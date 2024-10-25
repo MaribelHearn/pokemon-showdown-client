@@ -961,7 +961,10 @@ class ModdedDex {
 			if (!data.tier && data.baseSpecies && toID(data.baseSpecies) !== id) {
 				data.tier = this.species.get(data.baseSpecies).tier;
 			}
-			if (data.gen > this.gen) data.tier = 'Illegal';
+			if (data.gen > this.gen) {
+				console.log(data.gen + " illegal");
+				data.tier = 'Illegal';
+			}
 
 			const species = new Species(id, name, data);
 			this.cache.Species[id] = species;

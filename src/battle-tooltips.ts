@@ -648,6 +648,8 @@ class BattleTooltips {
 					calls = 'Moonblast';
 				} else if (this.battle.hasPseudoWeather('Psychic Terrain')) {
 					calls = 'Psychic';
+				} else if (this.battle.hasPseudoWeather('Glitchy Terrain')) {
+					calls = 'Super Glitch';
 				} else {
 					calls = 'Tri Attack';
 				}
@@ -735,6 +737,12 @@ class BattleTooltips {
 			}
 			if (move.flags.bite && ability === 'strongjaw') {
 				text += `<p class="movetag">&#x2713; Bite <small>(boosted by Strong Jaw)</small></p>`;
+			}
+			if (move.flags.beam && ability === 'lasermouth') {
+				text += `<p class="movetag">&#x2713; Beam <small>(boosted by Laser Mouth)</small></p>`;
+			}
+			if (move.flags.arrow && ability === 'sharpshooter') {
+				text += `<p class="movetag">&#x2713; Arrow <small>(boosted by Sharpshooter)</small></p>`;
 			}
 			if ((move.recoil || move.hasCrashDamage) && ability === 'reckless') {
 				text += `<p class="movetag">&#x2713; Recoil <small>(boosted by Reckless)</small></p>`;
@@ -1750,6 +1758,12 @@ class BattleTooltips {
 		}
 		if (move.flags['sound']) {
 			value.abilityModify(1.3, "Punk Rock");
+		}
+		if (move.flags['beam']) {
+			value.abilityModify(1.5, "Laser Mouth");
+		}
+		if (move.flags['arrow']) {
+			value.abilityModify(1.5, "Sharpshooter");
 		}
 		if (target) {
 			if (["MF", "FM"].includes(pokemon.gender + target.gender)) {

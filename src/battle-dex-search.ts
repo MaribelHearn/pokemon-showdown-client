@@ -859,6 +859,9 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 			case 'syclar':
 				results.push(['header', "CAP"]);
 				break;
+			case 'tentaquil':
+				results.push(['header', "Fundex"]);
+				break;
 			case 'pikachucosplay':
 				continue;
 			}
@@ -936,6 +939,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 		else if (format === 'pu') tierSet = tierSet.slice(slices.PU || slices.NU);
 		else if (format === 'zu') tierSet = tierSet.slice(slices.ZU || slices.PU || slices.NU);
 		else if (format === 'lc' || format === 'lcuu' || format.startsWith('lc') || (format !== 'caplc' && format.endsWith('lc'))) tierSet = tierSet.slice(slices.LC);
+		else if (format === 'fundex') tierSet = tierSet.slice(0, slices.AG || slices.Uber).concat(tierSet.slice(slices.OU));
 		else if (format === 'cap') tierSet = tierSet.slice(0, slices.AG || slices.Uber).concat(tierSet.slice(slices.OU));
 		else if (format === 'caplc') {
 			tierSet = tierSet.slice(slices['CAP LC'], slices.AG || slices.Uber).concat(tierSet.slice(slices.LC));

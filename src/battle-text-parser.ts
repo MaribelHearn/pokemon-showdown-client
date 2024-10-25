@@ -118,7 +118,7 @@ class BattleTextParser {
 			if ([
 				'ingrain', 'quickguard', 'wideguard', 'craftyshield', 'matblock', 'protect', 'mist', 'safeguard',
 				'electricterrain', 'mistyterrain', 'psychicterrain', 'telepathy', 'stickyhold', 'suctioncups', 'aromaveil',
-				'flowerveil', 'sweetveil', 'disguise', 'safetygoggles', 'protectivepads',
+				'flowerveil', 'sweetveil', 'disguise', 'safetygoggles', 'protectivepads', 'cardboardbox', 'taxidermy'
 			].includes(id)) {
 				if (target) {
 					kwArgs.of = pokemon;
@@ -495,6 +495,11 @@ class BattleTextParser {
 				case 'minior': id = 'shieldsdown'; templateName = 'transformEnd'; break;
 				case 'eiscuenoice': id = 'iceface'; break;
 				case 'eiscue': id = 'iceface'; templateName = 'transformEnd'; break;
+				// Fundex
+				case 'snakebusted': id = 'cardboardbox'; break;
+				case 'chucktestabusted': id = 'taxidermy'; break;
+				case 'booboolussus': id = 'gettogether'; break;
+				case 'boo': id = 'gettogether'; templateName = 'transformEnd'; break;
 				}
 			} else if (newSpecies) {
 				id = 'transform';
@@ -642,6 +647,13 @@ class BattleTextParser {
 			}
 			let templateId = 'start';
 			if (id === 'anticipation' || id === 'sturdy') templateId = 'activate';
+			// Fundex
+			if (id === 'research') {
+				const hasTarget = kwArgs.of && pokemon && kwArgs.of !== pokemon;
+				const template = this.template(hasTarget ? 'activate' : 'activateNoTarget', "Frisk");
+				return line1 + template.replace('[POKEMON]', this.pokemon(kwArgs.of)).replace('[ABILITY]', this.effect(ability)).replace('[TARGET]', this.pokemon(pokemon));
+			}
+			// ------
 			const template = this.template(templateId, ability, 'NODEFAULT');
 			return line1 + template.replace('[POKEMON]', this.pokemon(pokemon));
 		}

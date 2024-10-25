@@ -645,10 +645,10 @@
 					if (moveData.disabled) {
 						movebuttons += '<button disabled="disabled" class="has-tooltip" data-tooltip="' + BattleLog.escapeHTML(tooltipArgs) + '">';
 					} else {
-						movebuttons += '<button class="type-' + moveType + ' has-tooltip" name="chooseMove" value="' + (i + 1) + '" data-move="' + BattleLog.escapeHTML(moveData.move) + '" data-target="' + BattleLog.escapeHTML(moveData.target) + '" data-tooltip="' + BattleLog.escapeHTML(tooltipArgs) + '">';
+						movebuttons += '<button class="type-' + (moveType === '???' ? 'Unknown' : moveType) + ' has-tooltip" name="chooseMove" value="' + (i + 1) + '" data-move="' + BattleLog.escapeHTML(moveData.move) + '" data-target="' + BattleLog.escapeHTML(moveData.target) + '" data-tooltip="' + BattleLog.escapeHTML(tooltipArgs) + '">';
 						hasMoves = true;
 					}
-					movebuttons += name + '<br /><small class="type">' + (moveType ? Dex.types.get(moveType).name : "Unknown") + '</small> <small class="pp">' + pp + '</small>&nbsp;</button> ';
+					movebuttons += name + '<br /><small class="type">' + (moveType === '???' ? '???' : (moveType ? Dex.types.get(moveType).name : "Unknown")) + '</small> <small class="pp">' + pp + '</small>&nbsp;</button> ';
 				}
 				if (!hasMoves) {
 					moveMenu += '<button class="movebutton" name="chooseMove" value="0" data-move="Struggle" data-target="randomNormal">Struggle<br /><small class="type">Normal</small> <small class="pp">&ndash;</small>&nbsp;</button> ';
@@ -674,14 +674,14 @@
 								var tooltipArgs = classType + 'move|' + baseMove.id + '|' + pos;
 								if (specialMove.id.startsWith('gmax')) tooltipArgs += '|' + specialMove.id;
 								var isDisabled = specialMoves[i].disabled ? 'disabled="disabled"' : '';
-								movebuttons += '<button ' + isDisabled + ' class="type-' + moveType + ' has-tooltip" name="chooseMove" value="' + (i + 1) + '" data-move="' + BattleLog.escapeHTML(specialMoves[i].move) + '" data-target="' + BattleLog.escapeHTML(specialMoves[i].target) + '" data-tooltip="' + BattleLog.escapeHTML(tooltipArgs) + '">';
+								movebuttons += '<button ' + isDisabled + ' class="type-' + (moveType === '???' ? 'Unknown' : moveType) + ' has-tooltip" name="chooseMove" value="' + (i + 1) + '" data-move="' + BattleLog.escapeHTML(specialMoves[i].move) + '" data-target="' + BattleLog.escapeHTML(specialMoves[i].target) + '" data-tooltip="' + BattleLog.escapeHTML(tooltipArgs) + '">';
 								var pp = curActive.moves[i].pp + '/' + curActive.moves[i].maxpp;
 								if (canZMove) {
 									pp = '1/1';
 								} else if (!curActive.moves[i].maxpp) {
 									pp = '&ndash;';
 								}
-								movebuttons += specialMove.name + '<br /><small class="type">' + (moveType ? Dex.types.get(moveType).name : "Unknown") + '</small> <small class="pp">' + pp + '</small>&nbsp;</button> ';
+								movebuttons += specialMove.name + '<br /><small class="type">' + (moveType === '???' ? '???' : (moveType ? Dex.types.get(moveType).name : "Unknown")) + '</small> <small class="pp">' + pp + '</small>&nbsp;</button> ';
 							} else {
 								movebuttons += '<button disabled="disabled">&nbsp;</button>';
 							}

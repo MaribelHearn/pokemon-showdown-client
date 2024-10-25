@@ -393,3 +393,25 @@
 	background: linear-gradient(to bottom,  hsl(310,41%,77%),  hsl(310,41%,83%));
 	border-color: hsl(310,41%,41%);
 }
+
+.movemenu button.type-Unknown {
+	/* bg: ?? to ??, border: 53 */
+	background: hsl(163,23%,52%);
+	background: linear-gradient(to bottom, hsl(163,23%,85%), hsl(163,23%,71%));
+	border-color: hsl(163,23%,53%);
+}
+.movemenu button.type-Unknown small {
+	color: hsl(163,23%,35%);
+}
+.movemenu button.type-Unknown:hover {
+	/* bg: 95 to 83, border: 41 */
+	background: hsl(163,23%,45%);
+	background: linear-gradient(to bottom,  hsl(163,23%,79%),  hsl(163,23%,64%));
+	border-color: hsl(163,23%,35%);
+}
+.movemenu button.type-Unknown:active, .movemenu button.type-Unknown.pressed {
+	/* bg: 83 to 88, border: 41 */
+	background: hsl(163,23%,38%);
+	background: linear-gradient(to bottom,  hsl(163,23%,68%),  hsl(163,23%,74%));
+	border-color: hsl(163,23%,35%);
+}

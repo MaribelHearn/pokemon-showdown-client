@@ -2644,7 +2644,14 @@ function toId() {
 
 			var buf = '<div class="userdetails">';
 			if (avatar) buf += '<img class="trainersprite' + (userid === ownUserid ? ' yours' : '') + '" src="' + Dex.resolveAvatar(avatar) + '" />';
-			buf += '<strong><a href="//' + Config.routes.users + '/' + userid + '" target="_blank">' + BattleLog.escapeHTML(name) + '</a></strong><br />';
+
+			// PO bridge customisation
+			if (name.startsWith("po:")) {
+				buf += '<strong>' + BattleLog.escapeHTML(name) + '</strong><br /><small class="usergroup">PO User</small>';
+			} else {
+				buf += '<strong><a href="//' + Config.routes.users + '/' + userid + '" target="_blank">' + BattleLog.escapeHTML(name) + '</a></strong><br />';
+			}
+
 			var offline = data.rooms === false;
 			if (data.status || offline) {
 				var status = offline ? '(Offline)' : data.status.startsWith('!') ? data.status.slice(1) : data.status;

@@ -1092,6 +1092,10 @@ interface MoveFlags {
 	snatch?: 1 | 0;
 	/** Has no effect on Pokemon with the Soundproof Ability. */
 	sound?: 1 | 0;
+	/** Power is multiplied by 1.5 when used by a Pokemon with the Laser Mouth Ability. */
+	beam?: 1 | 0;
+	/** Power is multiplied by 1.5 when used by a Pokemon with the Sharpshooter Ability. */
+	arrow?: 1 | 0;
 }
 
 type MoveTarget = 'normal' | 'any' | 'adjacentAlly' | 'adjacentFoe' | 'adjacentAllyOrSelf' | // single-target

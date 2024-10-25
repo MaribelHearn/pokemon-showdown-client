@@ -32464,3 +32464,191 @@ BattleMoveAnims['shellsidearmphysical'] = {anim: BattleMoveAnims['poisonjab'].an
 BattleMoveAnims['shellsidearmspecial'] = {anim: BattleMoveAnims['sludgebomb'].anim};
 BattleMoveAnims['surgingstrikes'] = {anim: BattleMoveAnims['aquajet'].anim};
 BattleMoveAnims['eeriespell'] = {anim: BattleMoveAnims['psyshock'].anim};
+
+// Fundex
+BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
+BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
+BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
+BattleMoveAnims['roundhousekick']={anim:BattleMoveAnims['highjumpkick'].anim};
+BattleMoveAnims['falconpunch']={anim:BattleMoveAnims['firepunch'].anim};
+BattleMoveAnims['laevateinn']={anim:BattleMoveAnims['sacredsword'].anim};
+BattleMoveAnims['diamondblizzard']={anim:BattleMoveAnims['blizzard'].anim};
+//BattleMoveAnims['fantasyseal']={anim:BattleMoveAnims['focuspunch'].anim};
+//BattleMoveAnims['evilsealingcircle']={anim:BattleMoveAnims['focuspunch'].anim};
+BattleMoveAnims['killingdoll']={anim:BattleMoveAnims['smartstrike'].anim};
+//BattleMoveAnims['theworld']={anim:BattleMoveAnims['focuspunch'].anim};
+//BattleMoveAnims['nuke']={anim:BattleMoveAnims['focuspunch'].anim};
+BattleMoveAnims['ghastlydream']={anim:BattleMoveAnims['hex'].anim};
+//BattleMoveAnims['spearthegungnir']={anim:BattleMoveAnims['focuspunch'].anim};
+BattleMoveAnims['wrigglekick']={anim:BattleMoveAnims['highjumpkick'].anim};
+BattleMoveAnims['hisousword']={anim:BattleMoveAnims['sacredsword'].anim};
+BattleMoveAnims['throwingatlas']={anim:BattleMoveAnims['stoneedge'].anim};
+BattleMoveAnims['knockoutin3steps']={anim:BattleMoveAnims['focuspunch'].anim};
+//BattleMoveAnims['strawberrycross']={anim:BattleMoveAnims['focuspunch'].anim};
+//BattleMoveAnims['tsukinoiwakasascurse']={anim:BattleMoveAnims['focuspunch'].anim};
+//BattleMoveAnims['trainwreck']={anim:BattleMoveAnims['focuspunch'].anim};
+BattleMoveAnims['suzuranpoison']={anim:BattleMoveAnims['poisongas'].anim};
+//BattleMoveAnims['lemmingsparade']={anim:BattleMoveAnims['focuspunch'].anim};
+//BattleMoveAnims['apollo13']={anim:BattleMoveAnims['focuspunch'].anim};
+BattleMoveAnims['explod']={anim:BattleMoveAnims['explosion'].anim};
+BattleMoveAnims['study']={anim:BattleMoveAnims['calmmind'].anim};
+//BattleMoveAnims['corrupt']={anim:BattleMoveAnims['focuspunch'].anim};
+BattleMoveAnims['sovietreversal']={anim:BattleMoveAnims['reversal'].anim};
+//BattleMoveAnims['lolwut']={anim:BattleMoveAnims['focuspunch'].anim};
+//BattleMoveAnims['pingas']={anim:BattleMoveAnims['focuspunch'].anim};
+//BattleMoveAnims['mahboi']={anim:BattleMoveAnims['focuspunch'].anim};
+BattleMoveAnims['warlockpunch']={anim:BattleMoveAnims['shadowpunch'].anim};
+BattleMoveAnims['catnarok']={anim:BattleMoveAnims['explosion'].anim};
+BattleMoveAnims['ikeelyou']={anim:BattleMoveAnims['closecombat'].anim};
+BattleMoveAnims['barrelroll']={anim:BattleMoveAnims['steelroller'].anim};
+BattleMoveAnims['umadbro']={anim:BattleMoveAnims['swagger'].anim};
+BattleMoveAnims['zerolaser']={anim:BattleMoveAnims['hyperbeam'].anim};
+BattleMoveAnims['objection']={anim:BattleMoveAnims['counter'].anim};
+//stealthykick still TBD
+BattleMoveAnims['thunderdrumshot']={anim:BattleMoveAnims['electroball'].anim};
+//BattleMoveAnims['needleparade']={anim:BattleMoveAnims['focuspunch'].anim};
+//BattleMoveAnims['finaldanmaku']={anim:BattleMoveAnims['focuspunch'].anim};
+BattleMoveAnims['zzzap']={anim:BattleMoveAnims['thunderbolt'].anim};
+BattleMoveAnims['borderdistortion']={anim:BattleMoveAnims['extrasensory'].anim};
+BattleMoveAnims['dreaminduction']={anim:BattleMoveAnims['hypnosis'].anim};
+BattleMoveAnims['berserk']={anim:BattleMoveAnims['darkpulse'].anim};
+BattleMoveAnims['surprise']={anim:BattleMoveAnims['fakeout'].anim};
+BattleMoveAnims['royalflare']={anim:BattleMoveAnims['fireblast'].anim};
+BattleMoveAnims['princessundine']={anim:BattleMoveAnims['brine'].anim};
+BattleMoveAnims['satellitehimawari']={anim:BattleMoveAnims['energyball'].anim};
+BattleMoveAnims['emeraldmegalith']={anim:BattleMoveAnims['flashcannon'].anim};
+BattleMoveAnims['mishagujisama']={anim:BattleMoveAnims['earthpower'].anim};
+BattleMoveAnims['whirlingfortress']={anim:BattleMoveAnims['rapidspin'].anim};
+BattleMoveAnims['drybone']={anim:BattleMoveAnims['boneclub'].anim};
+BattleMoveAnims['recollection']={anim:BattleMoveAnims['assist'].anim};
+//BattleMoveAnims['superego']={anim:BattleMoveAnims['boneclub'].anim};
+//BattleMoveAnims['megawattlineargun']={anim:BattleMoveAnims['boneclub'].anim};
+//BattleMoveAnims['monstercucumber']={anim:BattleMoveAnims['boneclub'].anim};
+BattleMoveAnims['superhumanbyakurenhijiri']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['redufosofrage']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['blueufosofgrief']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['greenufosofloyalty']={anim:BattleMoveAnims['extremespeed'].anim};
+BattleMoveAnims['nyan']={anim:BattleMoveAnims['echoedvoice'].anim};
+//BattleMoveAnims['cakelie']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['superglitch']={anim:BattleMoveAnims['extremespeed'].anim};
+//anormalmove uses default animation
+BattleMoveAnims['miraclefruit']={anim:BattleMoveAnims['junglehealing'].anim};
+BattleMoveAnims['virtueofwindgod']={anim:BattleMoveAnims['hurricane'].anim};
+//BattleMoveAnims['expandedonbashira']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['foxtanukilaser']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['12generalgods']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['countdown']={anim:BattleMoveAnims['extremespeed'].anim};
+BattleMoveAnims['systemcrash']={anim:BattleMoveAnims['explosion'].anim};
+//BattleMoveAnims['malfunction']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['reboot']={anim:BattleMoveAnims['extremespeed'].anim};
+BattleMoveAnims['recoveryconsole']={anim:BattleMoveAnims['recover'].anim};
+//BattleMoveAnims['strengthenjutsu']={anim:BattleMoveAnims['extremespeed'].anim};
+BattleMoveAnims['washingmachine']={anim:BattleMoveAnims['whirlpool'].anim};
+//BattleMoveAnims['download']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['programfreeze']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['datastream']={anim:BattleMoveAnims['extremespeed'].anim};
+BattleMoveAnims['silverlight']={anim:BattleMoveAnims['flash'].anim};
+//BattleMoveAnims['delete']={anim:BattleMoveAnims['extremespeed'].anim};
+BattleMoveAnims['painflow']={anim:BattleMoveAnims['needlearm'].anim};
+BattleMoveAnims['flightofidaten']={anim:BattleMoveAnims['quickattack'].anim};
+BattleMoveAnims['phoenixspreadwings']={anim:BattleMoveAnims['wingattack'].anim};
+BattleMoveAnims['grandpatriotselixir']={anim:BattleMoveAnims['milkdrink'].anim};
+BattleMoveAnims['lunaticredeyes']={anim:BattleMoveAnims['psychic'].anim};
+BattleMoveAnims['catswalk']={anim:BattleMoveAnims['pound'].anim};
+BattleMoveAnims['slashofeternity']={anim:BattleMoveAnims['nightslash'].anim};
+BattleMoveAnims['mysterioussong']={anim:BattleMoveAnims['sing'].anim};
+BattleMoveAnims['illstarreddive']={anim:BattleMoveAnims['quickattack'].anim};
+BattleMoveAnims['peerlesswindgod']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['nope']={anim:BattleMoveAnims['extremespeed'].anim};
+BattleMoveAnims['swordoflight']={anim:BattleMoveAnims['slash'].anim};
+BattleMoveAnims['magicaltempest']={anim:BattleMoveAnims['thunder'].anim};
+//BattleMoveAnims['lightspeedmovement']={anim:BattleMoveAnims['extremespeed'].anim};
+//BattleMoveAnims['bearddeflect']={anim:BattleMoveAnims['extremespeed'].anim};
+BattleMoveAnims['matterstorm']={anim:BattleMoveAnims['sludgewave'].anim};
+BattleMoveAnims['laserbeam'] = {
+    anim:function(scene,_ref220){var attacker=_ref220[0],defender=_ref220[1];
+    var xstep=(defender.x-attacker.x)/5;
+    var ystep=(defender.y-attacker.y)/5;
+    var zstep=(defender.z-attacker.z)/5;
+
+    for(var i=0;i<4;i++){
+    scene.showEffect('wisp',{
+    x:attacker.x+xstep*(i+1),
+    y:attacker.y+ystep*(i+1),
+    z:attacker.z+zstep*(i+1),
+    scale:1.5,
+    opacity:0.6,
+    time:40*i},
+    {
+    opacity:0,
+    time:40*i+600},
+    'linear');
+    }
+    scene.showEffect('wisp',{
+    x:defender.x,
+    y:defender.y,
+    z:defender.z,
+    scale:0,
+    opacity:1,
+    time:100},
+    {
+    x:defender.x,
+    y:defender.y,
+    z:defender.z,
+    scale:2,
+    opacity:0,
+    time:400},
+    'linear');
+    scene.showEffect('wisp',{
+    x:defender.x,
+    y:defender.y,
+    z:defender.z,
+    scale:0,
+    opacity:1,
+    time:300},
+    {
+    x:defender.x,
+    y:defender.y,
+    z:defender.z,
+    scale:2,
+    opacity:0,
+    time:600},
+    'linear');
+
+    scene.showEffect('wisp',{
+    x:defender.x-30,
+    y:defender.y,
+    z:defender.z,
+    scale:2,
+    opacity:0.5,
+    time:200},
+    {
+    scale:4,
+    opacity:0,
+    time:600},
+    'linear','fade');
+    scene.showEffect('wisp',{
+    x:defender.x,
+    y:defender.y-30,
+    z:defender.z,
+    scale:2,
+    opacity:0.5,
+    time:300},
+    {
+    scale:4,
+    opacity:0,
+    time:650},
+    'linear','fade');
+    scene.showEffect('wisp',{
+    x:defender.x+15,
+    y:defender.y,
+    z:defender.z,
+    scale:2,
+    opacity:0.5,
+    time:400},
+    {
+    scale:4,
+    opacity:0,
+    time:700},
+    'linear','fade');
+}};
