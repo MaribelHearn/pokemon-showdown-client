@@ -32516,6 +32516,7 @@ BattleMoveAnims['surprise']={anim:BattleMoveAnims['fakeout'].anim};
 BattleMoveAnims['royalflare']={anim:BattleMoveAnims['fireblast'].anim};
 BattleMoveAnims['princessundine']={anim:BattleMoveAnims['brine'].anim};
 BattleMoveAnims['satellitehimawari']={anim:BattleMoveAnims['energyball'].anim};
+BattleMoveAnims['ragetrilithon']={anim:BattleMoveAnims['powergem'].anim};
 BattleMoveAnims['emeraldmegalith']={anim:BattleMoveAnims['flashcannon'].anim};
 BattleMoveAnims['mishagujisama']={anim:BattleMoveAnims['earthpower'].anim};
 BattleMoveAnims['whirlingfortress']={anim:BattleMoveAnims['rapidspin'].anim};
