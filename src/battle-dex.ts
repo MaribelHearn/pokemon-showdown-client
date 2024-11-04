@@ -665,7 +665,7 @@ const Dex = new class implements ModdedDex {
 		return spriteData;
 	}
 
-	getFundexIconNum(id: ID) {
+	getPokemonIconNum(id: ID, isFemale?: boolean, facingLeft?: boolean) {
 		switch(id) {
 			case 'tentaquil': return 1380 + 0;
 			/*case 'tentaquix': return 1380 + 1;*/
@@ -855,11 +855,9 @@ const Dex = new class implements ModdedDex {
 			case 'kisume': return 1380 + 184;
 			case 'chucktesta': return 1380 + 185;
 			case 'uncledolan': return 1380 + 186;
-			default: return 0;
+			default: break;
 		}
-	}
 
-	getPokemonIconNum(id: ID, isFemale?: boolean, facingLeft?: boolean) {
 		let num = 0;
 		if (window.BattlePokemonSprites?.[id]?.num) {
 			num = BattlePokemonSprites[id].num;
@@ -868,10 +866,6 @@ const Dex = new class implements ModdedDex {
 		}
 		if (num < 0) num = 0;
 		if (num > 3000) num = 0;
-
-		if (num >= 2000 && num < 3000) {
-			return this.getFundexIconNum(id);
-		}
 
 		if (window.BattlePokemonIconIndexes?.[id]) {
 			num = BattlePokemonIconIndexes[id];
