@@ -1263,7 +1263,7 @@ p.or:after {
 	background: url(https://play.pokemonshowdown.com/sprites/gen5/kecleon.png) center no-repeat;
 }
 .roomcounters button:hover .usercount {
-	background: url(https://play.pokemonshowdown.com/sprites/gen5-shiny/kecleon.png) center no-repeat;
+	background: url(https://raw.githubusercontent.com/MaribelHearn/pokemon-showdown-sprites/refs/heads/master/sprites/gen5-shiny/kecleon.png) center no-repeat;
 }
 .roomcounters .battlecount {
 	display: block;
