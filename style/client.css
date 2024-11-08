@@ -1263,7 +1263,7 @@ p.or:after {
 	background: url(https://play.pokemonshowdown.com/sprites/gen5/kecleon.png) center no-repeat;
 }
 .roomcounters button:hover .usercount {
-	background: url(https://play.pokemonshowdown.com/sprites/gen5ani/kecleon.gif) center no-repeat;
+	background: url(https://play.pokemonshowdown.com/sprites/gen5-shiny/kecleon.png) center no-repeat;
 }
 .roomcounters .battlecount {
 	display: block;
@@ -1275,7 +1275,7 @@ p.or:after {
 	background: url(https://play.pokemonshowdown.com/sprites/gen5/eevee.png) center no-repeat;
 }
 .roomcounters button:hover .battlecount {
-	background: url(https://play.pokemonshowdown.com/sprites/gen5ani/eevee.gif) center no-repeat;
+	background: url(https://play.pokemonshowdown.com/sprites/gen5-shiny/eevee.png) center no-repeat;
 }
 
 .roomlist {
