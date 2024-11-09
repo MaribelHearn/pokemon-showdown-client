@@ -537,9 +537,9 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	luigimrl: 1380 + 15,
 	luigiweegee: 1380 + 16,
 	giygas: 1380 + 17,
-	matrix: 1380 + 18,
+	matrix: 1380 + 18,*/
 	sovietmudkip: 1380 + 19,
-	satan: 1380 + 20,*/
+	//satan: 1380 + 20,
 	lilywhite: 1380 + 21,
 	//lolwutpear: 1380 + 22,
 	cirno: 1380 + 23,
