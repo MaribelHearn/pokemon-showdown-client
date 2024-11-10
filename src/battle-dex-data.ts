@@ -524,7 +524,7 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	//chucknorris: 1380 + 2,
 	//captainfalcon: 1380 + 3,
 	flandre: 1380 + 4,
-	//cell: 1380 + 5,
+	cell: 1380 + 5,
 	dennis: 1380 + 6,
 	dennismega: 1380 + 7,
 	zalgo: 1380 + 8,
