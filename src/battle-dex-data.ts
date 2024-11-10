@@ -565,11 +565,11 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	zelda: 1380 + 43,
 	zeldasheik: 1380 + 44,
 	ganondorf: 1380 + 45,
-	ganondorfmega: 1380 + 46,
+	ganondorfmega: 1380 + 46,*/
 	suiseiseki: 1380 + 47,
-	admiralackbar: 1380 + 48,
-	yoda: 1380 + 49,
-	darthvader: 1380 + 50,*/
+	//admiralackbar: 1380 + 48,
+	//yoda: 1380 + 49,
+	darthvader: 1380 + 50,
 	longcat: 1380 + 51,
 	tacgnol: 1380 + 52,
 	olngact: 1380 + 53,
@@ -700,13 +700,13 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	yumeko: 1380 + 178,
 	rumia: 1380 + 179,
 	koakuma: 1380 + 180,
-	youmu: 1380 + 180,
-	mystia: 1380 + 181,
-	tewi: 1380 + 182,
-	aya: 1380 + 183,
-	kisume: 1380 + 184,
-	/*chucktesta: 1380 + 185,
-	uncledolan: 1380 + 186,*/
+	youmu: 1380 + 181,
+	mystia: 1380 + 182,
+	tewi: 1380 + 183,
+	aya: 1380 + 184,
+	kisume: 1380 + 185,
+	/*chucktesta: 1380 + 186,
+	uncledolan: 1380 + 187,*/
 };
 
 const BattlePokemonIconIndexesLeft: {[id: string]: number} = {
