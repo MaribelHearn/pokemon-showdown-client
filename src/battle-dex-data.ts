@@ -520,7 +520,7 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	dorsoil: 1344 + 33,
 
 	tentaquil: 1380 + 0,
-	//tentaquix: 1380 + 1,
+	tentaquix: 1380 + 1,
 	//chucknorris: 1380 + 2,
 	//captainfalcon: 1380 + 3,
 	flandre: 1380 + 4,
@@ -573,10 +573,10 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	longcat: 1380 + 51,
 	tacgnol: 1380 + 52,
 	olngact: 1380 + 53,
-	/*orlyowl: 1380 + 54,
+	//orlyowl: 1380 + 54,
 	cats: 1380 + 55,
-	raptorjesus: 1380 + 56,
-	leeroyjenkins: 1380 + 57,*/
+	//raptorjesus: 1380 + 56,
+	//leeroyjenkins: 1380 + 57,
 	remilia: 1380 + 58,
 	/*angrybird: 1380 + 59,
 	bigbrother: 1380 + 60,
@@ -705,8 +705,8 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	tewi: 1380 + 183,
 	aya: 1380 + 184,
 	kisume: 1380 + 185,
-	/*chucktesta: 1380 + 186,
-	uncledolan: 1380 + 187,*/
+	//chucktesta: 1380 + 186,
+	//uncledolan: 1380 + 187,
 };
 
 const BattlePokemonIconIndexesLeft: {[id: string]: number} = {
