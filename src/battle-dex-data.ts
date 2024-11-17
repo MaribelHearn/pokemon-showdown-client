@@ -545,9 +545,9 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	cirno: 1380 + 23,
 	achicirno: 1380 + 24,
 	reimu: 1380 + 25,
-	/*drrobotnik: 1380 + 26,
-	leonidas: 1380 + 27,
-	kingharkinian: 1380 + 28,*/
+	drrobotnik: 1380 + 26,
+	//leonidas: 1380 + 27,
+	//kingharkinian: 1380 + 28,
 	yarrow: 1380 + 29,
 	doomsday: 1380 + 30,
 	/*vegeta: 1380 + 31,
