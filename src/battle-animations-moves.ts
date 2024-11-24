@@ -32476,7 +32476,7 @@ BattleMoveAnims['diamondblizzard']={anim:BattleMoveAnims['blizzard'].anim};
 //BattleMoveAnims['fantasyseal']={anim:BattleMoveAnims['focuspunch'].anim};
 //BattleMoveAnims['evilsealingcircle']={anim:BattleMoveAnims['focuspunch'].anim};
 BattleMoveAnims['killingdoll']={anim:BattleMoveAnims['smartstrike'].anim};
-//BattleMoveAnims['theworld']={anim:BattleMoveAnims['focuspunch'].anim};
+BattleMoveAnims['theworld']={anim:BattleMoveAnims['agility'].anim};
 //BattleMoveAnims['nuke']={anim:BattleMoveAnims['focuspunch'].anim};
 BattleMoveAnims['ghastlydream']={anim:BattleMoveAnims['hex'].anim};
 //BattleMoveAnims['spearthegungnir']={anim:BattleMoveAnims['focuspunch'].anim};
@@ -32522,7 +32522,6 @@ BattleMoveAnims['mishagujisama']={anim:BattleMoveAnims['earthpower'].anim};
 BattleMoveAnims['whirlingfortress']={anim:BattleMoveAnims['rapidspin'].anim};
 BattleMoveAnims['drybone']={anim:BattleMoveAnims['boneclub'].anim};
 BattleMoveAnims['recollection']={anim:BattleMoveAnims['assist'].anim};
-//BattleMoveAnims['superego']={anim:BattleMoveAnims['boneclub'].anim};
 //BattleMoveAnims['megawattlineargun']={anim:BattleMoveAnims['boneclub'].anim};
 //BattleMoveAnims['monstercucumber']={anim:BattleMoveAnims['boneclub'].anim};
 BattleMoveAnims['superhumanbyakurenhijiri']={anim:BattleMoveAnims['extremespeed'].anim};
@@ -32535,7 +32534,7 @@ BattleMoveAnims['nyan']={anim:BattleMoveAnims['echoedvoice'].anim};
 //anormalmove uses default animation
 BattleMoveAnims['miraclefruit']={anim:BattleMoveAnims['junglehealing'].anim};
 BattleMoveAnims['virtueofwindgod']={anim:BattleMoveAnims['hurricane'].anim};
-//BattleMoveAnims['expandedonbashira']={anim:BattleMoveAnims['extremespeed'].anim};
+BattleMoveAnims['expandedonbashira']={anim:BattleMoveAnims['woodhammer'].anim};
 //BattleMoveAnims['foxtanukilaser']={anim:BattleMoveAnims['extremespeed'].anim};
 //BattleMoveAnims['12generalgods']={anim:BattleMoveAnims['extremespeed'].anim};
 //BattleMoveAnims['countdown']={anim:BattleMoveAnims['extremespeed'].anim};
@@ -32543,11 +32542,11 @@ BattleMoveAnims['systemcrash']={anim:BattleMoveAnims['explosion'].anim};
 //BattleMoveAnims['malfunction']={anim:BattleMoveAnims['extremespeed'].anim};
 //BattleMoveAnims['reboot']={anim:BattleMoveAnims['extremespeed'].anim};
 BattleMoveAnims['recoveryconsole']={anim:BattleMoveAnims['recover'].anim};
-//BattleMoveAnims['strengthenjutsu']={anim:BattleMoveAnims['extremespeed'].anim};
+BattleMoveAnims['strengthenjutsu']={anim:BattleMoveAnims['nastyplot'].anim};
 BattleMoveAnims['washingmachine']={anim:BattleMoveAnims['whirlpool'].anim};
-//BattleMoveAnims['download']={anim:BattleMoveAnims['extremespeed'].anim};
-//BattleMoveAnims['programfreeze']={anim:BattleMoveAnims['extremespeed'].anim};
-//BattleMoveAnims['datastream']={anim:BattleMoveAnims['extremespeed'].anim};
+//see below for download
+BattleMoveAnims['programfreeze']={anim:BattleMoveAnims['sheercold'].anim};
+BattleMoveAnims['datastream']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['silverlight']={anim:BattleMoveAnims['flash'].anim};
 //BattleMoveAnims['delete']={anim:BattleMoveAnims['extremespeed'].anim};
 BattleMoveAnims['painflow']={anim:BattleMoveAnims['needlearm'].anim};
@@ -32560,15 +32559,19 @@ BattleMoveAnims['slashofeternity']={anim:BattleMoveAnims['nightslash'].anim};
 BattleMoveAnims['mysterioussong']={anim:BattleMoveAnims['sing'].anim};
 BattleMoveAnims['illstarreddive']={anim:BattleMoveAnims['quickattack'].anim};
 BattleMoveAnims['peerlesswindgod']={anim:BattleMoveAnims['extremespeed'].anim};
-//BattleMoveAnims['nope']={anim:BattleMoveAnims['extremespeed'].anim};
+//nope uses default animation
 BattleMoveAnims['swordoflight']={anim:BattleMoveAnims['slash'].anim};
 BattleMoveAnims['magicaltempest']={anim:BattleMoveAnims['thunder'].anim};
-//BattleMoveAnims['lightspeedmovement']={anim:BattleMoveAnims['extremespeed'].anim};
 //BattleMoveAnims['bearddeflect']={anim:BattleMoveAnims['extremespeed'].anim};
 BattleMoveAnims['matterstorm']={anim:BattleMoveAnims['sludgewave'].anim};
 BattleMoveAnims['perfectfreeze']={anim:BattleMoveAnims['blizzard'].anim};
-BattleMoveAnims['pixiedust']={anim:BattleMoveAnims['mist'].anim};
 BattleMoveAnims['deathegg']={anim:BattleMoveAnims['eggbomb'].anim};
+BattleMoveAnims['download'] = {
+	anim(scene, [attacker, defender]) {
+		scene.backgroundEffect('#FFFFFF', 900, 0.5);
+		BattleOtherAnims.drain.anim(scene, [attacker, defender]);
+	},
+};
 BattleMoveAnims['laserbeam'] = {
     anim:function(scene,_ref220){var attacker=_ref220[0],defender=_ref220[1];
     var xstep=(defender.x-attacker.x)/5;
@@ -32656,3 +32659,71 @@ BattleMoveAnims['laserbeam'] = {
     time:700},
     'linear','fade');
 }};
+BattleMoveAnims['pixiedust'] = {
+	anim(scene, [attacker, defender]) {
+		let xf = [1, -1, 1, -1];
+		let yf = [1, -1, -1, 1];
+		let xf2 = [1, 0, -1, 0];
+		let yf2 = [0, 1, 0, -1];
+
+		scene.backgroundEffect('#ffc0cb', 1000, 0.3);
+		for (let i = 0; i < 4; i++) {
+			scene.showEffect('blackwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 1,
+			}, {
+				x: attacker.x + 120 * xf[i],
+				y: attacker.y,
+				z: attacker.z + 68 * yf[i],
+				scale: 1,
+				opacity: 0,
+				time: 800,
+			}, 'decel', 'fade');
+			scene.showEffect('blackwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 1,
+			}, {
+				x: attacker.x + 113 * xf2[i],
+				y: attacker.y,
+				z: attacker.z + 97 * yf2[i],
+				scale: 1,
+				opacity: 0,
+				time: 800,
+			}, 'decel', 'fade');
+			scene.showEffect('blackwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 1,
+			}, {
+				x: attacker.x + 120 * xf[i],
+				y: attacker.y,
+				z: attacker.z + 68 * yf[i],
+				scale: 1,
+				opacity: 0,
+				time: 800,
+			}, 'decel', 'fade');
+			scene.showEffect('blackwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 1,
+			}, {
+				x: attacker.x + 113 * xf2[i],
+				y: attacker.y,
+				z: attacker.z + 97 * yf2[i],
+				scale: 1,
+				opacity: 0,
+				time: 800,
+			}, 'decel', 'fade');
+		}
+	},
+};

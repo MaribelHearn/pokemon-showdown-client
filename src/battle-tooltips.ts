@@ -494,7 +494,7 @@ class BattleTooltips {
 		Flying: "Supersonic Skystrike",
 		Ground: "Tectonic Rage",
 		Fairy: "Twinkle Tackle",
-		"???": "",
+		"???": "Unreal Unraveling",
 	};
 
 	static maxMoveTable: {[type in TypeName]: string} = {
@@ -1392,6 +1392,8 @@ class BattleTooltips {
 				moveType = 'Fairy';
 			} else if (this.battle.hasPseudoWeather('Psychic Terrain')) {
 				moveType = 'Psychic';
+			} else if (this.battle.hasPseudoWeather('Glitchy Terrain')) {
+				moveType = '???';
 			}
 		}
 
@@ -1399,10 +1401,16 @@ class BattleTooltips {
 		if (move.id === 'aurawheel' && pokemon.getSpeciesForme() === 'Morpeko-Hangry') {
 			moveType = 'Dark';
 		}
+		// Fundex: Catnarok uses the user's type and highest attacking stat
+		if (move.id === 'catnarok') {
+			if (pokemon.getSpecies().name === 'tacgnoL') moveType = 'Dark';
+			if (pokemon.getSpecies().name === 'oLngact') moveType = 'Fire';
+			if (serverPokemon.stats.spa > serverPokemon.stats.atk) category = 'Special';
+		}
 
 		// Other abilities that change the move type.
 		const noTypeOverride = [
-			'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball',
+			'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball', 'catnarok',
 		];
 		const allowTypeOverride = !noTypeOverride.includes(move.id);
 
@@ -1412,6 +1420,8 @@ class BattleTooltips {
 				if (value.abilityModify(0, 'Galvanize')) moveType = 'Electric';
 				if (value.abilityModify(0, 'Pixilate')) moveType = 'Fairy';
 				if (value.abilityModify(0, 'Refrigerate')) moveType = 'Ice';
+				if (value.abilityModify(0, 'Conflagrate')) moveType = 'Fire';
+				if (value.abilityModify(0, 'Corruption')) moveType = '???';
 			}
 			if (value.abilityModify(0, 'Normalize')) moveType = 'Normal';
 		}
@@ -1646,7 +1656,8 @@ class BattleTooltips {
 				this.battle.hasPseudoWeather('Electric Terrain') ||
 				this.battle.hasPseudoWeather('Grassy Terrain') ||
 				this.battle.hasPseudoWeather('Misty Terrain') ||
-				this.battle.hasPseudoWeather('Psychic Terrain')
+				this.battle.hasPseudoWeather('Psychic Terrain') ||
+				this.battle.hasPseudoWeather('Glitchy Terrain')
 			) {
 				value.modify(2, 'Terrain Pulse boost');
 			}
@@ -1776,7 +1787,7 @@ class BattleTooltips {
 			}
 		}
 		const noTypeOverride = [
-			'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball',
+			'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball', 'catnarok',
 		];
 		if (
 			move.category !== 'Status' && !noTypeOverride.includes(move.id) && !move.isZ && !move.isMax &&
@@ -1787,6 +1798,8 @@ class BattleTooltips {
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Galvanize");
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Pixilate");
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Refrigerate");
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Conflagrate");
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Corruption");
 			}
 			if (this.battle.gen > 6) {
 				value.abilityModify(1.2, "Normalize");
@@ -1843,7 +1856,8 @@ class BattleTooltips {
 		// Terrain
 		if ((this.battle.hasPseudoWeather('Electric Terrain') && moveType === 'Electric') ||
 			(this.battle.hasPseudoWeather('Grassy Terrain') && moveType === 'Grass') ||
-			(this.battle.hasPseudoWeather('Psychic Terrain') && moveType === 'Psychic')) {
+			(this.battle.hasPseudoWeather('Psychic Terrain') && moveType === 'Psychic') ||
+			(this.battle.hasPseudoWeather('Glitchy Terrain') && moveType === '???')) {
 			if (pokemon.isGrounded(serverPokemon)) {
 				value.modify(this.battle.gen > 7 ? 1.3 : 1.5, 'Terrain boost');
 			}
@@ -1876,7 +1890,8 @@ class BattleTooltips {
 			!this.battle.hasPseudoWeather('Electric Terrain') &&
 			!this.battle.hasPseudoWeather('Grassy Terrain') &&
 			!this.battle.hasPseudoWeather('Misty Terrain') &&
-			!this.battle.hasPseudoWeather('Psychic Terrain')
+			!this.battle.hasPseudoWeather('Psychic Terrain') &&
+			!this.battle.hasPseudoWeather('Glitchy Terrain')
 		) {
 			value.set(0, 'no Terrain');
 		}
@@ -2219,7 +2234,7 @@ class BattleStatGuesser {
 			} else if (['counter', 'endeavor', 'metalburst', 'mirrorcoat', 'rapidspin'].includes(move.id)) {
 				moveCount['Support']++;
 			} else if ([
-				'nightshade', 'seismictoss', 'psywave', 'superfang', 'naturesmadness', 'foulplay', 'endeavor', 'finalgambit', 'bodypress',
+				'nightshade', 'seismictoss', 'psywave', 'superfang', 'naturesmadness', 'foulplay', 'endeavor', 'finalgambit', 'bodypress', 'barriercrash',
 			].includes(move.id)) {
 				moveCount['Offense']++;
 			} else if (move.id === 'fellstinger') {
