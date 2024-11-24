@@ -32566,6 +32566,9 @@ BattleMoveAnims['magicaltempest']={anim:BattleMoveAnims['thunder'].anim};
 //BattleMoveAnims['lightspeedmovement']={anim:BattleMoveAnims['extremespeed'].anim};
 //BattleMoveAnims['bearddeflect']={anim:BattleMoveAnims['extremespeed'].anim};
 BattleMoveAnims['matterstorm']={anim:BattleMoveAnims['sludgewave'].anim};
+BattleMoveAnims['perfectfreeze']={anim:BattleMoveAnims['blizzard'].anim};
+BattleMoveAnims['pixiedust']={anim:BattleMoveAnims['mist'].anim};
+BattleMoveAnims['deathegg']={anim:BattleMoveAnims['eggbomb'].anim};
 BattleMoveAnims['laserbeam'] = {
     anim:function(scene,_ref220){var attacker=_ref220[0],defender=_ref220[1];
     var xstep=(defender.x-attacker.x)/5;

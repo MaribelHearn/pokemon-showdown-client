@@ -1849,6 +1849,8 @@ export class PokemonSprite extends Sprite {
 		// Gen 1
 		lightscreen: ['Light Screen', 'good'],
 		reflect: ['Reflect', 'good'],
+		// Fundex
+		warlockpunch: ['Focusing', 'neutral'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;
@@ -6074,3 +6076,4 @@ export const BattleStatusAnims: AnimTable = {
 	},
 };
 BattleStatusAnims['focuspunch'] = {anim: BattleStatusAnims['flinch'].anim};
+BattleStatusAnims['warlockpunch'] = {anim: BattleStatusAnims['flinch'].anim};
