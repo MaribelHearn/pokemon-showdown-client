@@ -546,6 +546,8 @@ class BattleTooltips {
 		if (isZOrMax === 'zmove') {
 			if (item.zMoveFrom === move.name) {
 				move = this.battle.dex.moves.get(item.zMove as string);
+			} else if (item.id === 'unknowniumz') {
+				move = this.battle.dex.moves.get(item.zMove as string);
 			} else if (move.category === 'Status') {
 				move = new Move(move.id, "", {
 					...move,
