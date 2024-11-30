@@ -538,6 +538,10 @@ class BattleTextParser {
 			if (kwArgs.zeffect) {
 				line1 = this.template('zEffect').replace('[POKEMON]', this.pokemon(pokemon));
 			}
+			if (this.pokemon(pokemon).toLowerCase() == 'the opposing Giygas') {
+				const template = this.template('moveGiygas', kwArgs.from);
+				return line1 + template;
+			}
 			const template = this.template('move', kwArgs.from);
 			return line1 + template.replace('[POKEMON]', this.pokemon(pokemon)).replace('[MOVE]', move);
 		}
@@ -1093,7 +1097,13 @@ class BattleTextParser {
 			const side = pokemon.slice(0, 2);
 			const pokemonName = this.pokemon(pokemon);
 			if (cmd === '-mega') {
-				const template2 = this.template('transformMega');
+				let template2;
+
+				switch (species) {
+					case 'Maribel': template2 = this.template('transformMaribel');
+					default: template2 = this.template('transformMega');
+				}
+
 				template += template2.replace('[POKEMON]', pokemonName).replace('[SPECIES]', species);
 			}
 			return template.replace('[POKEMON]', pokemonName).replace('[ITEM]', item).replace('[TRAINER]', this.trainer(side));
