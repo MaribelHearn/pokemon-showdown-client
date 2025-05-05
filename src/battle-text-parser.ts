@@ -627,7 +627,6 @@ class BattleTextParser {
 		}
 
 		case '-ability': {
-			console.log('test test');
 			let [, pokemon, ability, oldAbility, arg4] = args;
 			let line1 = '';
 			if (oldAbility && (oldAbility.startsWith('p1') || oldAbility.startsWith('p2') || oldAbility === 'boost')) {
@@ -641,14 +640,17 @@ class BattleTextParser {
 				const template = this.template('block', kwArgs.from);
 				return line1 + template;
 			}
+			const id = BattleTextParser.effectId(ability);
 			if (kwArgs.from) {
-				console.log('kwArgs.from');
+				// Fundex
+				if (id === 'research') {
+					line1 = this.ability(ability, kwArgs.of);
+				}
+
 				line1 = this.maybeAbility(kwArgs.from, pokemon) + line1;
 				const template = this.template('changeAbility', kwArgs.from);
 				return line1 + template.replace('[POKEMON]', this.pokemon(pokemon)).replace('[ABILITY]', this.effect(ability)).replace('[SOURCE]', this.pokemon(kwArgs.of));
 			}
-			const id = BattleTextParser.effectId(ability);
-			console.log(`id: ${id}`);
 			if (id === 'unnerve') {
 				const template = this.template('start', ability);
 				return line1 + template.replace('[TEAM]', this.team(pokemon.slice(0, 2), true));
