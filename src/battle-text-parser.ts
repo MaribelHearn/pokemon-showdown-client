@@ -498,7 +498,9 @@ class BattleTextParser {
 				// Fundex
 				case 'snakebusted': id = 'cardboardbox'; break;
 				case 'chucktestabusted': id = 'taxidermy'; break;
-				case 'booboolossus': id = 'gettogether'; break;
+				case 'samus': id = 'armordamage'; break;
+				case 'zerosuitsamus': id = 'armordamage'; templateName = 'transformEnd'; break;
+				case 'boolossus': id = 'gettogether'; break;
 				case 'boo': id = 'gettogether'; templateName = 'transformEnd'; break;
 				}
 			} else if (newSpecies) {
