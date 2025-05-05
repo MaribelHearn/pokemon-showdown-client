@@ -636,16 +636,17 @@ class BattleTextParser {
 			if (oldAbility) line1 += this.ability(oldAbility, pokemon);
 			line1 += this.ability(ability, pokemon);
 			if (kwArgs.fail) {
-				console.log('kwArgs.fail');
 				const template = this.template('block', kwArgs.from);
 				return line1 + template;
 			}
 			const id = BattleTextParser.effectId(ability);
+			const oldId = BattleTextParser.effectId(oldAbility);
 			if (kwArgs.from) {
-				console.log(`kwArgs.from`);
 				// Fundex
+				console.log(`oldAbility: ${oldAbility}`);
+				console.log(`oldId: ${oldId}`);
 				console.log(`id: ${id}`);
-				if (id === 'research') {
+				if (oldId === 'research') {
 					line1 = this.ability(ability, kwArgs.of);
 					console.log(`line1: ${line1}`);
 				}
