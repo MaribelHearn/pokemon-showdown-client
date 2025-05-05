@@ -642,12 +642,16 @@ class BattleTextParser {
 			}
 			const id = BattleTextParser.effectId(ability);
 			if (kwArgs.from) {
+				console.log(`kwArgs.from`);
 				// Fundex
+				console.log(`id: ${id}`);
 				if (id === 'research') {
 					line1 = this.ability(ability, kwArgs.of);
+					console.log(`line1: ${line1}`);
 				}
 
 				line1 = this.maybeAbility(kwArgs.from, pokemon) + line1;
+				console.log(`line1: ${line1}`);
 				const template = this.template('changeAbility', kwArgs.from);
 				return line1 + template.replace('[POKEMON]', this.pokemon(pokemon)).replace('[ABILITY]', this.effect(ability)).replace('[SOURCE]', this.pokemon(kwArgs.of));
 			}
