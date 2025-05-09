@@ -1851,6 +1851,7 @@ export class PokemonSprite extends Sprite {
 		reflect: ['Reflect', 'good'],
 		// Fundex
 		warlockpunch: ['Focusing', 'neutral'],
+		goldenbracket: ['Golden Bracket', 'bad'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;

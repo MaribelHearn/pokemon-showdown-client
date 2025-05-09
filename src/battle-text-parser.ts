@@ -131,7 +131,7 @@ class BattleTextParser {
 				return {args: ['-singlemove', pokemon, effect], kwArgs: {of: target}};
 			}
 			if ([
-				'bind', 'wrap', 'clamp', 'whirlpool', 'firespin', 'magmastorm', 'sandtomb', 'infestation', 'snaptrap', 'thundercage', 'trapped',
+				'bind', 'wrap', 'clamp', 'whirlpool', 'firespin', 'magmastorm', 'goldenbracket', 'sandtomb', 'infestation', 'snaptrap', 'thundercage', 'trapped',
 			].includes(id)) {
 				return {args: ['-start', pokemon, effect], kwArgs: {of: target}};
 			}
@@ -498,7 +498,9 @@ class BattleTextParser {
 				// Fundex
 				case 'snakebusted': id = 'cardboardbox'; break;
 				case 'chucktestabusted': id = 'taxidermy'; break;
-				case 'booboolussus': id = 'gettogether'; break;
+				case 'samusarmored': id = 'armordamage'; break;
+				case 'samus': id = 'armordamage'; templateName = 'transformEnd'; break;
+				case 'boolossus': id = 'gettogether'; break;
 				case 'boo': id = 'gettogether'; templateName = 'transformEnd'; break;
 				}
 			} else if (newSpecies) {
@@ -639,24 +641,24 @@ class BattleTextParser {
 				const template = this.template('block', kwArgs.from);
 				return line1 + template;
 			}
+			const id = BattleTextParser.effectId(ability);
+			const oldId = BattleTextParser.effectId(oldAbility);
 			if (kwArgs.from) {
-				line1 = this.maybeAbility(kwArgs.from, pokemon) + line1;
+				// Fundex
+				if (kwArgs.from.includes('Research')) {
+					line1 = this.maybeAbility(kwArgs.from, kwArgs.of) + line1;
+				} else {
+					line1 = this.maybeAbility(kwArgs.from, pokemon) + line1;
+				}
 				const template = this.template('changeAbility', kwArgs.from);
 				return line1 + template.replace('[POKEMON]', this.pokemon(pokemon)).replace('[ABILITY]', this.effect(ability)).replace('[SOURCE]', this.pokemon(kwArgs.of));
 			}
-			const id = BattleTextParser.effectId(ability);
 			if (id === 'unnerve') {
 				const template = this.template('start', ability);
 				return line1 + template.replace('[TEAM]', this.team(pokemon.slice(0, 2), true));
 			}
 			let templateId = 'start';
 			if (id === 'anticipation' || id === 'sturdy') templateId = 'activate';
-			// Fundex
-			if (id === 'research') {
-				const hasTarget = kwArgs.of && pokemon && kwArgs.of !== pokemon;
-				const template = this.template(hasTarget ? 'activate' : 'activateNoTarget', "Frisk");
-				return line1 + template.replace('[POKEMON]', this.pokemon(kwArgs.of)).replace('[ABILITY]', this.effect(ability)).replace('[TARGET]', this.pokemon(pokemon));
-			}
 			// ------
 			const template = this.template(templateId, ability, 'NODEFAULT');
 			return line1 + template.replace('[POKEMON]', this.pokemon(pokemon));
