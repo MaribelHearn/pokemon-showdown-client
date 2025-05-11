@@ -1605,8 +1605,6 @@ class Species implements Effect {
 		this.tier = data.tier || '';
 
 		this.isTotem = false;
-		console.log(this.formeid);
-		console.log(['-mega', '-megax', '-megay'].includes(this.formeid));
 		this.isMega = !!(this.forme && ['-mega', '-megax', '-megay'].includes(this.formeid));
 		this.canGigantamax = !!data.canGigantamax;
 		this.isPrimal = !!(this.forme && this.formeid === '-primal');
