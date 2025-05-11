@@ -2207,7 +2207,8 @@ class BattleStatGuesser {
 					moveCount['Special'] += 0.5;
 				} else if (move.id === 'naturepower') {
 					moveCount['Special']++;
-				} else if (['protect', 'detect', 'spikyshield', 'kingsshield'].includes(move.id)) {
+				// Fundex: include custom stall moves
+				} else if (['protect', 'detect', 'spikyshield', 'kingsshield', 'barrelroll', 'firewall', 'electricalshield'].includes(move.id)) {
 					moveCount['Stall']++;
 				} else if (move.id === 'wish') {
 					moveCount['Restoration']++;
