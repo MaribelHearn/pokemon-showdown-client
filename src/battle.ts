@@ -1492,17 +1492,10 @@ export class Battle {
 		}
 
 		let usedMove = kwArgs.anim ? Dex.moves.get(kwArgs.anim) : move;
-		if (!kwArgs.spread) {
-			console.log(pokemon);
-			console.log(pokemon.details);
-			if (pokemon.details.includes('Giygas')) {
-				const inexplicable = true;
-				console.log(pokemon.ability);
-				this.scene.runMoveAnim(Dex.moves.get('darkpulse').id, [pokemon, target], inexplicable);
-				return;
-			}
+		let incomprehensible = pokemon.ability === 'Incomprehensible';
 
-			this.scene.runMoveAnim(usedMove.id, [pokemon, target]);
+		if (!kwArgs.spread) {
+			this.scene.runMoveAnim(usedMove.id, [pokemon, target], incomprehensible);
 			return;
 		}
 
@@ -1521,12 +1514,7 @@ export class Battle {
 			}
 		}
 
-		if (pokemon.details.includes('Giygas')) {
-			this.scene.runMoveAnim(Dex.moves.get('darkpulse').id, targets);
-			return;
-		}
-
-		this.scene.runMoveAnim(usedMove.id, targets);
+		this.scene.runMoveAnim(usedMove.id, targets, incomprehensible);
 	}
 	cantUseMove(pokemon: Pokemon, effect: Effect, move: Move, kwArgs: KWArgs) {
 		pokemon.clearMovestatuses();
