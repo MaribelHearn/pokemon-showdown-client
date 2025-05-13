@@ -40,7 +40,7 @@ export class BattleSceneStub {
 	): void { }
 	typeAnim(pokemon: Pokemon, types: string): void { }
 	resume(): void { }
-	runMoveAnim(moveid: ID, participants: Pokemon[], inexplicable?: Boolean): void { }
+	runMoveAnim(moveid: ID, participants: Pokemon[], incomprehensible?: Boolean): void { }
 	runOtherAnim(moveid: ID, participants: Pokemon[]): void { }
 	runPrepareAnim(moveid: ID, attacker: Pokemon, defender: Pokemon): void { }
 	runResidualAnim(moveid: ID, pokemon: Pokemon): void { }

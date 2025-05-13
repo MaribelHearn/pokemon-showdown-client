@@ -535,6 +535,7 @@ class BattleTextParser {
 		}
 
 		case 'move': {
+			console.log(args);
 			const [, pokemon, move] = args;
 			let line1 = this.maybeAbility(kwArgs.from, kwArgs.of || pokemon);
 			if (kwArgs.zeffect) {
