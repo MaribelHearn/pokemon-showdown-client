@@ -540,7 +540,7 @@ class BattleTextParser {
 			if (kwArgs.zeffect) {
 				line1 = this.template('zEffect').replace('[POKEMON]', this.pokemon(pokemon));
 			}
-			if (this.pokemon(pokemon).toLowerCase() == 'the opposing Giygas') {
+			if (this.pokemon(pokemon).toLowerCase() == 'the opposing giygas') {
 				const template = this.template('moveGiygas', kwArgs.from);
 				return line1 + template;
 			}
