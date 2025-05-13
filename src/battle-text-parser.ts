@@ -170,9 +170,9 @@ class BattleTextParser {
 		}
 
 		case 'move': {
-			console.log("kwArgs.ability: " + kwArgs.ability);
+			console.log("kwArgs.from: " + kwArgs.from);
 			if (kwArgs.from === 'Magic Bounce') kwArgs.from = 'ability:Magic Bounce';
-			if (kwArgs.ability === 'Incomprehensible') kwArgs.from = 'ability:Incomprehensible';
+			if (kwArgs.from === 'Incomprehensible') kwArgs.from = 'ability:Incomprehensible';
 			break;
 		}
 
