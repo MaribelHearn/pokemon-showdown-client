@@ -1493,6 +1493,11 @@ export class Battle {
 
 		let usedMove = kwArgs.anim ? Dex.moves.get(kwArgs.anim) : move;
 		if (!kwArgs.spread) {
+			if (pokemon.details.includes('Giygas')) {
+				this.scene.runMoveAnim(Dex.moves.get('darkpulse').id, [pokemon, target]);
+				return;
+			}
+
 			this.scene.runMoveAnim(usedMove.id, [pokemon, target]);
 			return;
 		}
@@ -1510,6 +1515,11 @@ export class Battle {
 				}
 				targets.push(curTarget);
 			}
+		}
+
+		if (pokemon.details.includes('Giygas')) {
+			this.scene.runMoveAnim(Dex.moves.get('darkpulse').id, targets);
+			return;
 		}
 
 		this.scene.runMoveAnim(usedMove.id, targets);
