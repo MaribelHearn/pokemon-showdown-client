@@ -519,8 +519,11 @@ export class BattleScene implements BattleSceneStub {
 	// General updating
 	/////////////////////////////////////////////////////////////////////
 
-	runMoveAnim(moveid: ID, participants: Pokemon[]) {
+	runMoveAnim(moveid: ID, participants: Pokemon[], inexplicable?: Boolean) {
 		if (!this.animating) return;
+		if (inexplicable) {
+			moveid = Dex.moves.get('darkpulse').id;
+		}
 		let animEntry = BattleMoveAnims[moveid];
 		if (this.acceleration >= 3) {
 			const targetsSelf = !participants[1] || participants[0] === participants[1];

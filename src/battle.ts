@@ -1496,7 +1496,9 @@ export class Battle {
 			console.log(pokemon);
 			console.log(pokemon.details);
 			if (pokemon.details.includes('Giygas')) {
-				this.scene.runMoveAnim(Dex.moves.get('darkpulse').id, [pokemon, target]);
+				const inexplicable = true;
+				console.log(pokemon.ability);
+				this.scene.runMoveAnim(Dex.moves.get('darkpulse').id, [pokemon, target], inexplicable);
 				return;
 			}
 
