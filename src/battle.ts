@@ -1496,6 +1496,7 @@ export class Battle {
 		let incomprehensible = pokemon.ability === 'Incomprehensible';
 
 		if (!kwArgs.spread) {
+			console.log(pokemon.ability);
 			this.scene.runMoveAnim(usedMove.id, [pokemon, target], incomprehensible);
 			return;
 		}
@@ -1515,6 +1516,7 @@ export class Battle {
 			}
 		}
 
+		console.log(pokemon.ability);
 		this.scene.runMoveAnim(usedMove.id, targets, incomprehensible);
 	}
 	cantUseMove(pokemon: Pokemon, effect: Effect, move: Move, kwArgs: KWArgs) {
