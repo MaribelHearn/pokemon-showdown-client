@@ -522,7 +522,6 @@ export class BattleScene implements BattleSceneStub {
 	runMoveAnim(moveid: ID, participants: Pokemon[], incomprehensible?: Boolean) {
 		if (!this.animating) return;
 		let animEntry = BattleMoveAnims[moveid];
-		console.log("Incomprehensible: " + incomprehensible);
 		if (this.acceleration >= 3) {
 			const targetsSelf = !participants[1] || participants[0] === participants[1];
 			const isSpecial = !targetsSelf && this.battle.dex.moves.get(moveid).category === 'Special';
