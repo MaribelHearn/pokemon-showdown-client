@@ -1493,6 +1493,8 @@ export class Battle {
 
 		let usedMove = kwArgs.anim ? Dex.moves.get(kwArgs.anim) : move;
 		if (!kwArgs.spread) {
+			console.log(pokemon);
+			console.log(pokemon.details);
 			if (pokemon.details.includes('Giygas')) {
 				this.scene.runMoveAnim(Dex.moves.get('darkpulse').id, [pokemon, target]);
 				return;
