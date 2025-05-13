@@ -1102,6 +1102,8 @@ class BattleTextParser {
 				let template2;
 
 				switch (species) {
+					case 'Vegeta': template2 = this.template('transformVegeta');
+					case 'Bowser': template2 = this.template('transformBowser');
 					case 'Maribel': template2 = this.template('transformMaribel');
 					default: template2 = this.template('transformMega');
 				}
