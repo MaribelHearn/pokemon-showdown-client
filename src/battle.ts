@@ -1492,8 +1492,7 @@ export class Battle {
 		}
 
 		let usedMove = kwArgs.anim ? Dex.moves.get(kwArgs.anim) : move;
-		console.log(pokemon.ability);
-		let incomprehensible = pokemon.ability === 'Incomprehensible';
+		let incomprehensible = pokemon.name === 'Giygas' && pokemon.ability !== 'Dark Aura';
 
 		if (!kwArgs.spread) {
 			console.log(pokemon.ability);
