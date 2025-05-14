@@ -3472,6 +3472,10 @@ export class Battle {
 			break;
 		}
 		case 'move': {
+			console.log('args:');
+			console.log(args);
+			console.log('kwArgs:');
+			console.log(kwArgs);
 			this.endLastTurn();
 			this.resetTurnsSinceMoved();
 			let poke = this.getPokemon(args[1])!;

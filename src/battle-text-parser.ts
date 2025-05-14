@@ -170,10 +170,7 @@ class BattleTextParser {
 		}
 
 		case 'move': {
-			console.log("args: " + args);
-			console.log(kwArgs);
 			if (kwArgs.from === 'Magic Bounce') kwArgs.from = 'ability:Magic Bounce';
-			if (kwArgs.from === 'Incomprehensible') kwArgs.from = 'ability:Incomprehensible';
 			break;
 		}
 
@@ -538,7 +535,6 @@ class BattleTextParser {
 		}
 
 		case 'move': {
-			console.log(args);
 			const [, pokemon, move] = args;
 			let line1 = this.maybeAbility(kwArgs.from, kwArgs.of || pokemon);
 			if (kwArgs.zeffect) {
