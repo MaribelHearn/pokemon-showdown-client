@@ -3482,7 +3482,7 @@ export class Battle {
 			this.useMove(poke, move, poke2, kwArgs);
 			this.animateMove(poke, move, poke2, kwArgs);
 			if (poke.speciesForme === 'Giygas' && poke.ability === '') {
-				args.push('ability:Incomprehensible');
+				args.push('Incomprehensible');
 			}
 			this.log(args, kwArgs);
 			this.scene.afterMove(poke);
