@@ -1228,7 +1228,7 @@ export class Battle {
 		this.p4 = null!;
 	}
 
-	log(args: Args, kwArgs?: KWArgs, preempt?: boolean) {
+	log(args: Args, kwArgs?: KWArgs, preempt?: boolean, poke?: Pokemon) {
 		this.scene.log.add(args, kwArgs, preempt);
 	}
 
@@ -3479,14 +3479,11 @@ export class Battle {
 			if (this.checkActive(poke)) return;
 			let poke2 = this.getPokemon(args[3]);
 			this.scene.beforeMove(poke);
-			console.log('poke:' + typeof(poke));
-			console.log(poke);
-			console.log('move:' + typeof(move));
-			console.log(move);
-			console.log('poke2:' + typeof(poke2));
-			console.log(poke2);
 			this.useMove(poke, move, poke2, kwArgs);
 			this.animateMove(poke, move, poke2, kwArgs);
+			if (poke.speciesForme === 'Giygas' && poke.ability === '') {
+				args.push('ability:Incomprehensible');
+			}
 			this.log(args, kwArgs);
 			this.scene.afterMove(poke);
 			break;
