@@ -3472,10 +3472,6 @@ export class Battle {
 			break;
 		}
 		case 'move': {
-			console.log('args:');
-			console.log(args);
-			console.log('kwArgs:');
-			console.log(kwArgs);
 			this.endLastTurn();
 			this.resetTurnsSinceMoved();
 			let poke = this.getPokemon(args[1])!;
@@ -3483,6 +3479,12 @@ export class Battle {
 			if (this.checkActive(poke)) return;
 			let poke2 = this.getPokemon(args[3]);
 			this.scene.beforeMove(poke);
+			console.log('poke:' + typeof(poke));
+			console.log(poke);
+			console.log('move:' + typeof(move));
+			console.log(move);
+			console.log('poke2:' + typeof(poke2));
+			console.log(poke2);
 			this.useMove(poke, move, poke2, kwArgs);
 			this.animateMove(poke, move, poke2, kwArgs);
 			this.log(args, kwArgs);
