@@ -606,7 +606,7 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	kingdedede: 1380 + 84,
 	snake: 1380 + 85,
 	samus: 1380 + 86,
-	armoredsamus: 1380 + 87,
+	samusarmored: 1380 + 87,
 	zeekyhbomb: 1380 + 88,
 	yumemi: 1380 + 89,
 	engineer: 1380 + 90,
@@ -707,6 +707,8 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	kisume: 1380 + 185,
 	chucktesta: 1380 + 186,
 	uncledolan: 1380 + 187,
+	snakebusted: 1380 + 188,
+	chucktestabusted: 1380 + 189,
 };
 
 const BattlePokemonIconIndexesLeft: {[id: string]: number} = {
