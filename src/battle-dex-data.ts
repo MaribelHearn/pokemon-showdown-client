@@ -551,7 +551,7 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	yarrow: 1380 + 29,
 	doomsday: 1380 + 30,
 	vegeta: 1380 + 31,
-	vegetasupersaiyan: 1380 + 32,
+	supersaiyanvegeta: 1380 + 32,
 	droctogonapus: 1380 + 33,
 	acetrainer: 1380 + 34,
 	crasherwake: 1380 + 35,
