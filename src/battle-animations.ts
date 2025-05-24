@@ -974,6 +974,7 @@ export class BattleScene implements BattleSceneStub {
 			case 'grassyterrain':
 			case 'mistyterrain':
 			case 'psychicterrain':
+			case 'glitchyterrain':
 				terrain = pwid;
 				break;
 			default:

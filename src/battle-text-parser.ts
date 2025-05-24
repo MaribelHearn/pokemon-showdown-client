@@ -117,7 +117,7 @@ class BattleTextParser {
 
 			if ([
 				'ingrain', 'quickguard', 'wideguard', 'craftyshield', 'matblock', 'protect', 'mist', 'safeguard',
-				'electricterrain', 'mistyterrain', 'psychicterrain', 'telepathy', 'stickyhold', 'suctioncups', 'aromaveil',
+				'electricterrain', 'mistyterrain', 'psychicterrain', 'glitchyterrain', 'telepathy', 'stickyhold', 'suctioncups', 'aromaveil',
 				'flowerveil', 'sweetveil', 'disguise', 'safetygoggles', 'protectivepads', 'cardboardbox', 'taxidermy'
 			].includes(id)) {
 				if (target) {

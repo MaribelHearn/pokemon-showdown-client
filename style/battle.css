@@ -462,6 +462,10 @@ License: GPLv2
 	background: #CCAAEE url(../fx/weather-psychicterrain.png) no-repeat scroll left top;
 	color: #441155;
 }
+.glitchyterrainweather {
+	background: #CCAAEE url(../fx/weather-glitchyterrain.png) no-repeat scroll left top;
+	color: #441155;
+}
 .pseudoweather {
 	background: #DDAAEE url(../fx/weather-trickroom.png) no-repeat scroll left top;
 	color: #661155;
