@@ -2712,6 +2712,9 @@ export class Battle {
 				}
 			}
 			this.scene.updateStatbar(poke);
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -2761,6 +2764,9 @@ export class Battle {
 				break;
 			}
 			this.scene.updateStatbar(poke);
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -2776,6 +2782,9 @@ export class Battle {
 			case 'destinybond':
 				this.scene.resultAnim(poke, 'Destiny Bond', 'neutral');
 				break;
+			}
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
 			}
 			this.log(args, kwArgs);
 			break;
@@ -2903,6 +2912,9 @@ export class Battle {
 					this.scene.resultAnim(poke, 'Protection broken', 'bad');
 				}
 			}
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -2954,6 +2966,9 @@ export class Battle {
 				kwArgs.from = this.weather;
 			}
 			this.changeWeather(effect.name, poke, !!kwArgs.upkeep, ability);
+			if (poke?.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -2984,6 +2999,9 @@ export class Battle {
 					}
 				}
 				break;
+			}
+			if (poke?.status === 'tmt') {
+				args.push('TMTRAINER');
 			}
 			this.log(args, kwArgs);
 			break;
