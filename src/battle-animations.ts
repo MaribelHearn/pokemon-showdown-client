@@ -2657,7 +2657,8 @@ export class PokemonSprite extends Sprite {
 		let buf = '<div class="statbar' + (this.isFrontSprite ? ' lstatbar' : ' rstatbar') + '" style="display: none">';
 		const ignoreNick = this.isFrontSprite && (this.scene.battle.ignoreOpponent || this.scene.battle.ignoreNicks);
 		let boldName = BattleLog.escapeHTML(ignoreNick ? pokemon.speciesForme : pokemon.name);
-		console.log(pokemon);
+		console.log('GETSTATBARHTML');
+		console.log(pokemon.status);
 		boldName += pokemon.status === 'tmt' ? 'TMTRAINER' : '';
 		buf += `<strong>${boldName}`;
 		const gender = pokemon.gender;
@@ -2748,10 +2749,6 @@ export class PokemonSprite extends Sprite {
 			status += '<span class="par">PAR</span> ';
 		} else if (pokemon.status === 'frz') {
 			status += '<span class="frz">FRZ</span> ';
-		}
-		if (pokemon.status === 'tmt') {
-			this.$statbar = $(this.getStatbarHTML(pokemon));
-			this.scene.$stat.append(this.$statbar);
 		}
 		if (pokemon.volatiles.typechange && pokemon.volatiles.typechange[1]) {
 			const types = pokemon.volatiles.typechange[1].split('/');
