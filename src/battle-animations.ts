@@ -532,6 +532,7 @@ export class BattleScene implements BattleSceneStub {
 			animEntry = BattleMoveAnims['tackle'];
 		}
 		animEntry.anim(this, participants.map(p => p.sprite));
+		console.log(moveid);
 		if (moveid === 'superglitch') {
 			this.updateStatbars();
 		}
@@ -2660,6 +2661,7 @@ export class PokemonSprite extends Sprite {
 		let buf = '<div class="statbar' + (this.isFrontSprite ? ' lstatbar' : ' rstatbar') + '" style="display: none">';
 		const ignoreNick = this.isFrontSprite && (this.scene.battle.ignoreOpponent || this.scene.battle.ignoreNicks);
 		let boldName = BattleLog.escapeHTML(ignoreNick ? pokemon.speciesForme : pokemon.name);
+		console.log(pokemon.status);
 		boldName += pokemon.status === 'tmt' ? 'TMTRAINER' : '';
 		buf += `<strong>${boldName}`;
 		const gender = pokemon.gender;
