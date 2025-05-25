@@ -532,7 +532,6 @@ export class BattleScene implements BattleSceneStub {
 			animEntry = BattleMoveAnims['tackle'];
 		}
 		animEntry.anim(this, participants.map(p => p.sprite));
-		console.log(moveid);
 	}
 
 	runOtherAnim(moveid: ID, participants: Pokemon[]) {
@@ -2749,6 +2748,10 @@ export class PokemonSprite extends Sprite {
 			status += '<span class="par">PAR</span> ';
 		} else if (pokemon.status === 'frz') {
 			status += '<span class="frz">FRZ</span> ';
+		}
+		if (pokemon.status === 'tmt') {
+			this.$statbar = $(this.getStatbarHTML(pokemon));
+			this.scene.$stat.append(this.$statbar);
 		}
 		if (pokemon.volatiles.typechange && pokemon.volatiles.typechange[1]) {
 			const types = pokemon.volatiles.typechange[1].split('/');
