@@ -1107,14 +1107,12 @@ class BattleTextParser {
 			let template = this.template(templateId, id);
 			const side = pokemon.slice(0, 2);
 			const pokemonName = this.pokemon(pokemon);
-			if (cmd === '-mega') {
-				let template2;
-
-				switch (species) {
-					case 'Super Saiyan Vegeta': template2 = this.template('transformVegeta');
-					default: template2 = this.template('transformMega');
-				}
-
+			if (species === 'Vegeta' || species === 'Super Saiyan Vegeta') {
+				let template2= this.template('transformVegeta');
+				template += template2.replace('[POKEMON]', pokemonName).replace('[SPECIES]', species);
+			}
+			else if (cmd === '-mega') {
+				let template2= this.template('transformMega');
 				template += template2.replace('[POKEMON]', pokemonName).replace('[SPECIES]', species);
 			}
 			return template.replace('[POKEMON]', pokemonName).replace('[ITEM]', item).replace('[TRAINER]', this.trainer(side));
