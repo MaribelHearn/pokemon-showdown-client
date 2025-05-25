@@ -2703,11 +2703,13 @@ export class PokemonSprite extends Sprite {
 	}
 
 	updateStatbar(pokemon: Pokemon, updatePrevhp?: boolean, updateHp?: boolean) {
+		console.log(this.scene.animating);
 		if (!this.scene.animating) return;
 		if (!pokemon.isActive()) {
 			if (this.$statbar) this.$statbar.hide();
 			return;
 		}
+		console.log(pokemon.status);
 		if (!this.$statbar || pokemon.status === 'tmt') {
 			this.$statbar = $(this.getStatbarHTML(pokemon));
 			this.scene.$stat.append(this.$statbar);
