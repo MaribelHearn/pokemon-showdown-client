@@ -413,6 +413,10 @@ class BattleTextParser {
 
 	parseArgsInner(args: Args, kwArgs: KWArgs) {
 		let cmd = args[0];
+		if (args[4] === 'TMTRAINER') {
+			args[1] += args[4];
+		}
+		console.log(args[1]);
 		switch (cmd) {
 		case 'player': {
 			const [, side, name] = args;
@@ -467,9 +471,6 @@ class BattleTextParser {
 		}
 
 		case 'detailschange': case '-transform': case '-formechange': {
-			if (args[4] === 'TMTRAINER') {
-				args[1] += args[4];
-			}
 			const [, pokemon, arg2, arg3] = args;
 			let newSpecies = '';
 			switch (cmd) {
