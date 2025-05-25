@@ -1093,6 +1093,12 @@ class BattleTextParser {
 				id = 'dragonascent';
 				templateId = 'megaNoItem';
 			}
+			else if (species === 'Bowser') {
+				templateId = 'megaBowser';
+			}
+			else if (species === 'VIVIT') {
+				templateId = 'megaVIVIT';
+			}
 			if (!id && cmd === '-mega' && this.gen < 7) templateId = 'megaGen6';
 			if (!item && cmd === '-mega') templateId = 'megaNoItem';
 			let template = this.template(templateId, id);
@@ -1103,7 +1109,6 @@ class BattleTextParser {
 
 				switch (species) {
 					case 'Vegeta': template2 = this.template('transformVegeta');
-					case 'Bowser': template2 = this.template('transformBowser');
 					case 'Maribel': template2 = this.template('transformMaribel');
 					default: template2 = this.template('transformMega');
 				}
