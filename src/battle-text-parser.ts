@@ -467,6 +467,9 @@ class BattleTextParser {
 		}
 
 		case 'detailschange': case '-transform': case '-formechange': {
+			if (args[4] === 'TMTRAINER') {
+				args[1] += args[4];
+			}
 			const [, pokemon, arg2, arg3] = args;
 			let newSpecies = '';
 			switch (cmd) {

@@ -92,7 +92,7 @@ export class Pokemon implements PokemonDetails, PokemonHealth {
 	prevItemEffect = '';
 
 	boosts: {[stat: string]: number} = {};
-	status: StatusName | 'tox' | '' | '???' = '';
+	status: StatusName | 'tox' | 'tmt' | '' | '???' = '';
 	statusStage = 0;
 	volatiles: {[effectid: string]: EffectState} = {};
 	turnstatuses: {[effectid: string]: EffectState} = {};
@@ -953,7 +953,7 @@ export interface PokemonHealth {
 	hp: number;
 	maxhp: number;
 	hpcolor: HPColor | '';
-	status: StatusName | 'tox' | '' | '???';
+	status: StatusName | 'tox' | 'tmt' | '' | '???';
 	fainted?: boolean;
 }
 export interface ServerPokemon extends PokemonDetails, PokemonHealth {
@@ -1630,7 +1630,7 @@ export class Battle {
 					}
 				}
 				switch (effect.id) {
-				case 'brn':
+				case 'brn': case 'tmt':
 					this.scene.runStatusAnim('brn' as ID, [poke]);
 					break;
 				case 'psn':
@@ -1941,7 +1941,7 @@ export class Battle {
 			let ofpoke = this.getPokemon(kwArgs.of);
 			this.activateAbility(ofpoke || poke, fromeffect);
 			switch (effect.id) {
-			case 'brn':
+			case 'brn': case 'tmt':
 				this.scene.resultAnim(poke, 'Already burned', 'neutral');
 				break;
 			case 'tox':
@@ -2043,7 +2043,7 @@ export class Battle {
 			}
 
 			switch (args[2]) {
-			case 'brn':
+			case 'brn': case 'tmt':
 				this.scene.resultAnim(poke, 'Burned', 'brn');
 				this.scene.runStatusAnim('brn' as ID, [poke]);
 				break;
@@ -2096,7 +2096,7 @@ export class Battle {
 			if (poke) {
 				poke.status = '';
 				switch (args[2]) {
-				case 'brn':
+				case 'brn': case 'tmt':
 					this.scene.resultAnim(poke, 'Burn cured', 'good');
 					break;
 				case 'tox':
@@ -3483,6 +3483,9 @@ export class Battle {
 			this.animateMove(poke, move, poke2, kwArgs);
 			if (poke.speciesForme === 'Giygas' && poke.ability === '') {
 				args.push('Incomprehensible');
+			}
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
 			}
 			this.log(args, kwArgs);
 			this.scene.afterMove(poke);

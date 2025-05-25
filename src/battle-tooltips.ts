@@ -1742,7 +1742,7 @@ class BattleTooltips {
 		if (!value.value) return value;
 
 		// Other ability boosts
-		if (pokemon.status === 'brn' && move.category === 'Special') {
+		if (['brn', 'tmt'].includes(pokemon.status) && move.category === 'Special') {
 			value.abilityModify(1.5, "Flare Boost");
 		}
 		if (move.flags['pulse']) {
@@ -1757,7 +1757,7 @@ class BattleTooltips {
 		if (['psn', 'tox'].includes(pokemon.status) && move.category === 'Physical') {
 			value.abilityModify(1.5, "Toxic Boost");
 		}
-		if (this.battle.gen > 2 && serverPokemon.status === 'brn' && move.id !== 'facade' && move.category === 'Physical') {
+		if (this.battle.gen > 2 && ['brn', 'tmt'].includes(serverPokemon.status) && move.id !== 'facade' && move.category === 'Physical') {
 			if (!value.tryAbility("Guts")) value.modify(0.5, 'Burn');
 		}
 		if (['Rock', 'Ground', 'Steel'].includes(moveType) && this.battle.weather === 'sandstorm') {
