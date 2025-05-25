@@ -2064,9 +2064,14 @@ export class Battle {
 			}
 
 			switch (args[2]) {
-			case 'brn': case 'tmt':
+			case 'brn':
 				this.scene.resultAnim(poke, 'Burned', 'brn');
 				this.scene.runStatusAnim('brn' as ID, [poke]);
+				break;
+			case 'tmt':
+				this.scene.resultAnim(poke, 'Burned', 'brn');
+				this.scene.runStatusAnim('brn' as ID, [poke]);
+				this.scene.updateStatbar(poke);
 				break;
 			case 'tox':
 				this.scene.resultAnim(poke, 'Toxic poison', 'psn');
@@ -2220,6 +2225,9 @@ export class Battle {
 					break;
 				}
 			}
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -2282,6 +2290,9 @@ export class Battle {
 					break;
 				}
 			}
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -2328,6 +2339,9 @@ export class Battle {
 				this.activateAbility(poke, ability.name);
 			}
 			this.scene.updateWeather();
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -2340,6 +2354,9 @@ export class Battle {
 
 			if (ability.id) {
 				if (!poke.baseAbility) poke.baseAbility = ability.name;
+			}
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
 			}
 			this.log(args, kwArgs);
 			break;
@@ -2368,6 +2385,9 @@ export class Battle {
 			poke.searchid = args[1].substr(0, 2) + args[1].substr(3) + '|' + args[2];
 
 			this.scene.animTransform(poke, true, true);
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -2396,6 +2416,9 @@ export class Battle {
 			}
 			this.scene.animTransform(poke);
 			this.scene.resultAnim(poke, 'Transformed', 'good');
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(['-transform', args[1], args[2], tpoke.speciesForme], kwArgs);
 			break;
 		}
@@ -2415,6 +2438,9 @@ export class Battle {
 			}
 			poke.addVolatile('formechange' as ID, species.name); // the formechange volatile reminds us to revert the sprite change on switch-out
 			this.scene.animTransform(poke, isCustomAnim);
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -2423,6 +2449,9 @@ export class Battle {
 			let item = Dex.items.get(args[3]);
 			if (args[3]) {
 				poke.item = item.name;
+			}
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
 			}
 			this.log(args, kwArgs);
 			break;
@@ -2591,6 +2620,9 @@ export class Battle {
 			}
 			poke.addVolatile(effect.id);
 			this.scene.updateStatbar(poke);
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}

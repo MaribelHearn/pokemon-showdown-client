@@ -533,9 +533,6 @@ export class BattleScene implements BattleSceneStub {
 		}
 		animEntry.anim(this, participants.map(p => p.sprite));
 		console.log(moveid);
-		if (moveid === 'superglitch') {
-			this.updateStatbars();
-		}
 	}
 
 	runOtherAnim(moveid: ID, participants: Pokemon[]) {
