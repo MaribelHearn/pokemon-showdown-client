@@ -1629,9 +1629,6 @@ export class Battle {
 						itemPoke.item = effect.name;
 					}
 				}
-				if (effect.id === 'tmt') {
-					args[1] += 'TMTRAINER';
-				}
 				switch (effect.id) {
 				case 'brn': case 'tmt':
 					this.scene.runStatusAnim('brn' as ID, [poke]);
@@ -1670,6 +1667,9 @@ export class Battle {
 				args[3] = damageinfo;
 			}
 			this.scene.damageAnim(poke, Pokemon.getFormattedRange(range, 0, ' to '));
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -1705,6 +1705,9 @@ export class Battle {
 			}
 			this.scene.runOtherAnim('heal' as ID, [poke]);
 			this.scene.healAnim(poke, Pokemon.getFormattedRange(range, 0, ' to '));
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -1750,6 +1753,9 @@ export class Battle {
 				}
 			}
 			this.scene.resultAnim(poke, poke.getBoost(stat), 'good');
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -1775,6 +1781,9 @@ export class Battle {
 				this.activateAbility(ofpoke || poke, effect);
 			}
 			this.scene.resultAnim(poke, poke.getBoost(stat), 'bad');
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -1784,6 +1793,9 @@ export class Battle {
 			let amount = parseInt(args[3], 10);
 			poke.boosts[stat] = amount;
 			this.scene.resultAnim(poke, poke.getBoost(stat), (amount > 0 ? 'good' : 'bad'));
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
@@ -1933,6 +1945,9 @@ export class Battle {
 			let target = this.getPokemon(args[2]);
 			if (target) {
 				this.scene.resultAnim(target, 'Missed', 'neutral');
+				if (target.status === 'tmt') {
+					args.push('TMTRAINER');
+				}
 			}
 			this.log(args, kwArgs);
 			break;
@@ -1974,6 +1989,9 @@ export class Battle {
 				break;
 			}
 			this.scene.animReset(poke);
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
