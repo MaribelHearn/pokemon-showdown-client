@@ -1111,7 +1111,7 @@ class BattleTextParser {
 				let template2;
 
 				switch (species) {
-					case 'Vegeta': template2 = this.template('transformVegeta');
+					case 'Super Saiyan Vegeta': template2 = this.template('transformVegeta');
 					default: template2 = this.template('transformMega');
 				}
 

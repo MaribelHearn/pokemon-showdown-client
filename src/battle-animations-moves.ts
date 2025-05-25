@@ -32569,6 +32569,8 @@ BattleMoveAnims['matterstorm']={anim:BattleMoveAnims['sludgewave'].anim};
 BattleMoveAnims['perfectfreeze']={anim:BattleMoveAnims['blizzard'].anim};
 BattleMoveAnims['deathegg']={anim:BattleMoveAnims['eggbomb'].anim};
 BattleMoveAnims['glitchyterrain'] = {anim: BattleMoveAnims['mistyterrain'].anim};
+BattleMoveAnims['mysteriouspower'] = {anim: BattleMoveAnims['secretpower'].anim};
+BattleMoveAnims['overflowingunnaturalpower'] = {anim: BattleMoveAnims['focusenergy'].anim};
 BattleMoveAnims['download'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('#FFFFFF', 900, 0.5);
