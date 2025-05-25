@@ -416,7 +416,7 @@ class BattleTextParser {
 		if (args[4] === 'TMTRAINER') {
 			args[1] += args[4];
 		}
-		console.log(args[1]);
+		console.log(args);
 		switch (cmd) {
 		case 'player': {
 			const [, side, name] = args;
