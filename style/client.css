@@ -2070,7 +2070,7 @@ a.ilink.yours {
 	border-radius: 3px;
 	padding: 0 2px;
 }
-.status.brn {
+.status.brn, status.tmt {
 	background: #EE5533;
 }
 .status.psn, .status.tox {

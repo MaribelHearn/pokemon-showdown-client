@@ -2733,6 +2733,8 @@ export class PokemonSprite extends Sprite {
 		let status = '';
 		if (pokemon.status === 'brn') {
 			status += '<span class="brn">BRN</span> ';
+		} else if (pokemon.status === 'tmt') {
+			status += '<span class="brn">BRN</span> ';
 		} else if (pokemon.status === 'psn') {
 			status += '<span class="psn">PSN</span> ';
 		} else if (pokemon.status === 'tox') {

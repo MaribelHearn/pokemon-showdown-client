@@ -3063,7 +3063,7 @@ export class Battle {
 		// status parse
 		if (!status) {
 			output.status = '';
-		} else if (status === 'par' || status === 'brn' || status === 'slp' || status === 'frz' || status === 'tox') {
+		} else if (status === 'par' || status === 'brn' || status === 'tmt' || status === 'slp' || status === 'frz' || status === 'tox') {
 			output.status = status;
 		} else if (status === 'psn' && output.status !== 'tox') {
 			output.status = status;
@@ -3481,11 +3481,10 @@ export class Battle {
 			this.scene.beforeMove(poke);
 			this.useMove(poke, move, poke2, kwArgs);
 			this.animateMove(poke, move, poke2, kwArgs);
-			if (poke.speciesForme === 'Giygas' && poke.ability === '') {
-				args.push('Incomprehensible');
-			}
 			if (poke.status === 'tmt') {
 				args.push('TMTRAINER');
+			} else if (poke.speciesForme === 'Giygas' && poke.ability === '') {
+				args.push('Incomprehensible');
 			}
 			this.log(args, kwArgs);
 			this.scene.afterMove(poke);
