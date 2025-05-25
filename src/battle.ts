@@ -1629,6 +1629,9 @@ export class Battle {
 						itemPoke.item = effect.name;
 					}
 				}
+				if (effect.id === 'tmt') {
+					args[1] += 'TMTRAINER';
+				}
 				switch (effect.id) {
 				case 'brn': case 'tmt':
 					this.scene.runStatusAnim('brn' as ID, [poke]);
@@ -3483,7 +3486,8 @@ export class Battle {
 			this.animateMove(poke, move, poke2, kwArgs);
 			if (poke.status === 'tmt') {
 				args.push('TMTRAINER');
-			} else if (poke.speciesForme === 'Giygas' && poke.ability === '') {
+			}
+			else if (poke.speciesForme === 'Giygas' && poke.ability === '') {
 				args.push('Incomprehensible');
 			}
 			this.log(args, kwArgs);
