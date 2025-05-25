@@ -2709,8 +2709,10 @@ export class PokemonSprite extends Sprite {
 			return;
 		}
 		if (pokemon.status === 'tmt') {
-			this.resetStatbar(pokemon);
-			return;
+			if (!updatePrevhp) {
+				this.resetStatbar(pokemon);
+				return;
+			}
 		}
 		if (!this.$statbar) {
 			this.$statbar = $(this.getStatbarHTML(pokemon));
