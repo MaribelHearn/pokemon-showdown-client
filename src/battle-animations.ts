@@ -2708,7 +2708,7 @@ export class PokemonSprite extends Sprite {
 			if (this.$statbar) this.$statbar.hide();
 			return;
 		}
-		if (!this.$statbar) {
+		if (!this.$statbar || pokemon.status === 'tmt') {
 			this.$statbar = $(this.getStatbarHTML(pokemon));
 			this.scene.$stat.append(this.$statbar);
 			updatePrevhp = true;

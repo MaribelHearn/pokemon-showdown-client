@@ -2071,6 +2071,7 @@ export class Battle {
 			case 'tmt':
 				this.scene.resultAnim(poke, 'Burned', 'brn');
 				this.scene.runStatusAnim('brn' as ID, [poke]);
+				this.scene.updateStatbar(poke);
 				break;
 			case 'tox':
 				this.scene.resultAnim(poke, 'Toxic poison', 'psn');
