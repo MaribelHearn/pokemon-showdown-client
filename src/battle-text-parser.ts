@@ -1111,8 +1111,8 @@ class BattleTextParser {
 			let template = this.template(templateId, id);
 			const side = pokemon.slice(0, 2);
 			const pokemonName = this.pokemon(pokemon);
-			if (species === 'Vegeta' || species === 'Super Saiyan Vegeta') {
-				let template2= this.template('transformVegeta');
+			if (['Vegeta', 'Bowser', 'Maribel', 'VIVIT'].includes(species)) {
+				let template2 = this.template(`transform${species}`);
 				template += template2.replace('[POKEMON]', pokemonName).replace('[SPECIES]', species);
 			}
 			else if (cmd === '-mega') {
