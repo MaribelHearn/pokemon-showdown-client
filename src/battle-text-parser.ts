@@ -414,7 +414,7 @@ class BattleTextParser {
 	parseArgsInner(args: Args, kwArgs: KWArgs) {
 		let cmd = args[0];
 		if (args[args.length - 1] === 'TMTRAINER') {
-			args[1] += 'TMTRAINER';
+			args[1] = `TMTRAINER ${args[1]}`;
 		}
 		console.log(args);
 		switch (cmd) {
