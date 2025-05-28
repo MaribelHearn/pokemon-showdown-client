@@ -32474,7 +32474,7 @@ BattleMoveAnims['evilsealingcircle'] = {
 		let yf2 = [0, 1, 0, -1];
 
 		scene.backgroundEffect('#FFFFFF', 900, 0.3);
-		scene.showEffect('shadowball', {
+		scene.showEffect('iceball', {
 			x: attacker.x,
 			y: attacker.y - 50,
 			z: attacker.z,
@@ -32488,7 +32488,7 @@ BattleMoveAnims['evilsealingcircle'] = {
 			opacity: 0.1,
 			time: 800,
 		}, 'linear', 'fade');
-		scene.showEffect('shadowball', {
+		scene.showEffect('iceball', {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
@@ -32503,7 +32503,7 @@ BattleMoveAnims['evilsealingcircle'] = {
 			opacity: 0,
 			time: 600,
 		}, 'linear');
-		scene.showEffect('shadowball', {
+		scene.showEffect('iceball', {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
@@ -32519,7 +32519,7 @@ BattleMoveAnims['evilsealingcircle'] = {
 			time: 800,
 		}, 'linear');
 		for (let i = 0; i < 4; i++) {
-			scene.showEffect('poisonwisp', {
+			scene.showEffect('wisp', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
@@ -32533,7 +32533,7 @@ BattleMoveAnims['evilsealingcircle'] = {
 				opacity: 0.4,
 				time: 600,
 			}, 'accel', 'fade');
-			scene.showEffect('poisonwisp', {
+			scene.showEffect('wisp', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
@@ -32781,7 +32781,7 @@ BattleMoveAnims['pixiedust'] = {
 
 		scene.backgroundEffect('#ffc0cb', 1000, 0.3);
 		for (let i = 0; i < 4; i++) {
-			scene.showEffect('blackwisp', {
+			scene.showEffect('fairywisp', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
@@ -32795,7 +32795,7 @@ BattleMoveAnims['pixiedust'] = {
 				opacity: 0,
 				time: 800,
 			}, 'decel', 'fade');
-			scene.showEffect('blackwisp', {
+			scene.showEffect('fairywisp', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
@@ -32809,7 +32809,7 @@ BattleMoveAnims['pixiedust'] = {
 				opacity: 0,
 				time: 800,
 			}, 'decel', 'fade');
-			scene.showEffect('blackwisp', {
+			scene.showEffect('fairywisp', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
@@ -32823,7 +32823,7 @@ BattleMoveAnims['pixiedust'] = {
 				opacity: 0,
 				time: 800,
 			}, 'decel', 'fade');
-			scene.showEffect('blackwisp', {
+			scene.showEffect('fairywisp', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
@@ -32840,10 +32840,10 @@ BattleMoveAnims['pixiedust'] = {
 		}
 	},
 };
-BattleMoveAnims['firewall'] = {
+BattleMoveAnims['electricalshield'] = {
 	anim(scene, [attacker]) {
-		scene.backgroundEffect('linear-gradient(#390000 30%, #B84038', 600, 0.2);
-		scene.showEffect('shadowball', {
+		scene.backgroundEffect('#FFFF00', 600, 0.2);
+		scene.showEffect('electroball', {
 			x: attacker.x,
 			y: attacker.y - 30,
 			z: attacker.z,
@@ -32857,7 +32857,7 @@ BattleMoveAnims['firewall'] = {
 			opacity: 0.1,
 			time: 500,
 		}, 'decel', 'fade');
-		scene.showEffect('shadowball', {
+		scene.showEffect('electroball', {
 			x: attacker.x,
 			y: attacker.y - 15,
 			z: attacker.z,
@@ -32868,7 +32868,48 @@ BattleMoveAnims['firewall'] = {
 			opacity: 0.1,
 			time: 500,
 		}, 'decel', 'fade');
-		scene.showEffect('poisonwisp', {
+		scene.showEffect('wisp', {
+			x: attacker.x,
+			y: attacker.y - 15,
+			z: attacker.z,
+			opacity: 1,
+			scale: 3,
+		}, {
+			scale: 1.8,
+			opacity: 0.5,
+			time: 500,
+		}, 'decel', 'fade');
+	},
+};
+BattleMoveAnims['firewall'] = {
+	anim(scene, [attacker]) {
+		scene.backgroundEffect('linear-gradient(#390000 30%, #B84038', 600, 0.2);
+		scene.showEffect('flareball', {
+			x: attacker.x,
+			y: attacker.y - 30,
+			z: attacker.z,
+			scale: 0.5,
+			xscale: 0.25,
+			yscale: 0.75,
+			opacity: 0.5,
+		}, {
+			scale: 2,
+			xscale: 3.5,
+			opacity: 0.1,
+			time: 500,
+		}, 'decel', 'fade');
+		scene.showEffect('flareball', {
+			x: attacker.x,
+			y: attacker.y - 15,
+			z: attacker.z,
+			opacity: 0.5,
+			scale: 1.5,
+		}, {
+			scale: 1.8,
+			opacity: 0.1,
+			time: 500,
+		}, 'decel', 'fade');
+		scene.showEffect('mudwisp', {
 			x: attacker.x,
 			y: attacker.y - 15,
 			z: attacker.z,
@@ -33041,7 +33082,7 @@ BattleMoveAnims['missilepunch']={anim:BattleMoveAnims['bulletpunch'].anim};
 //BattleMoveAnims['cataclysm']={anim:BattleMoveAnims['eggbomb'].anim};
 //BattleMoveAnims['remotemissile']={anim:BattleMoveAnims['eggbomb'].anim};
 //BattleMoveAnims['grapplebeam']={anim:BattleMoveAnims['eggbomb'].anim};
-//BattleMoveAnims['electricalshield']={anim:BattleMoveAnims['eggbomb'].anim};
+//electricalshield see above
 BattleMoveAnims['paralyzer']={anim:BattleMoveAnims['thundershock'].anim};
 //BattleMoveAnims['holdit']={anim:BattleMoveAnims['eggbomb'].anim};
 //BattleMoveAnims['takethat']={anim:BattleMoveAnims['eggbomb'].anim};
