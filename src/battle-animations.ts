@@ -2844,6 +2844,16 @@ interface AnimData {
 export type AnimTable = {[k: string]: AnimData};
 
 const BattleEffects: {[k: string]: SpriteData} = {
+	// Fundex
+	fairywisp: {
+		url: 'fairywisp.png',
+		w: 100, h: 100,
+	},
+	objection: {
+		url: 'objection.png',
+		w: 108, h: 80,
+	},
+	// ------
 	wisp: {
 		url: 'wisp.png',
 		w: 100, h: 100,

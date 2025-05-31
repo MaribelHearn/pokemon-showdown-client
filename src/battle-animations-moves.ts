@@ -32550,6 +32550,23 @@ BattleMoveAnims['evilsealingcircle'] = {
 		}
 	},
 };
+BattleMoveAnims['objection'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('objection', {
+			x: attacker.x - 30,
+			y: attacker.y - 30,
+			z: attacker.z,
+			scale: 1,
+			xscale: 1,
+			yscale: 1,
+			opacity: 1,
+		}, {
+			scale: 1,
+			opacity: 1,
+			time: 1000,
+		}, 'decel', 'fade');
+	},
+};
 BattleMoveAnims['needleparade'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('energyball', {
@@ -32989,7 +33006,7 @@ BattleMoveAnims['goldenbracket']={anim:BattleMoveAnims['clamp'].anim};
 BattleMoveAnims['barrelroll']={anim:BattleMoveAnims['steelroller'].anim};
 BattleMoveAnims['umadbro']={anim:BattleMoveAnims['swagger'].anim};
 BattleMoveAnims['zerolaser']={anim:BattleMoveAnims['hyperbeam'].anim};
-BattleMoveAnims['objection']={anim:BattleMoveAnims['counter'].anim};
+//objection see above
 //stealthykick still TBD
 BattleMoveAnims['thunderdrumshot']={anim:BattleMoveAnims['electroball'].anim};
 //needleparade see above
