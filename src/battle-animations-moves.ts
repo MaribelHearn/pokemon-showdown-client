@@ -32573,6 +32573,7 @@ BattleMoveAnims['objection'] = {
 			xscale: 1,
 			yscale: 1,
 			opacity: 1,
+			time: 100,
 		}, {
 			scale: 0.05,
 			opacity: 1,
@@ -32586,6 +32587,7 @@ BattleMoveAnims['objection'] = {
 			xscale: 1,
 			yscale: 1,
 			opacity: 1,
+			time: 200,
 		}, {
 			scale: 0.05,
 			opacity: 1,
@@ -32599,6 +32601,7 @@ BattleMoveAnims['objection'] = {
 			xscale: 1,
 			yscale: 1,
 			opacity: 1,
+			time: 300,
 		}, {
 			scale: 0.05,
 			opacity: 1,
@@ -32612,6 +32615,7 @@ BattleMoveAnims['objection'] = {
 			xscale: 1,
 			yscale: 1,
 			opacity: 1,
+			time: 400,
 		}, {
 			scale: 0.05,
 			opacity: 1,
@@ -32625,6 +32629,7 @@ BattleMoveAnims['objection'] = {
 			xscale: 1,
 			yscale: 1,
 			opacity: 1,
+			time: 500,
 		}, {
 			scale: 0.05,
 			opacity: 1,
@@ -32638,6 +32643,7 @@ BattleMoveAnims['objection'] = {
 			xscale: 1,
 			yscale: 1,
 			opacity: 1,
+			time: 600,
 		}, {
 			scale: 0.05,
 			opacity: 1,
@@ -32651,6 +32657,7 @@ BattleMoveAnims['objection'] = {
 			xscale: 1,
 			yscale: 1,
 			opacity: 1,
+			time: 700,
 		}, {
 			scale: 0.05,
 			opacity: 1,
