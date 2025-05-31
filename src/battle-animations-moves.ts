@@ -32553,8 +32553,8 @@ BattleMoveAnims['evilsealingcircle'] = {
 BattleMoveAnims['objection'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('objection', {
-			x: attacker.x - 30,
-			y: attacker.y - 30,
+			x: attacker.x + 30,
+			y: attacker.y + 30,
 			z: attacker.z,
 			scale: 1,
 			xscale: 1,
