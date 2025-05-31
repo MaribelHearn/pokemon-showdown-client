@@ -32556,12 +32556,64 @@ BattleMoveAnims['objection'] = {
 			x: attacker.x + 30,
 			y: attacker.y + 30,
 			z: attacker.z,
-			scale: 1,
+			scale: 0.05,
 			xscale: 1,
 			yscale: 1,
 			opacity: 1,
 		}, {
-			scale: 1,
+			scale: 0.05,
+			opacity: 1,
+			time: 20,
+		}, 'decel', 'fade');
+		scene.showEffect('objection', {
+			x: attacker.x + 30,
+			y: attacker.y + 35,
+			z: attacker.z,
+			scale: 0.05,
+			xscale: 1,
+			yscale: 1,
+			opacity: 1,
+		}, {
+			scale: 0.05,
+			opacity: 1,
+			time: 40,
+		}, 'decel', 'fade');
+		scene.showEffect('objection', {
+			x: attacker.x + 30,
+			y: attacker.y + 25,
+			z: attacker.z,
+			scale: 0.05,
+			xscale: 1,
+			yscale: 1,
+			opacity: 1,
+		}, {
+			scale: 0.05,
+			opacity: 1,
+			time: 60,
+		}, 'decel', 'fade');
+		scene.showEffect('objection', {
+			x: attacker.x + 30,
+			y: attacker.y + 35,
+			z: attacker.z,
+			scale: 0.05,
+			xscale: 1,
+			yscale: 1,
+			opacity: 1,
+		}, {
+			scale: 0.05,
+			opacity: 1,
+			time: 80,
+		}, 'decel', 'fade');
+		scene.showEffect('objection', {
+			x: attacker.x + 30,
+			y: attacker.y + 30,
+			z: attacker.z,
+			scale: 0.05,
+			xscale: 1,
+			yscale: 1,
+			opacity: 1,
+		}, {
+			scale: 0.05,
 			opacity: 1,
 			time: 1000,
 		}, 'decel', 'fade');
