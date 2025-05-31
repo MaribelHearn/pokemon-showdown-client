@@ -814,11 +814,13 @@ class BattleTooltips {
 			text += `<p class="section"><strong>Possible Illusion #${illusionIndex}</strong>${levelBuf}</p>`;
 		}
 
+		const status = pokemon.status === 'tmt' ? 'brn' : pokemon.status;
+
 		if (pokemon.fainted) {
 			text += '<p><small>HP:</small> (fainted)</p>';
 		} else if (this.battle.hardcoreMode) {
 			if (serverPokemon) {
-				text += '<p><small>HP:</small> ' + serverPokemon.hp + '/' + serverPokemon.maxhp + (pokemon.status ? ' <span class="status ' + pokemon.status + '">' + pokemon.status.toUpperCase() + '</span>' : '') + '</p>';
+				text += '<p><small>HP:</small> ' + serverPokemon.hp + '/' + serverPokemon.maxhp + (status ? ' <span class="status ' + status + '">' + status.toUpperCase() + '</span>' : '') + '</p>';
 			}
 		} else {
 			let exacthp = '';
@@ -827,15 +829,15 @@ class BattleTooltips {
 			} else if (pokemon.maxhp === 48) {
 				exacthp = ' <small>(' + pokemon.hp + '/' + pokemon.maxhp + ' pixels)</small>';
 			}
-			text += '<p><small>HP:</small> ' + Pokemon.getHPText(pokemon) + exacthp + (pokemon.status ? ' <span class="status ' + pokemon.status + '">' + pokemon.status.toUpperCase() + '</span>' : '');
+			text += '<p><small>HP:</small> ' + Pokemon.getHPText(pokemon) + exacthp + (status ? ' <span class="status ' + status + '">' + status.toUpperCase() + '</span>' : '');
 			if (clientPokemon) {
-				if (pokemon.status === 'tox') {
+				if (status === 'tox') {
 					if (pokemon.ability === 'Poison Heal' || pokemon.ability === 'Magic Guard') {
 						text += ' <small>Would take if ability removed: ' + Math.floor(100 / 16 * Math.min(clientPokemon.statusData.toxicTurns + 1, 15)) + '%</small>';
 					} else {
 						text += ' Next damage: ' + Math.floor(100 / (clientPokemon.volatiles['dynamax'] ? 32 : 16) * Math.min(clientPokemon.statusData.toxicTurns + 1, 15)) + '%';
 					}
-				} else if (pokemon.status === 'slp') {
+				} else if (status === 'slp') {
 					text += ' Turns asleep: ' + clientPokemon.statusData.sleepTurns;
 				}
 			}
