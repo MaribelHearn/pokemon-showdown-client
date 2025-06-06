@@ -829,6 +829,8 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 		let results: SearchRow[] = [];
 		for (let id in BattlePokedex) {
 			switch (id) {
+			case '2012':
+				continue;
 			case 'bulbasaur':
 				results.push(['header', "Generation 1"]);
 				break;
@@ -869,6 +871,9 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 				continue;
 			}
 			results.push(['pokemon', id as ID]);
+			if (id === 'zalgo') {
+				results.push(['pokemon', id as ID]);
+			}
 		}
 		return results;
 	}
