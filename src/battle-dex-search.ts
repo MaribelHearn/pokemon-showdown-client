@@ -865,7 +865,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 			case 'pikachucosplay':
 				continue;
 			}
-			if (results[results.length - 1][0] === 'header' && results[results.length - 1][1] !== 'Fundex') {
+			if (results.length > 0 && results[results.length - 1][0] === 'header' && results[results.length - 1][1] !== 'Fundex') {
 				continue;
 			}
 			results.push(['pokemon', id as ID]);
