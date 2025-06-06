@@ -191,7 +191,7 @@
 		case 'html':
 			return '<li class="result">' + id + '</li>';
 		case 'header':
-			return '<li class="result" class="header-' + id.replace(/\s/g, "").toLowerCase() + '"><h3>' + id + '</h3></li>';
+			return '<li class="result" id="header-' + id.replace(/\s/g, "").toLowerCase() + '"><h3>' + id + '</h3></li>';
 		case 'sortpokemon':
 			return this.renderPokemonSortRow();
 		case 'sortmove':
