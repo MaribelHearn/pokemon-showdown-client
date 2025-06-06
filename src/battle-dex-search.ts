@@ -872,7 +872,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 			}
 			results.push(['pokemon', id as ID]);
 			if (id === 'zalgo') {
-				results.push(['pokemon', id as ID]);
+				results.push(['pokemon', '2012' as ID]);
 			}
 		}
 		return results;
