@@ -856,13 +856,16 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 			/*case 'missingno':
 				results.push(['header', "Glitch"]);
 				break;*/
-			case 'syclar':
+			case 'missingnooriginal':
 				results.push(['header', "CAP"]);
 				break;
 			case 'tentaquil':
 				results.push(['header', "Fundex"]);
 				break;
 			case 'pikachucosplay':
+				continue;
+			}
+			if (results[results.length - 1][0] === 'header' && results[results.length - 1][1] !== 'Fundex') {
 				continue;
 			}
 			results.push(['pokemon', id as ID]);
