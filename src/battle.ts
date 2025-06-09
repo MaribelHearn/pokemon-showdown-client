@@ -1410,8 +1410,9 @@ export class Battle {
 		if (fromeffect.id === 'sleeptalk') {
 			pokemon.rememberMove(move.name, 0);
 		}
-		if (move.id === 'telemetry') {
-			target?.rememberMove(target.lastMove);
+		if (move.id === 'telemetry' && target) {
+			const lastMove = this.dex.moves.get(target.lastMove);
+			target.rememberMove(target.lastMove, lastMove.pp);
 		}
 		let callerMoveForPressure = null;
 		// will not include effects that are conditions named after moves like Magic Coat and Snatch, which is good
