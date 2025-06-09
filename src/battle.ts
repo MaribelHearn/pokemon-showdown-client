@@ -1410,6 +1410,9 @@ export class Battle {
 		if (fromeffect.id === 'sleeptalk') {
 			pokemon.rememberMove(move.name, 0);
 		}
+		if (move.id === 'telemetry') {
+			target?.rememberMove(target.lastMove);
+		}
 		let callerMoveForPressure = null;
 		// will not include effects that are conditions named after moves like Magic Coat and Snatch, which is good
 		if (fromeffect.id && kwArgs.from.startsWith("move:")) {
