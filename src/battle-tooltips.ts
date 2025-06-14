@@ -1166,6 +1166,22 @@ class BattleTooltips {
 			stats.spa = Math.floor(stats.spa * 1.5);
 			stats.spd = Math.floor(stats.spd * 1.5);
 		}
+		if (item === 'natureengine' && species === 'Weepinmeleon') {
+			stats.spa = Math.floor(stats.spa * 1.5);
+			stats.spd = Math.floor(stats.spe * 1.5);
+		}
+		if (item === 'magmaengine' && species === 'Weepinmeleon') {
+			stats.spa = Math.floor(stats.atk * 1.5);
+			stats.spd = Math.floor(stats.spe * 1.5);
+		}
+		if (item === 'basicengine' && species === 'Venudrio') {
+			stats.spa = Math.floor(stats.def * 1.5);
+			stats.spd = Math.floor(stats.spd * 1.5);
+		}
+		if (item === 'venomengine' && species === 'Venudrio') {
+			stats.spa = Math.floor(stats.atk * 1.5);
+			stats.spd = Math.floor(stats.spa * 1.5);
+		}
 		if (clientPokemon && (ability === 'plus' || ability === 'minus')) {
 			let allyActive = clientPokemon.side.active;
 			if (allyActive.length > 1) {
