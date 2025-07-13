@@ -962,7 +962,6 @@ class ModdedDex {
 				data.tier = this.species.get(data.baseSpecies).tier;
 			}
 			if (data.gen > this.gen) {
-				console.log(data.gen + " illegal");
 				data.tier = 'Illegal';
 			}
 
