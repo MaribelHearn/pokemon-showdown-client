@@ -1168,7 +1168,7 @@
 			var species = this.curTeam.dex.species.get(set.species);
 			var isLetsGo = this.curTeam.format.includes('letsgo');
 			var isBDSP = this.curTeam.format.includes('bdsp');
-			var isNatDex = this.curTeam.format.includes('nationaldex') || this.curTeam.dex.species.number >= 2000;
+			var isNatDex = this.curTeam.format.includes('nationaldex') || this.curTeam.format.includes('fundex');
 			var buf = '<li value="' + i + '">';
 			if (!set.species) {
 				if (this.deletedSet) {
@@ -2589,7 +2589,7 @@
 			var set = this.curSet;
 			var isLetsGo = this.curTeam.format.includes('letsgo');
 			var isBDSP = this.curTeam.format.includes('bdsp');
-			var isNatDex = this.curTeam.gen === 8 && (this.curTeam.format.includes('nationaldex') || this.curTeam.dex.species.number >= 2000);
+			var isNatDex = this.curTeam.gen === 8 && (this.curTeam.format.includes('nationaldex')  || this.curTeam.format.includes('fundex'));
 			var species = this.curTeam.dex.species.get(set.species);
 			if (!set) return;
 			buf += '<div class="resultheader"><h3>Details</h3></div>';
@@ -2673,7 +2673,7 @@
 			var species = this.curTeam.dex.species.get(set.species);
 			var isLetsGo = this.curTeam.format.includes('letsgo');
 			var isBDSP = this.curTeam.format.includes('bdsp');
-			var isNatDex = this.curTeam.format.includes('nationaldex') || this.curTeam.dex.species.number >= 2000;
+			var isNatDex = this.curTeam.format.includes('nationaldex') || this.curTeam.format.includes('fundex');
 
 			// level
 			var level = parseInt(this.$chart.find('input[name=level]').val(), 10);
