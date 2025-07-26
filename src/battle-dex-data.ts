@@ -706,9 +706,10 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	aya: 1380 + 184,
 	kisume: 1380 + 185,
 	chucktesta: 1380 + 186,
-	uncledolan: 1380 + 187,
-	snakebusted: 1380 + 188,
-	chucktestabusted: 1380 + 189,
+	grandma: 1380 + 187,
+	grandmatriarch: 1380 + 188,
+	snakebusted: 1380 + 189,
+	chucktestabusted: 1380 + 190,
 };
 
 const BattlePokemonIconIndexesLeft: {[id: string]: number} = {
