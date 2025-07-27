@@ -33307,6 +33307,39 @@ BattleMoveAnims['barriercrash'] = {
 		scene.wait(500);
 	},
 };
+BattleMoveAnims['shieldbash'] = {
+	anim(scene, [attacker, defender]) {
+		attacker.anim({
+			x: defender.x,
+			y: defender.y,
+			z: defender.behind(-5),
+			time: 300,
+		}, 'accel');
+		scene.showEffect('shield', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 1,
+			opacity: 1,
+			time: 300,
+		}, {
+			scale: 1,
+			opacity: 1,
+			time: 200,
+		}, 'linear', 'explode');
+		attacker.anim({
+			time: 500,
+		}, 'ballistic2Back');
+		defender.delay(280);
+		defender.anim({
+			z: defender.behind(20),
+			time: 100,
+		}, 'swing');
+		defender.anim({
+			time: 300,
+		}, 'swing');
+	},
+};
 BattleMoveAnims['electricalshield'] = {
 	anim(scene, [attacker]) {
 		scene.backgroundEffect('#FFFF00', 600, 0.2);
@@ -33531,7 +33564,7 @@ BattleMoveAnims['acidbomb']={anim:BattleMoveAnims['sludgebomb'].anim};
 BattleMoveAnims['bulletspray']={anim:BattleMoveAnims['flameburst'].anim};
 //BattleMoveAnims['nosferatu']={anim:BattleMoveAnims['sludgewave'].anim};
 //barriercrash see above
-//BattleMoveAnims['shieldbash']={anim:BattleMoveAnims['sludgewave'].anim};
+//shieldbash see above
 //BattleMoveAnims['psirockin']={anim:BattleMoveAnims['sludgewave'].anim};
 BattleMoveAnims['thunderhand']={anim:BattleMoveAnims['thunderpunch'].anim};
 //BattleMoveAnims['tornadotentacle']={anim:BattleMoveAnims['sludgewave'].anim};
