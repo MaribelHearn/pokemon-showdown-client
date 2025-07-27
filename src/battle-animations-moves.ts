@@ -33245,6 +33245,28 @@ BattleMoveAnims['barriercrash'] = {
 			z: defender.z,
 			time: 100,
 		});
+		scene.showEffect('mistball', {
+			x: defender.x,
+			y: defender.y + 80,
+			z: defender.behind(-30),
+			opacity: 0.5,
+			scale: 1.5,
+		}, {
+			scale: 1.8,
+			opacity: 0.1,
+			time: 400,
+		}, 'decel', 'fade');
+		scene.showEffect('fairywisp', {
+			x: defender.x,
+			y: defender.y + 80,
+			z: defender.behind(-30),
+			opacity: 1,
+			scale: 3,
+		}, {
+			scale: 1.8,
+			opacity: 0.5,
+			time: 400,
+		}, 'decel', 'fade');
 		attacker.anim({
 			time: 500,
 		}, 'ballistic2Back');
