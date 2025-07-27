@@ -513,7 +513,7 @@ class BattleTextParser {
 			}
 			const template = this.template(templateName, id, kwArgs.msg ? '' : 'NODEFAULT');
 			const line1 = this.maybeAbility(kwArgs.from, kwArgs.of || pokemon);
-			return line1 + template.replace('[POKEMON]', this.pokemon(pokemon, tmtrainer)).replace('[SPECIES]', newSpecies);
+			return line1 + template.replace('[POKEMON]', this.pokemon(pokemon, tmtrainer)).replace('[SPECIES]', newSpecies).replace('-Busted', '.');
 		}
 
 		case 'switchout': {

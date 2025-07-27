@@ -33195,54 +33195,6 @@ BattleMoveAnims['pixiedust'] = {
 		}
 	},
 };
-BattleMoveAnims['acidbomb'] = {
-	anim(scene, [attacker, defender]) {
-		scene.showEffect('poisonwisp', {
-			x: attacker.x,
-			y: attacker.y,
-			z: attacker.z,
-			scale: 0.1,
-			opacity: 0,
-		}, {
-			x: defender.x,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.7,
-			opacity: 1,
-			time: 400,
-		}, 'ballistic', 'explode');
-		scene.showEffect('poisonwisp', {
-			x: attacker.x,
-			y: attacker.y,
-			z: attacker.z,
-			scale: 0.1,
-			opacity: 0,
-			time: 100,
-		}, {
-			x: defender.x + 40,
-			y: defender.y - 20,
-			z: defender.z,
-			scale: 0.7,
-			opacity: 1,
-			time: 500,
-		}, 'ballistic', 'explode');
-		scene.showEffect('poisonwisp', {
-			x: attacker.x,
-			y: attacker.y,
-			z: attacker.z,
-			scale: 0.1,
-			opacity: 0,
-			time: 200,
-		}, {
-			x: defender.x - 30,
-			y: defender.y - 10,
-			z: defender.z,
-			scale: 0.7,
-			opacity: 1,
-			time: 600,
-		}, 'ballistic', 'explode');
-	},
-};
 BattleMoveAnims['electricalshield'] = {
 	anim(scene, [attacker]) {
 		scene.backgroundEffect('#FFFF00', 600, 0.2);
@@ -33461,7 +33413,7 @@ BattleMoveAnims['thousandcuts']={anim:BattleMoveAnims['cut'].anim};
 //BattleMoveAnims['icyarrow']={anim:BattleMoveAnims['sludgewave'].anim};
 //BattleMoveAnims['plasmawhip']={anim:BattleMoveAnims['sludgewave'].anim};
 BattleMoveAnims['plasmaburst']={anim:BattleMoveAnims['discharge'].anim};
-//acidbomb see above
+BattleMoveAnims['acidbomb']={anim:BattleMoveAnims['sludgebomb'].anim};
 //pixiedust see above
 //BattleMoveAnims['knifethrow']={anim:BattleMoveAnims['sludgewave'].anim};
 //BattleMoveAnims['colorsplash']={anim:BattleMoveAnims['sludgewave'].anim};
