@@ -1107,6 +1107,10 @@ class BattleTextParser {
 			else if (species === 'Maribel') {
 				templateId = 'megaMaribel';
 			}
+			else if (species === 'Grandma') {
+				const randInt = Math.floor(Math.random() * 4);
+				templateId = ['megaGrandma1', 'megaGrandma2', 'megaGrandma3', 'megaGrandma4'][randInt];
+			}
 			if (!id && cmd === '-mega' && this.gen < 7) templateId = 'megaGen6';
 			if (!item && cmd === '-mega') templateId = 'megaNoItem';
 			let template = this.template(templateId, id);
