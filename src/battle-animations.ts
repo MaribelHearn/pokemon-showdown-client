@@ -2853,6 +2853,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'objection.png',
 		w: 108, h: 80,
 	},
+	shield: {
+		url: 'shield.png',
+		w: 82, h: 100,
+	},
 	// ------
 	wisp: {
 		url: 'wisp.png',
