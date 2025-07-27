@@ -34136,7 +34136,6 @@ BattleMoveAnims['koin3steps']={anim:BattleMoveAnims['focuspunch'].anim};
 //BattleMoveAnims['trainwreck']={anim:BattleMoveAnims['focuspunch'].anim};
 BattleMoveAnims['suzuranpoison']={anim:BattleMoveAnims['poisongas'].anim};
 BattleMoveAnims['lemmingsparade']={anim:BattleMoveAnims['spikecannon'].anim};
-//BattleMoveAnims['apollo13']={anim:BattleMoveAnims['focuspunch'].anim};
 BattleMoveAnims['explod']={anim:BattleMoveAnims['explosion'].anim};
 BattleMoveAnims['study']={anim:BattleMoveAnims['calmmind'].anim};
 BattleMoveAnims['corrupt']={anim:BattleMoveAnims['curse'].anim};
