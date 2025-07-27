@@ -1116,7 +1116,7 @@ class BattleTextParser {
 			let template = this.template(templateId, id);
 			const side = pokemon.slice(0, 2);
 			const pokemonName = this.pokemon(pokemon, tmtrainer);
-			if (['Vegeta', 'Bowser', 'Maribel', 'VIVIT'].includes(species)) {
+			if (['Vegeta', 'Bowser', 'Maribel', 'VIVIT', 'Grandma'].includes(species)) {
 				let template2 = this.template(`transform${species}`);
 				template += template2.replace('[POKEMON]', pokemonName).replace('[SPECIES]', species);
 			}
