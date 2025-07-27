@@ -33220,7 +33220,7 @@ BattleMoveAnims['barriercrash'] = {
 		}, {
 			scale: 1.8,
 			opacity: 0.1,
-			time: 400,
+			time: 350,
 		}, 'decel', 'fade');
 		scene.showEffect('fairywisp', {
 			x: attacker.x,
@@ -33231,7 +33231,7 @@ BattleMoveAnims['barriercrash'] = {
 		}, {
 			scale: 1.8,
 			opacity: 0.5,
-			time: 400,
+			time: 350,
 		}, 'decel', 'fade');
 		attacker.anim({
 			x: defender.x,
@@ -33251,11 +33251,11 @@ BattleMoveAnims['barriercrash'] = {
 			z: defender.behind(-30),
 			opacity: 0.5,
 			scale: 1.5,
-			time: 400,
+			time: 350,
 		}, {
 			scale: 1.8,
 			opacity: 0.1,
-			time: 50,
+			time: 100,
 		}, 'decel', 'fade');
 		scene.showEffect('fairywisp', {
 			x: defender.x,
@@ -33263,11 +33263,11 @@ BattleMoveAnims['barriercrash'] = {
 			z: defender.behind(-30),
 			opacity: 1,
 			scale: 3,
-			time: 400,
+			time: 350,
 		}, {
 			scale: 1.8,
 			opacity: 0.5,
-			time: 50,
+			time: 100,
 		}, 'decel', 'fade');
 		attacker.anim({
 			time: 500,
@@ -33286,7 +33286,7 @@ BattleMoveAnims['barriercrash'] = {
 			z: defender.behind(0),
 			opacity: 0.5,
 			scale: 1.5,
-			time: 500,
+			time: 450,
 		}, {
 			scale: 1.8,
 			opacity: 0.1,
@@ -33302,7 +33302,7 @@ BattleMoveAnims['barriercrash'] = {
 		}, {
 			scale: 1.8,
 			opacity: 0.5,
-			time: 50,
+			time: 100,
 		}, 'decel', 'fade');
 		scene.wait(500);
 	},
@@ -33530,7 +33530,7 @@ BattleMoveAnims['acidbomb']={anim:BattleMoveAnims['sludgebomb'].anim};
 //BattleMoveAnims['deathsickle']={anim:BattleMoveAnims['sludgewave'].anim};
 BattleMoveAnims['bulletspray']={anim:BattleMoveAnims['flameburst'].anim};
 //BattleMoveAnims['nosferatu']={anim:BattleMoveAnims['sludgewave'].anim};
-//BattleMoveAnims['barriercrash']={anim:BattleMoveAnims['sludgewave'].anim};
+//barriercrash see above
 //BattleMoveAnims['shieldbash']={anim:BattleMoveAnims['sludgewave'].anim};
 //BattleMoveAnims['psirockin']={anim:BattleMoveAnims['sludgewave'].anim};
 BattleMoveAnims['thunderhand']={anim:BattleMoveAnims['thunderpunch'].anim};
