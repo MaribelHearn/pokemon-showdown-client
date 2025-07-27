@@ -33034,7 +33034,7 @@ BattleMoveAnims['needleparade'] = {
 		}, 'linear', 'explode');
 	},
 };
-BattleMoveAnims['download'] = {
+BattleMoveAnims['bittorrent'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('#FFFFFF', 900, 0.5);
 		BattleOtherAnims.drain.anim(scene, [attacker, defender]);
@@ -33193,6 +33193,70 @@ BattleMoveAnims['pixiedust'] = {
 				time: 800,
 			}, 'decel', 'fade');
 		}
+	},
+};
+BattleMoveAnims['barriercrash'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('mistball', {
+			x: attacker.x,
+			y: attacker.y - 30,
+			z: attacker.z,
+			scale: 0.5,
+			xscale: 0.25,
+			yscale: 0.75,
+			opacity: 0.5,
+		}, {
+			scale: 2,
+			xscale: 3.5,
+			opacity: 0.1,
+			time: 500,
+		}, 'decel', 'fade');
+		scene.showEffect('mistball', {
+			x: attacker.x,
+			y: attacker.y - 15,
+			z: attacker.z,
+			opacity: 0.5,
+			scale: 1.5,
+		}, {
+			scale: 1.8,
+			opacity: 0.1,
+			time: 500,
+		}, 'decel', 'fade');
+		scene.showEffect('fairywisp', {
+			x: attacker.x,
+			y: attacker.y - 15,
+			z: attacker.z,
+			opacity: 1,
+			scale: 3,
+		}, {
+			scale: 1.8,
+			opacity: 0.5,
+			time: 500,
+		}, 'decel', 'fade');
+		attacker.anim({
+			x: defender.x,
+			y: defender.y + 80,
+			z: defender.behind(-30),
+			time: 400,
+		}, 'ballistic');
+		attacker.anim({
+			x: defender.x,
+			y: defender.y + 5,
+			z: defender.z,
+			time: 100,
+		});
+		attacker.anim({
+			time: 500,
+		}, 'ballistic2Back');
+		defender.delay(450);
+		defender.anim({
+			z: defender.behind(20),
+			time: 100,
+		}, 'swing');
+		defender.anim({
+			time: 300,
+		}, 'swing');
+		scene.wait(500);
 	},
 };
 BattleMoveAnims['electricalshield'] = {
@@ -33379,11 +33443,8 @@ BattleMoveAnims['expandedonbashira']={anim:BattleMoveAnims['woodhammer'].anim};
 BattleMoveAnims['countdown']={anim:BattleMoveAnims['skullbash'].anim,prepareAnim:BattleOtherAnims.chargestatus.anim};
 BattleMoveAnims['systemcrash']={anim:BattleMoveAnims['explosion'].anim};
 //BattleMoveAnims['malfunction']={anim:BattleMoveAnims['extremespeed'].anim};
-//BattleMoveAnims['reboot']={anim:BattleMoveAnims['extremespeed'].anim};
-BattleMoveAnims['recoveryconsole']={anim:BattleMoveAnims['recover'].anim};
 BattleMoveAnims['strengthenjutsu']={anim:BattleMoveAnims['nastyplot'].anim};
 BattleMoveAnims['washingmachine']={anim:BattleMoveAnims['whirlpool'].anim};
-//download see above
 BattleMoveAnims['programfreeze']={anim:BattleMoveAnims['sheercold'].anim};
 BattleMoveAnims['datastream']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['silverlight']={anim:BattleMoveAnims['flash'].anim};
