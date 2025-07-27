@@ -33251,10 +33251,11 @@ BattleMoveAnims['barriercrash'] = {
 			z: defender.behind(-30),
 			opacity: 0.5,
 			scale: 1.5,
+			time: 400,
 		}, {
 			scale: 1.8,
 			opacity: 0.1,
-			time: 400,
+			time: 100,
 		}, 'decel', 'fade');
 		scene.showEffect('fairywisp', {
 			x: defender.x,
@@ -33262,10 +33263,11 @@ BattleMoveAnims['barriercrash'] = {
 			z: defender.behind(-30),
 			opacity: 1,
 			scale: 3,
+			time: 400,
 		}, {
 			scale: 1.8,
 			opacity: 0.5,
-			time: 400,
+			time: 100,
 		}, 'decel', 'fade');
 		attacker.anim({
 			time: 500,
@@ -33278,6 +33280,30 @@ BattleMoveAnims['barriercrash'] = {
 		defender.anim({
 			time: 300,
 		}, 'swing');
+		scene.showEffect('mistball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.behind(0),
+			opacity: 0.5,
+			scale: 1.5,
+			time: 500,
+		}, {
+			scale: 1.8,
+			opacity: 0.1,
+			time: 100,
+		}, 'decel', 'fade');
+		scene.showEffect('fairywisp', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.behind(0),
+			opacity: 1,
+			scale: 3,
+			time: 500,
+		}, {
+			scale: 1.8,
+			opacity: 0.5,
+			time: 100,
+		}, 'decel', 'fade');
 		scene.wait(500);
 	},
 };
