@@ -33300,16 +33300,16 @@ BattleMoveAnims['shieldbash'] = {
 			time: 300,
 		}, 'accel');
 		scene.showEffect('shield', {
-			x: attacker.x,
-			y: attacker.y,
-			z: attacker.z,
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
 			scale: 1,
 			opacity: 1,
 			time: 300,
 		}, {
 			scale: 1,
 			opacity: 1,
-			time: 300,
+			time: 500,
 		}, 'decel', 'fade');
 		attacker.anim({
 			time: 500,
