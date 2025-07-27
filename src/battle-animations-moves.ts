@@ -33310,7 +33310,7 @@ BattleMoveAnims['shieldbash'] = {
 			scale: 1,
 			opacity: 1,
 			time: 500,
-		}, 'decel', 'fade');
+		}, 'decel', 'explode');
 		attacker.anim({
 			time: 500,
 		}, 'ballistic2Back');
