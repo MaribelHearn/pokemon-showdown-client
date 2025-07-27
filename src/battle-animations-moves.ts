@@ -32797,8 +32797,6 @@ BattleMoveAnims['objection'] = {
 			y: attacker.y + 30,
 			z: attacker.z,
 			scale: 0.05,
-			xscale: 1,
-			yscale: 1,
 			opacity: 1,
 		}, {
 			scale: 0.05,
@@ -32810,8 +32808,6 @@ BattleMoveAnims['objection'] = {
 			y: attacker.y + 35,
 			z: attacker.z,
 			scale: 0.05,
-			xscale: 1,
-			yscale: 1,
 			opacity: 1,
 			time: 50,
 		}, {
@@ -32824,8 +32820,6 @@ BattleMoveAnims['objection'] = {
 			y: attacker.y + 25,
 			z: attacker.z,
 			scale: 0.05,
-			xscale: 1,
-			yscale: 1,
 			opacity: 1,
 			time: 100,
 		}, {
@@ -32838,8 +32832,6 @@ BattleMoveAnims['objection'] = {
 			y: attacker.y + 35,
 			z: attacker.z,
 			scale: 0.05,
-			xscale: 1,
-			yscale: 1,
 			opacity: 1,
 			time: 150,
 		}, {
@@ -32852,8 +32844,6 @@ BattleMoveAnims['objection'] = {
 			y: attacker.y + 25,
 			z: attacker.z,
 			scale: 0.05,
-			xscale: 1,
-			yscale: 1,
 			opacity: 1,
 			time: 200,
 		}, {
@@ -32866,8 +32856,6 @@ BattleMoveAnims['objection'] = {
 			y: attacker.y + 35,
 			z: attacker.z,
 			scale: 0.05,
-			xscale: 1,
-			yscale: 1,
 			opacity: 1,
 			time: 250,
 		}, {
@@ -32880,8 +32868,6 @@ BattleMoveAnims['objection'] = {
 			y: attacker.y + 25,
 			z: attacker.z,
 			scale: 0.05,
-			xscale: 1,
-			yscale: 1,
 			opacity: 1,
 			time: 300,
 		}, {
@@ -32894,8 +32880,6 @@ BattleMoveAnims['objection'] = {
 			y: attacker.y + 30,
 			z: attacker.z,
 			scale: 0.05,
-			xscale: 1,
-			yscale: 1,
 			opacity: 1,
 			time: 350,
 		}, {
@@ -33325,8 +33309,8 @@ BattleMoveAnims['shieldbash'] = {
 		}, {
 			scale: 1,
 			opacity: 1,
-			time: 200,
-		}, 'linear', 'explode');
+			time: 300,
+		}, 'decel', 'fade');
 		attacker.anim({
 			time: 500,
 		}, 'ballistic2Back');
