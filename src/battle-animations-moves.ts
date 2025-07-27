@@ -32807,7 +32807,7 @@ BattleMoveAnims['offwaves'] = {
 				scale: 1,
 				xscale: 5,
 				opacity: 0.8,
-				time: times[0] * i,
+				time: times[4] * (i - 1),
 			}, {
 				scale: 2,
 				xscale: 8,
@@ -34250,7 +34250,7 @@ BattleMoveAnims['glitchyterrain'] = {anim: BattleMoveAnims['mistyterrain'].anim}
 //BattleMoveAnims['rainbowufosofterror']={anim:BattleMoveAnims['eggbomb'].anim};
 BattleMoveAnims['mysteriouspower'] = {anim: BattleMoveAnims['secretpower'].anim};
 BattleMoveAnims['finaljudgment']={anim:BattleMoveAnims['judgment'].anim};
-//BattleMoveAnims['offwaves']={anim:BattleMoveAnims['eggbomb'].anim};
+//offwaves see above
 //narrowconfines see above
 //BattleMoveAnims['maxmystery']={anim:BattleMoveAnims['eggbomb'].anim};
 BattleMoveAnims['unrealunraveling'] = {anim: BattleMoveAnims['wringout'].anim};
