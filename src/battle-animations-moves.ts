@@ -32579,13 +32579,89 @@ BattleMoveAnims['overheadslash'] = {
 			x: defender.x,
 			y: defender.y + 20,
 			z: defender.z,
-			scale: 3.5,
+			scale: 3,
 			opacity: 1,
 			time: 500,
 		}, {
-			scale: 3.5,
+			scale: 3,
 			opacity: 0,
 			time: 900,
+		}, 'linear', 'fade');
+	},
+};
+BattleMoveAnims['remotemissile'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('missile', {
+			x: attacker.x,
+			y: attacker.y - 10,
+			z: attacker.z,
+			opacity: 1,
+		}, {
+			opacity: 0,
+			time: 100,
+		}, 'linear', 'fade');
+		scene.showEffect('missile', {
+			x: attacker.x,
+			y: attacker.y - 15,
+			z: attacker.behind(10),
+			opacity: 1,
+		}, {
+			opacity: 0,
+			time: 200,
+		}, 'linear', 'fade');
+		scene.showEffect('missile', {
+			x: attacker.x,
+			y: attacker.y - 20,
+			z: attacker.z,
+			opacity: 1,
+		}, {
+			opacity: 0,
+			time: 300,
+		}, 'linear', 'fade');
+		scene.showEffect('missile', {
+			x: attacker.x,
+			y: attacker.y - 20,
+			z: attacker.behind(-20),
+			opacity: 1,
+		}, {
+			opacity: 0,
+			time: 400,
+		}, 'linear', 'fade');
+		scene.showEffect('missile', {
+			x: attacker.x,
+			y: attacker.y - 20,
+			z: attacker.behind(-40),
+			opacity: 1,
+		}, {
+			opacity: 0,
+			time: 500,
+		}, 'linear', 'fade');
+		scene.showEffect('missile', {
+			x: defender.x,
+			y: defender.y - 20,
+			z: defender.behind(-40),
+			opacity: 1,
+		}, {
+			opacity: 0,
+			time: 600,
+		}, 'linear', 'fade');
+		scene.showEffect('missile', {
+			x: defender.x,
+			y: defender.y - 20,
+			z: defender.behind(-20),
+			opacity: 1,
+		}, {
+			opacity: 0,
+			time: 700,
+		}, 'linear', 'fade');
+		scene.showEffect('missile', {
+			x: defender.x,
+			y: defender.y - 20,
+			z: defender.z,
+			opacity: 1,
+		}, {
+			opacity: 0,
+			time: 800,
 		}, 'linear', 'fade');
 	},
 };
@@ -34413,7 +34489,7 @@ BattleMoveAnims['magicaltempest']={anim:BattleMoveAnims['thunder'].anim};
 BattleMoveAnims['handofdestruction']={anim:BattleMoveAnims['punishment'].anim};
 //BattleMoveAnims['matterstorm']={anim:BattleMoveAnims['sludgewave'].anim};
 //thousandcuts see above
-//BattleMoveAnims['overheadslash']={anim:BattleMoveAnims['sludgewave'].anim};
+//overheadslash see above
 //BattleMoveAnims['graspinghands']={anim:BattleMoveAnims['sludgewave'].anim};
 //arrowrain see above
 //flamingarrow see above
@@ -34439,7 +34515,7 @@ BattleMoveAnims['missilepunch']={anim:BattleMoveAnims['bulletpunch'].anim};
 //BattleMoveAnims['galickgun']={anim:BattleMoveAnims['eggbomb'].anim};
 //lightarrow see above
 BattleMoveAnims['cataclysm']={anim:BattleMoveAnims['dracometeor'].anim};
-//BattleMoveAnims['remotemissile']={anim:BattleMoveAnims['eggbomb'].anim};
+//remotemissile see above
 //BattleMoveAnims['grapplebeam']={anim:BattleMoveAnims['eggbomb'].anim};
 //electricalshield see above
 BattleMoveAnims['paralyzer']={anim:BattleMoveAnims['thundershock'].anim};
@@ -34457,8 +34533,8 @@ BattleMoveAnims['mysteriouspower'] = {anim: BattleMoveAnims['secretpower'].anim}
 BattleMoveAnims['finaljudgment']={anim:BattleMoveAnims['judgment'].anim};
 //offwaves see above
 //narrowconfines see above
-//BattleMoveAnims['maxmystery']={anim:BattleMoveAnims['eggbomb'].anim};
 BattleMoveAnims['unrealunraveling'] = {anim: BattleMoveAnims['wringout'].anim};
+//BattleMoveAnims['maxmystery']={anim:BattleMoveAnims['eggbomb'].anim};
 BattleMoveAnims['immafirinmahlazer'] = {anim: BattleMoveAnims['aeroblast'].anim};
 BattleMoveAnims['perfectfreeze'] = {anim: BattleMoveAnims['sheercold'].anim};
 BattleMoveAnims['spartakick'] = {anim: BattleMoveAnims['highjumpkick'].anim};

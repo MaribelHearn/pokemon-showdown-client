@@ -2857,6 +2857,14 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'shield.png',
 		w: 82, h: 100,
 	},
+	overheadslash: {
+		url: 'overheadslash.png',
+		w: 57, h: 56,
+	},
+	missile: {
+		url: 'missile.png',
+		w: 64, h: 64,
+	},
 	// ------
 	wisp: {
 		url: 'wisp.png',
@@ -3008,10 +3016,6 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	},
 	rightslash: {
 		url: 'rightslash.png', // by Pokemon Showdown user Modeling Clay
-		w: 57, h: 56,
-	},
-	overheadslash: {
-		url: 'overheadslash.png',
 		w: 57, h: 56,
 	},
 	leftchop: {
