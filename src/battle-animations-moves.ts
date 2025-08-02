@@ -32676,6 +32676,7 @@ BattleMoveAnims['remotemissile'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
+			time: 800,
 		}, {
 			scale: 6,
 			opacity: 0,
@@ -32686,7 +32687,7 @@ BattleMoveAnims['remotemissile'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
-			time: 150,
+			time: 950,
 		}, {
 			scale: 6,
 			opacity: 0,
@@ -32697,7 +32698,7 @@ BattleMoveAnims['remotemissile'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
-			time: 300,
+			time: 1100,
 		}, {
 			scale: 6,
 			opacity: 0,
