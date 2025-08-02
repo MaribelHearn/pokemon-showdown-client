@@ -32466,6 +32466,97 @@ BattleMoveAnims['surgingstrikes'] = {anim: BattleMoveAnims['aquajet'].anim};
 BattleMoveAnims['eeriespell'] = {anim: BattleMoveAnims['psyshock'].anim};
 
 // Fundex
+BattleMoveAnims['thousandcuts'] = {
+	anim(scene, [attacker]) {
+		scene.showEffect('leftslash', {
+			x: attacker.x - 10,
+			y: attacker.y - 10,
+			z: attacker.z,
+			scale: 0.7,
+			opacity: 0.3,
+		}, {
+			opacity: 0,
+			time: 300,
+		}, 'decel');
+		scene.showEffect('rightslash', {
+			x: attacker.x + 20,
+			y: attacker.y - 15,
+			z: attacker.z,
+			scale: 0.7,
+			opacity: 0.3,
+			time: 50,
+		}, {
+			opacity: 0,
+			time: 350,
+		}, 'decel');
+		scene.showEffect('leftslash', {
+			x: attacker.x - 5,
+			y: attacker.y + 15,
+			z: attacker.z,
+			scale: 0.7,
+			opacity: 0.3,
+			time: 100,
+		}, {
+			opacity: 0,
+			time: 400,
+		}, 'decel');
+		scene.showEffect('rightslash', {
+			x: attacker.x + 5,
+			y: attacker.y - 10,
+			z: attacker.z,
+			scale: 0.7,
+			opacity: 0.3,
+			time: 150,
+		}, {
+			opacity: 0,
+			time: 450,
+		}, 'decel');
+		scene.showEffect('leftslash', {
+			x: attacker.x - 10,
+			y: attacker.y - 10,
+			z: attacker.z,
+			scale: 0.7,
+			opacity: 0.3,
+			time: 200,
+		}, {
+			opacity: 0,
+			time: 500,
+		}, 'decel');
+		scene.showEffect('rightslash', {
+			x: attacker.x + 20,
+			y: attacker.y - 15,
+			z: attacker.z,
+			scale: 0.7,
+			opacity: 0.3,
+			time: 250,
+		}, {
+			opacity: 0,
+			time: 550,
+		}, 'decel');
+		scene.showEffect('leftslash', {
+			x: attacker.x - 5,
+			y: attacker.y + 15,
+			z: attacker.z,
+			scale: 0.7,
+			opacity: 0.3,
+			time: 300,
+		}, {
+			opacity: 0,
+			time: 600,
+		}, 'decel');
+		scene.showEffect('rightslash', {
+			x: attacker.x + 5,
+			y: attacker.y - 10,
+			z: attacker.z,
+			scale: 0.7,
+			opacity: 0.3,
+			time: 350,
+		}, {
+			opacity: 0,
+			time: 650,
+		}, 'decel');
+	},
+};
 BattleMoveAnims['fantasyseal'] = {
 	anim(scene, [attacker, defender]) {
 		// 1
