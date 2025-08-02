@@ -34380,7 +34380,7 @@ BattleMoveAnims['zantetsuken']={anim:BattleMoveAnims['slash'].anim};
 BattleMoveAnims['magicaltempest']={anim:BattleMoveAnims['thunder'].anim};
 BattleMoveAnims['handofdestruction']={anim:BattleMoveAnims['punishment'].anim};
 //BattleMoveAnims['matterstorm']={anim:BattleMoveAnims['sludgewave'].anim};
-BattleMoveAnims['thousandcuts']={anim:BattleMoveAnims['cut'].anim};
+//thousandcuts see above
 //BattleMoveAnims['overheadslash']={anim:BattleMoveAnims['sludgewave'].anim};
 //BattleMoveAnims['graspinghands']={anim:BattleMoveAnims['sludgewave'].anim};
 //arrowrain see above
