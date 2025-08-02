@@ -32467,22 +32467,20 @@ BattleMoveAnims['eeriespell'] = {anim: BattleMoveAnims['psyshock'].anim};
 
 // Fundex
 BattleMoveAnims['thousandcuts'] = {
-	anim(scene, [attacker]) {
+	anim(scene, [attacker, defender]) {
 		scene.showEffect('leftslash', {
-			x: attacker.x - 10,
-			y: attacker.y - 10,
-			z: attacker.z,
-			scale: 0.7,
+			x: defender.x - 10,
+			y: defender.y - 10,
+			z: defender.z,
 			opacity: 0.3,
 		}, {
 			opacity: 0,
 			time: 300,
 		}, 'decel');
 		scene.showEffect('rightslash', {
-			x: attacker.x + 20,
-			y: attacker.y - 15,
-			z: attacker.z,
-			scale: 0.7,
+			x: defender.x + 20,
+			y: defender.y - 15,
+			z: defender.z,
 			opacity: 0.3,
 			time: 100,
 		}, {
@@ -32490,10 +32488,9 @@ BattleMoveAnims['thousandcuts'] = {
 			time: 400,
 		}, 'decel');
 		scene.showEffect('leftslash', {
-			x: attacker.x - 5,
-			y: attacker.y + 15,
-			z: attacker.z,
-			scale: 0.7,
+			x: defender.x - 5,
+			y: defender.y + 15,
+			z: defender.z,
 			opacity: 0.3,
 			time: 200,
 		}, {
@@ -32501,10 +32498,9 @@ BattleMoveAnims['thousandcuts'] = {
 			time: 500,
 		}, 'decel');
 		scene.showEffect('rightslash', {
-			x: attacker.x + 5,
-			y: attacker.y - 10,
-			z: attacker.z,
-			scale: 0.7,
+			x: defender.x + 5,
+			y: defender.y - 10,
+			z: defender.z,
 			opacity: 0.3,
 			time: 300,
 		}, {
@@ -32512,10 +32508,9 @@ BattleMoveAnims['thousandcuts'] = {
 			time: 600,
 		}, 'decel');
 		scene.showEffect('leftslash', {
-			x: attacker.x - 10,
-			y: attacker.y - 10,
-			z: attacker.z,
-			scale: 0.7,
+			x: defender.x - 10,
+			y: defender.y - 10,
+			z: defender.z,
 			opacity: 0.3,
 			time: 400,
 		}, {
@@ -32523,10 +32518,9 @@ BattleMoveAnims['thousandcuts'] = {
 			time: 700,
 		}, 'decel');
 		scene.showEffect('rightslash', {
-			x: attacker.x + 20,
-			y: attacker.y - 15,
-			z: attacker.z,
-			scale: 0.7,
+			x: defender.x + 20,
+			y: defender.y - 15,
+			z: defender.z,
 			opacity: 0.3,
 			time: 500,
 		}, {
@@ -32534,10 +32528,9 @@ BattleMoveAnims['thousandcuts'] = {
 			time: 800,
 		}, 'decel');
 		scene.showEffect('leftslash', {
-			x: attacker.x - 5,
-			y: attacker.y + 15,
-			z: attacker.z,
-			scale: 0.7,
+			x: defender.x - 5,
+			y: defender.y + 15,
+			z: defender.z,
 			opacity: 0.3,
 			time: 600,
 		}, {
@@ -32545,10 +32538,9 @@ BattleMoveAnims['thousandcuts'] = {
 			time: 900,
 		}, 'decel');
 		scene.showEffect('rightslash', {
-			x: attacker.x + 5,
-			y: attacker.y - 10,
-			z: attacker.z,
-			scale: 0.7,
+			x: defender.x + 5,
+			y: defender.y - 10,
+			z: defender.z,
 			opacity: 0.3,
 			time: 700,
 		}, {
