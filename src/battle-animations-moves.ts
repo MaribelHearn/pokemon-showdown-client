@@ -32484,36 +32484,14 @@ BattleMoveAnims['thousandcuts'] = {
 			z: attacker.z,
 			scale: 0.7,
 			opacity: 0.3,
-			time: 50,
-		}, {
-			opacity: 0,
-			time: 350,
-		}, 'decel');
-		scene.showEffect('leftslash', {
-			x: attacker.x - 5,
-			y: attacker.y + 15,
-			z: attacker.z,
-			scale: 0.7,
-			opacity: 0.3,
 			time: 100,
 		}, {
 			opacity: 0,
 			time: 400,
 		}, 'decel');
-		scene.showEffect('rightslash', {
-			x: attacker.x + 5,
-			y: attacker.y - 10,
-			z: attacker.z,
-			scale: 0.7,
-			opacity: 0.3,
-			time: 150,
-		}, {
-			opacity: 0,
-			time: 450,
-		}, 'decel');
 		scene.showEffect('leftslash', {
-			x: attacker.x - 10,
-			y: attacker.y - 10,
+			x: attacker.x - 5,
+			y: attacker.y + 15,
 			z: attacker.z,
 			scale: 0.7,
 			opacity: 0.3,
@@ -32523,19 +32501,8 @@ BattleMoveAnims['thousandcuts'] = {
 			time: 500,
 		}, 'decel');
 		scene.showEffect('rightslash', {
-			x: attacker.x + 20,
-			y: attacker.y - 15,
-			z: attacker.z,
-			scale: 0.7,
-			opacity: 0.3,
-			time: 250,
-		}, {
-			opacity: 0,
-			time: 550,
-		}, 'decel');
-		scene.showEffect('leftslash', {
-			x: attacker.x - 5,
-			y: attacker.y + 15,
+			x: attacker.x + 5,
+			y: attacker.y - 10,
 			z: attacker.z,
 			scale: 0.7,
 			opacity: 0.3,
@@ -32544,16 +32511,49 @@ BattleMoveAnims['thousandcuts'] = {
 			opacity: 0,
 			time: 600,
 		}, 'decel');
+		scene.showEffect('leftslash', {
+			x: attacker.x - 10,
+			y: attacker.y - 10,
+			z: attacker.z,
+			scale: 0.7,
+			opacity: 0.3,
+			time: 400,
+		}, {
+			opacity: 0,
+			time: 700,
+		}, 'decel');
+		scene.showEffect('rightslash', {
+			x: attacker.x + 20,
+			y: attacker.y - 15,
+			z: attacker.z,
+			scale: 0.7,
+			opacity: 0.3,
+			time: 500,
+		}, {
+			opacity: 0,
+			time: 800,
+		}, 'decel');
+		scene.showEffect('leftslash', {
+			x: attacker.x - 5,
+			y: attacker.y + 15,
+			z: attacker.z,
+			scale: 0.7,
+			opacity: 0.3,
+			time: 600,
+		}, {
+			opacity: 0,
+			time: 900,
+		}, 'decel');
 		scene.showEffect('rightslash', {
 			x: attacker.x + 5,
 			y: attacker.y - 10,
 			z: attacker.z,
 			scale: 0.7,
 			opacity: 0.3,
-			time: 350,
+			time: 700,
 		}, {
 			opacity: 0,
-			time: 650,
+			time: 1000,
 		}, 'decel');
 	},
 };
