@@ -32555,14 +32555,12 @@ BattleMoveAnims['overheadslash'] = {
 			x: defender.x,
 			y: defender.y + 80,
 			z: defender.behind(-30),
-			scale: 1.2,
 			time: 400,
 		}, 'ballistic');
 		attacker.anim({
 			x: defender.x,
-			y: defender.y + 80,
-			z: defender.behind(30),
-			scale: 1.2,
+			y: defender.y + 5,
+			z: defender.z,
 			time: 100,
 		});
 		attacker.anim({
@@ -32577,17 +32575,17 @@ BattleMoveAnims['overheadslash'] = {
 			time: 300,
 		}, 'swing');
 
-		scene.showEffect('rightslash', {
+		scene.showEffect('overheadslash', {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			scale: 1.2,
+			scale: 4,
 			opacity: 1,
 			time: 500,
 		}, {
-			scale: 3,
+			scale: 4,
 			opacity: 0,
-			time: 800,
+			time: 900,
 		}, 'linear', 'fade');
 	},
 };
