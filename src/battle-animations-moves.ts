@@ -32577,13 +32577,13 @@ BattleMoveAnims['overheadslash'] = {
 
 		scene.showEffect('overheadslash', {
 			x: defender.x,
-			y: defender.y,
+			y: defender.y + 20,
 			z: defender.z,
-			scale: 4,
+			scale: 3.5,
 			opacity: 1,
 			time: 500,
 		}, {
-			scale: 4,
+			scale: 3.5,
 			opacity: 0,
 			time: 900,
 		}, 'linear', 'fade');
