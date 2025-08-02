@@ -32597,7 +32597,7 @@ BattleMoveAnims['remotemissile'] = {
 			z: attacker.z,
 			opacity: 1,
 		}, {
-			opacity: 0,
+			opacity: 1,
 			time: 100,
 		}, 'linear', 'fade');
 		scene.showEffect('missile', {
@@ -32607,7 +32607,7 @@ BattleMoveAnims['remotemissile'] = {
 			opacity: 1,
 			time: 100,
 		}, {
-			opacity: 0,
+			opacity: 1,
 			time: 200,
 		}, 'linear', 'fade');
 		scene.showEffect('missile', {
@@ -32617,7 +32617,7 @@ BattleMoveAnims['remotemissile'] = {
 			opacity: 1,
 			time: 200,
 		}, {
-			opacity: 0,
+			opacity: 1,
 			time: 300,
 		}, 'linear', 'fade');
 		scene.showEffect('missile', {
@@ -32627,7 +32627,7 @@ BattleMoveAnims['remotemissile'] = {
 			opacity: 1,
 			time: 300,
 		}, {
-			opacity: 0,
+			opacity: 1,
 			time: 400,
 		}, 'linear', 'fade');
 		scene.showEffect('missile', {
@@ -32637,7 +32637,7 @@ BattleMoveAnims['remotemissile'] = {
 			opacity: 1,
 			time: 400,
 		}, {
-			opacity: 0,
+			opacity: 1,
 			time: 500,
 		}, 'linear', 'fade');
 		scene.showEffect('missile', {
@@ -32647,7 +32647,7 @@ BattleMoveAnims['remotemissile'] = {
 			opacity: 1,
 			time: 500,
 		}, {
-			opacity: 0,
+			opacity: 1,
 			time: 600,
 		}, 'linear', 'fade');
 		scene.showEffect('missile', {
@@ -32657,7 +32657,7 @@ BattleMoveAnims['remotemissile'] = {
 			opacity: 1,
 			time: 600,
 		}, {
-			opacity: 0,
+			opacity: 1,
 			time: 700,
 		}, 'linear', 'fade');
 		scene.showEffect('missile', {
@@ -32667,9 +32667,41 @@ BattleMoveAnims['remotemissile'] = {
 			opacity: 1,
 			time: 700,
 		}, {
-			opacity: 0,
+			opacity: 1,
 			time: 800,
 		}, 'linear', 'fade');
+		scene.showEffect('fireball', {
+			x: defender.x + 40,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x - 40,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 150,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x + 10,
+			y: defender.y + 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 300,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
 	},
 };
 BattleMoveAnims['fantasyseal'] = {
