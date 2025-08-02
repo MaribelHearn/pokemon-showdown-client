@@ -3010,6 +3010,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'rightslash.png', // by Pokemon Showdown user Modeling Clay
 		w: 57, h: 56,
 	},
+	overheadslash: {
+		url: 'overheadslash.png',
+		w: 57, h: 56,
+	},
 	leftchop: {
 		url: 'leftchop.png', // by Pokemon Showdown user SailorCosmos
 		w: 100, h: 130,
