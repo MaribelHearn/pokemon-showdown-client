@@ -32599,7 +32599,7 @@ BattleMoveAnims['remotemissile'] = {
 		}, {
 			opacity: 1,
 			time: 100,
-		}, 'decel');
+		}, 'decel', 'fade');
 		scene.showEffect('missile', {
 			x: attacker.x,
 			y: attacker.y - 15,
@@ -32609,7 +32609,7 @@ BattleMoveAnims['remotemissile'] = {
 		}, {
 			opacity: 1,
 			time: 200,
-		}, 'decel');
+		}, 'decel', 'fade');
 		scene.showEffect('missile', {
 			x: attacker.x,
 			y: attacker.y - 20,
@@ -32619,7 +32619,7 @@ BattleMoveAnims['remotemissile'] = {
 		}, {
 			opacity: 1,
 			time: 300,
-		}, 'decel');
+		}, 'decel', 'fade');
 		scene.showEffect('missile', {
 			x: attacker.x,
 			y: attacker.y - 20,
@@ -32629,7 +32629,7 @@ BattleMoveAnims['remotemissile'] = {
 		}, {
 			opacity: 1,
 			time: 400,
-		}, 'decel');
+		}, 'decel', 'fade');
 		scene.showEffect('missile', {
 			x: attacker.x,
 			y: attacker.y - 20,
@@ -32639,7 +32639,7 @@ BattleMoveAnims['remotemissile'] = {
 		}, {
 			opacity: 1,
 			time: 500,
-		}, 'decel');
+		}, 'decel', 'fade');
 		scene.showEffect('missile', {
 			x: defender.x,
 			y: defender.y - 20,
@@ -32649,7 +32649,7 @@ BattleMoveAnims['remotemissile'] = {
 		}, {
 			opacity: 1,
 			time: 600,
-		}, 'decel');
+		}, 'decel', 'fade');
 		scene.showEffect('missile', {
 			x: defender.x,
 			y: defender.y - 20,
@@ -32659,7 +32659,7 @@ BattleMoveAnims['remotemissile'] = {
 		}, {
 			opacity: 1,
 			time: 700,
-		}, 'decel');
+		}, 'decel', 'fade');
 		scene.showEffect('missile', {
 			x: defender.x,
 			y: defender.y - 20,
@@ -32669,7 +32669,7 @@ BattleMoveAnims['remotemissile'] = {
 		}, {
 			opacity: 1,
 			time: 800,
-		}, 'decel');
+		}, 'decel', 'fade');
 		scene.showEffect('fireball', {
 			x: defender.x + 40,
 			y: defender.y,
