@@ -32549,6 +32549,48 @@ BattleMoveAnims['thousandcuts'] = {
 		}, 'decel');
 	},
 };
+BattleMoveAnims['overheadslash'] = {
+	anim(scene, [attacker, defender]) {
+		attacker.anim({
+			x: defender.x,
+			y: defender.y + 80,
+			z: defender.behind(-30),
+			scale: 1.2,
+			time: 400,
+		}, 'ballistic');
+		attacker.anim({
+			x: defender.x,
+			y: defender.y + 80,
+			z: defender.behind(30),
+			scale: 1.2,
+			time: 100,
+		});
+		attacker.anim({
+			time: 500,
+		}, 'ballistic2Back');
+		defender.delay(450);
+		defender.anim({
+			z: defender.behind(20),
+			time: 100,
+		}, 'swing');
+		defender.anim({
+			time: 300,
+		}, 'swing');
+
+		scene.showEffect('rightslash', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1.2,
+			opacity: 1,
+			time: 500,
+		}, {
+			scale: 3,
+			opacity: 0,
+			time: 800,
+		}, 'linear', 'fade');
+	},
+};
 BattleMoveAnims['fantasyseal'] = {
 	anim(scene, [attacker, defender]) {
 		// 1
