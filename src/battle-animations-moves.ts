@@ -32605,6 +32605,7 @@ BattleMoveAnims['remotemissile'] = {
 			y: attacker.y - 15,
 			z: attacker.behind(10),
 			opacity: 1,
+			time: 100,
 		}, {
 			opacity: 0,
 			time: 200,
@@ -32614,6 +32615,7 @@ BattleMoveAnims['remotemissile'] = {
 			y: attacker.y - 20,
 			z: attacker.z,
 			opacity: 1,
+			time: 200,
 		}, {
 			opacity: 0,
 			time: 300,
@@ -32623,6 +32625,7 @@ BattleMoveAnims['remotemissile'] = {
 			y: attacker.y - 20,
 			z: attacker.behind(-20),
 			opacity: 1,
+			time: 300,
 		}, {
 			opacity: 0,
 			time: 400,
@@ -32632,6 +32635,7 @@ BattleMoveAnims['remotemissile'] = {
 			y: attacker.y - 20,
 			z: attacker.behind(-40),
 			opacity: 1,
+			time: 400,
 		}, {
 			opacity: 0,
 			time: 500,
@@ -32641,6 +32645,7 @@ BattleMoveAnims['remotemissile'] = {
 			y: defender.y - 20,
 			z: defender.behind(-40),
 			opacity: 1,
+			time: 500,
 		}, {
 			opacity: 0,
 			time: 600,
@@ -32650,6 +32655,7 @@ BattleMoveAnims['remotemissile'] = {
 			y: defender.y - 20,
 			z: defender.behind(-20),
 			opacity: 1,
+			time: 600,
 		}, {
 			opacity: 0,
 			time: 700,
@@ -32659,6 +32665,7 @@ BattleMoveAnims['remotemissile'] = {
 			y: defender.y - 20,
 			z: defender.z,
 			opacity: 1,
+			time: 700,
 		}, {
 			opacity: 0,
 			time: 800,
