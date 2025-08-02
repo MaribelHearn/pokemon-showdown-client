@@ -33720,6 +33720,89 @@ BattleMoveAnims['icyarrow'] = {
 		}, 'swing');
 	},
 };
+BattleMoveAnims['bullseye'] = {
+	anim(scene, [attacker, defender]) {
+		scene.backgroundEffect('linear-gradient(#440044 30%, #000000', 1000, 0.4);
+		scene.showEffect('wisp', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 1,
+			opacity: 0.5,
+		}, {
+			scale: 3,
+			opacity: 0,
+		}, 'linear');
+		scene.showEffect('wisp', {
+			x: attacker.x,
+			y: attacker.y - 35,
+			z: attacker.z,
+			scale: 0.1,
+			opacity: 0.4,
+			time: 0,
+		}, {
+			x: attacker.x,
+			y: attacker.y + 200,
+			z: attacker.z,
+			scale: 0.2,
+			opacity: 0,
+			time: 300,
+		}, 'decel');
+
+		scene.showEffect('wisp', {
+			x: defender.x,
+			y: defender.y + 200,
+			z: defender.behind(-10),
+			opacity: 0.4,
+			xscale: 0.1,
+			yscale: 5,
+			time: 575,
+		}, {
+			y: defender.y + 150,
+			z: defender.behind(-10),
+			opacity: 0,
+			time: 825,
+		}, 'decel');
+		scene.showEffect('wisp', {
+			x: defender.x,
+			y: defender.y - 50,
+			z: defender.z,
+			opacity: 0.4,
+			xscale: 0.3,
+			yscale: 0.1,
+			time: 590,
+		}, {
+			xscale: 0.6,
+			yscale: 0.1,
+			opacity: 0,
+			time: 825,
+		}, 'linear', 'explode');
+
+		defender.delay(825);
+		defender.anim({
+			z: defender.behind(5),
+			time: 100,
+		}, 'swing');
+		defender.anim({
+			time: 300,
+		}, 'swing');
+		scene.showEffect('hitmark', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.6,
+			time: 825,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1,
+			opacity: 1,
+			time: 925,
+		}, 'linear', 'fade');
+	},
+};
 BattleMoveAnims['pixiedust'] = {
 	anim(scene, [attacker, defender]) {
 		let xf = [1, -1, 1, -1];
@@ -34243,7 +34326,7 @@ BattleMoveAnims['firebrand']={anim:BattleMoveAnims['firepunch'].anim};
 //BattleMoveAnims['softreset']={anim:BattleMoveAnims['eggbomb'].anim};
 //BattleMoveAnims['hardreset']={anim:BattleMoveAnims['eggbomb'].anim};
 //firewall see above
-//BattleMoveAnims['bullseye']={anim:BattleMoveAnims['eggbomb'].anim};
+//bullseye see above
 //laserbeam see above
 BattleMoveAnims['glitchyterrain'] = {anim: BattleMoveAnims['mistyterrain'].anim};
 //BattleMoveAnims['rainbowufosofterror']={anim:BattleMoveAnims['eggbomb'].anim};
