@@ -2865,6 +2865,18 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'missile.png',
 		w: 64, h: 64,
 	},
+	redufo: {
+		url: 'red-ufo.png',
+		w: 24, h: 17,
+	},
+	blueufo: {
+		url: 'blue-ufo.png',
+		w: 24, h: 17,
+	},
+	greenufo: {
+		url: 'green-ufo.png',
+		w: 24, h: 17,
+	},
 	// ------
 	wisp: {
 		url: 'wisp.png',

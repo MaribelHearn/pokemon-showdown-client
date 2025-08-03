@@ -33388,6 +33388,126 @@ BattleMoveAnims['monstercucumber'] = {
 		}, 'ballistic2Under', 'fade');
 	},
 };
+BattleMoveAnims['redufosofrage'] = {
+	anim(scene, [attacker]) {
+		scene.showEffect('redufo', {
+			x: attacker.x + 20,
+			y: attacker.y + 20,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 0,
+		}, {
+			scale: 1,
+			opacity: 1,
+			time: 300,
+		}, 'ballistic2Under', 'fade');
+		scene.showEffect('redufo', {
+			x: attacker.x - 20,
+			y: attacker.y + 10,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 100,
+		}, {
+			scale: 1,
+			opacity: 1,
+			time: 400,
+		}, 'ballistic2Under', 'fade');
+		scene.showEffect('redufo', {
+			x: attacker.x,
+			y: attacker.y + 40,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 200,
+		}, {
+			scale: 1,
+			opacity: 1,
+			time: 500,
+		}, 'ballistic2Under', 'fade');
+	},
+};
+BattleMoveAnims['blueufosofgrief'] = {
+	anim(scene, [attacker]) {
+		scene.showEffect('blueufo', {
+			x: attacker.x + 20,
+			y: attacker.y + 20,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 0,
+		}, {
+			scale: 1,
+			opacity: 1,
+			time: 300,
+		}, 'ballistic2Under', 'fade');
+		scene.showEffect('blueufo', {
+			x: attacker.x - 20,
+			y: attacker.y + 10,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 100,
+		}, {
+			scale: 1,
+			opacity: 1,
+			time: 400,
+		}, 'ballistic2Under', 'fade');
+		scene.showEffect('blueufo', {
+			x: attacker.x,
+			y: attacker.y + 40,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 200,
+		}, {
+			scale: 1,
+			opacity: 1,
+			time: 500,
+		}, 'ballistic2Under', 'fade');
+	},
+};
+BattleMoveAnims['greenufosofloyalty'] = {
+	anim(scene, [attacker]) {
+		scene.showEffect('greenufo', {
+			x: attacker.x + 20,
+			y: attacker.y + 20,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 0,
+		}, {
+			scale: 1,
+			opacity: 1,
+			time: 300,
+		}, 'ballistic2Under', 'fade');
+		scene.showEffect('greenufo', {
+			x: attacker.x - 20,
+			y: attacker.y + 10,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 100,
+		}, {
+			scale: 1,
+			opacity: 1,
+			time: 400,
+		}, 'ballistic2Under', 'fade');
+		scene.showEffect('greenufo', {
+			x: attacker.x,
+			y: attacker.y + 40,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 200,
+		}, {
+			scale: 1,
+			opacity: 1,
+			time: 500,
+		}, 'ballistic2Under', 'fade');
+	},
+};
 BattleMoveAnims['bittorrent'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('#FFFFFF', 900, 0.5);
@@ -34690,9 +34810,9 @@ BattleMoveAnims['releaseoftheid']={anim:BattleMoveAnims['acupressure'].anim};
 //BattleMoveAnims['megawattlineargun']={anim:BattleMoveAnims['boneclub'].anim};
 //monstercucumber see above
 BattleMoveAnims['superhumanbyakurenhijiri']={anim:BattleMoveAnims['extremespeed'].anim};
-//BattleMoveAnims['redufosofrage']={anim:BattleMoveAnims['extremespeed'].anim};
-//BattleMoveAnims['blueufosofgrief']={anim:BattleMoveAnims['extremespeed'].anim};
-//BattleMoveAnims['greenufosofloyalty']={anim:BattleMoveAnims['extremespeed'].anim};
+//redufosofrage see above
+//blueufosofgrief see above
+//greenufosofloyalty see above
 BattleMoveAnims['nyan']={anim:BattleMoveAnims['echoedvoice'].anim};
 //BattleMoveAnims['cakelie']={anim:BattleMoveAnims['extremespeed'].anim};
 //BattleMoveAnims['superglitch']={anim:BattleMoveAnims['extremespeed'].anim};
