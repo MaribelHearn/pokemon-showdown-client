@@ -34154,6 +34154,23 @@ BattleMoveAnims['pixiedust'] = {
 		}
 	},
 };
+BattleMoveAnims['deathsickle'] = {
+	anim(scene, [attacker, defender]) {
+		scene.backgroundEffect('#000000', 600, 0.3, 250);
+		scene.showEffect('rightslash', {
+			x: defender.x - 5,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 2,
+			opacity: 1,
+			time: 600,
+		}, {
+			scale: 4,
+			opacity: 0,
+			time: 900,
+		}, 'linear', 'fade');
+	},
+};
 BattleMoveAnims['barriercrash'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('mistball', {
@@ -34437,7 +34454,7 @@ BattleMoveAnims['graspinghands'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('leftchop', {
 			x: defender.x,
-			y: defender.y + 10,
+			y: defender.y,
 			z: defender.behind(-20),
 			scale: 0.5,
 			opacity: 0.1,
@@ -34449,7 +34466,7 @@ BattleMoveAnims['graspinghands'] = {
 		}, 'decel', 'explode');
 		scene.showEffect('rightchop', {
 			x: defender.x,
-			y: defender.y + 10,
+			y: defender.y,
 			z: defender.behind(20),
 			scale: 0.5,
 			opacity: 0.1,
@@ -34722,7 +34739,7 @@ BattleMoveAnims['acidbomb']={anim:BattleMoveAnims['sludgebomb'].anim};
 BattleMoveAnims['needlestorm']={anim:BattleMoveAnims['pinmissile'].anim};
 //BattleMoveAnims['colorsplash']={anim:BattleMoveAnims['sludgewave'].anim};
 //BattleMoveAnims['parasoltwirl']={anim:BattleMoveAnims['sludgewave'].anim};
-//BattleMoveAnims['deathsickle']={anim:BattleMoveAnims['sludgewave'].anim};
+//deathsickle see above
 BattleMoveAnims['bulletspray']={anim:BattleMoveAnims['flameburst'].anim};
 //BattleMoveAnims['nosferatu']={anim:BattleMoveAnims['sludgewave'].anim};
 //barriercrash see above
