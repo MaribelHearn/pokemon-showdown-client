@@ -34836,7 +34836,7 @@ BattleMoveAnims['narrowconfines'] = {
 BattleMoveAnims['nosferatu'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('linear-gradient(#440044 30%, #000000', 600, 0.2);
-		scene.showEffect('wisp', {
+		scene.showEffect('blackwisp', {
 			x: defender.x,
 			y: defender.y - 30,
 			z: defender.z,
@@ -34850,7 +34850,7 @@ BattleMoveAnims['nosferatu'] = {
 			opacity: 0.1,
 			time: 500,
 		}, 'decel', 'fade');
-		scene.showEffect('wisp', {
+		scene.showEffect('blackwisp', {
 			x: defender.x,
 			y: defender.y - 15,
 			z: defender.z,
