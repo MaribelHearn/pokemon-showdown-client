@@ -33373,7 +33373,7 @@ BattleMoveAnims['monstercucumber'] = {
 			z: defender.behind(20),
 			opacity: 0.6,
 			time: 300,
-		}, 'ballistic2');
+		}, 'ballistic2', 'fade');
 		scene.showEffect('energyball', {
 			x: defender.x,
 			y: defender.y,
@@ -33505,47 +33505,41 @@ BattleMoveAnims['rainbowufosofterror'] = {
 			x: attacker.x,
 			y: attacker.y - 10,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 0,
 		}, {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			scale: 1,
 			opacity: 1,
 			time: 400,
-		}, 'ballistic');
+		}, 'ballistic', 'fade');
 		scene.showEffect('blueufo', {
 			x: attacker.x,
 			y: attacker.y + 10,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 200,
 		}, {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			scale: 1,
 			opacity: 1,
 			time: 600,
-		}, 'ballistic2');
+		}, 'ballistic2', 'fade');
 		scene.showEffect('greenufo', {
 			x: attacker.x,
 			y: attacker.y - 10,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 400,
 		}, {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			scale: 1,
 			opacity: 1,
 			time: 800,
-		}, 'ballistic');
+		}, 'ballistic', 'fade');
 	},
 };
 BattleMoveAnims['bittorrent'] = {
