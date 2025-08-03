@@ -1411,8 +1411,29 @@ export class Battle {
 			pokemon.rememberMove(move.name, 0);
 		}
 		if (move.id === 'telemetry' && target) {
-			const lastMove = this.dex.moves.get(target.lastMove);
-			target.rememberMove(target.lastMove, lastMove.pp);
+			let unrevealedMoves = [] as Move[];
+
+			for (const moveName of target.moves) {
+				const move = this.dex.moves.get(moveName);
+				let isRevealed = false;
+
+				for (const entry of target.moveTrack) {
+					if (entry[0] === move.id) {
+						isRevealed = true;
+					}
+				}
+
+				if (!isRevealed) {
+					unrevealedMoves.push(move);
+				}
+			}
+
+			if (unrevealedMoves.length > 0) {
+				const randInt = Math.floor(Math.random() * unrevealedMoves.length);
+				const move = unrevealedMoves[randInt];
+				//const lastMove = this.dex.moves.get(target.lastMove);
+				target.rememberMove(move.id, move.pp);
+			}
 		}
 		let callerMoveForPressure = null;
 		// will not include effects that are conditions named after moves like Magic Coat and Snatch, which is good
