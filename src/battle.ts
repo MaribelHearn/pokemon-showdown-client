@@ -1411,7 +1411,7 @@ export class Battle {
 			pokemon.rememberMove(move.name, 0);
 		}
 		for (const volatile in pokemon.volatiles) {
-			if (volatile[0].startsWith('telemetry')) {
+			if (volatile.startsWith('telemetry')) {
 				const revealedMoveID = volatile[0].slice(9);
 				const revealedMove = this.dex.moves.get(revealedMoveID);
 				pokemon.rememberMove(revealedMove.name, revealedMove.pp);
