@@ -33589,6 +33589,25 @@ BattleMoveAnims['matterstorm'] = {
 		}, 'ballistic', 'fade');
 	},
 };
+BattleMoveAnims['cakelie'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('cake', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 0,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.behind(-40),
+			scale: 0.5,
+			opacity: 1,
+			time: 400,
+		}, 'ballistic', 'fade');
+	},
+};
 BattleMoveAnims['bittorrent'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('#FFFFFF', 900, 0.5);
@@ -35017,7 +35036,7 @@ BattleMoveAnims['superhumanbyakurenhijiri']={anim:BattleMoveAnims['extremespeed'
 //blueufosofgrief see above
 //greenufosofloyalty see above
 BattleMoveAnims['nyan']={anim:BattleMoveAnims['echoedvoice'].anim};
-//BattleMoveAnims['cakelie']={anim:BattleMoveAnims['extremespeed'].anim};
+//cakelie see above
 //BattleMoveAnims['superglitch']={anim:BattleMoveAnims['extremespeed'].anim};
 //anormalmove uses default animation
 BattleMoveAnims['miraclefruit']={anim:BattleMoveAnims['junglehealing'].anim};
