@@ -2889,6 +2889,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'cake.png',
 		w: 120, h: 120,
 	},
+	parasol: {
+		url: 'parasol.png',
+		w: 100, h: 100,
+	},
 	// ------
 	wisp: {
 		url: 'wisp.png',

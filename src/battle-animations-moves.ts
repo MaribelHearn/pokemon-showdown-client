@@ -34391,6 +34391,23 @@ BattleMoveAnims['deathsickle'] = {
 		}, 'linear', 'fade');
 	},
 };
+BattleMoveAnims['parasoltwirl'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('parasol', {
+			x: attacker.x,
+			y: attacker.y - 50,
+			z: attacker.behind(-20),
+			scale: 0.5,
+		}, {
+			x: defender.x,
+			y: defender.y - 50,
+			z: defender.behind(20),
+			scale: 0.5,
+			time: 400,
+		}, 'ballistic', 'fade');
+		BattleOtherAnims.contactattack.anim(scene, [attacker, defender]);
+	},
+};
 BattleMoveAnims['barriercrash'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('mistball', {
@@ -35080,7 +35097,7 @@ BattleMoveAnims['acidbomb']={anim:BattleMoveAnims['sludgebomb'].anim};
 //pixiedust see above
 BattleMoveAnims['needlestorm']={anim:BattleMoveAnims['pinmissile'].anim};
 //BattleMoveAnims['colorsplash']={anim:BattleMoveAnims['sludgewave'].anim};
-//BattleMoveAnims['parasoltwirl']={anim:BattleMoveAnims['sludgewave'].anim};
+//parasoltwirl see above
 //deathsickle see above
 BattleMoveAnims['bulletspray']={anim:BattleMoveAnims['flameburst'].anim};
 //nosferatu see above
