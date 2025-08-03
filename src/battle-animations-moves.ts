@@ -33542,6 +33542,53 @@ BattleMoveAnims['rainbowufosofterror'] = {
 		}, 'ballistic', 'fade');
 	},
 };
+BattleMoveAnims['matterstorm'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('darkmatter', {
+			x: attacker.x,
+			y: attacker.y - 10,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 0,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			opacity: 1,
+			time: 400,
+		}, 'ballistic', 'fade');
+		scene.showEffect('darkmatter', {
+			x: attacker.x,
+			y: attacker.y + 10,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 200,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			opacity: 1,
+			time: 600,
+		}, 'ballistic2', 'fade');
+		scene.showEffect('darkmatter', {
+			x: attacker.x,
+			y: attacker.y - 10,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 400,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.5,
+			opacity: 1,
+			time: 800,
+		}, 'ballistic', 'fade');
+	},
+};
 BattleMoveAnims['bittorrent'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('#FFFFFF', 900, 0.5);

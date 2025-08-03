@@ -2877,6 +2877,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'green-ufo.png',
 		w: 24, h: 17,
 	},
+	darkmatter: {
+		url: 'darkmatter.png',
+		w: 96, h: 96,
+	},
 	// ------
 	wisp: {
 		url: 'wisp.png',
