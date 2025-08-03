@@ -34366,6 +34366,73 @@ BattleMoveAnims['lightarrow'] = {
 		}, 'swing');
 	},
 };
+BattleMoveAnims['spearthegungnir'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('blackwisp', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 1,
+			opacity: 0.5,
+		}, {
+			scale: 3,
+			opacity: 0,
+		}, 'linear');
+		scene.showEffect('blackwisp', {
+			x: attacker.x,
+			y: attacker.y - 35,
+			z: attacker.z,
+			scale: 0.1,
+			opacity: 0.4,
+			time: 0,
+		}, {
+			x: attacker.x,
+			y: attacker.y + 200,
+			z: attacker.z,
+			scale: 0.2,
+			opacity: 0,
+			time: 300,
+		}, 'decel');
+
+		scene.showEffect('blackwisp', {
+			x: defender.x,
+			y: defender.y + 200,
+			z: defender.behind(-10),
+			opacity: 0.4,
+			xscale: 0.1,
+			yscale: 5,
+			time: 575,
+		}, {
+			y: defender.y + 150,
+			z: defender.behind(-10),
+			opacity: 0,
+			time: 825,
+		}, 'decel');
+		scene.showEffect('blackwisp', {
+			x: defender.x,
+			y: defender.y - 50,
+			z: defender.z,
+			opacity: 0.4,
+			xscale: 0.3,
+			yscale: 0.1,
+			time: 590,
+		}, {
+			xscale: 0.6,
+			yscale: 0.1,
+			opacity: 0,
+			time: 825,
+		}, 'linear', 'explode');
+
+		defender.delay(825);
+		defender.anim({
+			z: defender.behind(5),
+			time: 100,
+		}, 'swing');
+		defender.anim({
+			time: 300,
+		}, 'swing');
+	},
+};
 BattleMoveAnims['electricalshield'] = {
 	anim(scene, [attacker]) {
 		scene.backgroundEffect('#FFFF00', 600, 0.2);
@@ -34491,7 +34558,7 @@ BattleMoveAnims['killingdoll']={anim:BattleMoveAnims['smartstrike'].anim};
 BattleMoveAnims['theworld']={anim:BattleMoveAnims['agility'].anim};
 //BattleMoveAnims['nuke']={anim:BattleMoveAnims['focuspunch'].anim};
 BattleMoveAnims['ghastlydream']={anim:BattleMoveAnims['hex'].anim};
-//BattleMoveAnims['spearthegungnir']={anim:BattleMoveAnims['focuspunch'].anim};
+//spearthegungnir see above
 BattleMoveAnims['wrigglekick']={anim:BattleMoveAnims['highjumpkick'].anim};
 BattleMoveAnims['hisousword']={anim:BattleMoveAnims['sacredsword'].anim};
 BattleMoveAnims['throwingatlas']={anim:BattleMoveAnims['stoneedge'].anim};
