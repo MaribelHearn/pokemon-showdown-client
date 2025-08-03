@@ -33548,7 +33548,7 @@ BattleMoveAnims['blueufosofgrief'] = {
 	anim(scene, [attacker]) {
 		scene.showEffect('blueufo', {
 			x: attacker.x + 50,
-			y: attacker.y + 30,
+			y: attacker.y,
 			z: attacker.z,
 			opacity: 1,
 		}, {
@@ -33558,7 +33558,7 @@ BattleMoveAnims['blueufosofgrief'] = {
 		}, 'linear', 'fade');
 		scene.showEffect('blueufo', {
 			x: attacker.x - 50,
-			y: attacker.y + 30,
+			y: attacker.y ,
 			z: attacker.z,
 			opacity: 1,
 		}, {
@@ -33568,7 +33568,7 @@ BattleMoveAnims['blueufosofgrief'] = {
 		}, 'linear', 'fade');
 		scene.showEffect('blueufo', {
 			x: attacker.x + 50,
-			y: attacker.y + 30,
+			y: attacker.y,
 			z: attacker.z,
 			opacity: 1,
 			time: 300,
@@ -33579,7 +33579,7 @@ BattleMoveAnims['blueufosofgrief'] = {
 		}, 'linear', 'fade');
 		scene.showEffect('blueufo', {
 			x: attacker.x - 50,
-			y: attacker.y + 30,
+			y: attacker.y,
 			z: attacker.z,
 			opacity: 1,
 			time: 300,
