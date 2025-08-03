@@ -33382,96 +33382,101 @@ BattleMoveAnims['finaldanmaku'] = {
 
 		scene.backgroundEffect('#000000', 600, 0.3);
 
-		for (let i = 0; i < 4; i++) {
-			scene.showEffect('flareball', {
+		for (let t = 0; t < 5; t++) {
+			for (let i = 0; i < 4; i++) {
+				scene.showEffect('flareball', {
+					x: attacker.x,
+					y: attacker.y,
+					z: attacker.behind(-5),
+					scale: 0.5,
+					opacity: 1,
+					time: t * 300,
+				}, {
+					x: defender.x + 240 * xf[i],
+					y: defender.y,
+					z: defender.z + 137 * yf[i],
+					opacity: 0,
+					time: (t + 1) * 300,
+				}, 'decel');
+				scene.showEffect('flareball', {
+					x: attacker.x,
+					y: attacker.y,
+					z: attacker.behind(-5),
+					scale: 0.5,
+					opacity: 1,
+					time: t * 300,
+				}, {
+					x: defender.x + 339 * xf2[i],
+					y: defender.y + 10,
+					z: defender.z + 194 * yf2[i],
+					scale: 1,
+					opacity: 0,
+					time: (t + 1) * 300,
+				}, 'decel');
+			}
+			scene.showEffect('fireball', {
 				x: attacker.x,
 				y: attacker.y,
-				z: attacker.behind(-5),
-				scale: 0.5,
-				opacity: 1,
-			}, {
-				x: defender.x + 240 * xf[i],
-				y: defender.y,
-				z: defender.z + 137 * yf[i],
-				opacity: 0,
-				time: 600,
-			}, 'decel');
-			scene.showEffect('flareball', {
-				x: attacker.x,
-				y: attacker.y,
-				z: attacker.behind(-5),
-				scale: 0.5,
-				opacity: 1,
-			}, {
-				x: defender.x + 339 * xf2[i],
-				y: defender.y + 10,
-				z: defender.z + 194 * yf2[i],
+				z: attacker.z,
 				scale: 1,
-				opacity: 0,
-				time: 600,
-			}, 'decel');
-		}
-		scene.showEffect('fireball', {
-			x: attacker.x,
-			y: attacker.y,
-			z: attacker.z,
-			scale: 1,
-			opacity: 0.7,
-		}, {
-			x: defender.x,
-			y: defender.y,
-			z: defender.z,
-			scale: 1.5,
-			opacity: 0.6,
-			time: 300,
-		}, 'linear', 'explode');
+				opacity: 0.7,
+				time: t * 150,
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 1.5,
+				opacity: 0.6,
+				time: (t + 1) * 150,
+			}, 'linear', 'explode');
 
-		for (let i = 0; i < 4; i++) {
-			scene.showEffect('iceball', {
+			for (let i = 0; i < 4; i++) {
+				scene.showEffect('iceball', {
+					x: attacker.x,
+					y: attacker.y,
+					z: attacker.behind(-5),
+					scale: 0.5,
+					opacity: 1,
+					time: (t + 1) * 300,
+				}, {
+					x: defender.x + 240 * xf[i],
+					y: defender.y,
+					z: defender.z + 137 * yf[i],
+					opacity: 0,
+					time: (t + 2) * 300,
+				}, 'decel');
+				scene.showEffect('iceball', {
+					x: attacker.x,
+					y: attacker.y,
+					z: attacker.behind(-5),
+					scale: 0.5,
+					opacity: 1,
+					time: (t + 1) * 300,
+				}, {
+					x: defender.x + 339 * xf2[i],
+					y: defender.y + 10,
+					z: defender.z + 194 * yf2[i],
+					scale: 1,
+					opacity: 0,
+					time: (t + 2) * 300,
+				}, 'decel');
+			}
+			scene.showEffect('bluefireball', {
 				x: attacker.x,
 				y: attacker.y,
-				z: attacker.behind(-5),
-				scale: 0.5,
-				opacity: 1,
-				time: 600,
-			}, {
-				x: defender.x + 240 * xf[i],
-				y: defender.y,
-				z: defender.z + 137 * yf[i],
-				opacity: 0,
-				time: 1200,
-			}, 'decel');
-			scene.showEffect('iceball', {
-				x: attacker.x,
-				y: attacker.y,
-				z: attacker.behind(-5),
-				scale: 0.5,
-				opacity: 1,
-				time: 600,
-			}, {
-				x: defender.x + 339 * xf2[i],
-				y: defender.y + 10,
-				z: defender.z + 194 * yf2[i],
+				z: attacker.z,
 				scale: 1,
-				opacity: 0,
-				time: 1200,
-			}, 'decel');
+				opacity: 0.7,
+				time: t * 300,
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 1.5,
+				opacity: 0.6,
+				time: (t + 1) * 300,
+			}, 'linear', 'explode');
 		}
-		scene.showEffect('bluefireball', {
-			x: attacker.x,
-			y: attacker.y,
-			z: attacker.z,
-			scale: 1,
-			opacity: 0.7,
-			time: 600,
-		}, {
-			x: defender.x,
-			y: defender.y,
-			z: defender.z,
-			scale: 1.5,
-			opacity: 0.6,
-			time: 900,
-		}, 'linear', 'explode');
 	},
 	prepareAnim: BattleOtherAnims.chargestatus.anim,
 };
