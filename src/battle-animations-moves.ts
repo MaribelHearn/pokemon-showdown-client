@@ -33515,7 +33515,7 @@ BattleMoveAnims['redufosofrage'] = {
 			z: attacker.z,
 			opacity: 1,
 		}, {
-			x: attacker.y + 20,
+			y: attacker.y + 20,
 			opacity: 1,
 			time: 300,
 		}, 'linear', 'fade');
@@ -33526,7 +33526,7 @@ BattleMoveAnims['redufosofrage'] = {
 			opacity: 1,
 			time: 200,
 		}, {
-			x: attacker.y + 20,
+			y: attacker.y + 20,
 			opacity: 1,
 			time: 500,
 		}, 'linear', 'fade');
@@ -33537,7 +33537,7 @@ BattleMoveAnims['redufosofrage'] = {
 			opacity: 1,
 			time: 400,
 		}, {
-			x: attacker.y + 20,
+			y: attacker.y + 20,
 			opacity: 1,
 			time: 700,
 		}, 'linear', 'fade');
