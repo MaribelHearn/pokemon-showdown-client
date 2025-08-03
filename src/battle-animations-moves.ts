@@ -33380,9 +33380,9 @@ BattleMoveAnims['finaldanmaku'] = {
 		let xf2 = [1, 0, -1, 0];
 		let yf2 = [0, 1, 0, -1];
 
-		scene.backgroundEffect('#000000', 600, 0.3);
+		scene.backgroundEffect('#000000', 1800, 0.3);
 
-		for (let t = 0; t < 5; t++) {
+		for (let t = 0; t < 4; t++) {
 			for (let i = 0; i < 4; i++) {
 				scene.showEffect('flareball', {
 					x: attacker.x,
