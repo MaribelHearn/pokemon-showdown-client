@@ -34833,6 +34833,78 @@ BattleMoveAnims['narrowconfines'] = {
 		}, 'decel', 'fade');
 	},
 };
+BattleMoveAnims['nosferatu'] = {
+	anim(scene, [attacker, defender]) {
+		scene.backgroundEffect('linear-gradient(#440044 30%, #000000', 600, 0.2);
+		scene.showEffect('wisp', {
+			x: defender.x,
+			y: defender.y - 30,
+			z: defender.z,
+			scale: 0.5,
+			xscale: 0.25,
+			yscale: 0.75,
+			opacity: 0.5,
+		}, {
+			scale: 2,
+			xscale: 3.5,
+			opacity: 0.1,
+			time: 500,
+		}, 'decel', 'fade');
+		scene.showEffect('wisp', {
+			x: defender.x,
+			y: defender.y - 15,
+			z: defender.z,
+			opacity: 0.5,
+			scale: 1.5,
+		}, {
+			scale: 1.8,
+			opacity: 0.1,
+			time: 500,
+		}, 'decel', 'fade');
+		scene.showEffect('energyball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.6,
+			time: 500,
+		}, {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 1000,
+			opacity: 0,
+		}, 'ballistic2');
+		scene.showEffect('energyball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.6,
+			time: 550,
+		}, {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 1050,
+			opacity: 0,
+		}, 'linear');
+		scene.showEffect('energyball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.6,
+			time: 600,
+		}, {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 1100,
+			opacity: 0,
+		}, 'ballistic2Under');
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
