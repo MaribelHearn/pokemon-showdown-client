@@ -33510,23 +33510,23 @@ BattleMoveAnims['monstercucumber'] = {
 BattleMoveAnims['redufosofrage'] = {
 	anim(scene, [attacker]) {
 		scene.showEffect('redufo', {
-			x: attacker.x + 50,
+			x: attacker.x + 30,
 			y: attacker.y - 20,
 			z: attacker.z,
 			opacity: 1,
 		}, {
-			y: attacker.y + 20,
+			y: attacker.y + 30,
 			opacity: 1,
 			time: 300,
 		}, 'linear', 'fade');
 		scene.showEffect('redufo', {
-			x: attacker.x - 50,
+			x: attacker.x - 30,
 			y: attacker.y - 20,
 			z: attacker.z,
 			opacity: 1,
 			time: 200,
 		}, {
-			y: attacker.y + 20,
+			y: attacker.y + 30,
 			opacity: 1,
 			time: 500,
 		}, 'linear', 'fade');
@@ -33537,7 +33537,7 @@ BattleMoveAnims['redufosofrage'] = {
 			opacity: 1,
 			time: 400,
 		}, {
-			y: attacker.y + 20,
+			y: attacker.y + 30,
 			opacity: 1,
 			time: 700,
 		}, 'linear', 'fade');
