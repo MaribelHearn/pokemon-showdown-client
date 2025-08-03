@@ -32598,85 +32598,15 @@ BattleMoveAnims['remotemissile'] = {
 			opacity: 1,
 		}, {
 			opacity: 1,
-			time: 100,
-		}, 'decel', 'fade');
-		scene.showEffect('missile', {
-			x: attacker.x,
-			y: attacker.y - 15,
-			z: attacker.behind(10),
-			opacity: 1,
-			time: 100,
-		}, {
-			opacity: 1,
-			time: 200,
-		}, 'decel', 'fade');
-		scene.showEffect('missile', {
-			x: attacker.x,
-			y: attacker.y - 20,
-			z: attacker.z,
-			opacity: 1,
-			time: 200,
-		}, {
-			opacity: 1,
-			time: 300,
-		}, 'decel', 'fade');
-		scene.showEffect('missile', {
-			x: attacker.x,
-			y: attacker.y - 20,
-			z: attacker.behind(-20),
-			opacity: 1,
-			time: 300,
-		}, {
-			opacity: 1,
-			time: 400,
-		}, 'decel', 'fade');
-		scene.showEffect('missile', {
-			x: attacker.x,
-			y: attacker.y - 20,
-			z: attacker.behind(-40),
-			opacity: 1,
-			time: 400,
-		}, {
-			opacity: 1,
 			time: 500,
-		}, 'decel', 'fade');
-		scene.showEffect('missile', {
-			x: defender.x,
-			y: defender.y - 20,
-			z: defender.behind(-40),
-			opacity: 1,
-			time: 500,
-		}, {
-			opacity: 1,
-			time: 600,
-		}, 'decel', 'fade');
-		scene.showEffect('missile', {
-			x: defender.x,
-			y: defender.y - 20,
-			z: defender.behind(-20),
-			opacity: 1,
-			time: 600,
-		}, {
-			opacity: 1,
-			time: 700,
-		}, 'decel', 'fade');
-		scene.showEffect('missile', {
-			x: defender.x,
-			y: defender.y - 20,
-			z: defender.z,
-			opacity: 1,
-			time: 700,
-		}, {
-			opacity: 1,
-			time: 800,
-		}, 'decel', 'fade');
+		}, 'ballistic');
 		scene.showEffect('fireball', {
 			x: defender.x + 40,
 			y: defender.y,
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
-			time: 800,
+			time: 500,
 		}, {
 			scale: 6,
 			opacity: 0,
@@ -32687,7 +32617,7 @@ BattleMoveAnims['remotemissile'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
-			time: 950,
+			time: 650,
 		}, {
 			scale: 6,
 			opacity: 0,
@@ -32698,7 +32628,7 @@ BattleMoveAnims['remotemissile'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
-			time: 1100,
+			time: 800,
 		}, {
 			scale: 6,
 			opacity: 0,
@@ -33426,6 +33356,33 @@ BattleMoveAnims['needleparade'] = {
 			opacity: 0.6,
 			time: 500,
 		}, 'linear', 'explode');
+	},
+};
+BattleMoveAnims['monstercucumber'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('energyball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+		}, {
+			z: defender.behind(20),
+			opacity: 0.6,
+			time: 300,
+		}, 'ballistic2');
+		scene.showEffect('energyball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.behind(20),
+			scale: 0.4,
+			opacity: 0.6,
+			time: 300,
+		}, {
+			z: attacker.z,
+			opacity: 0.6,
+			time: 600,
+		}, 'ballistic2Under', 'fade');
 	},
 };
 BattleMoveAnims['bittorrent'] = {
@@ -34575,7 +34532,7 @@ BattleMoveAnims['drybone']={anim:BattleMoveAnims['boneclub'].anim};
 BattleMoveAnims['recollection']={anim:BattleMoveAnims['assist'].anim};
 BattleMoveAnims['releaseoftheid']={anim:BattleMoveAnims['acupressure'].anim};
 //BattleMoveAnims['megawattlineargun']={anim:BattleMoveAnims['boneclub'].anim};
-//BattleMoveAnims['monstercucumber']={anim:BattleMoveAnims['boneclub'].anim};
+//monstercucumber see above
 BattleMoveAnims['superhumanbyakurenhijiri']={anim:BattleMoveAnims['extremespeed'].anim};
 //BattleMoveAnims['redufosofrage']={anim:BattleMoveAnims['extremespeed'].anim};
 //BattleMoveAnims['blueufosofgrief']={anim:BattleMoveAnims['extremespeed'].anim};
