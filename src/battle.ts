@@ -1410,9 +1410,13 @@ export class Battle {
 		if (fromeffect.id === 'sleeptalk') {
 			pokemon.rememberMove(move.name, 0);
 		}
-		if (pokemon.hasVolatile('telemetry' as ID)) {
-			pokemon.rememberMove(move.name, move.pp);
-			pokemon.removeVolatile('telemetry' as ID);
+		for (const volatile in pokemon.volatiles) {
+			if (volatile[0].startsWith('telemetry')) {
+				const revealedMoveID = volatile[0].slice(9);
+				const revealedMove = this.dex.moves.get(revealedMoveID);
+				pokemon.rememberMove(revealedMove.name, revealedMove.pp);
+				pokemon.removeVolatile(volatile[0] as ID);
+			}
 		}
 		let callerMoveForPressure = null;
 		// will not include effects that are conditions named after moves like Magic Coat and Snatch, which is good
