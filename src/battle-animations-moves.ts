@@ -33361,6 +33361,120 @@ BattleMoveAnims['needleparade'] = {
 		}, 'linear', 'explode');
 	},
 };
+BattleMoveAnims['finaldanmaku'] = {
+	anim(scene, [attacker, ...defenders]) {
+		for (const defender of defenders) {
+			defender.delay(280);
+			defender.anim({
+				z: defender.behind(20),
+				time: 100,
+			}, 'swing');
+			defender.anim({
+				time: 300,
+			}, 'swing');
+		}
+		const defender = defenders[1] || defenders[0];
+
+		let xf = [1, -1, 1, -1];
+		let yf = [1, -1, -1, 1];
+		let xf2 = [1, 0, -1, 0];
+		let yf2 = [0, 1, 0, -1];
+
+		scene.backgroundEffect('#000000', 600, 0.3);
+
+		for (let i = 0; i < 4; i++) {
+			scene.showEffect('flareball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.behind(-5),
+				scale: 0.5,
+				opacity: 1,
+			}, {
+				x: defender.x + 240 * xf[i],
+				y: defender.y,
+				z: defender.z + 137 * yf[i],
+				opacity: 0,
+				time: 600,
+			}, 'decel');
+			scene.showEffect('flareball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.behind(-5),
+				scale: 0.5,
+				opacity: 1,
+			}, {
+				x: defender.x + 339 * xf2[i],
+				y: defender.y + 10,
+				z: defender.z + 194 * yf2[i],
+				scale: 1,
+				opacity: 0,
+				time: 600,
+			}, 'decel');
+		}
+		scene.showEffect('fireball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 1,
+			opacity: 0.7,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1.5,
+			opacity: 0.6,
+			time: 300,
+		}, 'linear', 'explode');
+
+		for (let i = 0; i < 4; i++) {
+			scene.showEffect('iceball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.behind(-5),
+				scale: 0.5,
+				opacity: 1,
+				time: 600,
+			}, {
+				x: defender.x + 240 * xf[i],
+				y: defender.y,
+				z: defender.z + 137 * yf[i],
+				opacity: 0,
+				time: 1200,
+			}, 'decel');
+			scene.showEffect('iceball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.behind(-5),
+				scale: 0.5,
+				opacity: 1,
+				time: 600,
+			}, {
+				x: defender.x + 339 * xf2[i],
+				y: defender.y + 10,
+				z: defender.z + 194 * yf2[i],
+				scale: 1,
+				opacity: 0,
+				time: 1200,
+			}, 'decel');
+		}
+		scene.showEffect('bluefireball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 1,
+			opacity: 0.7,
+			time: 600,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1.5,
+			opacity: 0.6,
+			time: 900,
+		}, 'linear', 'explode');
+	},
+	prepareAnim: BattleOtherAnims.chargestatus.anim,
+};
 BattleMoveAnims['monstercucumber'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('energyball', {
@@ -35030,7 +35144,7 @@ BattleMoveAnims['zerolaser']={anim:BattleMoveAnims['hyperbeam'].anim};
 //objection see above
 BattleMoveAnims['thunderdrumshot']={anim:BattleMoveAnims['electroball'].anim};
 //needleparade see above
-//BattleMoveAnims['finaldanmaku']={anim:BattleMoveAnims['focuspunch'].anim};
+//finaldanmaku see above
 BattleMoveAnims['zzzap']={anim:BattleMoveAnims['thunderbolt'].anim};
 BattleMoveAnims['borderdistortion']={anim:BattleMoveAnims['extrasensory'].anim};
 BattleMoveAnims['dreaminduction']={anim:BattleMoveAnims['hypnosis'].anim};
