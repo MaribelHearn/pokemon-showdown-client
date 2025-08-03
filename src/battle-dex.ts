@@ -506,7 +506,7 @@ const Dex = new class implements ModdedDex {
 			url: Dex.resourcePrefix + 'sprites/',
 			pixelated: true,
 			isFrontSprite: false,
-			cryurl: 'audio/cries/' + species.baseSpecies,
+			cryurl: Dex.resourcePrefix + 'audio/cries/' + toID(species.baseSpecies) + '.mp3',
 			shiny: options.shiny,
 		};
 		let name = species.spriteid;
