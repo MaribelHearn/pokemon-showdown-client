@@ -34687,14 +34687,14 @@ BattleMoveAnims['strawberrycross'] = {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			scale: 1,
+			scale: 0.5,
 			opacity: 1,
 			time: 400,
 		}, {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			scale: 2,
+			scale: 1,
 			opacity: 0,
 			time: 800,
 		}, 'decel', 'explode');
