@@ -33510,38 +33510,37 @@ BattleMoveAnims['monstercucumber'] = {
 BattleMoveAnims['redufosofrage'] = {
 	anim(scene, [attacker]) {
 		scene.showEffect('redufo', {
-			x: attacker.x + 20,
-			y: attacker.y + 20,
+			x: attacker.x + 50,
+			y: attacker.y - 20,
 			z: attacker.z,
-			opacity: 0.5,
-			time: 0,
+			opacity: 1,
 		}, {
-			scale: 1,
+			x: attacker.y + 20,
 			opacity: 1,
 			time: 300,
-		}, 'ballistic2Under', 'fade');
+		}, 'linear', 'fade');
 		scene.showEffect('redufo', {
-			x: attacker.x - 20,
-			y: attacker.y + 10,
+			x: attacker.x - 50,
+			y: attacker.y - 20,
 			z: attacker.z,
-			opacity: 0.5,
-			time: 100,
-		}, {
-			scale: 1,
 			opacity: 1,
-			time: 400,
-		}, 'ballistic2Under', 'fade');
-		scene.showEffect('redufo', {
-			x: attacker.x,
-			y: attacker.y + 40,
-			z: attacker.z,
-			opacity: 0.5,
 			time: 200,
 		}, {
-			scale: 1,
+			x: attacker.y + 20,
 			opacity: 1,
 			time: 500,
-		}, 'ballistic2Under', 'fade');
+		}, 'linear', 'fade');
+		scene.showEffect('redufo', {
+			x: attacker.x,
+			y: attacker.y - 20,
+			z: attacker.z,
+			opacity: 1,
+			time: 400,
+		}, {
+			x: attacker.y + 20,
+			opacity: 1,
+			time: 700,
+		}, 'linear', 'fade');
 	},
 };
 BattleMoveAnims['blueufosofgrief'] = {
@@ -33594,7 +33593,7 @@ BattleMoveAnims['greenufosofloyalty'] = {
 	anim(scene, [attacker]) {
 		scene.showEffect('greenufo', {
 			x: attacker.x + 20,
-			y: attacker.y + 20,
+			y: attacker.y + 10,
 			z: attacker.z,
 			opacity: 0.5,
 			time: 0,
@@ -33605,7 +33604,7 @@ BattleMoveAnims['greenufosofloyalty'] = {
 		}, 'ballistic2Under', 'fade');
 		scene.showEffect('greenufo', {
 			x: attacker.x - 20,
-			y: attacker.y + 10,
+			y: attacker.y,
 			z: attacker.z,
 			opacity: 0.5,
 			time: 100,
@@ -33616,7 +33615,7 @@ BattleMoveAnims['greenufosofloyalty'] = {
 		}, 'ballistic2Under', 'fade');
 		scene.showEffect('greenufo', {
 			x: attacker.x,
-			y: attacker.y + 40,
+			y: attacker.y + 30,
 			z: attacker.z,
 			opacity: 0.5,
 			time: 200,
