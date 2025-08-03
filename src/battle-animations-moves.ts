@@ -34820,18 +34820,16 @@ BattleMoveAnims['koin3steps'] = {
 			x: defender.x - 25,
 			y: defender.y,
 			z: defender.z,
-			scale: 0,
-		}, {
 			scale: 0.2,
+		}, {
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('iceball', {
 			x: defender.x + 25,
 			y: defender.y,
 			z: defender.z,
-			scale: 0,
-		}, {
 			scale: 0.2,
+		}, {
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('iceball', {
@@ -34846,125 +34844,112 @@ BattleMoveAnims['koin3steps'] = {
 			x: defender.x,
 			y: defender.y + 25,
 			z: defender.z,
-			scale: 0,
-		}, {
 			scale: 0.2,
+		}, {
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('iceball', {
 			x: defender.x - 25,
 			y: defender.y - 25,
 			z: defender.z,
-			scale: 0,
-		}, {
 			scale: 0.2,
+		}, {
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('iceball', {
 			x: defender.x + 25,
 			y: defender.y + 25,
 			z: defender.z,
-			scale: 0,
-		}, {
 			scale: 0.2,
+		}, {
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('iceball', {
 			x: defender.x - 25,
 			y: defender.y + 25,
 			z: defender.z,
-			scale: 0,
-		}, {
 			scale: 0.2,
+		}, {
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('iceball', {
 			x: defender.x + 25,
 			y: defender.y - 25,
 			z: defender.z,
-			scale: 0,
-		}, {
 			scale: 0.2,
+		}, {
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
 			x: defender.x - 50,
 			y: defender.y,
 			z: defender.z,
-			scale: 0,
+			scale: 0.2,
 			time: 300,
 		}, {
-			scale: 0.2,
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
 			x: defender.x + 50,
 			y: defender.y,
 			z: defender.z,
-			scale: 0,
+			scale: 0.2,
 			time: 300,
 		}, {
-			scale: 0.2,
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
 			x: defender.x,
 			y: defender.y - 50,
 			z: defender.z,
-			scale: 0,
+			scale: 0.2,
 			time: 300,
 		}, {
-			scale: 0.2,
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
 			x: defender.x,
 			y: defender.y + 50,
 			z: defender.z,
-			scale: 0,
+			scale: 0.2,
 			time: 300,
 		}, {
-			scale: 0.2,
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
 			x: defender.x - 50,
 			y: defender.y - 50,
 			z: defender.z,
-			scale: 0,
+			scale: 0.2,
 			time: 300,
 		}, {
-			scale: 0.2,
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
 			x: defender.x + 50,
 			y: defender.y + 50,
 			z: defender.z,
-			scale: 0,
+			scale: 0.2,
 			time: 300,
 		}, {
-			scale: 0.2,
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
 			x: defender.x - 50,
 			y: defender.y + 50,
 			z: defender.z,
-			scale: 0,
+			scale: 0.2,
 			time: 300,
 		}, {
-			scale: 0.2,
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
 			x: defender.x + 50,
 			y: defender.y - 50,
 			z: defender.z,
-			scale: 0,
+			scale: 0.2,
 			time: 300,
 		}, {
-			scale: 0.2,
 			time: 800,
 		}, 'decel', 'fade');
 		scene.showEffect('iceball', {
