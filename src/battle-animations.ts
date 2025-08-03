@@ -1853,6 +1853,7 @@ export class PokemonSprite extends Sprite {
 		lightscreen: ['Light Screen', 'good'],
 		reflect: ['Reflect', 'good'],
 		// Fundex
+		falconpunch: ['Focusing', 'neutral'],
 		warlockpunch: ['Focusing', 'neutral'],
 		goldenbracket: ['Golden Bracket', 'bad'],
 	};
