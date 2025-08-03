@@ -33720,7 +33720,7 @@ BattleMoveAnims['cakelie'] = {
 		}, {
 			x: defender.x,
 			y: defender.y,
-			z: defender.behind(-40),
+			z: defender.behind(-50),
 			scale: 0.5,
 			opacity: 1,
 			time: 400,
