@@ -33135,7 +33135,7 @@ BattleMoveAnims['objection'] = {
 		scene.showEffect('objection', {
 			x: attacker.x,
 			y: attacker.y + 30,
-			z: attacker.z,
+			z: attacker.behind(-20),
 			scale: 0.05,
 			opacity: 1,
 		}, {
@@ -33146,7 +33146,7 @@ BattleMoveAnims['objection'] = {
 		scene.showEffect('objection', {
 			x: attacker.x,
 			y: attacker.y + 35,
-			z: attacker.z,
+			z: attacker.behind(-20),
 			scale: 0.05,
 			opacity: 1,
 			time: 50,
@@ -33158,7 +33158,7 @@ BattleMoveAnims['objection'] = {
 		scene.showEffect('objection', {
 			x: attacker.x,
 			y: attacker.y + 25,
-			z: attacker.z,
+			z: attacker.behind(-20),
 			scale: 0.05,
 			opacity: 1,
 			time: 100,
@@ -33170,7 +33170,7 @@ BattleMoveAnims['objection'] = {
 		scene.showEffect('objection', {
 			x: attacker.x,
 			y: attacker.y + 35,
-			z: attacker.z,
+			z: attacker.behind(-20),
 			scale: 0.05,
 			opacity: 1,
 			time: 150,
@@ -33182,7 +33182,7 @@ BattleMoveAnims['objection'] = {
 		scene.showEffect('objection', {
 			x: attacker.x,
 			y: attacker.y + 25,
-			z: attacker.z,
+			z: attacker.behind(-20),
 			scale: 0.05,
 			opacity: 1,
 			time: 200,
@@ -33194,7 +33194,7 @@ BattleMoveAnims['objection'] = {
 		scene.showEffect('objection', {
 			x: attacker.x,
 			y: attacker.y + 35,
-			z: attacker.z,
+			z: attacker.behind(-20),
 			scale: 0.05,
 			opacity: 1,
 			time: 250,
@@ -33206,7 +33206,7 @@ BattleMoveAnims['objection'] = {
 		scene.showEffect('objection', {
 			x: attacker.x,
 			y: attacker.y + 25,
-			z: attacker.z,
+			z: attacker.behind(-20),
 			scale: 0.05,
 			opacity: 1,
 			time: 300,
@@ -33218,7 +33218,7 @@ BattleMoveAnims['objection'] = {
 		scene.showEffect('objection', {
 			x: attacker.x,
 			y: attacker.y + 30,
-			z: attacker.z,
+			z: attacker.behind(-20),
 			scale: 0.05,
 			opacity: 1,
 			time: 350,
@@ -33365,7 +33365,7 @@ BattleMoveAnims['monstercucumber'] = {
 			y: attacker.y,
 			z: attacker.z,
 			scale: 0.4,
-			opacity: 0.6,
+			opacity: 0,
 		}, {
 			z: defender.behind(20),
 			opacity: 0.6,
@@ -33380,7 +33380,7 @@ BattleMoveAnims['monstercucumber'] = {
 			time: 300,
 		}, {
 			z: attacker.z,
-			opacity: 0.6,
+			opacity: 0,
 			time: 600,
 		}, 'ballistic2Under', 'fade');
 	},
