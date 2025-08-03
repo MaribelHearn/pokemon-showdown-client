@@ -34814,6 +34814,214 @@ BattleMoveAnims['spearthegungnir'] = {
 		}, 'swing');
 	},
 };
+BattleMoveAnims['koin3steps'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('iceball', {
+			x: defender.x - 20,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+		}, {
+			x: defender.x - 20,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 400,
+		}, 'decel');
+		scene.showEffect('iceball', {
+			x: defender.x + 20,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+		}, {
+			x: defender.x + 20,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 400,
+		}, 'decel');
+		scene.showEffect('iceball', {
+			x: defender.x,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0.25,
+		}, {
+			x: defender.x,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0.25,
+			time: 400,
+		}, 'decel');
+		scene.showEffect('iceball', {
+			x: defender.x,
+			y: defender.y + 20,
+			z: defender.z,
+			scale: 0.25,
+		}, {
+			x: defender.x,
+			y: defender.y + 20,
+			z: defender.z,
+			scale: 0.25,
+			time: 400,
+		}, 'decel');
+		scene.showEffect('flareball', {
+			x: defender.x - 30,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 200,
+		}, {
+			x: defender.x - 30,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 400,
+		}, 'decel');
+		scene.showEffect('flareball', {
+			x: defender.x + 30,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 200,
+		}, {
+			x: defender.x + 30,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 400,
+		}, 'decel');
+		scene.showEffect('flareball', {
+			x: defender.x,
+			y: defender.y - 30,
+			z: defender.z,
+			scale: 0.25,
+			time: 200,
+		}, {
+			x: defender.x,
+			y: defender.y - 30,
+			z: defender.z,
+			scale: 0.25,
+			time: 400,
+		}, 'decel');
+		scene.showEffect('flareball', {
+			x: defender.x,
+			y: defender.y + 30,
+			z: defender.z,
+			scale: 0.25,
+			time: 200,
+		}, {
+			x: defender.x,
+			y: defender.y + 30,
+			z: defender.z,
+			scale: 0.25,
+			time: 400,
+		}, 'decel');
+		scene.showEffect('iceball', {
+			x: defender.x - 20,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 600,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 800,
+		}, 'linear', 'explode');
+		scene.showEffect('iceball', {
+			x: defender.x + 20,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 600,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 800,
+		}, 'linear', 'explode');
+		scene.showEffect('iceball', {
+			x: defender.x,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0.25,
+			time: 600,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 800,
+		}, 'linear', 'explode');
+		scene.showEffect('iceball', {
+			x: defender.x,
+			y: defender.y + 20,
+			z: defender.z,
+			scale: 0.25,
+			time: 600,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 800,
+		}, 'linear', 'explode');
+		scene.showEffect('flareball', {
+			x: defender.x - 30,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 600,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 800,
+		}, 'linear', 'explode');
+		scene.showEffect('flareball', {
+			x: defender.x + 30,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 600,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 800,
+		}, 'linear', 'explode');
+		scene.showEffect('flareball', {
+			x: defender.x,
+			y: defender.y - 30,
+			z: defender.z,
+			scale: 0.25,
+			time: 600,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 800,
+		}, 'linear', 'explode');
+		scene.showEffect('flareball', {
+			x: defender.x,
+			y: defender.y + 30,
+			z: defender.z,
+			scale: 0.25,
+			time: 600,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.25,
+			time: 800,
+		}, 'linear', 'explode');
+	},
+};
 BattleMoveAnims['strawberrycross'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('wisp', {
@@ -35135,7 +35343,7 @@ BattleMoveAnims['ghastlydream']={anim:BattleMoveAnims['hex'].anim};
 BattleMoveAnims['wrigglekick']={anim:BattleMoveAnims['highjumpkick'].anim};
 BattleMoveAnims['hisousword']={anim:BattleMoveAnims['sacredsword'].anim};
 BattleMoveAnims['throwingatlas']={anim:BattleMoveAnims['stoneedge'].anim};
-BattleMoveAnims['koin3steps']={anim:BattleMoveAnims['focuspunch'].anim};
+//BattleMoveAnims['koin3steps']={anim:BattleMoveAnims['focuspunch'].anim};
 //strawberrycross see above
 //BattleMoveAnims['iwakasascurse']={anim:BattleMoveAnims['focuspunch'].anim};
 //BattleMoveAnims['trainwreck']={anim:BattleMoveAnims['focuspunch'].anim};
