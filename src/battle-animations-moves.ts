@@ -33394,7 +33394,6 @@ BattleMoveAnims['redufosofrage'] = {
 			x: attacker.x + 20,
 			y: attacker.y + 20,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 0,
 		}, {
@@ -33406,7 +33405,6 @@ BattleMoveAnims['redufosofrage'] = {
 			x: attacker.x - 20,
 			y: attacker.y + 10,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 100,
 		}, {
@@ -33418,7 +33416,6 @@ BattleMoveAnims['redufosofrage'] = {
 			x: attacker.x,
 			y: attacker.y + 40,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 200,
 		}, {
@@ -33434,7 +33431,6 @@ BattleMoveAnims['blueufosofgrief'] = {
 			x: attacker.x + 20,
 			y: attacker.y + 20,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 0,
 		}, {
@@ -33446,7 +33442,6 @@ BattleMoveAnims['blueufosofgrief'] = {
 			x: attacker.x - 20,
 			y: attacker.y + 10,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 100,
 		}, {
@@ -33458,7 +33453,6 @@ BattleMoveAnims['blueufosofgrief'] = {
 			x: attacker.x,
 			y: attacker.y + 40,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 200,
 		}, {
@@ -33474,7 +33468,6 @@ BattleMoveAnims['greenufosofloyalty'] = {
 			x: attacker.x + 20,
 			y: attacker.y + 20,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 0,
 		}, {
@@ -33486,7 +33479,6 @@ BattleMoveAnims['greenufosofloyalty'] = {
 			x: attacker.x - 20,
 			y: attacker.y + 10,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 100,
 		}, {
@@ -33498,7 +33490,6 @@ BattleMoveAnims['greenufosofloyalty'] = {
 			x: attacker.x,
 			y: attacker.y + 40,
 			z: attacker.z,
-			scale: 0.5,
 			opacity: 0.5,
 			time: 200,
 		}, {
@@ -33506,6 +33497,55 @@ BattleMoveAnims['greenufosofloyalty'] = {
 			opacity: 1,
 			time: 500,
 		}, 'ballistic2Under', 'fade');
+	},
+};
+BattleMoveAnims['rainbowufosofterror'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('redufo', {
+			x: attacker.x,
+			y: attacker.y - 10,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 0,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1,
+			opacity: 1,
+			time: 400,
+		}, 'ballistic');
+		scene.showEffect('blueufo', {
+			x: attacker.x,
+			y: attacker.y + 10,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 200,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1,
+			opacity: 1,
+			time: 600,
+		}, 'ballistic2');
+		scene.showEffect('greenufo', {
+			x: attacker.x,
+			y: attacker.y - 10,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.5,
+			time: 400,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1,
+			opacity: 1,
+			time: 800,
+		}, 'ballistic');
 	},
 };
 BattleMoveAnims['bittorrent'] = {
