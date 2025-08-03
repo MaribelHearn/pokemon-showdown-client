@@ -34817,120 +34817,107 @@ BattleMoveAnims['spearthegungnir'] = {
 BattleMoveAnims['koin3steps'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('iceball', {
-			x: defender.x - 20,
+			x: defender.x - 25,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
 		}, {
-			x: defender.x - 20,
+			x: defender.x - 25,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 600,
-		}, 'decel');
+			time: 800,
+		}, 'decel', 'fade');
 		scene.showEffect('iceball', {
-			x: defender.x + 20,
+			x: defender.x + 25,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
 		}, {
-			x: defender.x + 20,
+			x: defender.x + 25,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 600,
-		}, 'decel');
-		scene.showEffect('iceball', {
-			x: defender.x,
-			y: defender.y - 20,
-			z: defender.z,
-			scale: 0.2,
-		}, {
-			x: defender.x,
-			y: defender.y - 20,
-			z: defender.z,
-			scale: 0.2,
-			time: 600,
-		}, 'decel');
+			time: 800,
+		}, 'decel', 'fade');
 		scene.showEffect('iceball', {
 			x: defender.x,
-			y: defender.y + 20,
+			y: defender.y - 25,
 			z: defender.z,
 			scale: 0.2,
 		}, {
 			x: defender.x,
-			y: defender.y + 20,
+			y: defender.y - 25,
 			z: defender.z,
 			scale: 0.2,
-			time: 600,
-		}, 'decel');
+			time: 800,
+		}, 'decel', 'fade');
+		scene.showEffect('iceball', {
+			x: defender.x,
+			y: defender.y + 25,
+			z: defender.z,
+			scale: 0.2,
+		}, {
+			x: defender.x,
+			y: defender.y + 25,
+			z: defender.z,
+			scale: 0.2,
+			time: 800,
+		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
-			x: defender.x - 40,
+			x: defender.x - 50,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
 			time: 300,
 		}, {
-			x: defender.x - 40,
+			x: defender.x - 50,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 600,
-		}, 'decel');
+			time: 800,
+		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
-			x: defender.x + 40,
+			x: defender.x + 50,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
 			time: 300,
 		}, {
-			x: defender.x + 40,
+			x: defender.x + 50,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 600,
-		}, 'decel');
+			time: 800,
+		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
 			x: defender.x,
-			y: defender.y - 40,
+			y: defender.y - 50,
 			z: defender.z,
 			scale: 0.2,
 			time: 300,
 		}, {
 			x: defender.x,
-			y: defender.y - 40,
+			y: defender.y - 50,
 			z: defender.z,
 			scale: 0.2,
-			time: 600,
-		}, 'decel');
+			time: 800,
+		}, 'decel', 'fade');
 		scene.showEffect('flareball', {
 			x: defender.x,
-			y: defender.y + 40,
+			y: defender.y + 50,
 			z: defender.z,
 			scale: 0.2,
 			time: 300,
 		}, {
 			x: defender.x,
-			y: defender.y + 40,
+			y: defender.y + 50,
 			z: defender.z,
 			scale: 0.2,
-			time: 600,
-		}, 'decel');
+			time: 800,
+		}, 'decel', 'fade');
 		scene.showEffect('iceball', {
-			x: defender.x - 20,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.2,
-			time: 900,
-		}, {
-			x: defender.x,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.2,
-			time: 1200,
-		}, 'linear', 'explode');
-		scene.showEffect('iceball', {
-			x: defender.x + 20,
+			x: defender.x - 25,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
@@ -34943,8 +34930,8 @@ BattleMoveAnims['koin3steps'] = {
 			time: 1200,
 		}, 'linear', 'explode');
 		scene.showEffect('iceball', {
-			x: defender.x,
-			y: defender.y - 20,
+			x: defender.x + 25,
+			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
 			time: 900,
@@ -34957,7 +34944,20 @@ BattleMoveAnims['koin3steps'] = {
 		}, 'linear', 'explode');
 		scene.showEffect('iceball', {
 			x: defender.x,
-			y: defender.y + 20,
+			y: defender.y - 25,
+			z: defender.z,
+			scale: 0.2,
+			time: 900,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.2,
+			time: 1200,
+		}, 'linear', 'explode');
+		scene.showEffect('iceball', {
+			x: defender.x,
+			y: defender.y + 25,
 			z: defender.z,
 			scale: 0.2,
 			time: 900,
@@ -34969,7 +34969,7 @@ BattleMoveAnims['koin3steps'] = {
 			time: 1200,
 		}, 'linear', 'explode');
 		scene.showEffect('flareball', {
-			x: defender.x - 40,
+			x: defender.x - 60,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
@@ -34982,7 +34982,7 @@ BattleMoveAnims['koin3steps'] = {
 			time: 1200,
 		}, 'linear', 'explode');
 		scene.showEffect('flareball', {
-			x: defender.x + 40,
+			x: defender.x + 50,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
@@ -34996,7 +34996,7 @@ BattleMoveAnims['koin3steps'] = {
 		}, 'linear', 'explode');
 		scene.showEffect('flareball', {
 			x: defender.x,
-			y: defender.y - 40,
+			y: defender.y - 50,
 			z: defender.z,
 			scale: 0.2,
 			time: 900,
@@ -35009,7 +35009,7 @@ BattleMoveAnims['koin3steps'] = {
 		}, 'linear', 'explode');
 		scene.showEffect('flareball', {
 			x: defender.x,
-			y: defender.y + 40,
+			y: defender.y + 50,
 			z: defender.z,
 			scale: 0.2,
 			time: 900,
@@ -35343,7 +35343,7 @@ BattleMoveAnims['ghastlydream']={anim:BattleMoveAnims['hex'].anim};
 BattleMoveAnims['wrigglekick']={anim:BattleMoveAnims['highjumpkick'].anim};
 BattleMoveAnims['hisousword']={anim:BattleMoveAnims['sacredsword'].anim};
 BattleMoveAnims['throwingatlas']={anim:BattleMoveAnims['stoneedge'].anim};
-//BattleMoveAnims['koin3steps']={anim:BattleMoveAnims['focuspunch'].anim};
+//koin3steps see above
 //strawberrycross see above
 //BattleMoveAnims['iwakasascurse']={anim:BattleMoveAnims['focuspunch'].anim};
 //BattleMoveAnims['trainwreck']={anim:BattleMoveAnims['focuspunch'].anim};
