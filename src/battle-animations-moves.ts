@@ -32602,7 +32602,7 @@ BattleMoveAnims['remotemissile'] = {
 			z: defender.z,
 			opacity: 1,
 			time: 500,
-		}, 'ballistic');
+		}, 'ballistic2');
 		scene.showEffect('fireball', {
 			x: defender.x + 40,
 			y: defender.y,
