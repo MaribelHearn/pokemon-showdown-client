@@ -34433,6 +34433,76 @@ BattleMoveAnims['spearthegungnir'] = {
 		}, 'swing');
 	},
 };
+BattleMoveAnims['graspinghands'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('leftchop', {
+			x: defender.x,
+			y: defender.y + 10,
+			z: defender.behind(-20),
+			scale: 0.5,
+			opacity: 0.1,
+		}, {
+			y: defender.y,
+			scale: 0.25,
+			opacity: 1,
+			time: 300,
+		}, 'decel', 'explode');
+		scene.showEffect('rightchop', {
+			x: defender.x,
+			y: defender.y + 10,
+			z: defender.behind(20),
+			scale: 0.5,
+			opacity: 0.1,
+		}, {
+			y: defender.y,
+			scale: 0.25,
+			opacity: 1,
+			time: 300,
+		}, 'decel', 'explode');
+		scene.showEffect('energyball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.6,
+			time: 300,
+		}, {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 800,
+			opacity: 0,
+		}, 'ballistic2');
+		scene.showEffect('energyball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.6,
+			time: 350,
+		}, {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 850,
+			opacity: 0,
+		}, 'linear');
+		scene.showEffect('energyball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.6,
+			time: 400,
+		}, {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 900,
+			opacity: 0,
+		}, 'ballistic2Under');
+	},
+};
 BattleMoveAnims['electricalshield'] = {
 	anim(scene, [attacker]) {
 		scene.backgroundEffect('#FFFF00', 600, 0.2);
