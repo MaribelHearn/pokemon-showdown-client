@@ -35160,6 +35160,39 @@ BattleMoveAnims['koin3steps'] = {
 			scale: 0.2,
 			time: 1200,
 		}, 'linear', 'explode');
+		scene.showEffect('fireball', {
+			x: defender.x + 40,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 1200,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x - 40,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 1350,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x + 10,
+			y: defender.y + 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 1500,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
 	},
 };
 BattleMoveAnims['strawberrycross'] = {
