@@ -34651,6 +34651,56 @@ BattleMoveAnims['spearthegungnir'] = {
 		}, 'swing');
 	},
 };
+BattleMoveAnims['strawberrycross'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('wisp', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 1,
+			time: 400,
+		}, {
+			x: defender.leftof(-20),
+			y: defender.y,
+			z: defender.behind(20),
+			scale: 3,
+			opacity: 0,
+			time: 700,
+		}, 'linear');
+		scene.showEffect('wisp', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 1,
+			time: 500,
+		}, {
+			x: defender.leftof(-20),
+			y: defender.y,
+			z: defender.behind(20),
+			scale: 3,
+			opacity: 0,
+			time: 800,
+		}, 'linear');
+		scene.showEffect('cross', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1,
+			opacity: 1,
+			time: 400,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 2,
+			opacity: 0,
+			time: 800,
+		}, 'decel', 'explode');
+		BattleOtherAnims.contactattack.anim(scene, [attacker, defender]);
+	},
+};
 BattleMoveAnims['graspinghands'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('leftchop', {
@@ -34923,7 +34973,7 @@ BattleMoveAnims['wrigglekick']={anim:BattleMoveAnims['highjumpkick'].anim};
 BattleMoveAnims['hisousword']={anim:BattleMoveAnims['sacredsword'].anim};
 BattleMoveAnims['throwingatlas']={anim:BattleMoveAnims['stoneedge'].anim};
 BattleMoveAnims['koin3steps']={anim:BattleMoveAnims['focuspunch'].anim};
-//BattleMoveAnims['strawberrycross']={anim:BattleMoveAnims['focuspunch'].anim};
+//strawberrycross see above
 //BattleMoveAnims['iwakasascurse']={anim:BattleMoveAnims['focuspunch'].anim};
 //BattleMoveAnims['trainwreck']={anim:BattleMoveAnims['focuspunch'].anim};
 BattleMoveAnims['suzuranpoison']={anim:BattleMoveAnims['poisongas'].anim};
@@ -35014,10 +35064,10 @@ BattleMoveAnims['needlestorm']={anim:BattleMoveAnims['pinmissile'].anim};
 //BattleMoveAnims['parasoltwirl']={anim:BattleMoveAnims['sludgewave'].anim};
 //deathsickle see above
 BattleMoveAnims['bulletspray']={anim:BattleMoveAnims['flameburst'].anim};
-//BattleMoveAnims['nosferatu']={anim:BattleMoveAnims['sludgewave'].anim};
+//nosferatu see above
 //barriercrash see above
 //shieldbash see above
-//BattleMoveAnims['psirockin']={anim:BattleMoveAnims['sludgewave'].anim};
+//psirockin see above
 BattleMoveAnims['thunderhand']={anim:BattleMoveAnims['thunderpunch'].anim};
 //BattleMoveAnims['tornadotentacle']={anim:BattleMoveAnims['sludgewave'].anim};
 BattleMoveAnims['deathegg']={anim:BattleMoveAnims['eggbomb'].anim};
@@ -35038,7 +35088,7 @@ BattleMoveAnims['firebrand']={anim:BattleMoveAnims['firepunch'].anim};
 //bullseye see above
 //laserbeam see above
 BattleMoveAnims['glitchyterrain'] = {anim: BattleMoveAnims['mistyterrain'].anim};
-//BattleMoveAnims['rainbowufosofterror']={anim:BattleMoveAnims['eggbomb'].anim};
+//rainbowufosofterror see above
 BattleMoveAnims['mysteriouspower'] = {anim: BattleMoveAnims['secretpower'].anim};
 BattleMoveAnims['finaljudgment']={anim:BattleMoveAnims['judgment'].anim};
 //offwaves see above
