@@ -32597,6 +32597,9 @@ BattleMoveAnims['remotemissile'] = {
 			z: attacker.z,
 			opacity: 1,
 		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
 			opacity: 1,
 			time: 500,
 		}, 'ballistic');
@@ -34296,7 +34299,6 @@ BattleMoveAnims['shieldbash'] = {
 		}, 'swing');
 	},
 };
-
 BattleMoveAnims['lightarrow'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('mistball', {
