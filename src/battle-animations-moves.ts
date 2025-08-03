@@ -33136,7 +33136,7 @@ BattleMoveAnims['objection'] = {
 			x: attacker.x,
 			y: attacker.y + 30,
 			z: attacker.behind(-20),
-			scale: 0.05,
+			scale: 0.5,
 			opacity: 1,
 		}, {
 			scale: 0.05,
@@ -33147,7 +33147,7 @@ BattleMoveAnims['objection'] = {
 			x: attacker.x,
 			y: attacker.y + 35,
 			z: attacker.behind(-20),
-			scale: 0.05,
+			scale: 0.5,
 			opacity: 1,
 			time: 50,
 		}, {
@@ -33159,7 +33159,7 @@ BattleMoveAnims['objection'] = {
 			x: attacker.x,
 			y: attacker.y + 25,
 			z: attacker.behind(-20),
-			scale: 0.05,
+			scale: 0.5,
 			opacity: 1,
 			time: 100,
 		}, {
@@ -33171,7 +33171,7 @@ BattleMoveAnims['objection'] = {
 			x: attacker.x,
 			y: attacker.y + 35,
 			z: attacker.behind(-20),
-			scale: 0.05,
+			scale: 0.5,
 			opacity: 1,
 			time: 150,
 		}, {
@@ -33183,7 +33183,7 @@ BattleMoveAnims['objection'] = {
 			x: attacker.x,
 			y: attacker.y + 25,
 			z: attacker.behind(-20),
-			scale: 0.05,
+			scale: 0.5,
 			opacity: 1,
 			time: 200,
 		}, {
@@ -33195,7 +33195,7 @@ BattleMoveAnims['objection'] = {
 			x: attacker.x,
 			y: attacker.y + 35,
 			z: attacker.behind(-20),
-			scale: 0.05,
+			scale: 0.5,
 			opacity: 1,
 			time: 250,
 		}, {
@@ -33207,7 +33207,7 @@ BattleMoveAnims['objection'] = {
 			x: attacker.x,
 			y: attacker.y + 25,
 			z: attacker.behind(-20),
-			scale: 0.05,
+			scale: 0.5,
 			opacity: 1,
 			time: 300,
 		}, {
@@ -33219,7 +33219,7 @@ BattleMoveAnims['objection'] = {
 			x: attacker.x,
 			y: attacker.y + 30,
 			z: attacker.behind(-20),
-			scale: 0.05,
+			scale: 0.5,
 			opacity: 1,
 			time: 350,
 		}, {
