@@ -34395,13 +34395,13 @@ BattleMoveAnims['parasoltwirl'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('parasol', {
 			x: attacker.x,
-			y: attacker.y - 50,
-			z: attacker.behind(-20),
+			y: attacker.y + 30,
+			z: attacker.behind(-10),
 			scale: 0.5,
 		}, {
 			x: defender.x,
-			y: defender.y - 50,
-			z: defender.behind(20),
+			y: defender.y + 30,
+			z: defender.behind(10),
 			scale: 0.5,
 			time: 400,
 		}, 'ballistic', 'fade');
