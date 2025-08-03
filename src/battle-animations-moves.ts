@@ -34921,6 +34921,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y - 50,
 			z: defender.z,
 			scale: 0.2,
+			time: 300,
 		}, {
 			time: 800,
 		}, 'decel', 'fade');
@@ -34929,6 +34930,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y + 50,
 			z: defender.z,
 			scale: 0.2,
+			time: 300,
 		}, {
 			time: 800,
 		}, 'decel', 'fade');
@@ -34937,6 +34939,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y + 50,
 			z: defender.z,
 			scale: 0.2,
+			time: 300,
 		}, {
 			time: 800,
 		}, 'decel', 'fade');
@@ -34945,6 +34948,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y - 50,
 			z: defender.z,
 			scale: 0.2,
+			time: 300,
 		}, {
 			time: 800,
 		}, 'decel', 'fade');
