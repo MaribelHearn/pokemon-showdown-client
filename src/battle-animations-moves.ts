@@ -34948,7 +34948,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('flareball', {
 			x: defender.x + 25,
@@ -34961,7 +34961,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('flareball', {
 			x: defender.x,
@@ -34974,7 +34974,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('flareball', {
 			x: defender.x,
@@ -34987,7 +34987,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('flareball', {
 			x: defender.x - 25,
@@ -35000,7 +35000,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('flareball', {
 			x: defender.x + 25,
@@ -35013,7 +35013,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('flareball', {
 			x: defender.x + 25,
@@ -35026,7 +35026,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('flareball', {
 			x: defender.x - 25,
@@ -35039,7 +35039,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('mistball', {
 			x: defender.x - 50,
@@ -35052,7 +35052,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('mistball', {
 			x: defender.x + 50,
@@ -35065,7 +35065,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('mistball', {
 			x: defender.x,
@@ -35078,7 +35078,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('mistball', {
 			x: defender.x,
@@ -35091,7 +35091,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('mistball', {
 			x: defender.x - 50,
@@ -35104,7 +35104,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('mistball', {
 			x: defender.x + 50,
@@ -35117,7 +35117,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('mistball', {
 			x: defender.x + 50,
@@ -35130,7 +35130,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('mistball', {
 			x: defender.x - 50,
@@ -35143,7 +35143,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1400,
+			time: 1500,
 		}, 'linear', 'explode');
 		scene.showEffect('fireball', {
 			x: defender.x + 40,
@@ -35151,7 +35151,7 @@ BattleMoveAnims['koin3steps'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
-			time: 1400,
+			time: 1500,
 		}, {
 			scale: 6,
 			opacity: 0,
@@ -35162,7 +35162,7 @@ BattleMoveAnims['koin3steps'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
-			time: 1550,
+			time: 1650,
 		}, {
 			scale: 6,
 			opacity: 0,
@@ -35173,7 +35173,7 @@ BattleMoveAnims['koin3steps'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
-			time: 1700,
+			time: 1800,
 		}, {
 			scale: 6,
 			opacity: 0,
