@@ -34805,6 +34805,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
+			time: 50,
 		}, {
 			time: 1000,
 		}, 'decel', 'fade');
@@ -34941,7 +34942,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -34954,7 +34955,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -34967,7 +34968,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y - 25,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -34980,7 +34981,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y + 25,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -34993,7 +34994,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y - 25,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -35006,7 +35007,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y + 25,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -35019,7 +35020,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y - 25,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -35032,7 +35033,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y + 25,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -35045,7 +35046,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -35058,7 +35059,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -35071,7 +35072,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y - 50,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -35084,7 +35085,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y + 50,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -35097,7 +35098,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y - 50,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -35110,7 +35111,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y + 50,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -35123,7 +35124,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y - 50,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
@@ -35136,7 +35137,7 @@ BattleMoveAnims['koin3steps'] = {
 			y: defender.y + 50,
 			z: defender.z,
 			scale: 0.2,
-			time: 1100,
+			time: 1200,
 		}, {
 			x: defender.x,
 			y: defender.y,
