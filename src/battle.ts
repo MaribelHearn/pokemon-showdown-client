@@ -1484,7 +1484,7 @@ export class Battle {
 	}
 	animateMove(pokemon: Pokemon, move: Move, target: Pokemon | null, kwArgs: KWArgs) {
 		if (move.id === 'explod') {
-			BattleSound.playEffect(Dex.resourcePrefix + 'audio/explod.mp3');
+			BattleSound.playEffect('audio/explod.mp3');
 		}
 		this.activeMoveIsSpread = kwArgs.spread;
 		if (this.seeking !== null || kwArgs.still) return;
