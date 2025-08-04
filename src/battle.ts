@@ -30,6 +30,7 @@
 import {BattleSceneStub} from './battle-scene-stub';
 import {BattleLog} from './battle-log';
 import {BattleScene, PokemonSprite, BattleStatusAnims} from './battle-animations';
+import {BattleSound} from './battle-sound';
 
 /** [id, element?, ...misc] */
 export type EffectState = any[] & {0: ID};
@@ -1482,6 +1483,9 @@ export class Battle {
 		}
 	}
 	animateMove(pokemon: Pokemon, move: Move, target: Pokemon | null, kwArgs: KWArgs) {
+		if (move.id === 'explod') {
+			BattleSound.playEffect(Dex.resourcePrefix + 'audio/explod.mp3');
+		}
 		this.activeMoveIsSpread = kwArgs.spread;
 		if (this.seeking !== null || kwArgs.still) return;
 
