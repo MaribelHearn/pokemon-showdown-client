@@ -1334,6 +1334,9 @@ class Move implements Effect {
 	readonly noSketch: boolean;
 	readonly num: number;
 
+	// Fundex
+	readonly audio: boolean;
+
 	constructor(id: ID, name: string, data: any) {
 		if (!data || typeof data !== 'object') data = {};
 		if (data.name) name = data.name;
@@ -1367,6 +1370,9 @@ class Move implements Effect {
 		this.noPPBoosts = data.noPPBoosts || false;
 		this.secondaries = data.secondaries || (data.secondary ? [data.secondary] : null);
 		this.noSketch = !!data.noSketch;
+
+		// Fundex
+		this.audio = !!data.audio;
 
 		this.isMax = data.isMax || false;
 		this.maxMove = data.maxMove || {basePower: 0};
