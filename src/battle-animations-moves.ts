@@ -34485,6 +34485,16 @@ BattleMoveAnims['pixiedust'] = {
 		}
 	},
 };
+BattleMoveAnims['explod'] = {
+	anim(scene, [attacker, defender]) {
+		for (let i = 1; i <= 26; i++) {
+			scene.backgroundEffect(`url('https://${Dex.resourcePrefix}/fx/explod/explod${i}.png')`, i * 16, (i - 1) * 16);
+		}
+		for (let j = 27; j <= 36; j++) {
+			scene.backgroundEffect(`url('https://${Dex.resourcePrefix}/fx/explod/explod26.png')`, j * 16, (j - 1) * 16);
+		}
+	},
+};
 BattleMoveAnims['deathsickle'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('#000000', 600, 0.3, 250);
@@ -35507,7 +35517,7 @@ BattleMoveAnims['throwingatlas']={anim:BattleMoveAnims['stoneedge'].anim};
 //BattleMoveAnims['trainwreck']={anim:BattleMoveAnims['focuspunch'].anim};
 BattleMoveAnims['suzuranpoison']={anim:BattleMoveAnims['poisongas'].anim};
 BattleMoveAnims['lemmingsparade']={anim:BattleMoveAnims['spikecannon'].anim};
-BattleMoveAnims['explod']={anim:BattleMoveAnims['explosion'].anim};
+//explod see above
 BattleMoveAnims['study']={anim:BattleMoveAnims['calmmind'].anim};
 BattleMoveAnims['corrupt']={anim:BattleMoveAnims['curse'].anim};
 BattleMoveAnims['sovietreversal']={anim:BattleMoveAnims['reversal'].anim};
