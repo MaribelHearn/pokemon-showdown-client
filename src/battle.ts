@@ -1504,7 +1504,7 @@ export class Battle {
 		}
 
 		let usedMove = kwArgs.anim ? Dex.moves.get(kwArgs.anim) : move;
-		let incomprehensible = pokemon.name === 'Giygas' && pokemon.ability === 'Incomprehensible';
+		let incomprehensible = pokemon.ability === 'Incomprehensible';
 
 		if (!kwArgs.spread) {
 			this.scene.runMoveAnim(usedMove.id, [pokemon, target], incomprehensible);
@@ -3567,7 +3567,7 @@ export class Battle {
 			if (poke.status === 'tmt') {
 				args.push('TMTRAINER');
 			}
-			else if (poke.speciesForme === 'Giygas' && poke.ability === 'Incomprehensible') {
+			else if (poke.ability === 'Incomprehensible') {
 				args.push('Incomprehensible');
 			}
 			this.log(args, kwArgs);
