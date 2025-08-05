@@ -3567,7 +3567,7 @@ export class Battle {
 			if (poke.status === 'tmt') {
 				args.push('TMTRAINER');
 			}
-			else if (poke.speciesForme === 'Giygas' && poke.ability === '') {
+			else if (poke.speciesForme === 'Giygas' && poke.ability === 'Incomprehensible') {
 				args.push('Incomprehensible');
 			}
 			this.log(args, kwArgs);
