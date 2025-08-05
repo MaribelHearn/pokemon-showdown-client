@@ -34488,10 +34488,10 @@ BattleMoveAnims['pixiedust'] = {
 BattleMoveAnims['explod'] = {
 	anim(scene, [attacker, defender]) {
 		for (let i = 1; i <= 26; i++) {
-			scene.backgroundEffect(`url('${Dex.resourcePrefix}fx/explod/explod${i}.png')`, i * 16, (i - 1) * 16);
+			scene.backgroundEffect(`url('${Dex.resourcePrefix}fx/explod/explod${i}.png')`, i * 16, 1, (i - 1) * 16);
 		}
 		for (let j = 27; j <= 36; j++) {
-			scene.backgroundEffect(`url('${Dex.resourcePrefix}fx/explod/explod26.png')`, j * 16, (j - 1) * 16);
+			scene.backgroundEffect(`url('${Dex.resourcePrefix}fx/explod/explod26.png')`, j * 16, 1, (j - 1) * 16);
 		}
 	},
 };
