@@ -35504,7 +35504,6 @@ BattleMoveAnims['diamondblizzard']={anim:BattleMoveAnims['blizzard'].anim};
 //fantasyseal see above
 //evilsealingcircle see above
 BattleMoveAnims['killingdoll']={anim:BattleMoveAnims['smartstrike'].anim};
-BattleMoveAnims['theworld']={anim:BattleMoveAnims['agility'].anim};
 //BattleMoveAnims['nuke']={anim:BattleMoveAnims['focuspunch'].anim};
 BattleMoveAnims['ghastlydream']={anim:BattleMoveAnims['hex'].anim};
 //spearthegungnir see above
@@ -35569,14 +35568,11 @@ BattleMoveAnims['strengthenjutsu']={anim:BattleMoveAnims['nastyplot'].anim};
 BattleMoveAnims['washingmachine']={anim:BattleMoveAnims['whirlpool'].anim};
 BattleMoveAnims['programfreeze']={anim:BattleMoveAnims['sheercold'].anim};
 BattleMoveAnims['datastream']={anim:BattleMoveAnims['hyperbeam'].anim};
-BattleMoveAnims['silverlight']={anim:BattleMoveAnims['flash'].anim};
 //BattleMoveAnims['delete']={anim:BattleMoveAnims['extremespeed'].anim};
 BattleMoveAnims['painflow']={anim:BattleMoveAnims['needlearm'].anim};
 BattleMoveAnims['flightofidaten']={anim:BattleMoveAnims['quickattack'].anim};
-BattleMoveAnims['phoenixspreadwings']={anim:BattleMoveAnims['wingattack'].anim};
-BattleMoveAnims['grandpatriotselixir']={anim:BattleMoveAnims['milkdrink'].anim};
+BattleMoveAnims['patriotselixir']={anim:BattleMoveAnims['milkdrink'].anim};
 BattleMoveAnims['lunaticredeyes']={anim:BattleMoveAnims['psychic'].anim};
-BattleMoveAnims['catswalk']={anim:BattleMoveAnims['pound'].anim};
 BattleMoveAnims['slashofeternity']={anim:BattleMoveAnims['nightslash'].anim};
 BattleMoveAnims['mysterioussong']={anim:BattleMoveAnims['sing'].anim};
 BattleMoveAnims['illstarreddive']={anim:BattleMoveAnims['quickattack'].anim};
@@ -35586,10 +35582,10 @@ BattleMoveAnims['aculyhigherstat']={anim:BattleMoveAnims['acupressure'].anim};
 BattleMoveAnims['zantetsuken']={anim:BattleMoveAnims['slash'].anim};
 BattleMoveAnims['magicaltempest']={anim:BattleMoveAnims['thunder'].anim};
 BattleMoveAnims['handofdestruction']={anim:BattleMoveAnims['punishment'].anim};
-//BattleMoveAnims['matterstorm']={anim:BattleMoveAnims['sludgewave'].anim};
+//matterstorm see above
 //thousandcuts see above
 //overheadslash see above
-//BattleMoveAnims['graspinghands']={anim:BattleMoveAnims['sludgewave'].anim};
+//graspinghands see above
 //arrowrain see above
 //flamingarrow see above
 //shockingarrow see above
