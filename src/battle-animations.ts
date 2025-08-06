@@ -2894,6 +2894,14 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'parasol.png',
 		w: 100, h: 100,
 	},
+	leftbite: {
+		url: 'leftbite.png',
+		w: 108, h: 64,
+	},
+	rightbite: {
+		url: 'rightbite.png',
+		w: 108, h: 64,
+	},
 	// ------
 	wisp: {
 		url: 'wisp.png',
