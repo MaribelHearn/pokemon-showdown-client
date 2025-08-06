@@ -35504,7 +35504,7 @@ BattleMoveAnims['goldenbracket'] = {
 			x: defender.x - 10,
 			y: defender.y,
 			z: defender.z,
-			time: 200,
+			time: 300,
 		}, 'linear', 'fade');
 		scene.showEffect('rightbite', {
 			x: defender.x + 20,
@@ -35514,33 +35514,38 @@ BattleMoveAnims['goldenbracket'] = {
 			x: defender.x + 10,
 			y: defender.y,
 			z: defender.z,
-			time: 200,
+			time: 300,
 		}, 'linear', 'fade');
+		scene.showEffect('leftbite', {
+			x: defender.x - 10,
+			y: defender.y,
+			z: defender.z,
+			time: 300,
+		}, {
+			time: 900,
+		}, 'decel', 'fade');
+		scene.showEffect('rightbite', {
+			x: defender.x + 10,
+			y: defender.y,
+			z: defender.z,
+			time: 300,
+		}, {
+			time: 900,
+		}, 'decel', 'fade');
 		scene.showEffect('shine', {
 			x: defender.x - 10,
 			y: defender.y - 10,
 			z: defender.z,
 			scale: 0.3,
 			opacity: 0.6,
-			time: 200
-		}, {
-			opacity: 0,
-			time: 500,
-		}, 'decel');
-		scene.showEffect('shine', {
-			x: defender.x + 20,
-			y: defender.y - 15,
-			z: defender.z,
-			scale: 0.3,
-			opacity: 0.6,
-			time: 300,
+			time: 300
 		}, {
 			opacity: 0,
 			time: 600,
 		}, 'decel');
 		scene.showEffect('shine', {
-			x: defender.x - 5,
-			y: defender.y + 15,
+			x: defender.x + 20,
+			y: defender.y - 15,
 			z: defender.z,
 			scale: 0.3,
 			opacity: 0.6,
@@ -35550,8 +35555,8 @@ BattleMoveAnims['goldenbracket'] = {
 			time: 700,
 		}, 'decel');
 		scene.showEffect('shine', {
-			x: defender.x + 5,
-			y: defender.y - 10,
+			x: defender.x - 5,
+			y: defender.y + 15,
 			z: defender.z,
 			scale: 0.3,
 			opacity: 0.6,
@@ -35559,6 +35564,17 @@ BattleMoveAnims['goldenbracket'] = {
 		}, {
 			opacity: 0,
 			time: 800,
+		}, 'decel');
+		scene.showEffect('shine', {
+			x: defender.x + 5,
+			y: defender.y - 10,
+			z: defender.z,
+			scale: 0.3,
+			opacity: 0.6,
+			time: 600,
+		}, {
+			opacity: 0,
+			time: 900,
 		}, 'accel');
 
 		scene.showEffect('shine', {
