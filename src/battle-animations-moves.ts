@@ -35497,27 +35497,27 @@ BattleMoveAnims['nosferatu'] = {
 BattleMoveAnims['goldenbracket'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('leftbite', {
-			x: defender.x - 20,
+			x: defender.x - 30,
 			y: defender.y,
 			z: defender.z,
 		}, {
-			x: defender.x - 10,
+			x: defender.x - 20,
 			y: defender.y,
 			z: defender.z,
 			time: 300,
 		}, 'linear', 'fade');
 		scene.showEffect('rightbite', {
-			x: defender.x + 20,
+			x: defender.x + 30,
 			y: defender.y,
 			z: defender.z,
 		}, {
-			x: defender.x + 10,
+			x: defender.x + 20,
 			y: defender.y,
 			z: defender.z,
 			time: 300,
 		}, 'linear', 'fade');
 		scene.showEffect('leftbite', {
-			x: defender.x - 10,
+			x: defender.x - 20,
 			y: defender.y,
 			z: defender.z,
 			time: 300,
@@ -35525,7 +35525,7 @@ BattleMoveAnims['goldenbracket'] = {
 			time: 900,
 		}, 'decel', 'fade');
 		scene.showEffect('rightbite', {
-			x: defender.x + 10,
+			x: defender.x + 20,
 			y: defender.y,
 			z: defender.z,
 			time: 300,
