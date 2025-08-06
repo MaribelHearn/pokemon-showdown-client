@@ -2214,19 +2214,18 @@ class BattleStatGuesser {
 			return '?';
 		}
 
+		// Fundex: include custom moves here
 		for (let i = 0, len = set.moves.length; i < len; i++) {
 			let move = this.dex.moves.get(set.moves[i]);
 			hasMove[move.id] = 1;
 			if (move.category === 'Status') {
 				if (['batonpass', 'healingwish', 'lunardance'].includes(move.id)) {
 					moveCount['Support']++;
-				// Fundex: include custom dual-category moves
 				} else if (['metronome', 'assist', 'copycat', 'mefirst', 'photongeyser', 'shellsidearm', 'recollection', 'catnarok', 'lightarrow'].includes(move.id)) {
 					moveCount['Physical'] += 0.5;
 					moveCount['Special'] += 0.5;
 				} else if (move.id === 'naturepower') {
 					moveCount['Special']++;
-				// Fundex: include custom stall moves
 				} else if (['protect', 'detect', 'spikyshield', 'kingsshield', 'barrelroll', 'firewall', 'electricalshield'].includes(move.id)) {
 					moveCount['Stall']++;
 				} else if (move.id === 'wish') {
@@ -2240,7 +2239,7 @@ class BattleStatGuesser {
 					if (['agility', 'rockpolish', 'shellsmash', 'growth', 'workup'].includes(move.id)) {
 						moveCount['PhysicalSetup']++;
 						moveCount['SpecialSetup']++;
-					} else if (['dragondance', 'swordsdance', 'coil', 'bulkup', 'curse', 'bellydrum'].includes(move.id)) {
+					} else if (['dragondance', 'swordsdance', 'coil', 'bulkup', 'curse', 'bellydrum', 'strengthenjutsu'].includes(move.id)) {
 						moveCount['PhysicalSetup']++;
 					} else if (['nastyplot', 'tailglow', 'quiverdance', 'calmmind', 'geomancy'].includes(move.id)) {
 						moveCount['SpecialSetup']++;
@@ -2253,10 +2252,10 @@ class BattleStatGuesser {
 					}
 					moveCount['Support']++;
 				}
-			} else if (['counter', 'endeavor', 'metalburst', 'mirrorcoat', 'rapidspin'].includes(move.id)) {
+			} else if (['counter', 'endeavor', 'metalburst', 'mirrorcoat', 'rapidspin', 'whirlingfortress'].includes(move.id)) {
 				moveCount['Support']++;
 			} else if ([
-				'nightshade', 'seismictoss', 'psywave', 'superfang', 'naturesmadness', 'foulplay', 'endeavor', 'finalgambit', 'bodypress', 'barriercrash',
+				'nightshade', 'seismictoss', 'psywave', 'superfang', 'naturesmadness', 'foulplay', 'endeavor', 'finalgambit', 'bodypress', 'shieldbash', 'barriercrash',
 			].includes(move.id)) {
 				moveCount['Offense']++;
 			} else if (move.id === 'fellstinger') {
@@ -2306,7 +2305,7 @@ class BattleStatGuesser {
 			specialBulk *= 1.5;
 		}
 
-		if (hasMove['bellydrum']) {
+		if (hasMove['bellydrum'] || hasMove['strengthenjutsu']) {
 			physicalBulk *= 0.6;
 			specialBulk *= 0.6;
 		}
@@ -2328,7 +2327,7 @@ class BattleStatGuesser {
 			physicalBulk *= 1.1;
 			specialBulk *= 1.1;
 		}
-		if (hasMove['gigadrain'] || hasMove['drainpunch'] || hasMove['hornleech']) {
+		if (hasMove['gigadrain'] || hasMove['drainpunch'] || hasMove['hornleech'] || hasMove['graspinghands']) {
 			physicalBulk *= 1.15;
 			specialBulk *= 1.15;
 		}
@@ -2353,7 +2352,7 @@ class BattleStatGuesser {
 			physicalBulk *= 0.7;
 			specialBulk *= 0.7;
 		}
-		if (abilityid === 'multiscale' || abilityid === 'magicguard' || abilityid === 'regenerator') {
+		if (abilityid === 'multiscale' || abilityid == 'felinedeity' || abilityid === 'magicguard' || abilityid === 'regenerator') {
 			physicalBulk *= 1.4;
 			specialBulk *= 1.4;
 		}
