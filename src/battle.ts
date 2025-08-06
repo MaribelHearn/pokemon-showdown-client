@@ -2881,7 +2881,7 @@ export class Battle {
 			// Fundex: Telemetry check
 			case 'telemetry':
 				if (target) {
-					target.rememberMove(kwArgs.move, Dex.moves.get(kwArgs.move).pp);
+					target.rememberMove(kwArgs.move, 0);
 				}
 				break;
 
