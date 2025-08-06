@@ -1411,6 +1411,7 @@ export class Battle {
 		if (fromeffect.id === 'sleeptalk') {
 			pokemon.rememberMove(move.name, 0);
 		}
+		// Fundex: old Telemetry code
 		/*for (const volatile in pokemon.volatiles) {
 			if (volatile.startsWith('telemetry')) {
 				const revealedMoveID = volatile[0].slice(9);
@@ -1470,10 +1471,12 @@ export class Battle {
 					}
 				}
 			}
-			if (!callerMoveForPressure) {
-				pokemon.rememberMove(moveName, pp);
-			} else {
-				pokemon.rememberMove(callerMoveForPressure.name, pp - 1); // 1 pp was already deducted from using the move itself
+			if (pokemon.ability !== 'Incomprehensible') {
+				if (!callerMoveForPressure) {
+					pokemon.rememberMove(moveName, pp);
+				} else {
+					pokemon.rememberMove(callerMoveForPressure.name, pp - 1); // 1 pp was already deducted from using the move itself
+				}
 			}
 		}
 		pokemon.lastMove = move.id;
