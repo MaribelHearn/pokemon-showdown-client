@@ -35500,30 +35500,22 @@ BattleMoveAnims['goldenbracket'] = {
 			x: defender.x - 50,
 			y: defender.y,
 			z: defender.z,
-			scale: 0.5,
-			opacity: 0,
 			time: 370,
 		}, {
 			x: defender.x - 10,
 			y: defender.y,
 			z: defender.z,
-			scale: 0.5,
-			opacity: 1,
 			time: 500,
 		}, 'linear', 'fade');
 		scene.showEffect('rightbite', {
 			x: defender.x + 50,
 			y: defender.y,
 			z: defender.z,
-			scale: 0.5,
-			opacity: 0,
 			time: 370,
 		}, {
 			x: defender.x + 10,
 			y: defender.y,
 			z: defender.z,
-			scale: 0.5,
-			opacity: 1,
 			time: 500,
 		}, 'linear', 'fade');
 	},
