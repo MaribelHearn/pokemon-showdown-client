@@ -35497,27 +35497,106 @@ BattleMoveAnims['nosferatu'] = {
 BattleMoveAnims['goldenbracket'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('leftbite', {
-			x: defender.x - 50,
+			x: defender.x - 20,
 			y: defender.y,
 			z: defender.z,
-			time: 370,
 		}, {
 			x: defender.x - 10,
 			y: defender.y,
 			z: defender.z,
-			time: 500,
+			time: 200,
 		}, 'linear', 'fade');
 		scene.showEffect('rightbite', {
-			x: defender.x + 50,
+			x: defender.x + 20,
 			y: defender.y,
 			z: defender.z,
-			time: 370,
 		}, {
 			x: defender.x + 10,
 			y: defender.y,
 			z: defender.z,
-			time: 500,
+			time: 200,
 		}, 'linear', 'fade');
+		scene.showEffect('shine', {
+			x: defender.x - 10,
+			y: defender.y - 10,
+			z: defender.z,
+			scale: 0.3,
+			opacity: 0.6,
+			time: 200
+		}, {
+			opacity: 0,
+			time: 500,
+		}, 'decel');
+		scene.showEffect('shine', {
+			x: defender.x + 20,
+			y: defender.y - 15,
+			z: defender.z,
+			scale: 0.3,
+			opacity: 0.6,
+			time: 300,
+		}, {
+			opacity: 0,
+			time: 600,
+		}, 'decel');
+		scene.showEffect('shine', {
+			x: defender.x - 5,
+			y: defender.y + 15,
+			z: defender.z,
+			scale: 0.3,
+			opacity: 0.6,
+			time: 400,
+		}, {
+			opacity: 0,
+			time: 700,
+		}, 'decel');
+		scene.showEffect('shine', {
+			x: defender.x + 5,
+			y: defender.y - 10,
+			z: defender.z,
+			scale: 0.3,
+			opacity: 0.6,
+			time: 500,
+		}, {
+			opacity: 0,
+			time: 800,
+		}, 'accel');
+
+		scene.showEffect('shine', {
+			x: defender.x + 20,
+			y: defender.y - 30,
+			z: defender.z,
+			scale: 0.2,
+			opacity: 1,
+			time: 0,
+		}, {
+			y: defender.y + 40,
+			opacity: 0,
+			time: 400,
+		}, 'accel');
+		scene.showEffect('shine', {
+			x: defender.x - 20,
+			y: defender.y + 40,
+			z: defender.z,
+			scale: 0.2,
+			opacity: 1,
+			time: 200,
+		}, {
+			y: defender.y + 40,
+			opacity: 0,
+			time: 600,
+		}, 'accel');
+		scene.showEffect('shine', {
+			x: defender.x,
+			y: defender.y + 30,
+			z: defender.z,
+			scale: 0.2,
+			opacity: 1,
+			time: 400,
+		}, {
+			y: defender.y + 40,
+			opacity: 0,
+			time: 800,
+		}, 'accel');
 	},
 };
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
