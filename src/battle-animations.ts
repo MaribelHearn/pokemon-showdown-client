@@ -2896,11 +2896,11 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	},
 	leftbite: {
 		url: 'leftbite.png',
-		w: 108, h: 64,
+		w: 64, h: 108,
 	},
 	rightbite: {
 		url: 'rightbite.png',
-		w: 108, h: 64,
+		w: 64, h: 108,
 	},
 	// ------
 	wisp: {
