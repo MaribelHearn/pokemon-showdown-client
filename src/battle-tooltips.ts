@@ -2327,7 +2327,7 @@ class BattleStatGuesser {
 			physicalBulk *= 1.1;
 			specialBulk *= 1.1;
 		}
-		if (hasMove['gigadrain'] || hasMove['drainpunch'] || hasMove['hornleech'] || hasMove['graspinghands']) {
+		if (hasMove['gigadrain'] || hasMove['drainpunch'] || hasMove['hornleech'] || hasMove['graspinghands'] || hasMove['bittorrent']) {
 			physicalBulk *= 1.15;
 			specialBulk *= 1.15;
 		}
