@@ -547,7 +547,7 @@ class BattleTextParser {
 			}
 			if (this.pokemon(pokemon, tmtrainer).toLowerCase() == 'the opposing giygas' && args[4] === 'Incomprehensible') {
 				const template = this.template('moveGiygas', kwArgs.from);
-				return line1 + template;
+				return line1 + template.replace('[POKEMON]', this.pokemon(pokemon, tmtrainer));
 			}
 			const template = this.template('move', kwArgs.from);
 			return line1 + template.replace('[POKEMON]', this.pokemon(pokemon, tmtrainer)).replace('[MOVE]', move);
