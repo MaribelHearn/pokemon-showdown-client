@@ -1471,7 +1471,7 @@ export class Battle {
 					}
 				}
 			}
-			if (pokemon.ability !== 'Incomprehensible') {
+			if (pokemon.side.sideid === this.mySide.sideid || pokemon.ability !== 'Incomprehensible') {
 				if (!callerMoveForPressure) {
 					pokemon.rememberMove(moveName, pp);
 				} else {
