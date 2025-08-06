@@ -526,7 +526,7 @@ export class BattleScene implements BattleSceneStub {
 			const targetsSelf = !participants[1] || participants[0] === participants[1];
 			const isSpecial = !targetsSelf && this.battle.dex.moves.get(moveid).category === 'Special';
 			animEntry = BattleOtherAnims[targetsSelf ? 'fastanimself' : isSpecial ? 'fastanimspecial' : 'fastanimattack'];
-		} else if (incomprehensible) {
+		} else if (incomprehensible && this.battle.mySide.sideid !== participants[0].side.sideid) {
 			animEntry = BattleMoveAnims['darkpulse'];
 		} else if (!animEntry) {
 			animEntry = BattleMoveAnims['tackle'];
