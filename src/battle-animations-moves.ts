@@ -35494,6 +35494,40 @@ BattleMoveAnims['nosferatu'] = {
 		}, 'ballistic2Under');
 	},
 };
+BattleMoveAnims['goldenbracket'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('leftbite', {
+			x: defender.x - 50,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.5,
+			opacity: 0,
+			time: 370,
+		}, {
+			x: defender.x - 10,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.5,
+			opacity: 1,
+			time: 500,
+		}, 'linear', 'fade');
+		scene.showEffect('rightbite', {
+			x: defender.x + 50,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.5,
+			opacity: 0,
+			time: 370,
+		}, {
+			x: defender.x + 10,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.5,
+			opacity: 1,
+			time: 500,
+		}, 'linear', 'fade');
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
@@ -35525,7 +35559,7 @@ BattleMoveAnims['sovietreversal']={anim:BattleMoveAnims['reversal'].anim};
 //BattleMoveAnims['mahboi']={anim:BattleMoveAnims['focuspunch'].anim};
 BattleMoveAnims['warlockpunch']={anim:BattleMoveAnims['shadowpunch'].anim};
 BattleMoveAnims['catnarok']={anim:BattleMoveAnims['explosion'].anim};
-BattleMoveAnims['goldenbracket']={anim:BattleMoveAnims['clamp'].anim};
+//goldenbracket see above
 BattleMoveAnims['barrelroll']={anim:BattleMoveAnims['steelroller'].anim};
 BattleMoveAnims['umadbro']={anim:BattleMoveAnims['swagger'].anim};
 BattleMoveAnims['zerolaser']={anim:BattleMoveAnims['hyperbeam'].anim};
