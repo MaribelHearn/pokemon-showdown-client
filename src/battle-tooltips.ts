@@ -601,7 +601,7 @@ class BattleTooltips {
 			}
 		}
 
-		if (pokemon.hasVolatile('sovietreversal' as ID)) {
+		if (pokemon.hasVolatile('soviet' as ID)) {
 			if (move.category === 'Physical') {
 				category = 'Special';
 			} else {

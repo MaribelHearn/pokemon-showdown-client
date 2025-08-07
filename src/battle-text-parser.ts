@@ -130,6 +130,7 @@ class BattleTextParser {
 			if (id === 'charge') {
 				return {args: ['-singlemove', pokemon, effect], kwArgs: {of: target}};
 			}
+			// Fundex: add Golden Bracket as a trapping move
 			if ([
 				'bind', 'wrap', 'clamp', 'whirlpool', 'firespin', 'magmastorm', 'goldenbracket', 'sandtomb', 'infestation', 'snaptrap', 'thundercage', 'trapped',
 			].includes(id)) {
@@ -147,8 +148,9 @@ class BattleTextParser {
 			} else if (id === 'skillswap' || id === 'mummy' || id === 'wanderingspirit') {
 				kwArgs.ability = arg3;
 				kwArgs.ability2 = arg4;
+			// Fundex: add Ghastly Dream as a PP depleting move
 			} else if ([
-				'eeriespell', 'gmaxdepletion', 'spite', 'grudge', 'forewarn', 'sketch', 'leppaberry', 'mysteryberry',
+				'eeriespell', 'ghastlydream', 'gmaxdepletion', 'spite', 'grudge', 'forewarn', 'sketch', 'leppaberry', 'mysteryberry',
 			].includes(id)) {
 				kwArgs.move = arg3;
 				kwArgs.number = arg4;
