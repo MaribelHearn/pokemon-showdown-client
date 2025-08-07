@@ -601,6 +601,14 @@ class BattleTooltips {
 			}
 		}
 
+		if (pokemon.hasVolatile('sovietreversal' as ID)) {
+			if (move.category === 'Physical') {
+				category = 'Special';
+			} else {
+				category = 'Physical';
+			}
+		}
+
 		text += '<h2>' + move.name + '<br />';
 
 		text += Dex.getTypeIcon(moveType);
