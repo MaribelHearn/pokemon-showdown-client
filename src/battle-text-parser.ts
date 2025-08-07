@@ -137,6 +137,11 @@ class BattleTextParser {
 				return {args: ['-start', pokemon, effect], kwArgs: {of: target}};
 			}
 
+			// Fundex: Soviet Reversal volatile status
+			if (id === 'sovietreversal') {
+				return {args: ['-start', pokemon, effect], kwArgs: {of: target}};
+			}
+
 			if (id === 'fairylock') {
 				return {args: ['-fieldactivate', effect], kwArgs: {}};
 			}
