@@ -2513,6 +2513,10 @@ export class PokemonSprite extends Sprite {
 				doCry = true;
 			}
 		}
+		// Fundex: check for Smithy
+		if (speciesid.startsWith("smithy")) {
+			BattleSound.playEffect('audio/hammer.mp3');
+		}
 		// Constructing here gives us 300ms extra time to preload the new sprite
 		let $newEl = $('<img src="' + sp.url + '" style="display:block;opacity:0;position:absolute"' + (sp.pixelated ? ' class="pixelated"' : '') + ' />');
 		$newEl.css(this.scene.pos({
@@ -2544,6 +2548,11 @@ export class PokemonSprite extends Sprite {
 			}, sp), 300);
 		});
 		this.scene.wait(500);
+		if (speciesid.startsWith("smithy")) {
+			BattleSound.playEffect('audio/hammer.mp3');
+			this.scene.wait(500);
+			BattleSound.playEffect('audio/hammer.mp3');
+		}
 
 		this.scene.updateSidebar(pokemon.side);
 		if (isPermanent) {

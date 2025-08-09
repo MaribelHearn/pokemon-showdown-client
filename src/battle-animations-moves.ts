@@ -33725,6 +33725,52 @@ BattleMoveAnims['bittorrent'] = {
 		BattleOtherAnims.drain.anim(scene, [attacker, defender]);
 	},
 };
+BattleMoveAnims['telemetry'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('shadowball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.6,
+			time: 0,
+		}, {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 500,
+			opacity: 0,
+		}, 'ballistic2');
+		scene.showEffect('shadowball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.6,
+			time: 50,
+		}, {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 550,
+			opacity: 0,
+		}, 'linear');
+		scene.showEffect('shadowball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.6,
+			time: 100,
+		}, {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 600,
+			opacity: 0,
+		}, 'ballistic2Under');
+	},
+};
 BattleMoveAnims['laserbeam'] = {
     anim:function(scene,_ref220){var attacker=_ref220[0],defender=_ref220[1];
     var xstep=(defender.x-attacker.x)/5;
@@ -34415,6 +34461,41 @@ BattleMoveAnims['bullseye'] = {
 			opacity: 1,
 			time: 925,
 		}, 'linear', 'fade');
+	},
+};
+BattleMoveAnims['plasmawhip'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('electroball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 1,
+			time: 450,
+		}, {
+			x: defender.x,
+			y: defender.y - 40,
+			z: defender.behind(15),
+			scale: 3,
+			opacity: 0,
+			time: 800,
+		}, 'linear');
+		scene.showEffect('electroball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 1,
+			time: 550,
+		}, {
+			x: defender.x,
+			y: defender.y - 40,
+			z: defender.behind(15),
+			scale: 3,
+			opacity: 0,
+			time: 900,
+		}, 'linear');
+		BattleOtherAnims.contactattack.anim(scene, [attacker, defender]);
 	},
 };
 BattleMoveAnims['pixiedust'] = {
@@ -35351,6 +35432,18 @@ BattleMoveAnims['electricalshield'] = {
 		}, 'decel', 'fade');
 	},
 };
+BattleMoveAnims['softreset'] = {
+	anim(scene, [attacker]) {
+		scene.backgroundEffect('#606060', 1000, 0.3);
+		BattleOtherAnims.dance.anim(scene, [attacker]);
+	},
+};
+BattleMoveAnims['hardreset'] = {
+	anim(scene, [attacker]) {
+		scene.backgroundEffect('#000000', 1000, 0.3);
+		BattleOtherAnims.dance.anim(scene, [attacker]);
+	},
+};
 BattleMoveAnims['firewall'] = {
 	anim(scene, [attacker]) {
 		scene.backgroundEffect('linear-gradient(#390000 30%, #B84038', 600, 0.2);
@@ -35711,7 +35804,7 @@ BattleMoveAnims['handofdestruction']={anim:BattleMoveAnims['punishment'].anim};
 //flamingarrow see above
 //shockingarrow see above
 //icyarrow see above
-//BattleMoveAnims['plasmawhip']={anim:BattleMoveAnims['sludgewave'].anim};
+//plasmawhip see above
 BattleMoveAnims['plasmaburst']={anim:BattleMoveAnims['discharge'].anim};
 BattleMoveAnims['acidbomb']={anim:BattleMoveAnims['sludgebomb'].anim};
 //pixiedust see above
@@ -35738,8 +35831,8 @@ BattleMoveAnims['paralyzer']={anim:BattleMoveAnims['thundershock'].anim};
 BattleMoveAnims['holdit']={anim:BattleMoveAnims['fakeout'].anim};
 //takethat uses default animation
 BattleMoveAnims['firebrand']={anim:BattleMoveAnims['firepunch'].anim};
-//BattleMoveAnims['softreset']={anim:BattleMoveAnims['eggbomb'].anim};
-//BattleMoveAnims['hardreset']={anim:BattleMoveAnims['eggbomb'].anim};
+//softreset see above
+//hardreset see above
 //firewall see above
 //bullseye see above
 //laserbeam see above
