@@ -2513,46 +2513,82 @@ export class PokemonSprite extends Sprite {
 				doCry = true;
 			}
 		}
-		// Fundex: check for Smithy
+
+		let $newEl = $('<img src="' + sp.url + '" style="display:block;opacity:0;position:absolute"' + (sp.pixelated ? ' class="pixelated"' : '') + ' />');
+		// Fundex: Smithy unique transformation
 		if (speciesid.startsWith("smithy")) {
 			BattleSound.playEffect('audio/hammer.mp3');
-			setTimeout(function () {
-				BattleSound.playEffect('audio/hammer.mp3');
-			}, 500);
-			setTimeout(function () {
-				BattleSound.playEffect('audio/hammer.mp3');
-			}, 1000);
-		}
-		// Constructing here gives us 300ms extra time to preload the new sprite
-		let $newEl = $('<img src="' + sp.url + '" style="display:block;opacity:0;position:absolute"' + (sp.pixelated ? ' class="pixelated"' : '') + ' />');
-		$newEl.css(this.scene.pos({
-			x: this.x,
-			y: this.y,
-			z: this.z,
-			yscale: 0,
-			xscale: 0,
-			opacity: 0,
-		}, sp));
-		this.$el.animate(this.scene.pos({
-			x: this.x,
-			y: this.y,
-			z: this.z,
-			yscale: 0,
-			xscale: 0,
-			opacity: 0.3,
-		}, oldsp), 300, () => {
-			if (this.cryurl && doCry) {
-				BattleSound.playEffect(this.cryurl);
-			}
-			this.$el.replaceWith($newEl);
-			this.$el = $newEl;
-			this.$el.animate(scene.pos({
+			$newEl.css(this.scene.pos({
+				x: this.x,
+				y: this.y,
+				z: this.z,
+				yscale: 0,
+				xscale: 0,
+				opacity: 0,
+			}, sp));
+			this.$el.animate(this.scene.pos({
 				x: this.x,
 				y: this.y,
 				z: this.z,
 				opacity: 1,
-			}, sp), 300);
-		});
+			}, oldsp), 500, () => {
+				BattleSound.playEffect('audio/hammer.mp3');
+				this.$el.animate(scene.pos({
+					x: this.x,
+					y: this.y,
+					z: this.z,
+					opacity: 1,
+				}, oldsp), 500);
+			});
+			this.$el.animate(this.scene.pos({
+				x: this.x,
+				y: this.y,
+				z: this.z,
+				yscale: 0,
+				xscale: 0,
+				opacity: 0.3,
+			}, oldsp), 1000, () => {
+				BattleSound.playEffect('audio/hammer.mp3');
+				this.$el.replaceWith($newEl);
+				this.$el = $newEl;
+				this.$el.animate(scene.pos({
+					x: this.x,
+					y: this.y,
+					z: this.z,
+					opacity: 1,
+				}, sp), 1000);
+			});
+		} else {
+			// Constructing here gives us 300ms extra time to preload the new sprite
+			$newEl.css(this.scene.pos({
+				x: this.x,
+				y: this.y,
+				z: this.z,
+				yscale: 0,
+				xscale: 0,
+				opacity: 0,
+			}, sp));
+			this.$el.animate(this.scene.pos({
+				x: this.x,
+				y: this.y,
+				z: this.z,
+				yscale: 0,
+				xscale: 0,
+				opacity: 0.3,
+			}, oldsp), 300, () => {
+				if (this.cryurl && doCry) {
+					BattleSound.playEffect(this.cryurl);
+				}
+				this.$el.replaceWith($newEl);
+				this.$el = $newEl;
+				this.$el.animate(scene.pos({
+					x: this.x,
+					y: this.y,
+					z: this.z,
+					opacity: 1,
+				}, sp), 300);
+			});
+		}
 		this.scene.wait(500);
 
 		this.scene.updateSidebar(pokemon.side);
