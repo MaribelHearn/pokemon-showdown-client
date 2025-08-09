@@ -35708,6 +35708,28 @@ BattleMoveAnims['goldenbracket'] = {
 		}, 'accel');
 	},
 };
+BattleMoveAnims['sledge'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('sledge', {
+			x: defender.x,
+			y: defender.y - 50,
+			z: defender.z,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			time: 200,
+		}, 'linear', 'fade');
+		scene.showEffect('sledge', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			time: 200,
+		}, {
+			time: 600,
+		}, 'linear', 'fade');
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
@@ -35823,7 +35845,6 @@ BattleMoveAnims['deathegg']={anim:BattleMoveAnims['eggbomb'].anim};
 BattleMoveAnims['missilepunch']={anim:BattleMoveAnims['bulletpunch'].anim};
 //BattleMoveAnims['galickgun']={anim:BattleMoveAnims['eggbomb'].anim};
 //lightarrow see above
-BattleMoveAnims['cataclysm']={anim:BattleMoveAnims['dracometeor'].anim};
 //remotemissile see above
 //BattleMoveAnims['grapplebeam']={anim:BattleMoveAnims['eggbomb'].anim};
 //electricalshield see above
@@ -35842,6 +35863,8 @@ BattleMoveAnims['mysteriouspower'] = {anim: BattleMoveAnims['secretpower'].anim}
 BattleMoveAnims['finaljudgment']={anim:BattleMoveAnims['judgment'].anim};
 //offwaves see above
 //narrowconfines see above
+BattleMoveAnims['cataclysm']={anim:BattleMoveAnims['dracometeor'].anim};
+//sledge see above
 BattleMoveAnims['unrealunraveling'] = {anim: BattleMoveAnims['wringout'].anim};
 //BattleMoveAnims['maxmystery']={anim:BattleMoveAnims['eggbomb'].anim};
 BattleMoveAnims['immafirinmahlazer'] = {anim: BattleMoveAnims['aeroblast'].anim};
