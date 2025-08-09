@@ -2952,7 +2952,7 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	},
 	sledge: {
 		url: 'sledge.png',
-		w: 140, h: 210,
+		w: 140, h: 242,
 	},
 	// ------
 	wisp: {

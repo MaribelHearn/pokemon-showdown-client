@@ -35712,17 +35712,17 @@ BattleMoveAnims['sledge'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('sledge', {
 			x: defender.x,
-			y: defender.y + 200,
+			y: defender.above(200),
 			z: defender.z,
 		}, {
 			x: defender.x,
-			y: defender.y + 50,
+			y: defender.above(50),
 			z: defender.z,
 			time: 400,
 		}, 'linear', 'fade');
 		scene.showEffect('sledge', {
 			x: defender.x,
-			y: defender.y + 50,
+			y: defender.above(50),
 			z: defender.z,
 			time: 400,
 		}, {
