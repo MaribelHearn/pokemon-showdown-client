@@ -2518,10 +2518,10 @@ export class PokemonSprite extends Sprite {
 			BattleSound.playEffect('audio/hammer.mp3');
 			setTimeout(function () {
 				BattleSound.playEffect('audio/hammer.mp3');
-			}, 400);
+			}, 500);
 			setTimeout(function () {
 				BattleSound.playEffect('audio/hammer.mp3');
-			}, 800);
+			}, 1000);
 		}
 		// Constructing here gives us 300ms extra time to preload the new sprite
 		let $newEl = $('<img src="' + sp.url + '" style="display:block;opacity:0;position:absolute"' + (sp.pixelated ? ' class="pixelated"' : '') + ' />');
