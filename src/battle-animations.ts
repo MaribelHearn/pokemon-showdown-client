@@ -1928,6 +1928,9 @@ export class PokemonSprite extends Sprite {
 	behind(offset: number) {
 		return this.z + (this.isFrontSprite ? 1 : -1) * offset;
 	}
+	above(offset: number) {
+		return this.y + (this.isFrontSprite ? 126 : 0) + offset;
+	}
 
 	removeTransform() {
 		if (!this.scene.animating) return;
