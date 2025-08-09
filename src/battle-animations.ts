@@ -2531,13 +2531,13 @@ export class PokemonSprite extends Sprite {
 				y: this.y,
 				z: this.z,
 				opacity: 1,
-			}, oldsp), 450, () => {
+			}, oldsp), 425, () => {
 				this.$el.animate(scene.pos({
 					x: this.x,
 					y: this.y,
 					z: this.z,
 					opacity: 1,
-				}, oldsp), 450);
+				}, oldsp), 425);
 			});
 			this.$el.animate(this.scene.pos({
 				x: this.x,
@@ -2546,7 +2546,7 @@ export class PokemonSprite extends Sprite {
 				yscale: 0,
 				xscale: 0,
 				opacity: 0.3,
-			}, oldsp), 900, () => {
+			}, oldsp), 850, () => {
 				this.$el.replaceWith($newEl);
 				this.$el = $newEl;
 				this.$el.animate(scene.pos({
@@ -2554,7 +2554,7 @@ export class PokemonSprite extends Sprite {
 					y: this.y,
 					z: this.z,
 					opacity: 1,
-				}, sp), 900);
+				}, sp), 850);
 			});
 		} else {
 			// Constructing here gives us 300ms extra time to preload the new sprite
