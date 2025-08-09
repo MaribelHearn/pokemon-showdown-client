@@ -1929,7 +1929,7 @@ export class PokemonSprite extends Sprite {
 		return this.z + (this.isFrontSprite ? 1 : -1) * offset;
 	}
 	above(offset: number) {
-		return this.y + (this.isFrontSprite ? 150 : 0) + offset;
+		return this.y + (this.isFrontSprite ? 0 : 126) + offset;
 	}
 
 	removeTransform() {
