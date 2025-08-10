@@ -35708,6 +35708,20 @@ BattleMoveAnims['goldenbracket'] = {
 		}, 'accel');
 	},
 };
+BattleMoveAnims['trainwreck'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('train', {
+			x: defender.x - 300,
+			y: defender.y,
+			z: defender.z,
+		}, {
+			x: defender.x + 600,
+			y: defender.y,
+			z: defender.z,
+			time: 2000,
+		}, 'linear', 'fade');
+	},
+};
 BattleMoveAnims['sledge'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('sledge', {
