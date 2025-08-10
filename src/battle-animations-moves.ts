@@ -34547,6 +34547,56 @@ BattleMoveAnims['plasmawhip'] = {
 		BattleOtherAnims.contactattack.anim(scene, [attacker, defender]);
 	},
 };
+BattleMoveAnims['colorsplash'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('waterwisp', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 1,
+			time: 450,
+		}, {
+			x: defender.x,
+			y: defender.y - 40,
+			z: defender.behind(15),
+			scale: 3,
+			opacity: 0,
+			time: 1000,
+		}, 'linear');
+		scene.showEffect('waterwisp', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 1,
+			time: 650,
+		}, {
+			x: defender.x,
+			y: defender.y - 40,
+			z: defender.behind(15),
+			scale: 3,
+			opacity: 0,
+			time: 1200,
+		}, 'linear');
+		scene.showEffect('rainbow', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0,
+			time: 850,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1,
+			opacity: 1,
+			time: 1200,
+		}, 'linear');
+		BattleOtherAnims.contactattack.anim(scene, [attacker, defender]);
+	},
+};
 BattleMoveAnims['pixiedust'] = {
 	anim(scene, [attacker, defender]) {
 		let xf = [1, -1, 1, -1];
@@ -36119,7 +36169,7 @@ BattleMoveAnims['plasmaburst']={anim:BattleMoveAnims['discharge'].anim};
 BattleMoveAnims['acidbomb']={anim:BattleMoveAnims['sludgebomb'].anim};
 //pixiedust see above
 BattleMoveAnims['needlestorm']={anim:BattleMoveAnims['pinmissile'].anim};
-//BattleMoveAnims['colorsplash']={anim:BattleMoveAnims['sludgewave'].anim};
+//colorsplash see above
 //parasoltwirl see above
 //deathsickle see above
 BattleMoveAnims['bulletspray']={anim:BattleMoveAnims['flameburst'].anim};
