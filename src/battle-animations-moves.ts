@@ -35672,7 +35672,7 @@ BattleMoveAnims['galickgun'] = {
 BattleMoveAnims['tornadotentacle'] = {
 	anim(scene, [attacker, defender]) {
 		for (let i = 0; i < 4; i++) {
-			scene.showEffect('leftslash', {
+			scene.showEffect('leftclaw', {
 				x: defender.x + 50,
 				y: defender.y - 35,
 				z: defender.z,
@@ -35687,7 +35687,7 @@ BattleMoveAnims['tornadotentacle'] = {
 				opacity: 0.4,
 				time: 200 * i + 200,
 			}, 'linear', 'fade');
-			scene.showEffect('rightslash', {
+			scene.showEffect('rightclaw', {
 				x: defender.x - 50,
 				y: defender.y + 35,
 				z: defender.z,
@@ -35702,7 +35702,7 @@ BattleMoveAnims['tornadotentacle'] = {
 				opacity: 0.4,
 				time: 200 * i + 200,
 			}, 'linear', 'fade');
-			scene.showEffect('leftslash', {
+			scene.showEffect('leftclaw', {
 				x: defender.x + 50,
 				y: defender.y,
 				z: defender.z,
@@ -35717,7 +35717,7 @@ BattleMoveAnims['tornadotentacle'] = {
 				opacity: 0.4,
 				time: 200 * i + 200,
 			}, 'linear', 'fade');
-			scene.showEffect('rightslash', {
+			scene.showEffect('rightclaw', {
 				x: defender.x - 50,
 				y: defender.y,
 				z: defender.z,
