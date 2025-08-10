@@ -415,11 +415,9 @@ function toId() {
 			// 		type: 'modal'
 			// 	});
 			} else {
-				if (document.location.hostname === Config.routes.client || Config.testclient) {
-					this.addRoom('rooms', null, true);
-				} else {
-					this.addRoom('lobby', null, true);
-				}
+				// Fundex: force starting on Rooms page
+				this.addRoom('rooms', null, true);
+				//this.addRoom('lobby', null, true);
 				Storage.whenPrefsLoaded(function () {
 					if (!Config.server.registered) {
 						app.send('/autojoin');

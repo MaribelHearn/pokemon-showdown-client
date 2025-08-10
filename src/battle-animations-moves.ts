@@ -35711,11 +35711,11 @@ BattleMoveAnims['goldenbracket'] = {
 BattleMoveAnims['trainwreck'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('train', {
-			x: defender.x - 500,
+			x: defender.leftof(300),
 			y: defender.y,
 			z: defender.z,
 		}, {
-			x: defender.x + 500,
+			x: defender.leftof(-500),
 			y: defender.y,
 			z: defender.z,
 			time: 1000,
