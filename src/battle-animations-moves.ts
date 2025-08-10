@@ -35426,11 +35426,10 @@ BattleMoveAnims['graspinghands'] = {
 			x: defender.x,
 			y: defender.y,
 			z: defender.behind(-20),
-			scale: 0.5,
 			opacity: 0.1,
 		}, {
 			y: defender.y,
-			scale: 0.25,
+			scale: 0.5,
 			opacity: 1,
 			time: 300,
 		}, 'decel', 'explode');
@@ -35438,15 +35437,58 @@ BattleMoveAnims['graspinghands'] = {
 			x: defender.x,
 			y: defender.y,
 			z: defender.behind(20),
-			scale: 0.5,
 			opacity: 0.1,
 		}, {
 			y: defender.y,
-			scale: 0.25,
+			scale: 0.5,
 			opacity: 1,
 			time: 300,
 		}, 'decel', 'explode');
-		scene.showEffect('energyball', {
+		scene.showEffect('leftchop', {
+			x: defender.x - 10,
+			y: defender.y - 20,
+			z: defender.behind(-20),
+			opacity: 0.1,
+		}, {
+			y: defender.y - 20,
+			scale: 0.5,
+			opacity: 1,
+			time: 300,
+		}, 'decel', 'explode');
+		scene.showEffect('rightchop', {
+			x: defender.x + 10,
+			y: defender.y - 20,
+			z: defender.behind(20),
+			opacity: 0.1,
+		}, {
+			y: defender.y - 20,
+			scale: 0.5,
+			opacity: 1,
+			time: 300,
+		}, 'decel', 'explode');
+		scene.showEffect('leftchop', {
+			x: defender.x + 30,
+			y: defender.y + 10,
+			z: defender.behind(-20),
+			opacity: 0.1,
+		}, {
+			y: defender.y + 10,
+			scale: 0.5,
+			opacity: 1,
+			time: 300,
+		}, 'decel', 'explode');
+		scene.showEffect('rightchop', {
+			x: defender.x + 30,
+			y: defender.y + 10,
+			z: defender.behind(20),
+			opacity: 0.1,
+		}, {
+			y: defender.y + 10,
+			scale: 0.5,
+			opacity: 1,
+			time: 300,
+		}, 'decel', 'explode');
+		scene.showEffect('shadowball', {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
@@ -35460,7 +35502,7 @@ BattleMoveAnims['graspinghands'] = {
 			time: 800,
 			opacity: 0,
 		}, 'ballistic2');
-		scene.showEffect('energyball', {
+		scene.showEffect('shadowball', {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
@@ -35474,7 +35516,7 @@ BattleMoveAnims['graspinghands'] = {
 			time: 850,
 			opacity: 0,
 		}, 'linear');
-		scene.showEffect('energyball', {
+		scene.showEffect('shadowball', {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
