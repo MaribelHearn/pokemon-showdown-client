@@ -1606,7 +1606,7 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/smithy.mp3', 3000, 135000, this.bgm);
 			break;
 		default:
-			this.bgm = BattleSound.loadBgm('audio/ghetsis.mp3', 4000, 121300, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/ghetsis.mp3', 4000, 133000, this.bgm);
 			break;
 		}
 		/*case 1:
