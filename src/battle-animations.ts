@@ -1497,6 +1497,10 @@ export class BattleScene implements BattleSceneStub {
 		return pokemon.sprite.updateStatbarIfExists(pokemon, updatePrevhp, updateHp);
 	}
 	animTransform(pokemon: Pokemon, isCustomAnim?: boolean, isPermanent?: boolean) {
+		// Fundex: Snake hijacks music
+		if (toID(pokemon.getSpeciesForme()) === 'snake') {
+			BattleSound.loadBgm('audio/encounter.mp3', 4000, 247000, this.bgm);
+		}
 		return pokemon.sprite.animTransform(pokemon, isCustomAnim, isPermanent);
 	}
 	clearEffects(pokemon: Pokemon) {
@@ -2591,10 +2595,6 @@ export class PokemonSprite extends Sprite {
 					z: this.z,
 					opacity: 1,
 				}, sp), 300);
-				// Fundex: Snake hijacks music
-				if (speciesid.startsWith("snake")) {
-					BattleSound.loadBgm('audio/encounter.mp3', 4000, 247000);
-				}
 			});
 		}
 		this.scene.wait(500);
