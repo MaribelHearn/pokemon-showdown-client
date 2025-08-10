@@ -2515,6 +2515,10 @@ export class PokemonSprite extends Sprite {
 		}
 
 		let $newEl = $('<img src="' + sp.url + '" style="display:block;opacity:0;position:absolute"' + (sp.pixelated ? ' class="pixelated"' : '') + ' />');
+		// Fundex: Snake alert sound
+		if (speciesid.startsWith("snake")) {
+			BattleSound.playEffect('audio/alert.mp3');
+		}
 		// Fundex: Smithy unique transformation
 		if (speciesid.startsWith("smithy")) {
 			BattleSound.playEffect('audio/hammer.mp3');
@@ -2585,6 +2589,10 @@ export class PokemonSprite extends Sprite {
 					z: this.z,
 					opacity: 1,
 				}, sp), 300);
+				// Fundex: Snake hijacks music
+				if (speciesid.startsWith("snake")) {
+					BattleSound.loadBgm('audio/encounter.mp3', 4000, 247000);
+				}
 			});
 		}
 		this.scene.wait(500);
@@ -2946,6 +2954,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	rightbite: {
 		url: 'rightbite.png',
 		w: 64, h: 108,
+	},
+	train: {
+		url: 'train.png',
+		w: 1662, h: 176,
 	},
 	sledge: {
 		url: 'sledge.png',
