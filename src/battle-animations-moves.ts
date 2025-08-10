@@ -35564,6 +35564,111 @@ BattleMoveAnims['narrowconfines'] = {
 		}, 'decel', 'fade');
 	},
 };
+BattleMoveAnims['galickgun'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('shadowball', {
+			x: attacker.x,
+			y: attacker.y - 15,
+			z: attacker.z,
+			opacity: 0.5,
+			scale: 1.5,
+		}, {
+			scale: 1.8,
+			opacity: 0.5,
+			time: 975,
+		}, 'decel', 'fade');
+		scene.showEffect('shadowball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 400,
+		}, {
+			x: defender.x + 30,
+			y: defender.y + 30,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.3,
+			time: 600,
+		}, 'linear', 'explode');
+		scene.showEffect('shadowball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 475,
+		}, {
+			x: defender.x + 20,
+			y: defender.y - 30,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.3,
+			time: 675,
+		}, 'linear', 'explode');
+		scene.showEffect('shadowball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 550,
+		}, {
+			x: defender.x - 30,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.3,
+			time: 750,
+		}, 'linear', 'explode');
+		scene.showEffect('shadowball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 625,
+		}, {
+			x: defender.x - 10,
+			y: defender.y + 10,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.3,
+			time: 825,
+		}, 'linear', 'explode');
+		scene.showEffect('shadowball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 700,
+		}, {
+			x: defender.x + 10,
+			y: defender.y - 10,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.3,
+			time: 900,
+		}, 'linear', 'explode');
+		scene.showEffect('shadowball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 775,
+		}, {
+			x: defender.x - 20,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.3,
+			time: 975,
+		}, 'linear', 'explode');
+	},
+};
 BattleMoveAnims['nosferatu'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('linear-gradient(#440044 30%, #000000', 600, 0.2);
@@ -35960,7 +36065,7 @@ BattleMoveAnims['thunderhand']={anim:BattleMoveAnims['thunderpunch'].anim};
 //BattleMoveAnims['tornadotentacle']={anim:BattleMoveAnims['sludgewave'].anim};
 BattleMoveAnims['deathegg']={anim:BattleMoveAnims['eggbomb'].anim};
 BattleMoveAnims['missilepunch']={anim:BattleMoveAnims['bulletpunch'].anim};
-//BattleMoveAnims['galickgun']={anim:BattleMoveAnims['eggbomb'].anim};
+//galickgun see above
 //lightarrow see above
 //remotemissile see above
 //BattleMoveAnims['grapplebeam']={anim:BattleMoveAnims['eggbomb'].anim};
