@@ -34592,8 +34592,8 @@ BattleMoveAnims['colorsplash'] = {
 			z: defender.z,
 			scale: 1,
 			opacity: 1,
-			time: 1400,
-		}, 'linear');
+			time: 1350,
+		}, 'linear', 'fade');
 		BattleOtherAnims.contactattack.anim(scene, [attacker, defender]);
 	},
 };
