@@ -35738,12 +35738,10 @@ BattleMoveAnims['trainwreck'] = {
 			x: defender.leftof(500),
 			y: defender.y,
 			z: defender.z,
-			scale: 0.5,
 		}, {
 			x: defender.leftof(-800),
 			y: defender.y,
 			z: defender.z,
-			scale: 0.5,
 			time: 1500,
 		}, 'linear', 'fade');
 	},
