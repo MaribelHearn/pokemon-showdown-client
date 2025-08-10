@@ -530,6 +530,8 @@ export class BattleScene implements BattleSceneStub {
 			animEntry = BattleMoveAnims['darkpulse'];
 		} else if (!animEntry) {
 			animEntry = BattleMoveAnims['tackle'];
+		} else if (moveid === 'remotemissile' && this.battle.mySide.sideid !== participants[0].side.sideid) {
+			animEntry = BattleMoveAnims['remotemissileback'];
 		}
 		animEntry.anim(this, participants.map(p => p.sprite));
 	}
@@ -2934,6 +2936,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	},
 	missile: {
 		url: 'missile.png',
+		w: 64, h: 64,
+	},
+	missileback: {
+		url: 'missileback.png',
 		w: 64, h: 64,
 	},
 	redufo: {

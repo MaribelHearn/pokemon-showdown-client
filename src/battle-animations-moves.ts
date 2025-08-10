@@ -32638,6 +32638,55 @@ BattleMoveAnims['remotemissile'] = {
 		}, 'decel');
 	},
 };
+BattleMoveAnims['remotemissileback'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('missileback', {
+			x: attacker.x,
+			y: attacker.y - 10,
+			z: attacker.z,
+			opacity: 1,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			opacity: 1,
+			time: 500,
+		}, 'ballistic2', 'explode');
+		scene.showEffect('fireball', {
+			x: defender.x + 40,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 500,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x - 40,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 650,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x + 10,
+			y: defender.y + 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 800,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+	},
+};
 BattleMoveAnims['fantasyseal'] = {
 	anim(scene, [attacker, defender]) {
 		// 1
