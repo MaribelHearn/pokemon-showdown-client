@@ -1499,7 +1499,7 @@ export class BattleScene implements BattleSceneStub {
 	animTransform(pokemon: Pokemon, isCustomAnim?: boolean, isPermanent?: boolean) {
 		// Fundex: Snake hijacks music
 		if (toID(pokemon.getSpeciesForme()) === 'snakebusted') {
-			this.bgm = BattleSound.loadBgm('audio/encounter.mp3', 4000, 247000, this.bgm);
+			this.setBgm(-4);
 		}
 		return pokemon.sprite.animTransform(pokemon, isCustomAnim, isPermanent);
 	}
@@ -1575,6 +1575,9 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case -3:
 			this.bgm = BattleSound.loadBgm('audio/colosseum-miror-b.mp3', 896, 47462, this.bgm);
+			break;
+		case -4:
+			this.bgm = BattleSound.loadBgm('audio/encounter.mp3', 4000, 247000, this.bgm);
 			break;
 		/*case 1:
 			this.bgm = BattleSound.loadBgm('audio/mr-l.mp3', 13440, 96959, this.bgm);
