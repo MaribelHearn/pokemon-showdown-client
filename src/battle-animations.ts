@@ -1582,7 +1582,7 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/encounter.mp3', 4000, 247000, this.bgm);
 			break;
 		case 1:
-			this.bgm = BattleSound.loadBgm('audio/mr-l.mp3', 8000, 120000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/brobot-l-type.mp3', 8000, 120000, this.bgm);
 			break;
 		case 2:
 			this.bgm = BattleSound.loadBgm('audio/lot-boss.mp3', 1600, 231000, this.bgm);
@@ -1592,6 +1592,18 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case 4:
 			this.bgm = BattleSound.loadBgm('audio/doomsday.mp3', 0, 305800, this.bgm);
+			break;
+		case 5:
+			this.bgm = BattleSound.loadBgm('audio/super-star-boss.mp3', 6000, 98000, this.bgm);
+			break;
+		case 6:
+			this.bgm = BattleSound.loadBgm('audio/gen1-trainer.mp3', 14000, 97000, this.bgm);
+			break;
+		case 7:
+			this.bgm = BattleSound.loadBgm('audio/battle-against-machine.mp3', 0, 95000, this.bgm);
+			break;
+		case 8:
+			this.bgm = BattleSound.loadBgm('audio/smithy.mp3', 3000, 135000, this.bgm);
 			break;
 		default:
 			this.bgm = BattleSound.loadBgm('audio/ghetsis.mp3', 4000, 121300, this.bgm);
