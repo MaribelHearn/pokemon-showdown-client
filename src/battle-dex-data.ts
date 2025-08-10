@@ -709,6 +709,10 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	grandmatriarch: 1380 + 188,
 	snakebusted: 1380 + 189,
 	chucktestabusted: 1380 + 190,
+
+	smithy: 1380 + 191,
+	smithytankhead: 1380 + 192,
+	smithymagichead: 1380 + 193,
 };
 
 const BattlePokemonIconIndexesLeft: {[id: string]: number} = {
