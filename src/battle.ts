@@ -1478,7 +1478,12 @@ export class Battle {
 	}
 	animateMove(pokemon: Pokemon, move: Move, target: Pokemon | null, kwArgs: KWArgs) {
 		if (move.audio) {
-			BattleSound.playEffect(`audio/${move.id}.mp3`);
+			if (toID(pokemon.getSpeciesForme()) === 'milesedgeworth' && move.id === 'objection') {
+				BattleSound.playEffect(`audio/${move.id}2.mp3`);
+			}
+			else {
+				BattleSound.playEffect(`audio/${move.id}.mp3`);
+			}
 		}
 		this.activeMoveIsSpread = kwArgs.spread;
 		if (this.seeking !== null || kwArgs.still) return;
