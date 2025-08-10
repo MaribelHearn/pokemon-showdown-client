@@ -34577,7 +34577,7 @@ BattleMoveAnims['colorsplash'] = {
 			z: defender.behind(15),
 			scale: 3,
 			opacity: 0,
-			time: 1200,
+			time: 1400,
 		}, 'linear');
 		scene.showEffect('rainbow', {
 			x: defender.x,
@@ -34592,7 +34592,7 @@ BattleMoveAnims['colorsplash'] = {
 			z: defender.z,
 			scale: 1,
 			opacity: 1,
-			time: 1200,
+			time: 1300,
 		}, 'linear');
 		BattleOtherAnims.contactattack.anim(scene, [attacker, defender]);
 	},
