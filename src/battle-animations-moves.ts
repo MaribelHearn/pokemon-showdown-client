@@ -33245,6 +33245,7 @@ BattleMoveAnims['objection'] = {
 			x: attacker.x,
 			y: attacker.y + 35,
 			z: attacker.behind(-20),
+			scale: 0.75,
 			time: 250,
 		}, 'linear', 'fade');
 		scene.showEffect('objection', {
