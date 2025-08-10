@@ -35735,11 +35735,11 @@ BattleMoveAnims['trainwreck'] = {
 			time: 1200,
 		}, 'linear');
 		scene.showEffect('train', {
-			x: defender.leftof(500),
+			x: defender.leftof(1000),
 			y: defender.y,
 			z: defender.z,
 		}, {
-			x: defender.leftof(-800),
+			x: defender.leftof(-1600),
 			y: defender.y,
 			z: defender.z,
 			time: 1500,
