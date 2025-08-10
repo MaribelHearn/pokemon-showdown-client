@@ -35672,7 +35672,7 @@ BattleMoveAnims['galickgun'] = {
 BattleMoveAnims['tornadotentacle'] = {
 	anim(scene, [attacker, defender]) {
 		for (let i = 0; i < 4; i++) {
-			scene.showEffect('leaf1', {
+			scene.showEffect('leftslash', {
 				x: defender.x + 50,
 				y: defender.y - 35,
 				z: defender.z,
@@ -35687,7 +35687,7 @@ BattleMoveAnims['tornadotentacle'] = {
 				opacity: 0.4,
 				time: 200 * i + 200,
 			}, 'linear', 'fade');
-			scene.showEffect('leaf2', {
+			scene.showEffect('rightslash', {
 				x: defender.x - 50,
 				y: defender.y + 35,
 				z: defender.z,
@@ -35702,7 +35702,7 @@ BattleMoveAnims['tornadotentacle'] = {
 				opacity: 0.4,
 				time: 200 * i + 200,
 			}, 'linear', 'fade');
-			scene.showEffect('leaf1', {
+			scene.showEffect('leftslash', {
 				x: defender.x + 50,
 				y: defender.y,
 				z: defender.z,
@@ -35717,7 +35717,7 @@ BattleMoveAnims['tornadotentacle'] = {
 				opacity: 0.4,
 				time: 200 * i + 200,
 			}, 'linear', 'fade');
-			scene.showEffect('leaf2', {
+			scene.showEffect('rightslash', {
 				x: defender.x - 50,
 				y: defender.y,
 				z: defender.z,
@@ -35733,7 +35733,6 @@ BattleMoveAnims['tornadotentacle'] = {
 				time: 200 * i + 200,
 			}, 'linear', 'fade');
 		}
-		BattleOtherAnims.clawattack.anim(scene, [attacker, defender]);
 	},
 };
 BattleMoveAnims['nosferatu'] = {
@@ -36045,7 +36044,7 @@ BattleMoveAnims['lemmingsparade']={anim:BattleMoveAnims['spikecannon'].anim};
 BattleMoveAnims['study']={anim:BattleMoveAnims['calmmind'].anim};
 BattleMoveAnims['corrupt']={anim:BattleMoveAnims['curse'].anim};
 BattleMoveAnims['sovietreversal']={anim:BattleMoveAnims['reversal'].anim};
-//BattleMoveAnims['lolwut']={anim:BattleMoveAnims['focuspunch'].anim};
+//lolwut see above
 BattleMoveAnims['pingas']={anim(scene, [attacker, defender]) {/* do nothing */}};
 //dinnerblaster see above
 BattleMoveAnims['warlockpunch']={anim:BattleMoveAnims['shadowpunch'].anim};
