@@ -2031,6 +2031,10 @@ export class Battle {
 				poke.item = 'Protective Pads';
 				break;
 			}
+			// Fundex: Snake alert sound
+			if (poke.speciesForme.startsWith("snake")) {
+				BattleSound.playEffect('audio/alert.mp3');
+			}
 			this.log(args, kwArgs);
 			break;
 		}

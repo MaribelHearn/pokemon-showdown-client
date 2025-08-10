@@ -1498,7 +1498,7 @@ export class BattleScene implements BattleSceneStub {
 	}
 	animTransform(pokemon: Pokemon, isCustomAnim?: boolean, isPermanent?: boolean) {
 		// Fundex: Snake hijacks music
-		if (toID(pokemon.getSpeciesForme()) === 'snake') {
+		if (toID(pokemon.getSpeciesForme()) === 'snakebusted') {
 			BattleSound.loadBgm('audio/encounter.mp3', 4000, 247000, this.bgm);
 		}
 		return pokemon.sprite.animTransform(pokemon, isCustomAnim, isPermanent);
@@ -2521,10 +2521,6 @@ export class PokemonSprite extends Sprite {
 		}
 
 		let $newEl = $('<img src="' + sp.url + '" style="display:block;opacity:0;position:absolute"' + (sp.pixelated ? ' class="pixelated"' : '') + ' />');
-		// Fundex: Snake alert sound
-		if (speciesid.startsWith("snake")) {
-			BattleSound.playEffect('audio/alert.mp3');
-		}
 		// Fundex: Smithy unique transformation
 		if (speciesid.startsWith("smithy")) {
 			BattleSound.playEffect('audio/hammer.mp3');
