@@ -1488,6 +1488,9 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 					}
 				}
 			}
+			if (this.formatType === 'fundex') {
+				break;
+			}
 			learnsetid = this.nextLearnsetid(learnsetid, species.id);
 		}
 		if (sketch || isHackmons) {
