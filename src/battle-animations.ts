@@ -1560,7 +1560,7 @@ export class BattleScene implements BattleSceneStub {
 		this.preloadImage(Dex.resourcePrefix + 'sprites/ani-back/substitute.gif');
 	}
 	rollBgm() {
-		this.setBgm(1 + this.numericId % 4);
+		this.setBgm(1 + this.numericId % 5);
 	}
 	setBgm(bgmNum: number) {
 		if (this.bgmNum === bgmNum) return;
@@ -1579,16 +1579,16 @@ export class BattleScene implements BattleSceneStub {
 		case -4:
 			this.bgm = BattleSound.loadBgm('audio/encounter.mp3', 4000, 247000, this.bgm);
 			break;
-		/*case 1:
-			this.bgm = BattleSound.loadBgm('audio/mr-l.mp3', 13440, 96959, this.bgm);
-			break;*/
 		case 1:
-			this.bgm = BattleSound.loadBgm('audio/lot-boss.mp3', 1600, 231000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/mr-l.mp3', 8000, 120000, this.bgm);
 			break;
 		case 2:
-			this.bgm = BattleSound.loadBgm('audio/t-fanger.mp3', 8000, 319000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/lot-boss.mp3', 1600, 231000, this.bgm);
 			break;
 		case 3:
+			this.bgm = BattleSound.loadBgm('audio/t-fanger.mp3', 8000, 319000, this.bgm);
+			break;
+		case 4:
 			this.bgm = BattleSound.loadBgm('audio/doomsday.mp3', 0, 305800, this.bgm);
 			break;
 		default:
