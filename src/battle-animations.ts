@@ -2295,7 +2295,8 @@ export class PokemonSprite extends Sprite {
 			opacity: 1,
 		}, 400 / this.scene.acceleration);
 
-		this.dogarsCheck(pokemon);
+		// Fundex: remove Koffing check
+		//this.dogarsCheck(pokemon);
 	}
 	animDragIn(pokemon: Pokemon, slot: number) {
 		if (!this.scene.animating) return;
@@ -2333,7 +2334,8 @@ export class PokemonSprite extends Sprite {
 			opacity: 1,
 		}, 400);
 
-		this.dogarsCheck(pokemon);
+		// Fundex: remove Koffing check
+		//this.dogarsCheck(pokemon);
 	}
 	animDragOut(pokemon: Pokemon) {
 		if (!this.scene.animating) return this.animUnsummon(pokemon, true);

@@ -35710,15 +35710,39 @@ BattleMoveAnims['goldenbracket'] = {
 };
 BattleMoveAnims['trainwreck'] = {
 	anim(scene, [attacker, defender]) {
+		scene.showEffect('impact', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.4,
+			time: 400,
+		}, {
+			scale: 4,
+			opacity: 0,
+			time: 700,
+		}, 'linear');
+		scene.showEffect('impact', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.4,
+			time: 900,
+		}, {
+			scale: 4,
+			opacity: 0,
+			time: 1200,
+		}, 'linear');
 		scene.showEffect('train', {
-			x: defender.leftof(300),
+			x: defender.leftof(500),
 			y: defender.y,
 			z: defender.z,
 		}, {
-			x: defender.leftof(-500),
+			x: defender.leftof(-800),
 			y: defender.y,
 			z: defender.z,
-			time: 1000,
+			time: 1500,
 		}, 'linear', 'fade');
 	},
 };
