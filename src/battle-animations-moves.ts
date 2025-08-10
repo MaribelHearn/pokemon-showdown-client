@@ -35757,6 +35757,36 @@ BattleMoveAnims['goldenbracket'] = {
 		}, 'accel');
 	},
 };
+BattleMoveAnims['dinnerblaster'] = {
+	anim(scene, [attacker, defender]) {
+		const shuffle = (array: string[]) => {
+			for (let i = array.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[array[i], array[j]] = [array[j], array[i]];
+			}
+			return array;
+		}
+
+		let foods = ['banana', 'bread', 'broccoli', 'burger', 'carrot', 'fries', 'pancake', 'pizza', 'tomato'];
+		foods = shuffle(foods);
+
+		for (let i = 0; i < foods.length; i++) {
+			scene.showEffect(foods[i], {
+				x: attacker.x,
+				y: attacker.y - 10,
+				z: attacker.z,
+				opacity: 1,
+				time: 0 + (i * 100),
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				opacity: 1,
+				time: 300 + (i * 100),
+			}, 'ballistic2', 'explode');
+		}
+	},
+};
 BattleMoveAnims['trainwreck'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('impact', {
@@ -35836,7 +35866,7 @@ BattleMoveAnims['throwingatlas']={anim:BattleMoveAnims['stoneedge'].anim};
 //koin3steps see above
 //strawberrycross see above
 //BattleMoveAnims['iwakasascurse']={anim:BattleMoveAnims['focuspunch'].anim};
-//BattleMoveAnims['trainwreck']={anim:BattleMoveAnims['focuspunch'].anim};
+//trainwreck see above
 BattleMoveAnims['suzuranpoison']={anim:BattleMoveAnims['poisongas'].anim};
 BattleMoveAnims['lemmingsparade']={anim:BattleMoveAnims['spikecannon'].anim};
 //explod see above
@@ -35845,7 +35875,7 @@ BattleMoveAnims['corrupt']={anim:BattleMoveAnims['curse'].anim};
 BattleMoveAnims['sovietreversal']={anim:BattleMoveAnims['reversal'].anim};
 //BattleMoveAnims['lolwut']={anim:BattleMoveAnims['focuspunch'].anim};
 BattleMoveAnims['pingas']={anim(scene, [attacker, defender]) {/* do nothing */}};
-//BattleMoveAnims['mahboi']={anim:BattleMoveAnims['focuspunch'].anim};
+//dinnerblaster see above
 BattleMoveAnims['warlockpunch']={anim:BattleMoveAnims['shadowpunch'].anim};
 BattleMoveAnims['catnarok']={anim:BattleMoveAnims['explosion'].anim};
 //goldenbracket see above

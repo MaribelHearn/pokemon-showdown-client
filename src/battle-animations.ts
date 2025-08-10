@@ -2982,6 +2982,42 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'train.png',
 		w: 1662, h: 176,
 	},
+	banana: {
+		url: 'dinnerblaster/banana.png',
+		w: 50, h: 50,
+	},
+	bread: {
+		url: 'dinnerblaster/bread.png',
+		w: 50, h: 50,
+	},
+	broccoli: {
+		url: 'dinnerblaster/broccoli.png',
+		w: 50, h: 50,
+	},
+	burger: {
+		url: 'dinnerblaster/burger.png',
+		w: 50, h: 50,
+	},
+	carrot: {
+		url: 'dinnerblaster/carrot.png',
+		w: 50, h: 50,
+	},
+	fries: {
+		url: 'dinnerblaster/fries.png',
+		w: 50, h: 50,
+	},
+	pancake: {
+		url: 'dinnerblaster/pancake.png',
+		w: 50, h: 50,
+	},
+	pizza: {
+		url: 'dinnerblaster/pizza.png',
+		w: 50, h: 50,
+	},
+	tomato: {
+		url: 'dinnerblaster/tomato.png',
+		w: 50, h: 50,
+	},
 	sledge: {
 		url: 'sledge.png',
 		w: 140, h: 242,
