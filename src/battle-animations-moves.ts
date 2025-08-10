@@ -35669,6 +35669,73 @@ BattleMoveAnims['galickgun'] = {
 		}, 'linear', 'explode');
 	},
 };
+BattleMoveAnims['tornadotentacle'] = {
+	anim(scene, [attacker, defender]) {
+		for (let i = 0; i < 4; i++) {
+			scene.showEffect('leaf1', {
+				x: defender.x + 50,
+				y: defender.y - 35,
+				z: defender.z,
+				scale: 0.5,
+				opacity: 1,
+				time: 200 * i,
+			}, {
+				x: defender.x - 50,
+				y: defender.y,
+				z: defender.z,
+				scale: 1,
+				opacity: 0.4,
+				time: 200 * i + 200,
+			}, 'linear', 'fade');
+			scene.showEffect('leaf2', {
+				x: defender.x - 50,
+				y: defender.y + 35,
+				z: defender.z,
+				scale: 0.5,
+				opacity: 1,
+				time: 200 * i,
+			}, {
+				x: defender.x + 50,
+				y: defender.y,
+				z: defender.z,
+				scale: 1,
+				opacity: 0.4,
+				time: 200 * i + 200,
+			}, 'linear', 'fade');
+			scene.showEffect('leaf1', {
+				x: defender.x + 50,
+				y: defender.y,
+				z: defender.z,
+				scale: 0.5,
+				opacity: 1,
+				time: 200 * i,
+			}, {
+				x: defender.x - 50,
+				y: defender.y - 35,
+				z: defender.z,
+				scale: 1,
+				opacity: 0.4,
+				time: 200 * i + 200,
+			}, 'linear', 'fade');
+			scene.showEffect('leaf2', {
+				x: defender.x - 50,
+				y: defender.y,
+				z: defender.z,
+				scale: 0.5,
+				opacity: 1,
+				time: 200 * i,
+			}, {
+				x: defender.x + 50,
+				y: defender.y - 35,
+				z: defender.z,
+				scale: 1,
+				opacity: 0.4,
+				time: 200 * i + 200,
+			}, 'linear', 'fade');
+		}
+		BattleOtherAnims.clawattack.anim(scene, [attacker, defender]);
+	},
+};
 BattleMoveAnims['nosferatu'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('linear-gradient(#440044 30%, #000000', 600, 0.2);
@@ -36062,7 +36129,7 @@ BattleMoveAnims['bulletspray']={anim:BattleMoveAnims['flameburst'].anim};
 //shieldbash see above
 //psirockin see above
 BattleMoveAnims['thunderhand']={anim:BattleMoveAnims['thunderpunch'].anim};
-//BattleMoveAnims['tornadotentacle']={anim:BattleMoveAnims['sludgewave'].anim};
+//tornadotentacle see above
 BattleMoveAnims['deathegg']={anim:BattleMoveAnims['eggbomb'].anim};
 BattleMoveAnims['missilepunch']={anim:BattleMoveAnims['bulletpunch'].anim};
 //galickgun see above
