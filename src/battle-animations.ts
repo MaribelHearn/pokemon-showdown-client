@@ -1499,7 +1499,7 @@ export class BattleScene implements BattleSceneStub {
 	animTransform(pokemon: Pokemon, isCustomAnim?: boolean, isPermanent?: boolean) {
 		// Fundex: Snake hijacks music
 		if (toID(pokemon.getSpeciesForme()) === 'snakebusted') {
-			BattleSound.loadBgm('audio/encounter.mp3', 4000, 247000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/encounter.mp3', 4000, 247000, this.bgm);
 		}
 		return pokemon.sprite.animTransform(pokemon, isCustomAnim, isPermanent);
 	}
