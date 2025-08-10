@@ -35422,7 +35422,7 @@ BattleMoveAnims['strawberrycross'] = {
 };
 BattleMoveAnims['graspinghands'] = {
 	anim(scene, [attacker, defender]) {
-		scene.showEffect('leftchop', {
+		scene.showEffect('leftchopblack', {
 			x: defender.x,
 			y: defender.y,
 			z: defender.behind(-20),
@@ -35435,7 +35435,7 @@ BattleMoveAnims['graspinghands'] = {
 			opacity: 1,
 			time: 350,
 		}, 'decel', 'explode');
-		scene.showEffect('rightchop', {
+		scene.showEffect('rightchopblack', {
 			x: defender.x,
 			y: defender.y,
 			z: defender.behind(20),
@@ -35447,7 +35447,7 @@ BattleMoveAnims['graspinghands'] = {
 			opacity: 1,
 			time: 300,
 		}, 'decel', 'explode');
-		scene.showEffect('leftchop', {
+		scene.showEffect('leftchopblack', {
 			x: defender.x - 10,
 			y: defender.y - 20,
 			z: defender.behind(-20),
@@ -35460,7 +35460,7 @@ BattleMoveAnims['graspinghands'] = {
 			opacity: 1,
 			time: 400,
 		}, 'decel', 'explode');
-		scene.showEffect('rightchop', {
+		scene.showEffect('rightchopblack', {
 			x: defender.x + 10,
 			y: defender.y - 20,
 			z: defender.behind(20),
@@ -35473,7 +35473,7 @@ BattleMoveAnims['graspinghands'] = {
 			opacity: 1,
 			time: 500,
 		}, 'decel', 'explode');
-		scene.showEffect('leftchop', {
+		scene.showEffect('leftchopblack', {
 			x: defender.x + 30,
 			y: defender.y + 10,
 			z: defender.behind(-20),
@@ -35486,7 +35486,7 @@ BattleMoveAnims['graspinghands'] = {
 			opacity: 1,
 			time: 550,
 		}, 'decel', 'explode');
-		scene.showEffect('rightchop', {
+		scene.showEffect('rightchopblack', {
 			x: defender.x + 30,
 			y: defender.y + 10,
 			z: defender.behind(20),

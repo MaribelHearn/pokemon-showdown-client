@@ -2982,6 +2982,14 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'train.png',
 		w: 1662, h: 176,
 	},
+	leftchopblack: {
+		url: 'leftchop-black.png',
+		w: 100, h: 130,
+	},
+	rightchopblack: {
+		url: 'rightchop-black.png',
+		w: 100, h: 130,
+	},
 	banana: {
 		url: 'dinnerblaster/banana.png',
 		w: 50, h: 50,
