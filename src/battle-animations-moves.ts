@@ -35426,21 +35426,24 @@ BattleMoveAnims['graspinghands'] = {
 			x: defender.x,
 			y: defender.y,
 			z: defender.behind(-20),
+			scale: 0.5,
 			opacity: 0.1,
+			time: 50,
 		}, {
 			y: defender.y,
-			scale: 0.5,
+			scale: 0.25,
 			opacity: 1,
-			time: 300,
+			time: 350,
 		}, 'decel', 'explode');
 		scene.showEffect('rightchop', {
 			x: defender.x,
 			y: defender.y,
 			z: defender.behind(20),
+			scale: 0.5,
 			opacity: 0.1,
 		}, {
 			y: defender.y,
-			scale: 0.5,
+			scale: 0.25,
 			opacity: 1,
 			time: 300,
 		}, 'decel', 'explode');
@@ -35448,45 +35451,53 @@ BattleMoveAnims['graspinghands'] = {
 			x: defender.x - 10,
 			y: defender.y - 20,
 			z: defender.behind(-20),
+			scale: 0.5,
 			opacity: 0.1,
+			time: 100,
 		}, {
 			y: defender.y - 20,
-			scale: 0.5,
+			scale: 0.25,
 			opacity: 1,
-			time: 300,
+			time: 400,
 		}, 'decel', 'explode');
 		scene.showEffect('rightchop', {
 			x: defender.x + 10,
 			y: defender.y - 20,
 			z: defender.behind(20),
+			scale: 0.5,
 			opacity: 0.1,
+			time: 200,
 		}, {
 			y: defender.y - 20,
-			scale: 0.5,
+			scale: 0.25,
 			opacity: 1,
-			time: 300,
+			time: 500,
 		}, 'decel', 'explode');
 		scene.showEffect('leftchop', {
 			x: defender.x + 30,
 			y: defender.y + 10,
 			z: defender.behind(-20),
+			scale: 0.5,
 			opacity: 0.1,
+			time: 250,
 		}, {
 			y: defender.y + 10,
-			scale: 0.5,
+			scale: 0.25,
 			opacity: 1,
-			time: 300,
+			time: 550,
 		}, 'decel', 'explode');
 		scene.showEffect('rightchop', {
 			x: defender.x + 30,
 			y: defender.y + 10,
 			z: defender.behind(20),
+			scale: 0.5,
 			opacity: 0.1,
+			time: 150,
 		}, {
 			y: defender.y + 10,
-			scale: 0.5,
+			scale: 0.25,
 			opacity: 1,
-			time: 300,
+			time: 450,
 		}, 'decel', 'explode');
 		scene.showEffect('shadowball', {
 			x: defender.x,
