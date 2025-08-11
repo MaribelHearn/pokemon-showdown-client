@@ -33286,6 +33286,62 @@ BattleMoveAnims['objection'] = {
 		}, 'decel', 'fade');
 	},
 };
+BattleMoveAnims['iwakasascurse'] = {
+	anim(scene, [attacker, defender]) {
+		for (let i = 0; i < 10; i++) {
+			scene.showEffect('icicle', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: 50 * i,
+			}, {
+				x: attacker.x - 100,
+				y: attacker.y - (10 * i),
+				z: attacker.z,
+				time: (50 * i) + 200,
+			}, 'linear', 'fade');
+		}
+		for (let i = 0; i < 10; i++) {
+			scene.showEffect('icicle', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 650,
+			}, {
+				x: (attacker.x - 100) + (10 * i),
+				y: attacker.y - 100,
+				z: attacker.z,
+				time: (50 * i) + 850,
+			}, 'linear', 'fade');
+		}
+		for (let i = 0; i < 10; i++) {
+			scene.showEffect('icicle', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1300,
+			}, {
+				x: attacker.x + (10 * i),
+				y: attacker.y - 100,
+				z: attacker.z,
+				time: (50 * i) + 1500,
+			}, 'linear', 'fade');
+		}
+		for (let i = 0; i < 10; i++) {
+			scene.showEffect('icicle', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1950,
+			}, {
+				x: attacker.x + 100,
+				y: (attacker.y - 100) + (10 * i),
+				z: attacker.z,
+				time: (50 * i) + 2150,
+			}, 'linear', 'fade');
+		}
+	},
+};
 BattleMoveAnims['needleparade'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('energyball', {
@@ -36160,7 +36216,7 @@ BattleMoveAnims['hisousword']={anim:BattleMoveAnims['sacredsword'].anim};
 BattleMoveAnims['throwingatlas']={anim:BattleMoveAnims['stoneedge'].anim};
 //koin3steps see above
 //strawberrycross see above
-//BattleMoveAnims['iwakasascurse']={anim:BattleMoveAnims['focuspunch'].anim};
+//iwakasascurse see above
 //trainwreck see above
 BattleMoveAnims['suzuranpoison']={anim:BattleMoveAnims['poisongas'].anim};
 BattleMoveAnims['lemmingsparade']={anim:BattleMoveAnims['spikecannon'].anim};
