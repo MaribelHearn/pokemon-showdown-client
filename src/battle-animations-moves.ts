@@ -33306,12 +33306,12 @@ BattleMoveAnims['iwakasascurse'] = {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
-				time: (50 * i) + 650,
+				time: (50 * i) + 500,
 			}, {
 				x: (attacker.x - 100) + (10 * i),
 				y: attacker.y - 100,
 				z: attacker.z,
-				time: (50 * i) + 850,
+				time: (50 * i) + 700,
 			}, 'linear', 'fade');
 		}
 		for (let i = 0; i < 10; i++) {
@@ -33319,12 +33319,12 @@ BattleMoveAnims['iwakasascurse'] = {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
-				time: (50 * i) + 1300,
+				time: (50 * i) + 1000,
 			}, {
 				x: attacker.x + (10 * i),
 				y: attacker.y - 100,
 				z: attacker.z,
-				time: (50 * i) + 1500,
+				time: (50 * i) + 1200,
 			}, 'linear', 'fade');
 		}
 		for (let i = 0; i < 10; i++) {
@@ -33332,12 +33332,12 @@ BattleMoveAnims['iwakasascurse'] = {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
-				time: (50 * i) + 1950,
+				time: (50 * i) + 1500,
 			}, {
 				x: attacker.x + 100,
 				y: (attacker.y - 100) + (10 * i),
 				z: attacker.z,
-				time: (50 * i) + 2150,
+				time: (50 * i) + 1700,
 			}, 'linear', 'fade');
 		}
 	},
