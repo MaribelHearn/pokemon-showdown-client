@@ -33443,6 +33443,39 @@ BattleMoveAnims['iwakasascurse'] = {
 				z: attacker.z,
 				time: (50 * i) + 1800,
 			}, 'linear', 'fade');
+			scene.showEffect('icicle', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1500,
+			}, {
+				x: (attacker.x + 300) - (30 * i),
+				y: attacker.y + 300,
+				z: attacker.z,
+				time: (50 * i) + 1800,
+			}, 'linear', 'fade');
+			scene.showEffect('icicle', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1500,
+			}, {
+				x: attacker.x - 300,
+				y: (attacker.y + 300) - (30 * i),
+				z: attacker.z,
+				time: (50 * i) + 1800,
+			}, 'linear', 'fade');
+			scene.showEffect('icicle', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1500,
+			}, {
+				x: (attacker.x - 300) + (30 * i),
+				y: attacker.y - 300,
+				z: attacker.z,
+				time: (50 * i) + 1800,
+			}, 'linear', 'fade');
 		}
 	},
 };
