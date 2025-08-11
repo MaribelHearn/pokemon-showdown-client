@@ -33288,7 +33288,7 @@ BattleMoveAnims['objection'] = {
 };
 BattleMoveAnims['iwakasascurse'] = {
 	anim(scene, [attacker, defender]) {
-		scene.backgroundEffect('linear-gradient(#440044 30%, #000000', 1700, 0.2);
+		scene.backgroundEffect('linear-gradient(#440044 30%, #000000', 1800, 0.3);
 		// first loop
 		for (let i = 0; i < 10; i++) {
 			scene.showEffect('icicle', {
@@ -33348,6 +33348,39 @@ BattleMoveAnims['iwakasascurse'] = {
 				y: attacker.y - 300,
 				z: attacker.z,
 				time: (50 * i) + 800,
+			}, 'linear', 'fade');
+			scene.showEffect('icicle', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: 50 * i,
+			}, {
+				x: attacker.x + 300,
+				y: (attacker.y - 300) + (30 * i),
+				z: attacker.z,
+				time: (50 * i) + 300,
+			}, 'linear', 'fade');
+			scene.showEffect('icicle', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: 50 * i,
+			}, {
+				x: (attacker.x + 300) - (30 * i),
+				y: attacker.y + 300,
+				z: attacker.z,
+				time: (50 * i) + 300,
+			}, 'linear', 'fade');
+			scene.showEffect('icicle', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: 50 * i,
+			}, {
+				x: attacker.x - 300,
+				y: (attacker.y + 300) - (30 * i),
+				z: attacker.z,
+				time: (50 * i) + 300,
 			}, 'linear', 'fade');
 		}
 		// third loop
