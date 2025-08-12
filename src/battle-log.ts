@@ -24,6 +24,20 @@ declare const html: any;
 declare function MD5(input: string): string;
 declare function formatText(input: string, isTrusted?: boolean): string;
 
+// Fundex: BGM pretty names
+const bgmName: Record<string, any> = {
+	"encounter": "Metal Gear Solid - Encounter",
+	"brobot-l-type": "Super Paper Mario - Brobot L-Type Battle",
+	"lot-boss": "Labyrinth of Touhou - Boss Battle",
+	"t-fanger": "Keitai Denjuu Telefang 2 - Battle! T-Fanger",
+	"doomsday": "Keitai Denjuu Telefang - Battle! Doomsday",
+	"super-star-boss": "Kirby Super Star - Boss Battle",
+	"gen1-trainer": "Pokemon Red & Blue - Battle! Trainer",
+	"battle-against-machine": "EarthBound - Battle against a Machine",
+	"smithy": "Super Mario RPG - Fight Against Smithy, Who Likes Transforming",
+	"ghetsis": "Pokemon Black & White - Battle! Ghetsis",
+};
+
 export class BattleLog {
 	elem: HTMLDivElement;
 	innerElem: HTMLDivElement;
@@ -242,7 +256,13 @@ export class BattleLog {
 	}
 	addBattleMessage(args: Args, kwArgs?: KWArgs) {
 		// Fundex: add BGM to battle log
-		this.addDiv('', '<small>BGM:</small> <br /><strong>' + BattleSound.currentBgm() + '</strong>');
+		if (['rated', 'tier'].includes(args[0])) {
+			const currentBgm = BattleSound.currentBgm();
+
+			if (currentBgm && currentBgm.url) {
+				this.addDiv('', '<small>BGM:</small> <br /><strong>' + bgmName[currentBgm.url] + '</strong>');
+			}
+		}
 
 		switch (args[0]) {
 		case 'warning':
