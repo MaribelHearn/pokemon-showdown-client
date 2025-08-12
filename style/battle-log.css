@@ -364,7 +364,7 @@ input[type=range]:active::-webkit-slider-thumb {
 .chat > strong { /* username, changed rating */
 	color: #40576A;
 }
-.chat > em,
+.chat > em:not(.bgm),
 .chat > q { /* user's chat message */
 	padding: 0 4px 0 3px;
 	font-style: normal;
