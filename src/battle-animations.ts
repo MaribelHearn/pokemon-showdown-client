@@ -91,6 +91,7 @@ export class BattleScene implements BattleSceneStub {
 	bgm: BattleBGM | null = null;
 	backdropImage: string = '';
 	bgmNum = 0;
+	bgmPosted = false;
 	preloadCache: {[url: string]: HTMLImageElement} = {};
 
 	messagebarOpen = false;
@@ -1694,10 +1695,10 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm!.resume();
 
 			// Fundex: add BGM to battle log
-			if (this.bgm !== null) {
-				this.log.addDiv('chat battle-history',
-					'<small>BGM:</small> 🎵 <em>' + bgmName[this.bgm.url] + '</em>'
-				);
+			if (this.bgm !== null && !this.bgmPosted) {
+				const theme = this.bgm.url.replace(/(\.mp3|audio\/)/g, '');
+				this.log.addDiv('chat battle-history', '<small>BGM:</small> 🎵 <em>' + bgmName[theme] + '</em>');
+				this.bgmPosted = true;
 			}
 		} else if (this.bgm) {
 			this.bgm.pause();
