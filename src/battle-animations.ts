@@ -17,6 +17,20 @@ import {BattleMoveAnims} from './battle-animations-moves';
 import {BattleLog} from './battle-log';
 import {BattleBGM, BattleSound} from './battle-sound';
 
+// Fundex: BGM pretty names
+const bgmName: Record<string, any> = {
+	"encounter": "Metal Gear Solid - Encounter",
+	"brobot-l-type": "Super Paper Mario - Brobot L-Type Battle",
+	"lot-boss": "Labyrinth of Touhou - Boss Battle",
+	"t-fanger": "Keitai Denjuu Telefang 2 - Battle! T-Fanger",
+	"doomsday": "Keitai Denjuu Telefang - Battle! Doomsday",
+	"super-star-boss": "Kirby Super Star - Boss Battle",
+	"gen1-trainer": "Pokemon Red & Blue - Battle! Trainer",
+	"battle-against-machine": "EarthBound - Battle against a Machine",
+	"smithy": "Super Mario RPG - Fight Against Smithy, Who Likes Transforming",
+	"ghetsis": "Pokemon Black & White - Battle! Ghetsis",
+};
+
 /*
 
 Most of this file is: CC0 (public domain)
@@ -1680,6 +1694,13 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm!.resume();
 		} else if (this.bgm) {
 			this.bgm.pause();
+		}
+
+		// Fundex: add BGM to battle log
+		if (this.bgm !== null) {
+			this.log.addDiv('chat battle-history',
+				'<small>BGM:</small> <br />🎵 <em>' + bgmName[this.bgm.url] + '</em>'
+			);
 		}
 	}
 	resetBgm() {
