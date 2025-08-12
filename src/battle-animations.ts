@@ -1692,16 +1692,17 @@ export class BattleScene implements BattleSceneStub {
 		if (nowPlaying) {
 			if (!this.bgm) this.rollBgm();
 			this.bgm!.resume();
+
+			// Fundex: add BGM to battle log
+			if (this.bgm !== null) {
+				this.log.addDiv('chat battle-history',
+					'<small>BGM:</small> <br />🎵 <em>' + bgmName[this.bgm.url] + '</em>'
+				);
+			}
 		} else if (this.bgm) {
 			this.bgm.pause();
 		}
 
-		// Fundex: add BGM to battle log
-		if (this.bgm !== null) {
-			this.log.addDiv('chat battle-history',
-				'<small>BGM:</small> <br />🎵 <em>' + bgmName[this.bgm.url] + '</em>'
-			);
-		}
 	}
 	resetBgm() {
 		if (this.bgm) this.bgm.stop();
