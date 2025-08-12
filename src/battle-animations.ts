@@ -1697,7 +1697,7 @@ export class BattleScene implements BattleSceneStub {
 			// Fundex: add BGM to battle log
 			if (this.bgm !== null && !this.bgmPosted) {
 				const theme = this.bgm.url.replace(/(\.mp3|audio\/)/g, '');
-				this.log.addDiv('chat battle-history', '<small>BGM:</small> 🎵 <em>' + bgmName[theme] + '</em>');
+				this.log.addDiv('chat battle-history', '<small>BGM:</small> 🎵 <em class="bgm">' + bgmName[theme] + '</em>');
 				this.bgmPosted = true;
 			}
 		} else if (this.bgm) {

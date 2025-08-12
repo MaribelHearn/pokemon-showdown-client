@@ -1365,7 +1365,7 @@ p.or:after {
 	padding-left: 8px;
 	padding-right: 8px;
 }
-.chat em {
+.chat em:not(.bgm) {
 	padding: 0 4px 0 3px;
 	font-style: normal;
 }
