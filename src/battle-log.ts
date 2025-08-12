@@ -14,6 +14,7 @@
  */
 
 import type {BattleScene} from './battle-animations';
+import {BattleSound} from './battle-sound';
 
 // Caja
 declare const html4: any;
@@ -240,6 +241,9 @@ export class BattleLog {
 		if (divHTML) this.addDiv(divClass, divHTML, preempt);
 	}
 	addBattleMessage(args: Args, kwArgs?: KWArgs) {
+		// Fundex: add BGM to battle log
+		this.addDiv('', '<small>BGM:</small> <br /><strong>' + BattleSound.currentBgm() + '</strong>');
+
 		switch (args[0]) {
 		case 'warning':
 			this.message('<strong>Warning:</strong> ' + BattleLog.escapeHTML(args[1]));
