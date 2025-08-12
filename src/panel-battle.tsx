@@ -5,6 +5,8 @@
  * @license AGPLv3
  */
 
+import { BattleSound } from "./battle-sound";
+
 type BattleDesc = {
 	id: RoomID,
 	minElo?: number | string,
@@ -60,7 +62,9 @@ class BattlesPanel extends PSRoomPanel<BattlesRoom> {
 				<p>
 					<button class="button" name="refresh" onClick={this.refresh}><i class="fa fa-refresh"></i> Refresh</button> <span style={Dex.getPokemonIcon('meloetta-pirouette') + ';display:inline-block;vertical-align:middle'} class="picon" title="Meloetta is PS's mascot! The Pirouette forme is Fighting-type, and represents our battles."></span>
 				</p>
-
+				<p>
+					<label class="label">BGM:</label> {BattleSound.currentBgm()}
+				</p>
 				<p>
 					<label class="label">Format:</label><FormatDropdown onChange={this.changeFormat} />
 				</p>
