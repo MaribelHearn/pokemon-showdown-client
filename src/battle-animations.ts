@@ -29,6 +29,9 @@ const bgmName: Record<string, any> = {
 	"battle-against-machine": "EarthBound - Battle against a Machine",
 	"smithy": "Super Mario RPG - Fight Against Smithy, Who Likes Transforming",
 	"ghetsis": "Pokemon Black & White - Battle! Ghetsis",
+	"legrous": "Zero Wing - Legrous (Stage 2)",
+	"firmament-army": "Seihou Shuusou Gyoku - Firmament Army",
+	"duel-of-the-fates": "LEGO Star Wars: The Video Game - Duel of the Fates",
 };
 
 /*
@@ -1577,7 +1580,8 @@ export class BattleScene implements BattleSceneStub {
 		this.preloadImage(Dex.resourcePrefix + 'sprites/ani-back/substitute.gif');
 	}
 	rollBgm() {
-		this.setBgm(1 + this.numericId % 9);
+		const bgmCount = Object.keys(bgmName).length - 1;
+		this.setBgm(1 + this.numericId % bgmCount);
 	}
 	setBgm(bgmNum: number) {
 		if (this.bgmNum === bgmNum) return;
@@ -1619,6 +1623,15 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case 8:
 			this.bgm = BattleSound.loadBgm('audio/smithy.mp3', 3000, 135000, this.bgm);
+			break;
+		case 9:
+			this.bgm = BattleSound.loadBgm('audio/legrous.mp3', 12000, 184000, this.bgm);
+			break;
+		case 9:
+			this.bgm = BattleSound.loadBgm('audio/firmament-army.mp3', 6000, 147000, this.bgm);
+			break;
+		case 9:
+			this.bgm = BattleSound.loadBgm('audio/duel-of-the-fates.mp3', 14000, 145000, this.bgm);
 			break;
 		default:
 			this.bgm = BattleSound.loadBgm('audio/ghetsis.mp3', 4000, 133000, this.bgm);
@@ -2579,7 +2592,7 @@ export class PokemonSprite extends Sprite {
 		let $newEl = $('<img src="' + sp.url + '" style="display:block;opacity:0;position:absolute"' + (sp.pixelated ? ' class="pixelated"' : '') + ' />');
 		// Fundex: Smithy unique transformation
 		if (speciesid.startsWith("smithy")) {
-			BattleSound.playEffect('audio/hammer.mp3');
+			BattleSound.playEffect('audio/moves/hammer.mp3');
 			$newEl.css(this.scene.pos({
 				x: this.x,
 				y: this.y,
