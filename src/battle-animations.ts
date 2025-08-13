@@ -32,6 +32,7 @@ const bgmName: Record<string, any> = {
 	"legrous": "Zero Wing - Legrous (Stage 2)",
 	"firmament-army": "Seihou Shuusou Gyoku - Firmament Army",
 	"duel-of-the-fates": "LEGO Star Wars: The Video Game - Duel of the Fates",
+	"dream-chaser": "F-Zero X - Dream Chaser",
 };
 
 /*
@@ -1632,6 +1633,9 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case 9:
 			this.bgm = BattleSound.loadBgm('audio/duel-of-the-fates.mp3', 14000, 145000, this.bgm);
+			break;
+		case 10:
+			this.bgm = BattleSound.loadBgm('audio/dream-chaser.mp3', 2000, 200000, this.bgm);
 			break;
 		default:
 			this.bgm = BattleSound.loadBgm('audio/ghetsis.mp3', 4000, 133000, this.bgm);
