@@ -415,9 +415,8 @@ function toId() {
 			// 		type: 'modal'
 			// 	});
 			} else {
-				// Fundex: force starting on Rooms page
 				this.addRoom('rooms', null, true);
-				//this.addRoom('lobby', null, true);
+				this.addRoom('lobby', null, true);
 				Storage.whenPrefsLoaded(function () {
 					if (!Config.server.registered) {
 						app.send('/autojoin');
@@ -920,7 +919,7 @@ function toId() {
 				data = data.substr(nlIndex + 1);
 			}
 			if (data.substr(0, 6) === '|init|') {
-				if (!roomid) roomid = 'lobby';
+				if (!roomid) return;
 				var roomType = data.substr(6);
 				var roomTypeLFIndex = roomType.indexOf('\n');
 				if (roomTypeLFIndex >= 0) roomType = roomType.substr(0, roomTypeLFIndex);
