@@ -33,6 +33,7 @@ const bgmName: Record<string, any> = {
 	"firmament-army": "Seihou Shuusou Gyoku - Firmament Army",
 	"duel-of-the-fates": "LEGO Star Wars: The Video Game - Duel of the Fates",
 	"dream-chaser": "F-Zero X - Dream Chaser",
+	"never-gonna-give-you-up": "Rick Astley - Never Gonna Give You Up",
 };
 
 /*
@@ -1636,6 +1637,9 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case 10:
 			this.bgm = BattleSound.loadBgm('audio/dream-chaser.mp3', 2000, 200000, this.bgm);
+			break;
+		case 11:
+			this.bgm = BattleSound.loadBgm('audio/never-gonna-give-you-up.mp3', 43000, 161000, this.bgm);
 			break;
 		default:
 			this.bgm = BattleSound.loadBgm('audio/ghetsis.mp3', 4000, 133000, this.bgm);
