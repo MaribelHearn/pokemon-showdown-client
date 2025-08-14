@@ -1629,16 +1629,16 @@ export class BattleScene implements BattleSceneStub {
 		case 9:
 			this.bgm = BattleSound.loadBgm('audio/legrous.mp3', 12000, 184000, this.bgm);
 			break;
-		case 9:
+		case 10:
 			this.bgm = BattleSound.loadBgm('audio/firmament-army.mp3', 6000, 147000, this.bgm);
 			break;
-		case 9:
+		case 11:
 			this.bgm = BattleSound.loadBgm('audio/duel-of-the-fates.mp3', 14000, 145000, this.bgm);
 			break;
-		case 10:
+		case 12:
 			this.bgm = BattleSound.loadBgm('audio/dream-chaser.mp3', 2000, 200000, this.bgm);
 			break;
-		case 11:
+		case 13:
 			this.bgm = BattleSound.loadBgm('audio/never-gonna-give-you-up.mp3', 43000, 161000, this.bgm);
 			break;
 		default:
