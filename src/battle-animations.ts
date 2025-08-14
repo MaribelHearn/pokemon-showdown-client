@@ -35,6 +35,8 @@ const bgmName: Record<string, any> = {
 	"dream-chaser": "F-Zero X - Dream Chaser",
 	"never-gonna-give-you-up": "Rick Astley - Never Gonna Give You Up",
 	"star-wolf": "Star Fox 64 - Star Wolf",
+	"vertigo": "Dodonpachi Daifukkatsu Black Label - Vertigo",
+	"trolololo": "Eduard Khil - I Am Very Glad, As I Am Finally Returning Back Home",
 };
 
 /*
@@ -1644,6 +1646,12 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case 14:
 			this.bgm = BattleSound.loadBgm('audio/bgm/star-wolf.mp3', 8000, 119000, this.bgm);
+			break;
+		case 15:
+			this.bgm = BattleSound.loadBgm('audio/bgm/vertigo.mp3', 125000, 250000, this.bgm);
+			break;
+		case 16:
+			this.bgm = BattleSound.loadBgm('audio/bgm/trolololo.mp3', 2000, 163000, this.bgm);
 			break;
 		default:
 			this.bgm = BattleSound.loadBgm('audio/bgm/ghetsis.mp3', 4000, 133000, this.bgm);
