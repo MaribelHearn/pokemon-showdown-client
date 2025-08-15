@@ -919,12 +919,12 @@ function toId() {
 				data = data.substr(nlIndex + 1);
 			}
 			if (data.substr(0, 6) === '|init|') {
-				if (!roomid) return;
+				if (!roomid) roomid = 'lobby';
 				var roomType = data.substr(6);
 				var roomTypeLFIndex = roomType.indexOf('\n');
 				if (roomTypeLFIndex >= 0) roomType = roomType.substr(0, roomTypeLFIndex);
 				roomType = toID(roomType);
-				if (this.rooms[roomid] || roomid === 'staff' || roomid === 'upperstaff') {
+				if (this.rooms[roomid] || roomid === 'lobby' || roomid === 'staff' || roomid === 'upperstaff') {
 					// autojoin rooms are joined in background
 					this.addRoom(roomid, roomType, true);
 				} else {
