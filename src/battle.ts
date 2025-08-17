@@ -2050,8 +2050,8 @@ export class Battle {
 		case '-zpower': {
 			let poke = this.getPokemon(args[1])!;
 			if (poke.speciesForme === 'Utsuho') {
-				this.scene.runOtherAnim('radioactive' as ID, [poke]);
 				BattleSound.playEffect('audio/caution.mp3');
+				this.scene.runOtherAnim('radioactive' as ID, [poke]);
 			}
 			else {
 				this.scene.runOtherAnim('zpower' as ID, [poke]);
