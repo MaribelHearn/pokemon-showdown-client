@@ -34994,7 +34994,7 @@ BattleMoveAnims['pixiedust'] = {
 			y: defender.y - 10,
 			z: defender.z,
 			scale: 0.5,
-			opacity: 0.5,
+			opacity: 0.4,
 		}, 'ballistic');
 		scene.showEffect('shinepink', {
 			x: attacker.x,
@@ -35008,7 +35008,7 @@ BattleMoveAnims['pixiedust'] = {
 			y: defender.y - 40,
 			z: defender.z,
 			scale: 0.5,
-			opacity: 0.5,
+			opacity: 0.4,
 		}, 'ballistic');
 		scene.showEffect('shinepink', {
 			x: attacker.x,
@@ -35022,7 +35022,7 @@ BattleMoveAnims['pixiedust'] = {
 			y: defender.y - 20,
 			z: defender.z,
 			scale: 0.5,
-			opacity: 0.5,
+			opacity: 0.4,
 		}, 'ballistic');
 		scene.showEffect('shinepink', {
 			x: attacker.x,
@@ -35036,7 +35036,7 @@ BattleMoveAnims['pixiedust'] = {
 			y: defender.y - 30,
 			z: defender.z,
 			scale: 0.5,
-			opacity: 0.5,
+			opacity: 0.4,
 		}, 'ballistic');
 	},
 };

@@ -1377,7 +1377,7 @@ export class BattleScene implements BattleSceneStub {
 				y: y + 10,
 				z: side.z,
 				opacity: 0.5,
-				scale: 0.5,
+				scale: 0.4,
 			}, this);
 
 			const shine2 = new Sprite(BattleEffects.shinepink, {
@@ -1386,7 +1386,7 @@ export class BattleScene implements BattleSceneStub {
 				y: y + 40,
 				z: side.z,
 				opacity: 0.5,
-				scale: 0.5,
+				scale: 0.4,
 			}, this);
 
 			const shine3 = new Sprite(BattleEffects.shinepink, {
@@ -1395,7 +1395,7 @@ export class BattleScene implements BattleSceneStub {
 				y: y + 20,
 				z: side.z,
 				opacity: 0.5,
-				scale: 0.5,
+				scale: 0.4,
 			}, this);
 
 			const shine4 = new Sprite(BattleEffects.shinepink, {
@@ -1404,7 +1404,7 @@ export class BattleScene implements BattleSceneStub {
 				y: y + 30,
 				z: side.z,
 				opacity: 0.5,
-				scale: 0.5,
+				scale: 0.4,
 			}, this);
 
 			this.$spritesFront[spriteIndex].append(shine1.$el!);
