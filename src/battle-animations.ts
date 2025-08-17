@@ -17,8 +17,6 @@ import {BattleMoveAnims} from './battle-animations-moves';
 import {BattleLog} from './battle-log';
 import {BattleBGM, BattleSound} from './battle-sound';
 
-const { createHash } = require('node:crypto');
-
 // Fundex: BGM pretty names
 const bgmName: Record<string, any> = {
 	"encounter": "Metal Gear Solid - Encounter",
@@ -1632,12 +1630,7 @@ export class BattleScene implements BattleSceneStub {
 	}
 	rollBgm() {
 		const bgmCount = Object.keys(bgmName).length - 1;
-		const hash = createHash('sha256');
-		let randInt = hash.update(this.numericId);
-		randInt = hash.digest(this.numericId);
-		randInt = hash.replace(/[^\d]/g, "");
-		randInt = Number(randInt) % bgmCount;
-		this.setBgm(randInt);
+		this.setBgm(1 + this.numericId % bgmCount);
 	}
 	setBgm(bgmNum: number) {
 		if (this.bgmNum === bgmNum) return;
