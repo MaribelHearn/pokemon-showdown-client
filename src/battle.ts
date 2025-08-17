@@ -2049,9 +2049,9 @@ export class Battle {
 		}
 		case '-zpower': {
 			let poke = this.getPokemon(args[1])!;
-			let moveid = toID(args[2]);
-			if (moveid === 'uncontainablenuclearreaction') {
+			if (poke.lastMove === 'uncontainablenuclearreaction') {
 				this.scene.runOtherAnim('radioactive' as ID, [poke]);
+				BattleSound.playEffect('audio/caution.mp3');
 			}
 			else {
 				this.scene.runOtherAnim('zpower' as ID, [poke]);
