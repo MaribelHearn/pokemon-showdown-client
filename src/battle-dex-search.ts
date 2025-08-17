@@ -786,7 +786,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 		return false;
 	}
 	getTier(pokemon: Species) {
-		if (this.formatType === 'metronome' || this.formatType === 'natdex') {
+		if (this.formatType?.includes('metronome') || this.formatType === 'natdex') {
 			return pokemon.num >= 0 ? String(pokemon.num) : pokemon.tier;
 		}
 		let table = window.BattleTeambuilderTable;
@@ -913,7 +913,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 			table = table['gen7letsgo'];
 		} else if (this.formatType === 'natdex') {
 			table = table['natdex'];
-		} else if (this.formatType === 'metronome') {
+		} else if (this.formatType?.includes('metronome')) {
 			table = table['metronome'];
 		} else if (this.formatType === 'nfe') {
 			table = table['gen' + dex.gen + 'nfe'];
@@ -1098,7 +1098,7 @@ class BattleAbilitySearch extends BattleTypedSearch<'ability'> {
 			abilitySet.push(['header', "Special Event Ability"]);
 			abilitySet.push(['ability', toID(species.abilities['S'])]);
 		}
-		if (isAAA || format === 'metronomebattle' || isHackmons) {
+		if (isAAA || format.includes('metronome') || isHackmons) {
 			let abilities: ID[] = [];
 			for (let i in this.getTable()) {
 				const ability = dex.abilities.get(i);
@@ -1159,7 +1159,7 @@ class BattleItemSearch extends BattleTypedSearch<'item'> {
 			table = table['gen8bdsp'];
 		} else if (this.formatType === 'natdex') {
 			table = table['natdex'];
-		} else if (this.formatType === 'metronome') {
+		} else if (this.formatType?.includes('metronome')) {
 			table = table['metronome'];
 		} else if (this.dex.gen < 8) {
 			table = table['gen' + this.dex.gen];
@@ -1267,7 +1267,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 			if (id === 'megadrain') return true;
 		}
 
-		if (this.formatType === 'metronome') {
+		if (this.formatType?.includes('metronome')) {
 			if (id === 'metronome') return true;
 		}
 
@@ -1516,7 +1516,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 				}
 			}
 		}
-		if (this.formatType === 'metronome') moves = ['metronome'];
+		if (this.formatType?.includes('metronome')) moves = ['metronome'];
 		if (isSTABmons) {
 			for (let id in this.getTable()) {
 				const move = dex.moves.get(id);
