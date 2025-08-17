@@ -5774,43 +5774,43 @@ export const BattleOtherAnims: AnimTable = {
 			}, {
 				scale: 1,
 				opacity: 0.5,
-				time: 800,
+				time: 1100,
 			}, 'decel', 'explode');
 			scene.showEffect(attacker.sp, {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
 				opacity: 0.3,
-				time: 800,
+				time: 1100,
 			}, {
 				y: attacker.y + 20,
 				scale: 2,
 				opacity: 0,
-				time: 1200,
+				time: 1500,
 			}, 'accel');
 			scene.showEffect(attacker.sp, {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
 				opacity: 0.3,
-				time: 1000,
+				time: 1300,
 			}, {
 				y: attacker.y + 20,
 				scale: 2,
 				opacity: 0,
-				time: 1400,
+				time: 1700,
 			}, 'accel');
 			scene.showEffect(attacker.sp, {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
 				opacity: 0.3,
-				time: 1200,
+				time: 1500,
 			}, {
 				y: attacker.y + 20,
 				scale: 2,
 				opacity: 0,
-				time: 1600,
+				time: 1900,
 			}, 'accel');
 		},
 	},
