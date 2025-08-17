@@ -35369,9 +35369,9 @@ BattleMoveAnims['spearthegungnir'] = {
 };
 BattleMoveAnims['nuke'] = {
 	anim(scene, [attacker, defender]) {
-		scene.showEffect('flareball', {
-			x: defender.x + 25,
-			y: defender.y + 300,
+		scene.showEffect('nuke', {
+			x: defender.x + 50,
+			y: defender.y + 200,
 			z: defender.z,
 			scale: 1,
 		}, {
