@@ -35373,12 +35373,12 @@ BattleMoveAnims['nuke'] = {
 			x: defender.x + 50,
 			y: defender.y + 200,
 			z: defender.z,
-			scale: 0.5,
+			scale: 0.3,
 		}, {
 			x: defender.x,
 			y: defender.y + 25,
 			z: defender.z,
-			scale: 0.5,
+			scale: 0.3,
 			time: 500,
 		}, 'linear', 'explode');
 		scene.showEffect('fireball', {
