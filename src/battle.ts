@@ -2049,7 +2049,13 @@ export class Battle {
 		}
 		case '-zpower': {
 			let poke = this.getPokemon(args[1])!;
-			this.scene.runOtherAnim('zpower' as ID, [poke]);
+			let moveid = toID(args[2]);
+			if (moveid === 'uncontainablenuclearreaction') {
+				this.scene.runOtherAnim('radioactive' as ID, [poke]);
+			}
+			else {
+				this.scene.runOtherAnim('zpower' as ID, [poke]);
+			}
 			this.log(args, kwArgs);
 			break;
 		}

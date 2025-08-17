@@ -3062,6 +3062,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'nuke.png',
 		w: 128, h: 128,
 	},
+	radioactive: {
+		url: 'radioactive.png',
+		w: 100, h: 100,
+	},
 	banana: {
 		url: 'dinnerblaster/banana.png',
 		w: 50, h: 50,
@@ -5637,6 +5641,130 @@ export const BattleOtherAnims: AnimTable = {
 				time: 500,
 			}, 'linear', 'fade');
 			scene.showEffect('zsymbol', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.7,
+				opacity: 1,
+				time: 500,
+			}, {
+				scale: 1,
+				opacity: 0.5,
+				time: 800,
+			}, 'decel', 'explode');
+			scene.showEffect(attacker.sp, {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				opacity: 0.3,
+				time: 800,
+			}, {
+				y: attacker.y + 20,
+				scale: 2,
+				opacity: 0,
+				time: 1200,
+			}, 'accel');
+			scene.showEffect(attacker.sp, {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				opacity: 0.3,
+				time: 1000,
+			}, {
+				y: attacker.y + 20,
+				scale: 2,
+				opacity: 0,
+				time: 1400,
+			}, 'accel');
+			scene.showEffect(attacker.sp, {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				opacity: 0.3,
+				time: 1200,
+			}, {
+				y: attacker.y + 20,
+				scale: 2,
+				opacity: 0,
+				time: 1600,
+			}, 'accel');
+		},
+	},
+	// Fundex: Utsuho Z-power is radioactive, for Uncontainable Nuclear Reaction (Nuke)
+	radioactive: {
+		anim(scene, [attacker]) {
+			scene.backgroundEffect('linear-gradient(#000000 20%, #0000DD)', 1800, 0.4);
+			scene.showEffect('electroball', {
+				x: attacker.x - 60,
+				y: attacker.y + 40,
+				z: attacker.z,
+				scale: 0.7,
+				opacity: 0.7,
+				time: 0,
+			}, {
+				x: attacker.x,
+				y: attacker.y,
+				scale: 0.2,
+				opacity: 0.2,
+				time: 300,
+			}, 'linear', 'fade');
+			scene.showEffect('electroball', {
+				x: attacker.x + 60,
+				y: attacker.y - 5,
+				z: attacker.z,
+				scale: 0.7,
+				opacity: 0.7,
+				time: 100,
+			}, {
+				x: attacker.x,
+				y: attacker.y,
+				scale: 0.2,
+				opacity: 0.2,
+				time: 300,
+			}, 'linear', 'fade');
+			scene.showEffect('electroball', {
+				x: attacker.x - 30,
+				y: attacker.y + 60,
+				z: attacker.z,
+				scale: 0.7,
+				opacity: 0.7,
+				time: 100,
+			}, {
+				x: attacker.x,
+				y: attacker.y,
+				scale: 0.2,
+				opacity: 0.2,
+				time: 400,
+			}, 'linear', 'fade');
+			scene.showEffect('electroball', {
+				x: attacker.x + 20,
+				y: attacker.y - 50,
+				z: attacker.z,
+				scale: 0.7,
+				opacity: 0.7,
+				time: 100,
+			}, {
+				x: attacker.x,
+				y: attacker.y,
+				scale: 0.2,
+				opacity: 0.2,
+				time: 400,
+			}, 'linear', 'fade');
+			scene.showEffect('electroball', {
+				x: attacker.x - 70,
+				y: attacker.y - 50,
+				z: attacker.z,
+				scale: 0.7,
+				opacity: 0.7,
+				time: 200,
+			}, {
+				x: attacker.x,
+				y: attacker.y,
+				scale: 0.2,
+				opacity: 0.2,
+				time: 500,
+			}, 'linear', 'fade');
+			scene.showEffect('radioactive', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
