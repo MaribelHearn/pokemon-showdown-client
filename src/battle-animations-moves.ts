@@ -33735,35 +33735,75 @@ BattleMoveAnims['megawattlineargun'] = {
 				y: defender.y,
 				z: defender.z,
 				scale: 0.2,
+				time: 200 * i,
 			}, {
 				time: 200 * (i + 1),
+			}, 'decel');
+			scene.showEffect('iceball', {
+				x: defender.x + (25 + i * 10),
+				y: defender.y,
+				z: defender.z,
+				scale: 0.2,
+				time: 200 * i,
+			}, {
+				time: 200 * (i + 1),
+			}, 'decel');
+			scene.showEffect('iceball', {
+				x: defender.x,
+				y: defender.y - (25 + i * 10),
+				z: defender.z,
+				scale: 0.2,
+				time: 200 * i,
+			}, {
+				time: 200 * (i + 1),
+			}, 'decel');
+			scene.showEffect('iceball', {
+				x: defender.x,
+				y: defender.y + (25 + i * 10),
+				z: defender.z,
+				scale: 0.2,
+				time: 200 * i,
+			}, {
+				time: 200 * (i + 1),
+			}, 'decel');
+			// standstill
+			scene.showEffect('iceball', {
+				x: defender.x - (25 + i * 10),
+				y: defender.y,
+				z: defender.z,
+				scale: 0.2,
+				time: 200 * (i + 1),
+			}, {
+				time: 800
 			}, 'decel', 'fade');
 			scene.showEffect('iceball', {
 				x: defender.x + (25 + i * 10),
 				y: defender.y,
 				z: defender.z,
 				scale: 0.2,
-			}, {
 				time: 200 * (i + 1),
+			}, {
+				time: 800
 			}, 'decel', 'fade');
 			scene.showEffect('iceball', {
 				x: defender.x,
 				y: defender.y - (25 + i * 10),
 				z: defender.z,
 				scale: 0.2,
-			}, {
 				time: 200 * (i + 1),
+			}, {
+				time: 800
 			}, 'decel', 'fade');
 			scene.showEffect('iceball', {
 				x: defender.x,
 				y: defender.y + (25 + i * 10),
 				z: defender.z,
 				scale: 0.2,
-			}, {
 				time: 200 * (i + 1),
+			}, {
+				time: 800
 			}, 'decel', 'fade');
-		}
-		for (let i = 0; i < 3; i++) {
+			// move into opponent
 			scene.showEffect('iceball', {
 				x: defender.x - (25 + i * 10),
 				y: defender.y,
