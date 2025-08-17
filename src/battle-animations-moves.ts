@@ -33727,6 +33727,131 @@ BattleMoveAnims['finaldanmaku'] = {
 	},
 	prepareAnim: BattleOtherAnims.chargestatus.anim,
 };
+BattleMoveAnims['megawattlineargun'] = {
+	anim(scene, [attacker, defender]) {
+		for (let i = 0; i < 3; i++) {
+			scene.showEffect('iceball', {
+				x: defender.x - (25 + i * 10),
+				y: defender.y,
+				z: defender.z,
+				scale: 0.2,
+			}, {
+				time: 200 * (i + 1),
+			}, 'decel', 'fade');
+			scene.showEffect('iceball', {
+				x: defender.x + (25 + i * 10),
+				y: defender.y,
+				z: defender.z,
+				scale: 0.2,
+			}, {
+				time: 200 * (i + 1),
+			}, 'decel', 'fade');
+			scene.showEffect('iceball', {
+				x: defender.x,
+				y: defender.y - (25 + i * 10),
+				z: defender.z,
+				scale: 0.2,
+			}, {
+				time: 200 * (i + 1),
+			}, 'decel', 'fade');
+			scene.showEffect('iceball', {
+				x: defender.x,
+				y: defender.y + (25 + i * 10),
+				z: defender.z,
+				scale: 0.2,
+			}, {
+				time: 200 * (i + 1),
+			}, 'decel', 'fade');
+		}
+		for (let i = 0; i < 3; i++) {
+			scene.showEffect('iceball', {
+				x: defender.x - (25 + i * 10),
+				y: defender.y,
+				z: defender.z,
+				scale: 0.2,
+				time: 800,
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 0.2,
+				time: 1000,
+			}, 'linear', 'explode');
+			scene.showEffect('iceball', {
+				x: defender.x + (25 + i * 10),
+				y: defender.y,
+				z: defender.z,
+				scale: 0.2,
+				time: 800,
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 0.2,
+				time: 1000,
+			}, 'linear', 'explode');
+			scene.showEffect('iceball', {
+				x: defender.x,
+				y: defender.y - (25 + i * 10),
+				z: defender.z,
+				scale: 0.2,
+				time: 800,
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 0.2,
+				time: 1000,
+			}, 'linear', 'explode');
+			scene.showEffect('iceball', {
+				x: defender.x,
+				y: defender.y + (25 + (i * 10)),
+				z: defender.z,
+				scale: 0.2,
+				time: 800,
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 0.2,
+				time: 1000,
+			}, 'linear', 'explode');
+		}
+		scene.showEffect('fireball', {
+			x: defender.x + 40,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 1000,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x - 40,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 1150,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x + 10,
+			y: defender.y + 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 1300,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+	},
+};
 BattleMoveAnims['monstercucumber'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('energyball', {
@@ -36389,7 +36514,7 @@ BattleMoveAnims['whirlingfortress']={anim:BattleMoveAnims['rapidspin'].anim};
 BattleMoveAnims['drybone']={anim:BattleMoveAnims['boneclub'].anim};
 BattleMoveAnims['recollection']={anim:BattleMoveAnims['assist'].anim};
 BattleMoveAnims['releaseoftheid']={anim:BattleMoveAnims['acupressure'].anim};
-//BattleMoveAnims['megawattlineargun']={anim:BattleMoveAnims['boneclub'].anim};
+//megawattlineargun see above
 //monstercucumber see above
 BattleMoveAnims['superhumanbyakurenhijiri']={anim:BattleMoveAnims['extremespeed'].anim};
 //redufosofrage see above
