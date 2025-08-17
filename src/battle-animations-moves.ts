@@ -35372,7 +35372,7 @@ BattleMoveAnims['nuke'] = {
 			scale: 0.3,
 		}, {
 			x: defender.x,
-			y: defender.y + 25,
+			y: defender.y + 10,
 			z: defender.z,
 			scale: 0.3,
 			time: 500,
