@@ -1481,7 +1481,16 @@ export class Battle {
 			if (toID(pokemon.getSpeciesForme()) === 'milesedgeworth' && move.id === 'objection') {
 				BattleSound.playEffect(`audio/moves/${move.id}2.mp3`);
 			}
-			else {
+			else if (toID(pokemon.getSpeciesForme()) === 'phoenixwright' && move.id === 'objection') {
+				BattleSound.playEffect(`audio/moves/${move.id}.mp3`);
+			}
+			else if (toID(pokemon.getSpeciesForme()) === 'engineer' && move.id === 'nope') {
+				BattleSound.playEffect(`audio/cries/engineer.mp3`);
+			}
+			else if (toID(pokemon.getSpeciesForme()) === 'chucktesta' && move.id === 'nope') {
+				BattleSound.playEffect(`audio/cries/chucktesta.mp3`);
+			}
+			else if (move.id !== 'objection' && move.id !== 'nope') {
 				BattleSound.playEffect(`audio/moves/${move.id}.mp3`);
 			}
 		}
