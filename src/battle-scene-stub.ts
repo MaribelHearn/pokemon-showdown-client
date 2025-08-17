@@ -65,7 +65,7 @@ export class BattleSceneStub {
 	animDragOut(pokemon: Pokemon) { }
 	updateStatbar(pokemon: Pokemon, updatePrevhp?: boolean, updateHp?: boolean, tmTrainer?: boolean) { }
 	updateStatbarIfExists(pokemon: Pokemon, updatePrevhp?: boolean, updateHp?: boolean) { }
-	animTransform(pokemon: Pokemon, isCustomAnim?: boolean, isPermanent?: boolean) { }
+	animTransform(pokemon: Pokemon, isCustomAnim?: boolean, isPermanent?: boolean, isSeeking?: boolean) { }
 	clearEffects(pokemon: Pokemon) { }
 	removeTransform(pokemon: Pokemon) { }
 	animFaint(pokemon: Pokemon) { }

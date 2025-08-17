@@ -1521,9 +1521,9 @@ export class BattleScene implements BattleSceneStub {
 	updateStatbarIfExists(pokemon: Pokemon, updatePrevhp?: boolean, updateHp?: boolean) {
 		return pokemon.sprite.updateStatbarIfExists(pokemon, updatePrevhp, updateHp);
 	}
-	animTransform(pokemon: Pokemon, isCustomAnim?: boolean, isPermanent?: boolean) {
+	animTransform(pokemon: Pokemon, isCustomAnim?: boolean, isPermanent?: boolean, isSeeking?: true) {
 		// Fundex: Snake hijacks music
-		if (toID(pokemon.getSpeciesForme()) === 'snakebusted') {
+		if (toID(pokemon.getSpeciesForme()) === 'snakebusted' && !isSeeking) {
 			this.setBgm(-4);
 		}
 		return pokemon.sprite.animTransform(pokemon, isCustomAnim, isPermanent);
