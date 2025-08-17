@@ -1586,7 +1586,7 @@ export class BattleScene implements BattleSceneStub {
 	}
 	rollBgm() {
 		const bgmCount = Object.keys(bgmName).length - 1;
-		this.setBgm(1 + this.numericId % bgmCount);
+		this.setBgm(Math.ceil(Math.random() * bgmCount));
 	}
 	setBgm(bgmNum: number) {
 		if (this.bgmNum === bgmNum) return;
@@ -3065,6 +3065,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	radioactive: {
 		url: 'radioactive.png',
 		w: 100, h: 100,
+	},
+	folder: {
+		url: 'folder.png',
+		w: 50, h: 50,
 	},
 	banana: {
 		url: 'dinnerblaster/banana.png',
