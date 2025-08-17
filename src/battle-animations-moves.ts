@@ -34147,6 +34147,11 @@ BattleMoveAnims['cakelie'] = {
 		}, 'ballistic', 'fade');
 	},
 };
+/*BattleMoveAnims['delete'] = {
+	anim(scene, [attacker, defender]) {
+
+	},
+};*/
 BattleMoveAnims['bittorrent'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('#FFFFFF', 900, 0.5);
@@ -36559,6 +36564,7 @@ BattleMoveAnims['diamondblizzard']={anim:BattleMoveAnims['blizzard'].anim};
 //fantasyseal see above
 //evilsealingcircle see above
 BattleMoveAnims['killingdoll']={anim:BattleMoveAnims['smartstrike'].anim};
+BattleMoveAnims['theworld']={anim:BattleMoveAnims['agility'].anim};
 //nuke see above
 BattleMoveAnims['ghastlydream']={anim:BattleMoveAnims['hex'].anim};
 //spearthegungnir see above
@@ -36571,6 +36577,7 @@ BattleMoveAnims['throwingatlas']={anim:BattleMoveAnims['stoneedge'].anim};
 //trainwreck see above
 BattleMoveAnims['suzuranpoison']={anim:BattleMoveAnims['poisongas'].anim};
 BattleMoveAnims['lemmingsparade']={anim:BattleMoveAnims['spikecannon'].anim};
+BattleMoveAnims['houraielixir']={anim:BattleMoveAnims['milkdrink'].anim};
 //explod see above
 BattleMoveAnims['study']={anim:BattleMoveAnims['calmmind'].anim};
 BattleMoveAnims['corrupt']={anim:BattleMoveAnims['curse'].anim};
@@ -36623,7 +36630,7 @@ BattleMoveAnims['strengthenjutsu']={anim:BattleMoveAnims['nastyplot'].anim};
 BattleMoveAnims['washingmachine']={anim:BattleMoveAnims['whirlpool'].anim};
 BattleMoveAnims['programfreeze']={anim:BattleMoveAnims['sheercold'].anim};
 BattleMoveAnims['datastream']={anim:BattleMoveAnims['hyperbeam'].anim};
-//BattleMoveAnims['delete']={anim:BattleMoveAnims['extremespeed'].anim};
+//delete see above
 BattleMoveAnims['painflow']={anim:BattleMoveAnims['needlearm'].anim};
 BattleMoveAnims['flightofidaten']={anim:BattleMoveAnims['quickattack'].anim};
 BattleMoveAnims['patriotselixir']={anim:BattleMoveAnims['milkdrink'].anim};
