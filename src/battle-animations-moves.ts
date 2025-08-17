@@ -35367,6 +35367,54 @@ BattleMoveAnims['spearthegungnir'] = {
 		}, 'swing');
 	},
 };
+BattleMoveAnims['nuke'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('flareball', {
+			x: defender.x + 25,
+			y: defender.y + 300,
+			z: defender.z,
+			scale: 1,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			time: 500,
+		}, 'linear', 'explode');
+		scene.showEffect('fireball', {
+			x: defender.x + 40,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 500,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x - 40,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 650,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x + 10,
+			y: defender.y + 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 800,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+	},
+};
 BattleMoveAnims['koin3steps'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('flareball', {
@@ -36510,7 +36558,7 @@ BattleMoveAnims['diamondblizzard']={anim:BattleMoveAnims['blizzard'].anim};
 //fantasyseal see above
 //evilsealingcircle see above
 BattleMoveAnims['killingdoll']={anim:BattleMoveAnims['smartstrike'].anim};
-//BattleMoveAnims['nuke']={anim:BattleMoveAnims['focuspunch'].anim};
+//nuke see above
 BattleMoveAnims['ghastlydream']={anim:BattleMoveAnims['hex'].anim};
 //spearthegungnir see above
 BattleMoveAnims['wrigglekick']={anim:BattleMoveAnims['highjumpkick'].anim};
