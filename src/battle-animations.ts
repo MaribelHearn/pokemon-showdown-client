@@ -1369,6 +1369,50 @@ export class BattleScene implements BattleSceneStub {
 				tspikeArray.push(tspike2);
 			}
 			break;
+		// Fundex: Pixie Dust lingering
+		case 'pixiedust':
+			const shine1 = new Sprite(BattleEffects.shinepink, {
+				display: 'block',
+				x: x + side.leftof(-40),
+				y: y - 10,
+				z: side.z,
+				opacity: 0.5,
+				scale: 0.2,
+			}, this);
+
+			const shine2 = new Sprite(BattleEffects.shinepink, {
+				display: 'block',
+				x: x + side.leftof(-20),
+				y: y - 40,
+				z: side.z,
+				opacity: 0.5,
+				scale: 0.2,
+			}, this);
+
+			const shine3 = new Sprite(BattleEffects.shinepink, {
+				display: 'block',
+				x: x + side.leftof(30),
+				y: y - 20,
+				z: side.z,
+				opacity: 0.5,
+				scale: 0.2,
+			}, this);
+
+			const shine4 = new Sprite(BattleEffects.shinepink, {
+				display: 'block',
+				x: x + side.leftof(10),
+				y: y - 30,
+				z: side.z,
+				opacity: 0.5,
+				scale: 0.2,
+			}, this);
+
+			this.$spritesFront[spriteIndex].append(shine1.$el!);
+			this.$spritesFront[spriteIndex].append(shine2.$el!);
+			this.$spritesFront[spriteIndex].append(shine3.$el!);
+			this.$spritesFront[spriteIndex].append(shine4.$el!);
+			this.sideConditions[siden][id] = [shine1, shine2, shine3, shine4];
+			break;
 		case 'stickyweb':
 			const web = new Sprite(BattleEffects.web, {
 				display: 'block',
