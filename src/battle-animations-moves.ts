@@ -34991,7 +34991,7 @@ BattleMoveAnims['pixiedust'] = {
 			opacity: 1,
 		}, {
 			x: defender.leftof(-40),
-			y: defender.y - 10,
+			y: defender.y + 10,
 			z: defender.z,
 			scale: 0.5,
 			opacity: 0.4,
@@ -35005,7 +35005,7 @@ BattleMoveAnims['pixiedust'] = {
 			time: 75,
 		}, {
 			x: defender.leftof(-20),
-			y: defender.y - 40,
+			y: defender.y + 40,
 			z: defender.z,
 			scale: 0.5,
 			opacity: 0.4,
@@ -35019,7 +35019,7 @@ BattleMoveAnims['pixiedust'] = {
 			time: 150,
 		}, {
 			x: defender.leftof(30),
-			y: defender.y - 20,
+			y: defender.y + 20,
 			z: defender.z,
 			scale: 0.5,
 			opacity: 0.4,
@@ -35033,7 +35033,7 @@ BattleMoveAnims['pixiedust'] = {
 			time: 225,
 		}, {
 			x: defender.leftof(10),
-			y: defender.y - 30,
+			y: defender.y + 30,
 			z: defender.z,
 			scale: 0.5,
 			opacity: 0.4,
