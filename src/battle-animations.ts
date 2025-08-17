@@ -3070,6 +3070,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'folder.png',
 		w: 50, h: 50,
 	},
+	shinepink: {
+		url: 'shine-pink.png',
+		w: 80, h: 100,
+	},
 	banana: {
 		url: 'dinnerblaster/banana.png',
 		w: 50, h: 50,

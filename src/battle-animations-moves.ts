@@ -34983,70 +34983,61 @@ BattleMoveAnims['colorsplash'] = {
 };
 BattleMoveAnims['pixiedust'] = {
 	anim(scene, [attacker, defender]) {
-		let xf = [1, -1, 1, -1];
-		let yf = [1, -1, -1, 1];
-		let xf2 = [1, 0, -1, 0];
-		let yf2 = [0, 1, 0, -1];
-
-		scene.backgroundEffect('#ffc0cb', 1000, 0.3);
-		for (let i = 0; i < 4; i++) {
-			scene.showEffect('fairywisp', {
-				x: attacker.x,
-				y: attacker.y,
-				z: attacker.z,
-				scale: 0.5,
-				opacity: 1,
-			}, {
-				x: attacker.x + 120 * xf[i],
-				y: attacker.y,
-				z: attacker.z + 68 * yf[i],
-				scale: 1,
-				opacity: 0,
-				time: 800,
-			}, 'decel', 'fade');
-			scene.showEffect('fairywisp', {
-				x: attacker.x,
-				y: attacker.y,
-				z: attacker.z,
-				scale: 0.5,
-				opacity: 1,
-			}, {
-				x: attacker.x + 113 * xf2[i],
-				y: attacker.y,
-				z: attacker.z + 97 * yf2[i],
-				scale: 1,
-				opacity: 0,
-				time: 800,
-			}, 'decel', 'fade');
-			scene.showEffect('fairywisp', {
-				x: attacker.x,
-				y: attacker.y,
-				z: attacker.z,
-				scale: 0.5,
-				opacity: 1,
-			}, {
-				x: attacker.x + 120 * xf[i],
-				y: attacker.y,
-				z: attacker.z + 68 * yf[i],
-				scale: 1,
-				opacity: 0,
-				time: 800,
-			}, 'decel', 'fade');
-			scene.showEffect('fairywisp', {
-				x: attacker.x,
-				y: attacker.y,
-				z: attacker.z,
-				scale: 0.5,
-				opacity: 1,
-			}, {
-				x: attacker.x + 113 * xf2[i],
-				y: attacker.y,
-				z: attacker.z + 97 * yf2[i],
-				scale: 1,
-				opacity: 0,
-				time: 800,
-			}, 'decel', 'fade');
-		}
+		scene.showEffect('shinepink', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.3,
+			opacity: 1,
+		}, {
+			x: defender.leftof(-40),
+			y: defender.y - 10,
+			z: defender.z,
+			scale: 0.5,
+			opacity: 0.5,
+		}, 'ballistic');
+		scene.showEffect('shinepink', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.3,
+			opacity: 1,
+			time: 75,
+		}, {
+			x: defender.leftof(-20),
+			y: defender.y - 40,
+			z: defender.z,
+			scale: 0.5,
+			opacity: 0.5,
+		}, 'ballistic');
+		scene.showEffect('shinepink', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.3,
+			opacity: 1,
+			time: 150,
+		}, {
+			x: defender.leftof(30),
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0.5,
+			opacity: 0.5,
+		}, 'ballistic');
+		scene.showEffect('shinepink', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.3,
+			opacity: 1,
+			time: 225,
+		}, {
+			x: defender.leftof(10),
+			y: defender.y - 30,
+			z: defender.z,
+			scale: 0.5,
+			opacity: 0.5,
+		}, 'ballistic');
 	},
 };
 BattleMoveAnims['explod'] = {
