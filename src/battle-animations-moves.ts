@@ -36694,3 +36694,4 @@ BattleMoveAnims['houraijewel'] = {anim: BattleMoveAnims['energyball'].anim};
 BattleMoveAnims['imperishableshooting'] = {anim: BattleMoveAnims['sacredfire'].anim};
 BattleMoveAnims['overflowingunnaturalpower'] = {anim: BattleMoveAnims['focusenergy'].anim};
 BattleMoveAnims['medicineoflife']={anim:BattleMoveAnims['recover'].anim};
+BattleMoveAnims['200yojanain1slash']={anim:BattleMoveAnims['extremespeed'].anim};
