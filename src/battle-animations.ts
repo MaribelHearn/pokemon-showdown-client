@@ -909,7 +909,6 @@ export class BattleScene implements BattleSceneStub {
 	}
 
 	pseudoWeatherLeft(pWeather: WeatherState) {
-		if (this.battle.tier.includes('Weather Wars')) return '';
 		let buf = '<br />' + Dex.moves.get(pWeather[0]).name;
 		if (!pWeather[1] && pWeather[2]) {
 			pWeather[1] = pWeather[2];
@@ -940,7 +939,7 @@ export class BattleScene implements BattleSceneStub {
 		return buf + ' <small>(' + cond[2] + ' or ' + cond[3] + ' turns)</small>';
 	}
 	weatherLeft() {
-		if (this.battle.tier.includes('Weather Wars') || this.battle.gen < 7 && this.battle.hardcoreMode) return '';
+		if (this.battle.gen < 7 && this.battle.hardcoreMode) return '';
 
 		let weatherhtml = ``;
 
