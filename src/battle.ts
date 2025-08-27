@@ -3014,7 +3014,7 @@ export class Battle {
 			let fromeffect = Dex.getEffect(kwArgs.from);
 			this.activateAbility(poke, fromeffect);
 			let minTimeLeft = 5;
-			let maxTimeLeft = 8;
+			let maxTimeLeft = 0;
 			if (effect.id.endsWith('terrain')) {
 				for (let i = this.pseudoWeather.length - 1; i >= 0; i--) {
 					let pwID = toID(this.pseudoWeather[i][0]);
@@ -3023,7 +3023,10 @@ export class Battle {
 						continue;
 					}
 				}
-				if (this.gen <= 6 || this.tier.includes('Weather Wars') && fromeffect.id !== '') {
+				if (this.gen > 6) { // Terrain Extender
+					maxTimeLeft = 8;
+				}
+				if (this.tier.includes('Weather Wars') && fromeffect.id !== '') {
 					minTimeLeft = 0;
 					maxTimeLeft = 0;
 				}
