@@ -3013,8 +3013,8 @@ export class Battle {
 			let poke = this.getPokemon(kwArgs.of);
 			let fromeffect = Dex.getEffect(kwArgs.from);
 			this.activateAbility(poke, fromeffect);
-			let minTimeLeft = 0;
-			let maxTimeLeft = 0;
+			let minTimeLeft = 5;
+			let maxTimeLeft = 8;
 			if (effect.id.endsWith('terrain')) {
 				for (let i = this.pseudoWeather.length - 1; i >= 0; i--) {
 					let pwID = toID(this.pseudoWeather[i][0]);
@@ -3023,9 +3023,9 @@ export class Battle {
 						continue;
 					}
 				}
-				if (this.gen > 6 && !this.tier.includes('Weather Wars')) {
-					minTimeLeft = 5;
-					maxTimeLeft = 8;
+				if (this.gen <= 5 || this.tier.includes('Weather Wars') && poke?.ability.endsWith('Surge')) {
+					minTimeLeft = 0;
+					maxTimeLeft = 0;
 				}
 			}
 			this.addPseudoWeather(effect.name, minTimeLeft, maxTimeLeft);
