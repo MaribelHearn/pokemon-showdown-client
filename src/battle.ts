@@ -1339,8 +1339,8 @@ export class Battle {
 				if (ability) {
 					this.activateAbility(poke, ability.name);
 				}
-				this.weatherTimeLeft = (this.gen <= 5 || isExtremeWeather) ? 0 : 8;
-				this.weatherMinTimeLeft = (this.gen <= 5 || isExtremeWeather) ? 0 : 5;
+				this.weatherTimeLeft = (this.gen <= 5 || this.tier.includes('Weather Wars') || isExtremeWeather) ? 0 : 8;
+				this.weatherMinTimeLeft = (this.gen <= 5 || this.tier.includes('Weather Wars') || isExtremeWeather) ? 0 : 5;
 			} else if (isExtremeWeather) {
 				this.weatherTimeLeft = 0;
 				this.weatherMinTimeLeft = 0;
