@@ -3023,7 +3023,7 @@ export class Battle {
 						continue;
 					}
 				}
-				if (this.gen <= 5 || this.tier.includes('Weather Wars') && fromeffect.id !== '') {
+				if (this.gen <= 6 || this.tier.includes('Weather Wars') && fromeffect.id !== '') {
 					minTimeLeft = 0;
 					maxTimeLeft = 0;
 				}
