@@ -1314,15 +1314,15 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 		case 'headbutt':
 			return abilityid === 'serenegrace';
 		case 'hiddenpowerelectric':
-			return (dex.gen < 4 && !moves.includes('thunderpunch')) && !moves.includes('thunderbolt');
+			return (dex.gen > 3 || !moves.includes('thunderpunch')) && !moves.includes('thunderbolt') && !moves.includes('risingvoltage');
 		case 'hiddenpowerfighting':
-			return (dex.gen < 4 && !moves.includes('brickbreak')) && !moves.includes('aurasphere') && !moves.includes('focusblast');
+			return (dex.gen > 3 || !moves.includes('brickbreak')) && !moves.includes('aurasphere') && !moves.includes('focusblast') && !moves.includes('secretsword');
 		case 'hiddenpowerfire':
-			return (dex.gen < 4 && !moves.includes('firepunch')) && !moves.includes('flamethrower');
+			return (dex.gen > 3 || !moves.includes('firepunch')) && !moves.includes('flamethrower') && !moves.includes('mysticalfire') && !moves.includes('burningjealousy');
 		case 'hiddenpowergrass':
 			return !moves.includes('energyball') && !moves.includes('grassknot') && !moves.includes('gigadrain');
 		case 'hiddenpowerice':
-			return !moves.includes('icebeam') && (dex.gen < 4 && !moves.includes('icepunch')) || (dex.gen > 5 && !moves.includes('aurorabeam'));
+			return !moves.includes('icebeam') && ((dex.gen < 4 && !moves.includes('icepunch')) || (dex.gen > 5 && !moves.includes('aurorabeam')));
 		case 'hiddenpowerflying':
 			return dex.gen < 4 && !moves.includes('drillpeck');
 		case 'hiddenpowerbug':
@@ -1423,7 +1423,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 	] as ID[] as readonly ID[];
 	// Fundex: add custom good weak moves
 	static readonly GOOD_WEAK_MOVES = [
-		'accelerock', 'acidbomb', 'acrobatics', 'aquajet', 'avalanche', 'bonemerang', 'bouncybubble', 'bulletpunch', 'bulletspray', 'buzzybuzz', 'circlethrow', 'clearsmog', 'doubleironbash', 'dragondarts', 'dragontail', 'endeavor', 'evilsealingcircle', 'facade', 'fantasyseal', 'firefang', 'flightofidaten', 'flipturn', 'freezedry', 'frustration', 'geargrind', 'grassknot', 'gyroball', 'hex', 'holdit', 'icefang', 'iceshard', 'iciclespear', 'knockoff', 'koin3steps', 'lemmingsparade', 'lightarrow', 'lowkick', 'machpunch', 'mysteriouspower', 'narrowconfines', 'nightshade', 'nuzzle', 'objection', 'paralyzer', 'pikapapow', 'psychocut', 'pursuit', 'quickattack', 'rapidspin', 'return', 'rockblast', 'scorchingsands', 'seismictoss', 'shadowclaw', 'shadowsneak', 'sizzlyslide', 'sovietreversal', 'storedpower', 'stormthrow', 'suckerpunch', 'superfang', 'superglitch', 'surgingstrikes', 'surprise', 'tailslap', 'tripleaxel', 'uturn', 'veeveevolley', 'voltswitch', 'watershuriken', 'weatherball', 'zerolaser', 'zzzap',
+		'accelerock', 'acidbomb', 'acrobatics', 'aquajet', 'avalanche', 'bonemerang', 'bouncybubble', 'bulletpunch', 'bulletspray', 'buzzybuzz', 'circlethrow', 'clearsmog', 'doubleironbash', 'dragondarts', 'dragontail', 'endeavor', 'evilsealingcircle', 'facade', 'fantasyseal', 'firefang', 'flightofidaten', 'flipturn', 'freezedry', 'frustration', 'geargrind', 'grassknot', 'gyroball', 'hex', 'holdit', 'icefang', 'iceshard', 'iciclespear', 'knockoff', 'koin3steps', 'lemmingsparade', 'lightarrow', 'lowkick', 'machpunch', 'mysteriouspower', 'narrowconfines', 'nightshade', 'nuzzle', 'nyan', 'objection', 'paralyzer', 'pikapapow', 'psychocut', 'pursuit', 'quickattack', 'rapidspin', 'return', 'rockblast', 'scorchingsands', 'seismictoss', 'shadowclaw', 'shadowsneak', 'sizzlyslide', 'sovietreversal', 'storedpower', 'stormthrow', 'suckerpunch', 'superfang', 'superglitch', 'surgingstrikes', 'surprise', 'tailslap', 'tripleaxel', 'uturn', 'veeveevolley', 'voltswitch', 'watershuriken', 'weatherball', 'zerolaser', 'zzzap',
 	] as ID[] as readonly ID[];
 	static readonly BAD_STRONG_MOVES = [
 		'beakblast', 'belch', 'burnup', 'crushclaw', 'doomdesire', 'dragonrush', 'dreameater', 'eggbomb', 'firepledge', 'flyingpress', 'futuresight', 'grasspledge', 'hyperbeam', 'hyperfang', 'hyperspacehole', 'jawlock', 'landswrath', 'lastresort', 'megakick', 'megapunch', 'mistyexplosion', 'muddywater', 'nightdaze', 'pollenpuff', 'rockclimb', 'selfdestruct', 'shelltrap', 'skyuppercut', 'slam', 'strength', 'submission', 'synchronoise', 'takedown', 'thrash', 'uproar', 'waterpledge',
