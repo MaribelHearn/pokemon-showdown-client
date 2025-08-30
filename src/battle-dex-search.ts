@@ -1322,7 +1322,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 		case 'hiddenpowergrass':
 			return !moves.includes('energyball') && !moves.includes('grassknot') && !moves.includes('gigadrain');
 		case 'hiddenpowerice':
-			return !moves.includes('icebeam') && ((dex.gen < 4 && !moves.includes('icepunch')) || (dex.gen > 5 && !moves.includes('aurorabeam')));
+			return !moves.includes('icebeam') && (dex.gen > 3 || !moves.includes('icepunch')) || (dex.gen < 4 || !moves.includes('aurorabeam'));
 		case 'hiddenpowerflying':
 			return dex.gen < 4 && !moves.includes('drillpeck');
 		case 'hiddenpowerbug':
