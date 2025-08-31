@@ -3549,6 +3549,10 @@ export class Battle {
 		}
 		case 'switch': case 'drag': case 'replace': {
 			this.endLastTurn();
+			let oldPoke = this.getPokemon(args[1]);
+			if (!this.seeking && this.scene.currentBgm().includes('encounter') && oldPoke.speciesForme === 'Snake-Busted') {
+				this.scene.rollBgm();
+			}
 			let poke = this.getSwitchedPokemon(args[1], args[2])!;
 			let slot = poke.slot;
 			poke.healthParse(args[3]);
@@ -3565,9 +3569,6 @@ export class Battle {
 			}
 			this.scene.updateWeather();
 			this.log(args, kwArgs);
-			if (!this.seeking && this.scene.currentBgm().includes('encounter') && poke.speciesForme === 'Snake-Busted') {
-				this.scene.rollBgm();
-			}
 			break;
 		}
 		case 'faint': {
