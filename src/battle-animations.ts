@@ -39,6 +39,7 @@ const bgmName: Record<string, any> = {
 	"trolololo": "Eduard Khil - I Am Very Glad, As I Am Finally Returning Back Home",
 	"windows-error-remix": "Windows Error Remix",
 	"tabuu-theme": "Super Smash Bros. Brawl - Final Battle",
+	"decisive-magic-battle": "Decisive Magic Battle! ~ Fight it Out!",
 };
 
 /*
@@ -1704,6 +1705,9 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case 18:
 			this.bgm = BattleSound.loadBgm('audio/bgm/tabuu-theme.mp3', 1000, 188000, this.bgm);
+			break;
+		case 19:
+			this.bgm = BattleSound.loadBgm('audio/bgm/decisive-magic-battle.mp3', 0, 544000, this.bgm);
 			break;
 		default:
 			this.bgm = BattleSound.loadBgm('audio/bgm/ghetsis.mp3', 4000, 133000, this.bgm);
