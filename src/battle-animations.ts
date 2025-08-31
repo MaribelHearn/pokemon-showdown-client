@@ -571,6 +571,9 @@ export class BattleScene implements BattleSceneStub {
 			animEntry = BattleMoveAnims['deleteback'];
 		}
 		animEntry.anim(this, participants.map(p => p.sprite));
+		if (moveid === 'delete') {
+			participants[1].sprite.reset(participants[1]);
+		}
 	}
 
 	runOtherAnim(moveid: ID, participants: Pokemon[]) {
