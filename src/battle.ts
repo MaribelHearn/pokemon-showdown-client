@@ -3571,6 +3571,9 @@ export class Battle {
 			let poke = this.getPokemon(args[1])!;
 			poke.side.faint(poke);
 			this.log(args, kwArgs);
+			if (!this.seeking && (poke.speciesForme === 'Phoenix Wright' || poke.speciesForme === 'Miles Edgeworth')) {
+				this.scene.rollBgm();
+			}
 			break;
 		}
 		case 'swap': {

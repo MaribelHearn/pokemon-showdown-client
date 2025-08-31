@@ -34,6 +34,7 @@ export class BattleSceneStub {
 	removeSideCondition(siden: number, id: ID): void { }
 	reset(): void { }
 	setBgm(bgmNum: number): void { }
+	rollBgm(): void { }
 	resetBgm(): void { }
 	updateBgm(): void { }
 	resultAnim(
