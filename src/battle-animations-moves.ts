@@ -34235,6 +34235,94 @@ BattleMoveAnims['deleteback'] = {
 		}, 'swing');
 	},
 };
+BattleMoveAnims['deleteshiny'] = {
+	anim(scene, [attacker, defender]) {
+		defender.anim({
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 400,
+		}, 'linear');
+		defender.anim({
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0,
+			time: 900,
+		}, 'linear');
+		defender.anim({
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0,
+			time: 1400,
+		}, 'linear');
+		scene.showEffect('recyclebinxp', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 900,
+		}, {
+			time: 1400,
+		}, 'linear', 'fade');
+		defender.anim({
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+		}, 'linear');
+		defender.anim({
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1,
+		}, 'swing');
+	},
+};
+BattleMoveAnims['deletebackshiny'] = {
+	anim(scene, [attacker, defender]) {
+		defender.anim({
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 400,
+		}, 'linear');
+		defender.anim({
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0,
+			time: 900,
+		}, 'linear');
+		defender.anim({
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0,
+			time: 1400,
+		}, 'linear');
+		scene.showEffect('recyclebinxpback', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 900,
+		}, {
+			time: 1400,
+		}, 'linear', 'fade');
+		defender.anim({
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+		}, 'linear');
+		defender.anim({
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1,
+		}, 'swing');
+	},
+};
 BattleMoveAnims['superglitch'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect(`url('${Dex.fxPrefix}/weather-glitchyterrain.png')`, 1000, 0.6);
