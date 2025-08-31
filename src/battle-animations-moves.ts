@@ -37011,7 +37011,7 @@ BattleMoveAnims['houraielixir']={anim:BattleMoveAnims['milkdrink'].anim};
 BattleMoveAnims['study']={anim:BattleMoveAnims['calmmind'].anim};
 BattleMoveAnims['corrupt']={anim:BattleMoveAnims['curse'].anim};
 BattleMoveAnims['sovietreversal']={anim:BattleMoveAnims['reversal'].anim};
-//lolwut see above
+BattleMoveAnims['lolwut']={anim(scene, [attacker, defender]) {/* do nothing */}};
 BattleMoveAnims['pingas']={anim(scene, [attacker, defender]) {/* do nothing */}};
 //dinnerblaster see above
 BattleMoveAnims['warlockpunch']={anim:BattleMoveAnims['shadowpunch'].anim};
