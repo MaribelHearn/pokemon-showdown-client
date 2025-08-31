@@ -552,7 +552,7 @@ class BattleTextParser {
 			if (kwArgs.zeffect) {
 				line1 = this.template('zEffect').replace('[POKEMON]', this.pokemon(pokemon, tmtrainer));
 			}
-			if (args[4] === 'Incomprehensible') {
+			if (this.pokemon(pokemon, tmtrainer).toLowerCase().startsWith('the opposing') && args[4] === 'Incomprehensible') {
 				const template = this.template('moveGiygas', kwArgs.from);
 				return line1 + template.replace('[POKEMON]', this.pokemon(pokemon, tmtrainer).replace('the opposing ', ''));
 			}
