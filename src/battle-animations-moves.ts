@@ -34159,7 +34159,7 @@ BattleMoveAnims['delete'] = {
 			x: attacker.x,
 			y: attacker.y,
 			z: attacker.z,
-			scale: 0.1,
+			scale: 0,
 			time: 900,
 		}, 'linear');
 		defender.anim({
@@ -34203,7 +34203,7 @@ BattleMoveAnims['deleteback'] = {
 			x: attacker.x,
 			y: attacker.y,
 			z: attacker.z,
-			scale: 0.1,
+			scale: 0,
 			time: 900,
 		}, 'linear');
 		defender.anim({
