@@ -3571,7 +3571,7 @@ export class Battle {
 			let poke = this.getPokemon(args[1])!;
 			poke.side.faint(poke);
 			this.log(args, kwArgs);
-			if (!this.seeking && this.scene.currentBgm().includes('encounter') && poke.speciesForme === 'Snake') {
+			if (!this.seeking && this.scene.currentBgm().includes('encounter') && poke.speciesForme === 'Snake-Busted') {
 				this.scene.rollBgm();
 			}
 			if (!this.seeking && this.scene.currentBgm().includes('turnabout') && poke.speciesForme === 'Phoenix Wright' || poke.speciesForme === 'Miles Edgeworth') {
@@ -3591,7 +3591,7 @@ export class Battle {
 					if (target) args[2] = target.ident;
 				}
 				poke.side.swapTo(poke, targetIndex, kwArgs);
-				if (!this.seeking && this.scene.currentBgm().includes('encounter') && poke.speciesForme === 'Snake') {
+				if (!this.seeking && this.scene.currentBgm().includes('encounter') && poke.speciesForme === 'Snake-Busted') {
 					this.scene.rollBgm();
 				}
 			}
