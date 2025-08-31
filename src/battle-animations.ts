@@ -1650,8 +1650,8 @@ export class BattleScene implements BattleSceneStub {
 	}
 	rollBgm() {
 		const bgmCount = Object.keys(bgmName).length - 1;
-		const randInt = this.murmurHash3(this.numericId.toString())();
-		this.setBgm(1 + (randInt % bgmCount));
+		const generateHash = this.murmurHash3(this.numericId.toString());
+		this.setBgm(1 + (generateHash() % bgmCount));
 	}
 	setBgm(bgmNum: number) {
 		if (this.bgmNum === bgmNum) return;
