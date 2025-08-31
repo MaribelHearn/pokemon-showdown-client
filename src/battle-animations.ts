@@ -1634,24 +1634,31 @@ export class BattleScene implements BattleSceneStub {
 		this.preloadImage(Dex.resourcePrefix + 'sprites/ani/substitute.gif');
 		this.preloadImage(Dex.resourcePrefix + 'sprites/ani-back/substitute.gif');
 	}
-	murmurHash3(string: string) {
-		let hash: number;
-		for (let i = 0, hash = 1779033703 ^ string.length; i < string.length; i++) {
-			let bitwise_xor_from_character = hash ^ string.charCodeAt(i);
-			hash = Math.imul(bitwise_xor_from_character, 3432918353);
-			hash = hash << 13 | hash >>> 19;
+	murmurHash3(key: string, seed: number = 0): number {
+		let h1 = seed ^ key.length;
+		const c1 = 0xcc9e2d51;
+		const c2 = 0x1b873593;
+		for (let i = 0; i < key.length; i++) {
+			let k1 = key.charCodeAt(i);
+			k1 = k1 * c1;
+			k1 = (k1 << 15) | (k1 >>> 17);
+			k1 = k1 * c2;
+			h1 ^= k1;
+			h1 = (h1 << 13) | (h1 >>> 19);
+			h1 = h1 * 5 + 0xe6546b64;
 		}
-		return () => {
-			// Return the hash that you can use as a seed
-			hash = Math.imul(hash ^ (hash >>> 16), 2246822507);
-			hash = Math.imul(hash ^ (hash >>> 13), 3266489909);
-			return (hash ^= hash >>> 16) >>> 0;
-		}
+		h1 ^= key.length;
+		h1 ^= h1 >>> 16;
+		h1 = h1 * 0x85ebca6b;
+		h1 ^= h1 >>> 13;
+		h1 = h1 * 0xc2b2ae35;
+		h1 ^= h1 >>> 16;
+		return h1 >>> 0;
 	}
 	rollBgm() {
 		const bgmCount = Object.keys(bgmName).length - 1;
-		const generateHash = this.murmurHash3(this.numericId.toString());
-		this.setBgm(1 + (generateHash() % bgmCount));
+		const hashValue = this.murmurHash3(this.numericId.toString());
+		this.setBgm(1 + hashValue % bgmCount);
 	}
 	setBgm(bgmNum: number) {
 		if (this.bgmNum === bgmNum) return;
