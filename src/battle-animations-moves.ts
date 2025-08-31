@@ -34176,10 +34176,10 @@ BattleMoveAnims['delete'] = {
 		}, 'linear', 'fade');
 		defender.anim({
 			scale: 0.25,
-			time: 700,
+			time: 900,
 		}, 'linear');
 		defender.anim({
-			time: 400,
+			time: 700,
 		}, 'accel');
 		scene.showEffect('recyclebinfull', {
 			x: defender.x,
