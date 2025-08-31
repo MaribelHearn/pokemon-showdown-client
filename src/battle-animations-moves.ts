@@ -34279,7 +34279,7 @@ BattleMoveAnims['deleteshiny'] = {
 		}, 'swing');
 	},
 };
-BattleMoveAnims['deletebackshiny'] = {
+BattleMoveAnims['deleteshinyback'] = {
 	anim(scene, [attacker, defender]) {
 		defender.anim({
 			x: attacker.x,

@@ -566,7 +566,7 @@ export class BattleScene implements BattleSceneStub {
 		} else if (moveid === 'delete' && this.battle.mySide.sideid !== participants[0].side.sideid && participants[0].shiny) {
 			animEntry = BattleMoveAnims['deleteshinyback'];
 		} else if (moveid === 'delete' && participants[0].shiny) {
-			animEntry = BattleMoveAnims['deleteshinyback'];
+			animEntry = BattleMoveAnims['deleteshiny'];
 		} else if (moveid === 'delete' && this.battle.mySide.sideid !== participants[0].side.sideid) {
 			animEntry = BattleMoveAnims['deleteback'];
 		}
