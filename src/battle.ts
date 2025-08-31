@@ -3565,6 +3565,9 @@ export class Battle {
 			}
 			this.scene.updateWeather();
 			this.log(args, kwArgs);
+			if (!this.seeking && this.scene.currentBgm().includes('encounter') && poke.speciesForme === 'Snake-Busted') {
+				this.scene.rollBgm();
+			}
 			break;
 		}
 		case 'faint': {
@@ -3583,9 +3586,6 @@ export class Battle {
 			if (isNaN(Number(args[2]))) {
 				const poke = this.getPokemon(args[1])!;
 				poke.side.swapWith(poke, this.getPokemon(args[2])!, kwArgs);
-				if (!this.seeking && this.scene.currentBgm().includes('encounter') && poke.speciesForme === 'Snake-Busted') {
-					this.scene.rollBgm();
-				}
 			} else {
 				const poke = this.getPokemon(args[1])!;
 				const targetIndex = parseInt(args[2], 10);
