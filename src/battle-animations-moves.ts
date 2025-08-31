@@ -36893,6 +36893,96 @@ BattleMoveAnims['unrealunraveling'] = {
 		}, 'decel');
 	},
 };
+BattleMoveAnims['maxmystery'] = {
+	anim(scene, [attacker, defender]) {
+		scene.backgroundEffect(`url('${Dex.fxPrefix}/weather-glitchyterrain.png')`, 1300, 0.6);
+		scene.showEffect('question', {
+			x: attacker.x,
+			y: attacker.y + 20,
+			z: attacker.z,
+			scale: 1,
+			opacity: 0.8,
+		}, {
+			scale: 1.6,
+			time: 400,
+		}, 'linear');
+		scene.showEffect('question', {
+			x: attacker.x,
+			y: attacker.y + 20,
+			z: attacker.z,
+			scale: 1.6,
+			time: 400,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1.6,
+			time: 800,
+		}, 'ballistic', 'explode');
+		scene.showEffect('fireball', {
+			x: defender.x + 40,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 800,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x - 40,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 950,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x + 10,
+			y: defender.y + 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 1100,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		defender.delay(800);
+		defender.anim({
+			x: defender.x - 30,
+			time: 75,
+		});
+		defender.anim({
+			x: defender.x + 30,
+			time: 100,
+		});
+		defender.anim({
+			x: defender.x - 30,
+			time: 100,
+		});
+		defender.anim({
+			x: defender.x + 30,
+			time: 100,
+		});
+		defender.anim({
+			x: defender.x - 30,
+			time: 100,
+		});
+		defender.anim({
+			x: defender.x + 30,
+			time: 100,
+		});
+		defender.anim({
+			x: defender.x,
+			time: 100,
+		});
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
