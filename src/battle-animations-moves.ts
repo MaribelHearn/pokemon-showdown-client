@@ -34172,12 +34172,12 @@ BattleMoveAnims['delete'] = {
 			opacity: 0.75,
 			time: 400,
 		}, {
-			time: 700,
+			time: 800,
 		}, 'linear', 'fade');
 		defender.delay(400);
 		defender.anim({
 			scale: 0.25,
-			time: 700,
+			time: 800,
 		}, 'linear');
 		defender.anim({
 			time: 400,
@@ -34188,10 +34188,63 @@ BattleMoveAnims['delete'] = {
 			z: defender.z,
 			scale: 0.5,
 			opacity: 0.75,
+			time: 800,
+		}, {
+			time: 1200,
+		}, 'linear', 'fade');
+	},
+};
+BattleMoveAnims['superglitch'] = {
+	anim(scene, [attacker, defender]) {
+		scene.backgroundEffect(`url('${Dex.fxPrefix}/weather-glitchyterrain.png')`, 1000, 0.6);
+		scene.showEffect('impact', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.4,
+			time: 400,
+		}, {
+			scale: 1,
+			opacity: 0,
+			time: 700,
+		}, 'linear');
+		scene.showEffect('impact', {
+			x: defender.x + 10,
+			y: defender.y - 5,
+			z: defender.z + 10,
+			scale: 0,
+			opacity: 0.4,
+			time: 500,
+		}, {
+			scale: 1,
+			opacity: 0,
+			time: 800,
+		}, 'linear');
+		scene.showEffect('impact', {
+			x: defender.x + 20,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.4,
+			time: 600,
+		}, {
+			scale: 1,
+			opacity: 0,
+			time: 900,
+		}, 'linear');
+		scene.showEffect('impact', {
+			x: defender.x - 10,
+			y: defender.y + 10,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.4,
 			time: 700,
 		}, {
-			time: 900,
-		}, 'linear', 'fade');
+			scale: 1,
+			opacity: 0,
+			time: 1000,
+		}, 'linear');
 	},
 };
 BattleMoveAnims['bittorrent'] = {
@@ -36693,7 +36746,7 @@ BattleMoveAnims['superhumanbyakurenhijiri']={anim:BattleMoveAnims['extremespeed'
 //greenufosofloyalty see above
 BattleMoveAnims['nyan']={anim:BattleMoveAnims['echoedvoice'].anim};
 //cakelie see above
-//BattleMoveAnims['superglitch']={anim:BattleMoveAnims['extremespeed'].anim};
+//superglitch see above
 //anormalmove uses default animation
 BattleMoveAnims['miraclefruit']={anim:BattleMoveAnims['junglehealing'].anim};
 BattleMoveAnims['virtueofwindgod']={anim:BattleMoveAnims['hurricane'].anim};
