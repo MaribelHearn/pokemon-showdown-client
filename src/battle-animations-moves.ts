@@ -34155,7 +34155,6 @@ BattleMoveAnims['delete'] = {
 			z: attacker.z,
 			time: 400,
 		}, 'linear');
-		defender.delay(400);
 		defender.anim({
 			scale: 1,
 			time: 900,
@@ -34164,9 +34163,9 @@ BattleMoveAnims['delete'] = {
 			time: 400,
 		}, 'accel');
 		scene.showEffect('recyclebinback', {
-			x: defender.x,
-			y: defender.y,
-			z: defender.z,
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
 			time: 900,
 		}, {
 			time: 1400,
@@ -34181,7 +34180,6 @@ BattleMoveAnims['deleteback'] = {
 			z: attacker.z,
 			time: 400,
 		}, 'linear');
-		defender.delay(400);
 		defender.anim({
 			scale: 1,
 			time: 900,
@@ -34190,9 +34188,9 @@ BattleMoveAnims['deleteback'] = {
 			time: 400,
 		}, 'accel');
 		scene.showEffect('recyclebin', {
-			x: defender.x,
-			y: defender.y,
-			z: defender.z,
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
 			time: 900,
 		}, {
 			time: 1400,
