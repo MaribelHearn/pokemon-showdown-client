@@ -34181,6 +34181,12 @@ BattleMoveAnims['delete'] = {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
+			scale: 0,
+		}, 'linear');
+		defender.anim({
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
 			scale: 1,
 		}, 'swing');
 	},
@@ -34215,6 +34221,12 @@ BattleMoveAnims['deleteback'] = {
 		}, {
 			time: 1400,
 		}, 'linear', 'fade');
+		defender.anim({
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+		}, 'linear');
 		defender.anim({
 			x: defender.x,
 			y: defender.y,
