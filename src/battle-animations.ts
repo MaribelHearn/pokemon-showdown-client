@@ -43,6 +43,8 @@ const bgmName: Record<string, any> = {
 	"marisa": "Touhou - Love-coloured Master Spark",
 	"sanae": "Touhou - Faith is for the Transient People",
 	"utsuho": "Touhou - Solar Sect of Mystic Wisdom ~ Nuclear Fusion",
+	"popple": "Mario & Luigi: Superstar Saga - Popple Battle",
+	"miracle-matter": "Kirby 64 - Miracle Matter",
 };
 
 /*
@@ -1742,6 +1744,12 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case 22:
 			this.bgm = BattleSound.loadBgm('audio/bgm/utsuho.mp3', 0, 332000, this.bgm);
+			break;
+		case 23:
+			this.bgm = BattleSound.loadBgm('audio/bgm/popple.mp3', 0, 93000, this.bgm);
+			break;
+		case 24:
+			this.bgm = BattleSound.loadBgm('audio/bgm/miracle-matter.mp3', 91500, 166500, this.bgm);
 			break;
 		default:
 			this.bgm = BattleSound.loadBgm('audio/bgm/ghetsis.mp3', 4000, 133000, this.bgm);
