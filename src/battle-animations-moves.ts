@@ -34257,7 +34257,7 @@ BattleMoveAnims['deleteshiny'] = {
 			scale: 0,
 			time: 1400,
 		}, 'linear');
-		scene.showEffect('recyclebinxp', {
+		scene.showEffect('recyclebinxpback', {
 			x: attacker.x,
 			y: attacker.y,
 			z: attacker.z,
@@ -34301,7 +34301,7 @@ BattleMoveAnims['deleteshinyback'] = {
 			scale: 0,
 			time: 1400,
 		}, 'linear');
-		scene.showEffect('recyclebinxpback', {
+		scene.showEffect('recyclebinxp', {
 			x: attacker.x,
 			y: attacker.y,
 			z: attacker.z,
