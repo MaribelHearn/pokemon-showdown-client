@@ -36547,7 +36547,7 @@ BattleMoveAnims['sledge'] = {
 };
 BattleMoveAnims['perfectburn'] = {
 	anim(scene, [attacker, defender]) {
-		scene.backgroundEffect(`url('https://${Config.routes.client}/sprites/gen6bgs/bg-volcanocave.jpg')`, 1000, 0.6);
+		scene.backgroundEffect(`url('https://raw.githubusercontent.com/MaribelHearn/pokemon-showdown-sprites/sprites/gen6bgs/bg-volcanocave.jpg')`, 1000, 0.6);
 		scene.showEffect('fireball', {
 			x: defender.x,
 			y: defender.y,
