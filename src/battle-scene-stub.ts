@@ -33,6 +33,7 @@ export class BattleSceneStub {
 	preemptCatchup(): void { }
 	removeSideCondition(siden: number, id: ID): void { }
 	reset(): void { }
+	setBgm(bgmNum: number): void { }
 	resetBgm(): void { }
 	updateBgm(): void { }
 	resultAnim(

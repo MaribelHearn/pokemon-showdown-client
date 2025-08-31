@@ -20,6 +20,7 @@ import {BattleBGM, BattleSound} from './battle-sound';
 // Fundex: BGM pretty names
 const bgmName: Record<string, any> = {
 	"encounter": "Metal Gear Solid - Encounter",
+	"turnabout": "Phoenix Wright: Ace Attorney - Pressing Pursuit ~ Cornered",
 	"brobot-l-type": "Super Paper Mario - Brobot L-Type Battle",
 	"lot-boss": "Labyrinth of Touhou - Boss Battle",
 	"t-fanger": "Keitai Denjuu Telefang 2 - Battle! T-Fanger",
@@ -1684,6 +1685,9 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case -4:
 			this.bgm = BattleSound.loadBgm('audio/bgm/encounter.mp3', 4000, 247000, this.bgm);
+			break;
+		case -5:
+			this.bgm = BattleSound.loadBgm('audio/bgm/turnabout.mp3', 7000, 84000, this.bgm);
 			break;
 		case 1:
 			this.bgm = BattleSound.loadBgm('audio/bgm/brobot-l-type.mp3', 8000, 120000, this.bgm);
