@@ -2910,7 +2910,7 @@ export class Battle {
 				break;
 			// Fundex: Phoenix/Edgeworth sig move KO check
 			case 'objection': case 'holdit': case 'takethat':
-				if (target?.fainted && (toID(poke.getSpeciesForme()) === 'phoenixwright' || toID(poke.getSpeciesForme()) === 'milesedgeworth')) {
+				if (poke.speciesForme === 'phoenixwright' || poke.speciesForme === 'milesedgeworth') {
 					this.scene.setBgm(-5);
 				}
 			// ability activations
