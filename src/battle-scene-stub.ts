@@ -37,6 +37,7 @@ export class BattleSceneStub {
 	rollBgm(): void { }
 	resetBgm(): void { }
 	updateBgm(): void { }
+	currentBgm(): any { }
 	resultAnim(
 		pokemon: Pokemon, result: string, type: "bad" | "good" | "neutral" | "par" | "psn" | "frz" | "slp" | "brn"
 	): void { }

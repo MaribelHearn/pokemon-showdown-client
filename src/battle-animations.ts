@@ -1849,6 +1849,9 @@ export class BattleScene implements BattleSceneStub {
 	resetBgm() {
 		if (this.bgm) this.bgm.stop();
 	}
+	currentBgm() {
+		return this.bgm?.url;
+	}
 	destroy() {
 		this.log.destroy();
 		if (this.$frame) this.$frame.empty();
