@@ -3165,6 +3165,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'sledge.png',
 		w: 140, h: 242,
 	},
+	error: {
+		url: 'error.png',
+		w: 32, h: 32,
+	},
 	// ------
 	wisp: {
 		url: 'wisp.png',
