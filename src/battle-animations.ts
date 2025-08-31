@@ -39,7 +39,10 @@ const bgmName: Record<string, any> = {
 	"trolololo": "Eduard Khil - I Am Very Glad, As I Am Finally Returning Back Home",
 	"windows-error-remix": "Windows Error Remix",
 	"tabuu-theme": "Super Smash Bros. Brawl - Final Battle",
-	"decisive-magic-battle": "Decisive Magic Battle! ~ Fight it Out!",
+	"decisive-magic-battle": "Touhou - Decisive Magic Battle! ~ Fight it Out!",
+	"marisa": "Touhou - Love-coloured Master Spark",
+	"sanae": "Touhou - Faith is for the Transient People",
+	"utsuho": "Touhou - Solar Sect of Mystic Wisdom ~ Nuclear Fusion",
 };
 
 /*
@@ -1631,9 +1634,41 @@ export class BattleScene implements BattleSceneStub {
 		this.preloadImage(Dex.resourcePrefix + 'sprites/ani/substitute.gif');
 		this.preloadImage(Dex.resourcePrefix + 'sprites/ani-back/substitute.gif');
 	}
+	murmurHash3(string: string) {
+		let hash: number;
+		for (let i = 0, hash = 1779033703 ^ string.length; i < string.length; i++) {
+			let bitwise_xor_from_character = hash ^ string.charCodeAt(i);
+			hash = Math.imul(bitwise_xor_from_character, 3432918353);
+			hash = hash << 13 | hash >>> 19;
+		}
+		return () => {
+			// Return the hash that you can use as a seed
+			hash = Math.imul(hash ^ (hash >>> 16), 2246822507);
+			hash = Math.imul(hash ^ (hash >>> 13), 3266489909);
+			return (hash ^= hash >>> 16) >>> 0;
+		}
+	}
+	sfc32(seed1: number, seed2: number, seed3: number, seed4: number) {
+		return () => {
+			seed1 >>>= 0;
+			seed2 >>>= 0;
+			seed3 >>>= 0;
+			seed4 >>>= 0;
+			let cast32 = (seed1 + seed2) | 0;
+			seed1 = seed2 ^ seed2 >>> 9;
+			seed2 = seed3 + (seed3 << 3) | 0;
+			seed3 = (seed3 << 21 | seed3 >>> 11);
+			seed4 = seed4 + 1 | 0;
+			cast32 = cast32 + seed4 | 0;
+			seed3 = seed3 + cast32 | 0;
+			return (cast32 >>> 0) / 4294967296;
+		}
+	}
 	rollBgm() {
 		const bgmCount = Object.keys(bgmName).length - 1;
-		this.setBgm(1 + this.numericId % bgmCount);
+		const generateSeed = this.murmurHash3(this.numericId.toString());
+		const randInt = this.sfc32(generateSeed(), generateSeed(), generateSeed(), generateSeed());
+		this.setBgm(Math.ceil(randInt() * bgmCount));
 	}
 	setBgm(bgmNum: number) {
 		if (this.bgmNum === bgmNum) return;
@@ -1708,6 +1743,15 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case 19:
 			this.bgm = BattleSound.loadBgm('audio/bgm/decisive-magic-battle.mp3', 0, 544000, this.bgm);
+			break;
+		case 20:
+			this.bgm = BattleSound.loadBgm('audio/bgm/marisa.mp3', 1000, 234000, this.bgm);
+			break;
+		case 21:
+			this.bgm = BattleSound.loadBgm('audio/bgm/sanae.mp3', 13500, 341000, this.bgm);
+			break;
+		case 22:
+			this.bgm = BattleSound.loadBgm('audio/bgm/utsuho.mp3', 0, 332000, this.bgm);
 			break;
 		default:
 			this.bgm = BattleSound.loadBgm('audio/bgm/ghetsis.mp3', 4000, 133000, this.bgm);
