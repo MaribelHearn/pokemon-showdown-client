@@ -1437,7 +1437,7 @@ class BattleTooltips {
 			if (serverPokemon.stats.spa > serverPokemon.stats.atk) category = 'Special';
 		}
 		if (move.id === 'rainbowufosofterror') {
-			moveType = pokemon.getSpecies().types[0];
+			moveType = pokemon.volatiles.typeadd ? pokemon.volatiles.typeadd[1] : pokemon.getSpecies().types[0];
 		}
 
 		// Other abilities that change the move type.
