@@ -34182,8 +34182,7 @@ BattleMoveAnims['delete'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 1,
-			time: 1400,
-		}, 'accel');
+		}, 'swing');
 	},
 };
 BattleMoveAnims['deleteback'] = {
@@ -34221,8 +34220,7 @@ BattleMoveAnims['deleteback'] = {
 			y: defender.y,
 			z: defender.z,
 			scale: 1,
-			time: 1400,
-		}, 'accel');
+		}, 'swing');
 	},
 };
 BattleMoveAnims['superglitch'] = {
