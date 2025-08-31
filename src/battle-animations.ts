@@ -563,6 +563,12 @@ export class BattleScene implements BattleSceneStub {
 			animEntry = BattleMoveAnims['tackle'];
 		} else if (moveid === 'remotemissile' && this.battle.mySide.sideid !== participants[0].side.sideid) {
 			animEntry = BattleMoveAnims['remotemissileback'];
+		} else if (moveid === 'delete' && this.battle.mySide.sideid !== participants[0].side.sideid && participants[0].shiny) {
+			animEntry = BattleMoveAnims['deleteshinyback'];
+		} else if (moveid === 'delete' && participants[0].shiny) {
+			animEntry = BattleMoveAnims['deleteshinyback'];
+		} else if (moveid === 'delete' && this.battle.mySide.sideid !== participants[0].side.sideid) {
+			animEntry = BattleMoveAnims['deleteback'];
 		}
 		animEntry.anim(this, participants.map(p => p.sprite));
 	}
@@ -3167,8 +3173,16 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'recyclebin.png',
 		w: 96, h: 96,
 	},
-	recyclebinfull: {
-		url: 'recyclebin-full.png',
+	recyclebinback: {
+		url: 'recyclebin-back.png',
+		w: 96, h: 96,
+	},
+	recyclebinxp: {
+		url: 'recyclebin-xp.png',
+		w: 96, h: 96,
+	},
+	recyclebinxpback: {
+		url: 'recyclebin-xp-back.png',
 		w: 96, h: 96,
 	},
 	shinepink: {

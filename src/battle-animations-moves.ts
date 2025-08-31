@@ -34149,45 +34149,50 @@ BattleMoveAnims['cakelie'] = {
 };
 BattleMoveAnims['delete'] = {
 	anim(scene, [attacker, defender]) {
-		scene.showEffect('recyclebin', {
+		defender.anim({
 			x: attacker.x,
 			y: attacker.y,
 			z: attacker.z,
-			scale: 0.6,
-			opacity: 0.75,
-			time: 0,
-		}, {
-			x: defender.x,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.6,
-			opacity: 0.75,
 			time: 400,
-		}, 'ballistic');
-		scene.showEffect('recyclebin', {
-			x: attacker.x,
-			y: attacker.y,
-			z: attacker.z,
-			scale: 0.6,
-			opacity: 0.75,
-			time: 400,
-		}, {
-			time: 900,
-		}, 'linear', 'fade');
+		}, 'linear');
 		defender.delay(400);
 		defender.anim({
-			scale: 0.1,
+			scale: 1,
 			time: 900,
 		}, 'linear');
 		defender.anim({
 			time: 400,
 		}, 'accel');
-		scene.showEffect('recyclebinfull', {
+		scene.showEffect('recyclebinback', {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			scale: 0.6,
-			opacity: 0.75,
+			time: 900,
+		}, {
+			time: 1400,
+		}, 'linear', 'fade');
+	},
+};
+BattleMoveAnims['deleteback'] = {
+	anim(scene, [attacker, defender]) {
+		defender.anim({
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			time: 400,
+		}, 'linear');
+		defender.delay(400);
+		defender.anim({
+			scale: 1,
+			time: 900,
+		}, 'linear');
+		defender.anim({
+			time: 400,
+		}, 'accel');
+		scene.showEffect('recyclebin', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
 			time: 900,
 		}, {
 			time: 1400,
