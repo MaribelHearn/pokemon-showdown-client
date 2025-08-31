@@ -2046,7 +2046,7 @@ export class Battle {
 				poke.item = 'Protective Pads';
 				break;
 			}
-			if (poke.speciesForme === "Snake") {
+			if (!this.seeking && poke.speciesForme === "Snake") {
 				BattleSound.playEffect('audio/alert.mp3');
 			}
 			this.log(args, kwArgs);
