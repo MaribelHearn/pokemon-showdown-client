@@ -1648,27 +1648,10 @@ export class BattleScene implements BattleSceneStub {
 			return (hash ^= hash >>> 16) >>> 0;
 		}
 	}
-	sfc32(seed1: number, seed2: number, seed3: number, seed4: number) {
-		return () => {
-			seed1 >>>= 0;
-			seed2 >>>= 0;
-			seed3 >>>= 0;
-			seed4 >>>= 0;
-			let cast32 = (seed1 + seed2) | 0;
-			seed1 = seed2 ^ seed2 >>> 9;
-			seed2 = seed3 + (seed3 << 3) | 0;
-			seed3 = (seed3 << 21 | seed3 >>> 11);
-			seed4 = seed4 + 1 | 0;
-			cast32 = cast32 + seed4 | 0;
-			seed3 = seed3 + cast32 | 0;
-			return (cast32 >>> 0) / 4294967296;
-		}
-	}
 	rollBgm() {
 		const bgmCount = Object.keys(bgmName).length - 1;
-		const generateSeed = this.murmurHash3(this.numericId.toString());
-		const randInt = this.sfc32(generateSeed(), generateSeed(), generateSeed(), generateSeed());
-		this.setBgm(Math.ceil(randInt() * bgmCount));
+		const randInt = this.murmurHash3(this.numericId.toString())();
+		this.setBgm(1 + (randInt % bgmCount));
 	}
 	setBgm(bgmNum: number) {
 		if (this.bgmNum === bgmNum) return;
