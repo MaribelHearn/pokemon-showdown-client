@@ -36695,7 +36695,7 @@ BattleMoveAnims['unrealunraveling'] = {
 		}, {
 			scale: 1,
 			time: 700,
-		}, 'linear');
+		}, 'linear', 'explode');
 		scene.showEffect('question', {
 			x: defender.x + 5 + Math.random() * 10,
 			y: defender.y - 5 - Math.random() * 10,
@@ -36706,7 +36706,7 @@ BattleMoveAnims['unrealunraveling'] = {
 		}, {
 			scale: 1,
 			time: 800,
-		}, 'linear');
+		}, 'linear', 'explode');
 		scene.showEffect('question', {
 			x: defender.x + 10 + Math.random() * 10,
 			y: defender.y - 10 - Math.random() * 10,
@@ -36717,7 +36717,7 @@ BattleMoveAnims['unrealunraveling'] = {
 		}, {
 			scale: 1,
 			time: 900,
-		}, 'linear');
+		}, 'linear', 'explode');
 		scene.showEffect('question', {
 			x: defender.x - 10 - Math.random() * 10,
 			y: defender.y + 10 + Math.random() * 10,
@@ -36728,14 +36728,14 @@ BattleMoveAnims['unrealunraveling'] = {
 		}, {
 			scale: 1,
 			time: 1000,
-		}, 'linear');
+		}, 'linear', 'explode');
 		scene.showEffect('fireball', {
 			x: defender.x + 40,
 			y: defender.y,
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
-			time: 700,
+			time: 850,
 		}, {
 			scale: 6,
 			opacity: 0,
@@ -36746,7 +36746,7 @@ BattleMoveAnims['unrealunraveling'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
-			time: 850,
+			time: 1000,
 		}, {
 			scale: 6,
 			opacity: 0,
@@ -36757,7 +36757,7 @@ BattleMoveAnims['unrealunraveling'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.6,
-			time: 1000,
+			time: 1150,
 		}, {
 			scale: 6,
 			opacity: 0,
