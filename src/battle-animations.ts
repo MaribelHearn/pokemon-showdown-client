@@ -38,7 +38,7 @@ const bgmName: Record<string, any> = {
 	"vertigo": "Dodonpachi Daifukkatsu Black Label - Vertigo",
 	"trolololo": "Eduard Khil - I Am Very Glad, As I Am Finally Returning Back Home",
 	"windows-error-remix": "Windows Error Remix",
-	"tabuu-theme": "Super Smash Bros. Brawl - Final Battle"
+	"tabuu-theme": "Super Smash Bros. Brawl - Final Battle",
 };
 
 /*

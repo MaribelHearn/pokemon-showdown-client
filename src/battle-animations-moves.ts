@@ -34153,14 +34153,14 @@ BattleMoveAnims['delete'] = {
 			x: attacker.x,
 			y: attacker.y,
 			z: attacker.z,
-			scale: 0.5,
+			scale: 0.6,
 			opacity: 0.75,
 			time: 0,
 		}, {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			scale: 0.5,
+			scale: 0.6,
 			opacity: 0.75,
 			time: 400,
 		}, 'ballistic');
@@ -34168,16 +34168,16 @@ BattleMoveAnims['delete'] = {
 			x: attacker.x,
 			y: attacker.y,
 			z: attacker.z,
-			scale: 0.5,
+			scale: 0.6,
 			opacity: 0.75,
 			time: 400,
 		}, {
-			time: 800,
+			time: 900,
 		}, 'linear', 'fade');
 		defender.delay(400);
 		defender.anim({
-			scale: 0.25,
-			time: 800,
+			scale: 0.1,
+			time: 900,
 		}, 'linear');
 		defender.anim({
 			time: 400,
@@ -34186,11 +34186,11 @@ BattleMoveAnims['delete'] = {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			scale: 0.5,
+			scale: 0.6,
 			opacity: 0.75,
-			time: 800,
+			time: 900,
 		}, {
-			time: 1200,
+			time: 1400,
 		}, 'linear', 'fade');
 	},
 };
