@@ -1430,10 +1430,14 @@ class BattleTooltips {
 			moveType = 'Dark';
 		}
 		// Fundex: Catnarok uses the user's type and highest attacking stat
+		// Rainbow UFOs of Terror matches Nue's primary type
 		if (move.id === 'catnarok') {
 			if (pokemon.getSpecies().name === 'tacgnoL') moveType = 'Dark';
 			if (pokemon.getSpecies().name === 'oLngact') moveType = 'Fire';
 			if (serverPokemon.stats.spa > serverPokemon.stats.atk) category = 'Special';
+		}
+		if (move.id === 'rainbowufosofterror') {
+			moveType = pokemon.getSpecies().types[0];
 		}
 
 		// Other abilities that change the move type.
