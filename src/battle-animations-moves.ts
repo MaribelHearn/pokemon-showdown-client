@@ -36545,6 +36545,24 @@ BattleMoveAnims['sledge'] = {
 		}, 'linear', 'fade');
 	},
 };
+BattleMoveAnims['perfectburn'] = {
+	anim(scene, [attacker, defender]) {
+		scene.backgroundEffect(`url('https://${Config.routes.client}/sprites/gen6bgs/bg-volcanocave.jpg')`, 1000, 0.6);
+		scene.showEffect('fireball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			xscale: 2,
+			yscale: 5,
+			opacity: 0.6,
+		}, {
+			xscale: 2.2,
+			yscale: 5.25,
+			scale: 0.6,
+			time: 800,
+		}, 'linear', 'explode');
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
@@ -36686,6 +36704,7 @@ BattleMoveAnims['unrealunraveling'] = {anim: BattleMoveAnims['wringout'].anim};
 //BattleMoveAnims['maxmystery']={anim:BattleMoveAnims['eggbomb'].anim};
 BattleMoveAnims['immafirinmahlazer'] = {anim: BattleMoveAnims['aeroblast'].anim};
 BattleMoveAnims['perfectfreeze'] = {anim: BattleMoveAnims['sheercold'].anim};
+//perfectburn see above
 BattleMoveAnims['spartakick'] = {anim: BattleMoveAnims['highjumpkick'].anim};
 BattleMoveAnims['uncontainablenuclearreaction'] = {anim: BattleMoveAnims['overheat'].anim};
 BattleMoveAnims['saigyoujiflawlessnirvana'] = {anim: BattleMoveAnims['ghastlydream'].anim};
