@@ -36682,6 +36682,92 @@ BattleMoveAnims['malfunction'] = {
 		BattleOtherAnims.contactattack.anim(scene, [attacker, defender]);
 	},
 };
+BattleMoveAnims['unrealunraveling'] = {
+	anim(scene, [attacker, defender]) {
+		scene.backgroundEffect(`url('${Dex.fxPrefix}/weather-glitchyterrain.png')`, 1300, 0.6);
+		scene.showEffect('question', {
+			x: defender.x - 5 + Math.random() * 10,
+			y: defender.y + 5 - Math.random() * 10,
+			z: defender.z - 10 - Math.random() * 10,
+			scale: 0.6,
+			opacity: 0.4,
+			time: 400,
+		}, {
+			scale: 1,
+			opacity: 0,
+			time: 700,
+		}, 'linear');
+		scene.showEffect('question', {
+			x: defender.x + 5 + Math.random() * 10,
+			y: defender.y - 5 - Math.random() * 10,
+			z: defender.z + 10 + Math.random() * 10,
+			scale: 0.6,
+			opacity: 0.4,
+			time: 500,
+		}, {
+			scale: 1,
+			opacity: 0,
+			time: 800,
+		}, 'linear');
+		scene.showEffect('question', {
+			x: defender.x + 10 + Math.random() * 10,
+			y: defender.y - 10 - Math.random() * 10,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.4,
+			time: 600,
+		}, {
+			scale: 1,
+			opacity: 0,
+			time: 900,
+		}, 'linear');
+		scene.showEffect('question', {
+			x: defender.x - 10 - Math.random() * 10,
+			y: defender.y + 10 + Math.random() * 10,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.4,
+			time: 700,
+		}, {
+			scale: 1,
+			opacity: 0,
+			time: 1000,
+		}, 'linear');
+		scene.showEffect('fireball', {
+			x: defender.x + 40,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 700,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x - 40,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 850,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+		scene.showEffect('fireball', {
+			x: defender.x + 10,
+			y: defender.y + 20,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.6,
+			time: 1000,
+		}, {
+			scale: 6,
+			opacity: 0,
+		}, 'decel');
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
@@ -36820,8 +36906,8 @@ BattleMoveAnims['finaljudgment']={anim:BattleMoveAnims['judgment'].anim};
 //narrowconfines see above
 BattleMoveAnims['cataclysm']={anim:BattleMoveAnims['dracometeor'].anim};
 //sledge see above
-BattleMoveAnims['unrealunraveling'] = {anim: BattleMoveAnims['wringout'].anim};
-//BattleMoveAnims['maxmystery']={anim:BattleMoveAnims['eggbomb'].anim};
+//unrealunraveling see above
+//maxmystery see above
 BattleMoveAnims['immafirinmahlazer'] = {anim: BattleMoveAnims['aeroblast'].anim};
 BattleMoveAnims['perfectfreeze'] = {anim: BattleMoveAnims['sheercold'].anim};
 //perfectburn see above
