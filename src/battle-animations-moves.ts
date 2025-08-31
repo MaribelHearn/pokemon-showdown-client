@@ -34156,7 +34156,7 @@ BattleMoveAnims['delete'] = {
 			time: 400,
 		}, 'linear');
 		defender.anim({
-			scale: 1,
+			scale: 0.25,
 			time: 900,
 		}, 'linear');
 		defender.anim({
@@ -34181,7 +34181,7 @@ BattleMoveAnims['deleteback'] = {
 			time: 400,
 		}, 'linear');
 		defender.anim({
-			scale: 1,
+			scale: 0.25,
 			time: 900,
 		}, 'linear');
 		defender.anim({
