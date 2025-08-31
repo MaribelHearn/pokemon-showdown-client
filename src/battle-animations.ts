@@ -3117,9 +3117,13 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'radioactive.png',
 		w: 100, h: 100,
 	},
-	folder: {
-		url: 'folder.png',
-		w: 50, h: 50,
+	recyclebin: {
+		url: 'recyclebin.png',
+		w: 96, h: 96,
+	},
+	recyclebinfull: {
+		url: 'recyclebin-full.png',
+		w: 96, h: 96,
 	},
 	shinepink: {
 		url: 'shine-pink.png',

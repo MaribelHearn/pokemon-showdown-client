@@ -34147,11 +34147,52 @@ BattleMoveAnims['cakelie'] = {
 		}, 'ballistic', 'fade');
 	},
 };
-/*BattleMoveAnims['delete'] = {
+BattleMoveAnims['delete'] = {
 	anim(scene, [attacker, defender]) {
-
+		scene.showEffect('recyclebin', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.75,
+			time: 0,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.5,
+			opacity: 0.75,
+			time: 400,
+		}, 'ballistic');
+		scene.showEffect('recyclebin', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.5,
+			opacity: 0.75,
+			time: 400,
+		}, {
+			time: 700,
+		}, 'linear', 'fade');
+		defender.anim({
+			scale: 0.25,
+			time: 700,
+		}, 'linear');
+		defender.anim({
+			time: 400,
+		}, 'accel');
+		scene.showEffect('recyclebinfull', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.5,
+			opacity: 0.75,
+			time: 700,
+		}, {
+			time: 900,
+		}, 'linear', 'fade');
 	},
-};*/
+};
 BattleMoveAnims['bittorrent'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('#FFFFFF', 900, 0.5);
@@ -36581,6 +36622,12 @@ BattleMoveAnims['perfectburn'] = {
 		}, 'linear', 'explode');
 	},
 };
+BattleMoveAnims['malfunction'] = {
+	anim(scene, [attacker, defender]) {
+		scene.backgroundEffect(`url('${Dex.fxPrefix}/weather-glitchyterrain.png')`, 500, 0.6);
+		BattleOtherAnims.contactattack.anim(scene, [attacker, defender]);
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
@@ -36652,7 +36699,7 @@ BattleMoveAnims['virtueofwindgod']={anim:BattleMoveAnims['hurricane'].anim};
 BattleMoveAnims['expandedonbashira']={anim:BattleMoveAnims['woodhammer'].anim};
 BattleMoveAnims['countdown']={anim:BattleMoveAnims['skullbash'].anim,prepareAnim:BattleOtherAnims.chargestatus.anim};
 BattleMoveAnims['systemcrash']={anim:BattleMoveAnims['explosion'].anim};
-//BattleMoveAnims['malfunction']={anim:BattleMoveAnims['extremespeed'].anim};
+//malfunction see above
 BattleMoveAnims['strengthenjutsu']={anim:BattleMoveAnims['nastyplot'].anim};
 BattleMoveAnims['washingmachine']={anim:BattleMoveAnims['whirlpool'].anim};
 BattleMoveAnims['programfreeze']={anim:BattleMoveAnims['sheercold'].anim};
