@@ -35844,6 +35844,24 @@ BattleMoveAnims['strawberrycross'] = {
 		BattleOtherAnims.contactattack.anim(scene, [attacker, defender]);
 	},
 };
+BattleMoveAnims['denialofservice'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('error', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1.5,
+			opacity: 0.75,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 1,
+			opacity: 0.75,
+			time: 400,
+		}, 'decel', 'explode');
+	},
+};
 BattleMoveAnims['graspinghands'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('leftchopblack', {
@@ -36683,6 +36701,7 @@ BattleMoveAnims['missilepunch']={anim:BattleMoveAnims['bulletpunch'].anim};
 //remotemissile see above
 //BattleMoveAnims['grapplebeam']={anim:BattleMoveAnims['eggbomb'].anim};
 //electricalshield see above
+//denialofservice see above
 BattleMoveAnims['paralyzer']={anim:BattleMoveAnims['thundershock'].anim};
 BattleMoveAnims['holdit']={anim:BattleMoveAnims['fakeout'].anim};
 //takethat uses default animation
