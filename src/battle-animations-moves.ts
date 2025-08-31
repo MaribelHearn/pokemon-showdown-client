@@ -36903,20 +36903,20 @@ BattleMoveAnims['maxmystery'] = {
 			scale: 1,
 			opacity: 0.8,
 		}, {
-			scale: 1.6,
+			scale: 2,
 			time: 400,
-		}, 'linear');
+		}, 'linear', 'fade');
 		scene.showEffect('question', {
 			x: attacker.x,
 			y: attacker.y + 20,
 			z: attacker.z,
-			scale: 1.6,
+			scale: 2,
 			time: 400,
 		}, {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			scale: 1.6,
+			scale: 2,
 			time: 800,
 		}, 'ballistic', 'explode');
 		scene.showEffect('fireball', {
