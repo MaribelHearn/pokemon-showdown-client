@@ -3550,7 +3550,7 @@ export class Battle {
 		case 'switch': case 'drag': case 'replace': {
 			this.endLastTurn();
 			let oldPoke = this.getPokemon(args[1]);
-			if (!this.seeking && this.scene.currentBgm().includes('encounter') && oldPoke.speciesForme === 'Snake-Busted') {
+			if (!this.seeking && this.scene.currentBgm().includes('encounter') && oldPoke?.speciesForme === 'Snake-Busted') {
 				this.scene.rollBgm();
 			}
 			let poke = this.getSwitchedPokemon(args[1], args[2])!;
