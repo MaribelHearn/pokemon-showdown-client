@@ -2656,13 +2656,25 @@ export class PokemonSprite extends Sprite {
 
 			const touhouFaintCry = ['Flandre', 'Marisa', 'Lily White', 'Cirno', 'Achi Cirno', 'Reimu', 'Utsuho', 'Yuyuko', 'Remilia', 'Sakuya',
 				'Wriggle', 'Eirin', 'Kaguya', 'Tenshi', 'Suika', 'Letty', 'Keine', 'Keine-Hakutaku', 'Yumemi', 'Mokou', 'Yuugi', 'Komachi', 'Eiki',
-				'Yukari', 'Yamame', 'Iku', 'Medicine', 'Yuuka', 'Minoriko', 'Shizuha', 'Alice', 'VIVIT', 'Angel VIVIT', 'Maribel', 'Kogasa',
+				'Yukari', 'Yamame', 'Iku', 'Medicine', 'Yuuka', 'Minoriko', 'Shizuha', 'Alice', 'Genjii', 'VIVIT', 'Angel VIVIT', 'Maribel', 'Kogasa',
 				'Meiling', 'Patchouli', 'Suwako', 'Shingyoku', 'Shingyoku-Priestess', 'Shingyoku-Orb', 'Sariel', 'Satori', 'Koishi', 'Nitori',
 				'Byakuren', 'Nue', 'Ichirin', 'Sunny Milk', 'Luna Child', 'Star Sapphire', 'Sanae', 'Kanako', 'Ran', 'Hina', 'Chen', 'Reisen',
 				'Parsee', 'Rin', 'Daiyousei', 'Konngara', 'Yumeko', 'Rumia', 'Koakuma', 'Youmu', 'Mystia', 'Tewi', 'Aya', 'Kisume'];
 
 			if (touhouFaintCry.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect("audio/cries/touhou-faint.mp3");
+			}
+
+			const telefangFaintCry = ['Yarrow', 'Doomsday', 'Kanzou', 'Hagumanoki', 'Ruscus', 'Ryuuguu'];
+
+			if (telefangFaintCry.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect("audio/cries/telefang-faint.mp3");
+			}
+
+			const digitalFaintCry = ['Blue Screen of Death', 'Internet Explorer', 'Inori Aizawa', 'Microsoft Edge', 'Mozilla Firefox', 'Google Chrome', 'Recycle Bin'];
+
+			if (digitalFaintCry.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect("audio/cries/digital-faint.mp3");
 			}
 
 			const labyrinthFaintCry = ['Berserk Maribel', 'Serpent of Chaos', '*** WINNER ***'];
