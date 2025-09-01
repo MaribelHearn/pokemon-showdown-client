@@ -2647,7 +2647,11 @@ export class PokemonSprite extends Sprite {
 		this.updateStatbar(pokemon, false, true);
 		this.scene.updateSidebar(pokemon.side);
 		if (this.cryurl) {
-			BattleSound.playEffect(this.cryurl);
+			const faintCries = ['Snake-Busted'];
+
+			if (faintCries.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect(this.cryurl.replace(".mp3", "-faint.mp3"));
+			}
 		}
 		this.anim({
 			y: this.y - 80,
