@@ -2647,10 +2647,28 @@ export class PokemonSprite extends Sprite {
 		this.updateStatbar(pokemon, false, true);
 		this.scene.updateSidebar(pokemon.side);
 		if (this.cryurl) {
-			const faintCries = ['Snake-Busted'];
+			// Fundex: faint cries
+			const faintCries = ['Darth Vader', 'Kirby', 'Mario', 'Snake-Busted'];
 
 			if (faintCries.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect(this.cryurl.replace(".mp3", "-faint.mp3"));
+			}
+
+			const touhouFaintCry = ['Flandre', 'Marisa', 'Lily White', 'Cirno', 'Achi Cirno', 'Reimu', 'Utsuho', 'Yuyuko', 'Remilia', 'Sakuya',
+				'Wriggle', 'Eirin', 'Kaguya', 'Tenshi', 'Suika', 'Letty', 'Keine', 'Keine-Hakutaku', 'Yumemi', 'Mokou', 'Yuugi', 'Komachi', 'Eiki',
+				'Yukari', 'Yamame', 'Iku', 'Medicine', 'Yuuka', 'Minoriko', 'Shizuha', 'Alice', 'VIVIT', 'Angel VIVIT', 'Maribel', 'Kogasa',
+				'Meiling', 'Patchouli', 'Suwako', 'Shingyoku', 'Shingyoku-Priestess', 'Shingyoku-Orb', 'Sariel', 'Satori', 'Koishi', 'Nitori',
+				'Byakuren', 'Nue', 'Ichirin', 'Sunny Milk', 'Luna Child', 'Star Sapphire', 'Sanae', 'Kanako', 'Ran', 'Hina', 'Chen', 'Reisen',
+				'Parsee', 'Rin', 'Daiyousei', 'Konngara', 'Yumeko', 'Rumia', 'Koakuma', 'Youmu', 'Mystia', 'Tewi', 'Aya', 'Kisume'];
+
+			if (touhouFaintCry.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect("audio/cries/touhou-faint.mp3");
+			}
+
+			const labyrinthFaintCry = ['Berserk Maribel', 'Serpent of Chaos', '*** WINNER ***'];
+
+			if (labyrinthFaintCry.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect("audio/cries/lot-faint.mp3");
 			}
 		}
 		this.anim({
