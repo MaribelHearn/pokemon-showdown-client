@@ -2499,6 +2499,10 @@ export class Battle {
 			this.activateAbility(poke, effect);
 			this.activateAbility(ofpoke || poke, fromeffect);
 			switch (effect.id) {
+			// Fundex: Denial of Service volatile
+			case 'denialofservice':
+				this.scene.resultAnim(poke, 'Denial of Service', 'bad');
+				break;
 			case 'typechange':
 				if (ofpoke && fromeffect.id === 'reflecttype') {
 					poke.copyTypesFrom(ofpoke);
@@ -2666,6 +2670,10 @@ export class Battle {
 				// do nothing
 			} else {
 				switch (effect.id) {
+				// Fundex: Denial of Service
+				case 'denialofservice':
+					this.scene.resultAnim(poke, 'Denial of Service ended', 'good');
+					break;
 				case 'dynamax':
 					this.scene.animTransform(poke);
 					break;
