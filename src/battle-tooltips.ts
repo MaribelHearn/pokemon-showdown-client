@@ -47,6 +47,10 @@ class ModifiableValue {
 			this.comment.push(` (${itemName} suppressed by Embargo)`);
 			return false;
 		}
+		if (this.pokemon?.volatiles['denialofservice']) {
+			this.comment.push(` (${itemName} suppressed by Denial of Service)`);
+			return false;
+		}
 		const ignoreKlutz = [
 			"Macho Brace", "Power Anklet", "Power Band", "Power Belt", "Power Bracer", "Power Lens", "Power Weight",
 		];
@@ -1036,6 +1040,7 @@ class BattleTooltips {
 		if (
 			(ability === 'klutz' && !speedHalvingEVItems.includes(item)) ||
 			this.battle.hasPseudoWeather('Magic Room') ||
+			clientPokemon?.volatiles['denialofservice'] ||
 			clientPokemon?.volatiles['embargo']
 		) {
 			item = '' as ID;
