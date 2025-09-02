@@ -621,7 +621,7 @@
 		// name
 		var name = move.name;
 		if (name.substr(0, 12) === 'Hidden Power') name = 'Hidden Power';
-		buf += '<span class="col shortmovenamecol">' + name + '</span> ';
+		buf += '<span class="col shortmovenamecol' + (name.length > 18 ? 'small' : '') + '">' + name + '</span> ';
 
 		// error
 		if (errorMessage) {
