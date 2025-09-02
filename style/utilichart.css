@@ -243,7 +243,7 @@
 	color: #4488CC;
 	text-decoration: underline;
 }
-.utilichart small {
+.utilichart small, .utilichart .small {
 	font-size: 8pt;
 }
 .utilichart small b {
