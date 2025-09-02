@@ -2061,6 +2061,7 @@ export class PokemonSprite extends Sprite {
 		warlockpunch: ['Focusing', 'neutral'],
 		goldenbracket: ['Golden Bracket', 'bad'],
 		sovietreversal: ['Soviet Reversal', 'bad'],
+		denialofservice: ['Denial of Service', 'bad'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;
