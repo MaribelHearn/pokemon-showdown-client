@@ -605,6 +605,7 @@ class BattleTooltips {
 			}
 		}
 
+		// Fundex: Soviet Reversal category change
 		if (pokemon.hasVolatile('sovietreversal' as ID)) {
 			if (move.category === 'Physical') {
 				category = 'Special';
@@ -1436,6 +1437,7 @@ class BattleTooltips {
 		}
 		// Fundex: Catnarok uses the user's type and highest attacking stat
 		// Rainbow UFOs of Terror matches Nue's primary type
+		// Sledge uses the user's highest attacking stat
 		if (move.id === 'catnarok') {
 			if (pokemon.getSpecies().name === 'tacgnoL') moveType = 'Dark';
 			if (pokemon.getSpecies().name === 'oLngact') moveType = 'Fire';
@@ -1443,6 +1445,9 @@ class BattleTooltips {
 		}
 		if (move.id === 'rainbowufosofterror') {
 			moveType = pokemon.volatiles.typechange ? pokemon.volatiles.typechange[1] : pokemon.getSpecies().types[0];
+		}
+		if (move.id === 'sledge' && serverPokemon.stats.spa > serverPokemon.stats.atk) {
+			category = 'Special';
 		}
 
 		// Other abilities that change the move type.
@@ -2238,7 +2243,7 @@ class BattleStatGuesser {
 			if (move.category === 'Status') {
 				if (['batonpass', 'healingwish', 'lunardance'].includes(move.id)) {
 					moveCount['Support']++;
-				} else if (['metronome', 'assist', 'copycat', 'mefirst', 'photongeyser', 'shellsidearm', 'recollection', 'catnarok', 'lightarrow'].includes(move.id)) {
+				} else if (['metronome', 'assist', 'copycat', 'mefirst', 'photongeyser', 'shellsidearm', 'recollection', 'catnarok', 'lightarrow', 'sledge'].includes(move.id)) {
 					moveCount['Physical'] += 0.5;
 					moveCount['Special'] += 0.5;
 				} else if (move.id === 'naturepower') {
