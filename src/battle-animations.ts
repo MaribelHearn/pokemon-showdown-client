@@ -2678,7 +2678,7 @@ export class PokemonSprite extends Sprite {
 				BattleSound.playEffect("audio/cries/digital-faint.mp3");
 			}
 
-			const labyrinthFaintCry = ['Berserk Maribel', 'Serpent of Chaos', '*** WINNER ***'];
+			const labyrinthFaintCry = ['Hibachi', 'Hibachi 2', 'Evaccania DOOM', 'Berserk Maribel', 'Serpent of Chaos', '*** WINNER ***'];
 
 			if (labyrinthFaintCry.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect("audio/cries/lot-faint.mp3");
