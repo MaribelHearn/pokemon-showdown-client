@@ -810,7 +810,15 @@ class BattleTooltips {
 				if (clientPokemon.volatiles.transform) {
 					text += `<small>(Transformed into ${clientPokemon.volatiles.formechange[1]})</small><br />`;
 				} else {
-					text += `<small>(Changed forme: ${clientPokemon.volatiles.formechange[1]})</small><br />`;
+					if (clientPokemon.speciesForme == 'Smithy-Tank Head' && clientPokemon.shiny) {
+						text += `<small>(Changed forme: Smithy-Mask Head)</small><br />`;
+					}
+					else if (clientPokemon.speciesForme == 'Smithy-Magic Head' && clientPokemon.shiny) {
+						text += `<small>(Changed forme: Smithy-Treasure Head)</small><br />`;
+					}
+					else {
+						text += `<small>(Changed forme: ${clientPokemon.volatiles.formechange[1]})</small><br />`;
+					}
 				}
 			}
 
@@ -1180,6 +1188,7 @@ class BattleTooltips {
 			stats.spa = Math.floor(stats.spa * 1.5);
 			stats.spd = Math.floor(stats.spd * 1.5);
 		}
+		// Fundex: Engine item stat modifiers
 		if (item === 'natureengine' && species === 'Weepinmeleon') {
 			stats.spa = Math.floor(stats.spa * 1.5);
 			stats.spe = Math.floor(stats.spe * 1.5);
