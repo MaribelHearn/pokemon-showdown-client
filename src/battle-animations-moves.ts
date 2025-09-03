@@ -37061,7 +37061,7 @@ BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
 BattleMoveAnims['roundhousekick']={anim:BattleMoveAnims['highjumpkick'].anim};
-BattleMoveAnims['falconpunch']={anim:BattleMoveAnims['firepunch'].anim};
+//falconpunch see above
 BattleMoveAnims['laevateinn']={anim:BattleMoveAnims['sacredsword'].anim};
 BattleMoveAnims['diamondblizzard']={anim:BattleMoveAnims['blizzard'].anim};
 //fantasyseal see above
