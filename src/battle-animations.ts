@@ -2649,7 +2649,7 @@ export class PokemonSprite extends Sprite {
 		this.scene.updateSidebar(pokemon.side);
 		if (this.cryurl) {
 			// Fundex: faint cries
-			const faintCries = ['Darth Vader', 'Kirby', 'Mario', 'Snake-Busted'];
+			const faintCries = ['Captain Falcon', 'Darth Vader', 'Kirby', 'Mario', 'Snake-Busted'];
 
 			if (faintCries.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect(this.cryurl.replace(".mp3", "-faint.mp3"));
