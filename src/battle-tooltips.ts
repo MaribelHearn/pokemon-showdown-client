@@ -810,10 +810,10 @@ class BattleTooltips {
 				if (clientPokemon.volatiles.transform) {
 					text += `<small>(Transformed into ${clientPokemon.volatiles.formechange[1]})</small><br />`;
 				} else {
-					if (clientPokemon.speciesForme == 'Smithy-Tank Head' && clientPokemon.shiny) {
+					if (clientPokemon.speciesForme === 'smithytankhead' && clientPokemon.shiny) {
 						text += `<small>(Changed forme: Smithy-Mask Head)</small><br />`;
 					}
-					else if (clientPokemon.speciesForme == 'Smithy-Magic Head' && clientPokemon.shiny) {
+					else if (clientPokemon.speciesForme === 'smithymagichead' && clientPokemon.shiny) {
 						text += `<small>(Changed forme: Smithy-Treasure Head)</small><br />`;
 					}
 					else {
