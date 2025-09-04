@@ -36747,23 +36747,11 @@ BattleMoveAnims['trainwreck'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.4,
-			time: 900,
+			time: 1000,
 		}, {
 			scale: 6,
 			opacity: 0,
-			time: 1200,
-		}, 'linear');
-		scene.showEffect('impact', {
-			x: defender.x,
-			y: defender.y,
-			z: defender.z,
-			scale: 0,
-			opacity: 0.4,
-			time: 1400,
-		}, {
-			scale: 6,
-			opacity: 0,
-			time: 1700,
+			time: 1300,
 		}, 'linear');
 		scene.showEffect('train', {
 			x: defender.leftof(1000),
