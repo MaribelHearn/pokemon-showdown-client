@@ -545,7 +545,7 @@
 				name += '<small>' + move.name.substr(tagStart) + '</small>';
 			}
 		}
-		buf += '<span class="col movenamecol">' + name + '</span> ';
+		buf += '<span class="col movenamecol ' + (name.length > 24 ? 'small' : '') + '">' + name + '</span> ';
 
 		// error
 		if (errorMessage) {
@@ -582,7 +582,7 @@
 		var name = move.name;
 		var tagStart = (name.substr(0, 12) === 'Hidden Power' ? 12 : 0);
 		if (tagStart) name = name.substr(0, tagStart) + '<small>' + move.name.substr(tagStart) + '</small>';
-		buf += '<span class="col movenamecol">' + name + '</span> ';
+		buf += '<span class="col movenamecol ' + (name.length > 24 ? 'small' : '') + '">' + name + '</span> ';
 
 		// error
 		if (errorMessage) {
