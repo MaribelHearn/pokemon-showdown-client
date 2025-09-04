@@ -37057,6 +37057,34 @@ BattleMoveAnims['falconpunch'] = {
 		}, 'swing');
 	},
 };
+BattleMoveAnims['corrupt'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('wisp', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 2,
+			opacity: 0.2,
+			time: 0,
+		}, {
+			scale: 0,
+			opacity: 1,
+			time: 300,
+		}, 'linear');
+		scene.showEffect('wisp', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 2,
+			opacity: 0.2,
+			time: 200,
+		}, {
+			scale: 0,
+			opacity: 1,
+			time: 500,
+		}, 'linear');
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
@@ -37083,7 +37111,7 @@ BattleMoveAnims['lemmingsparade']={anim:BattleMoveAnims['spikecannon'].anim};
 BattleMoveAnims['houraielixir']={anim:BattleMoveAnims['milkdrink'].anim};
 //explod see above
 BattleMoveAnims['study']={anim:BattleMoveAnims['calmmind'].anim};
-BattleMoveAnims['corrupt']={anim:BattleMoveAnims['curse'].anim};
+//corrupt see above
 BattleMoveAnims['sovietreversal']={anim:BattleMoveAnims['reversal'].anim};
 BattleMoveAnims['lolwut']={anim(scene, [attacker, defender]) {/* do nothing */}};
 BattleMoveAnims['pingas']={anim(scene, [attacker, defender]) {/* do nothing */}};
