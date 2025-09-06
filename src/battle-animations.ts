@@ -2650,7 +2650,7 @@ export class PokemonSprite extends Sprite {
 		this.scene.updateSidebar(pokemon.side);
 		if (this.cryurl) {
 			// Fundex: faint cries
-			const faintCries = ['Captain Falcon', 'Darth Vader', 'Kirby', 'Mario', 'Snake-Busted'];
+			const faintCries = ['Captain Falcon', 'Darth Vader', 'Kirby', 'Snake-Busted'];
 
 			if (faintCries.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect(this.cryurl.replace(".mp3", "-faint.mp3"));
@@ -2683,6 +2683,13 @@ export class PokemonSprite extends Sprite {
 
 			if (labyrinthFaintCry.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect("audio/cries/lot-faint.mp3");
+			}
+
+			// temporary
+			const marioFaintCry = ['Mario', 'Paper Mario', 'Malleo', 'Luigi', 'Mr. L', 'Weegee', 'Baby Bowser', 'Bowser', 'Giga Bowser', 'Dry Bowser', 'Boo', 'Boolussus', 'King Boo', 'Wiggler', 'Angry Wiggler'];
+
+			if (marioFaintCry.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect("audio/cries/mario-faint.mp3");
 			}
 		}
 		this.anim({
