@@ -130,9 +130,9 @@ class BattleTextParser {
 			if (id === 'charge') {
 				return {args: ['-singlemove', pokemon, effect], kwArgs: {of: target}};
 			}
-			// Fundex: add Golden Bracket as a trapping move
+			// Fundex: add Golden Bracket and Grapple Beam as trapping moves
 			if ([
-				'bind', 'wrap', 'clamp', 'whirlpool', 'firespin', 'magmastorm', 'goldenbracket', 'sandtomb', 'infestation', 'snaptrap', 'thundercage', 'trapped',
+				'bind', 'wrap', 'clamp', 'whirlpool', 'firespin', 'magmastorm', 'goldenbracket', 'grapplebeam', 'sandtomb', 'infestation', 'snaptrap', 'thundercage', 'trapped',
 			].includes(id)) {
 				return {args: ['-start', pokemon, effect], kwArgs: {of: target}};
 			}
