@@ -37087,67 +37087,73 @@ BattleMoveAnims['corrupt'] = {
 };
 BattleMoveAnims['grapplebeam'] = {
 	anim(scene, [attacker, defender]) {
-		for (let i = 0; i < 3; i++) {
+		for (let i = 0; i < 10; i++) {
 			scene.showEffect('iceball', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.2,
-				time: 0 + (i * 50),
+				time: 0 + (i * 20),
 			}, {
 				x: defender.x,
 				y: defender.y,
 				z: defender.z,
 				opacity: 0.6,
-				time: 200 + (i * 50),
+				time: 200 + (i * 20),
 			}, 'linear', 'explode');
 		}
 		defender.delay(350);
 		defender.anim({
 			x: defender.x,
 			y: defender.y,
-			z: defender.behind(10),
-			time: 700,
+			z: defender.behind(-10),
+			time: 350,
 		}, 'linear');
-		for (let i = 0; i < 3; i++) {
+		for (let i = 0; i < 10; i++) {
 			scene.showEffect('iceball', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.2,
-				time: 350 + (i * 50),
+				time: 350 + (i * 20),
 			}, {
 				x: defender.x,
 				y: defender.y,
-				z: defender.behind(10),
+				z: defender.behind(-10),
 				opacity: 0.6,
-				time: 550 + (i * 50),
+				time: 550 + (i * 20),
 			}, 'linear', 'explode');
 		}
 		defender.anim({
 			x: defender.x,
 			y: defender.y,
-			z: defender.behind(20),
-			time: 1050,
+			z: defender.behind(-20),
+			time: 700,
 		}, 'linear');
-		for (let i = 0; i < 3; i++) {
+		for (let i = 0; i < 10; i++) {
 			scene.showEffect('iceball', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.2,
-				time: 700 + (i * 50),
+				time: 700 + (i * 20),
 			}, {
 				x: defender.x,
 				y: defender.y,
-				z: defender.behind(20),
+				z: defender.behind(-20),
 				opacity: 0.6,
-				time: 900 + (i * 50),
+				time: 900 + (i * 20),
 			}, 'linear', 'explode');
 		}
+		defender.anim({
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			time: 1050
+		}, 'linear');
 	},
 };
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
