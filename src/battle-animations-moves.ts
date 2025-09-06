@@ -36698,6 +36698,25 @@ BattleMoveAnims['goldenbracket'] = {
 		}, 'accel');
 	},
 };
+BattleMoveAnims['zerolaser'] = {
+	anim(scene, [attacker, defender]) {
+		for (let i = 0; i < 20; i++) {
+			scene.showEffect('electroball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				opacity: 0.2,
+				time: 0 + (i * 20),
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				opacity: 0.6,
+				time: 200 + (i * 20),
+			}, 'linear', 'explode');
+		}
+	},
+};
 BattleMoveAnims['dinnerblaster'] = {
 	anim(scene, [attacker, defender]) {
 		const shuffle = (array: string[]) => {
@@ -37193,7 +37212,7 @@ BattleMoveAnims['catnarok']={anim:BattleMoveAnims['explosion'].anim};
 //goldenbracket see above
 BattleMoveAnims['barrelroll']={anim:BattleMoveAnims['steelroller'].anim};
 BattleMoveAnims['umadbro']={anim:BattleMoveAnims['swagger'].anim};
-BattleMoveAnims['zerolaser']={anim:BattleMoveAnims['hyperbeam'].anim};
+//zerolaser see above
 //objection see above
 BattleMoveAnims['thunderdrumshot']={anim:BattleMoveAnims['electroball'].anim};
 //needleparade see above
