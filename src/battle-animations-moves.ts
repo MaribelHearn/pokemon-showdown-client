@@ -37103,12 +37103,12 @@ BattleMoveAnims['grapplebeam'] = {
 				time: 200 + (i * 20),
 			}, 'linear', 'explode');
 		}
-		defender.delay(350);
+		defender.delay(200);
 		defender.anim({
 			x: defender.x,
 			y: defender.y,
 			z: defender.behind(-10),
-			time: 350,
+			time: 200,
 		}, 'linear');
 		for (let i = 0; i < 10; i++) {
 			scene.showEffect('iceball', {
@@ -37117,20 +37117,20 @@ BattleMoveAnims['grapplebeam'] = {
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.2,
-				time: 350 + (i * 20),
+				time: 200 + (i * 20),
 			}, {
 				x: defender.x,
 				y: defender.y,
 				z: defender.behind(-10),
 				opacity: 0.6,
-				time: 550 + (i * 20),
+				time: 400 + (i * 20),
 			}, 'linear', 'explode');
 		}
 		defender.anim({
 			x: defender.x,
 			y: defender.y,
 			z: defender.behind(-20),
-			time: 700,
+			time: 400,
 		}, 'linear');
 		for (let i = 0; i < 10; i++) {
 			scene.showEffect('iceball', {
@@ -37139,20 +37139,20 @@ BattleMoveAnims['grapplebeam'] = {
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.2,
-				time: 700 + (i * 20),
+				time: 400 + (i * 20),
 			}, {
 				x: defender.x,
 				y: defender.y,
 				z: defender.behind(-20),
 				opacity: 0.6,
-				time: 900 + (i * 20),
+				time: 600 + (i * 20),
 			}, 'linear', 'explode');
 		}
 		defender.anim({
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			time: 1050
+			time: 600
 		}, 'linear');
 	},
 };
