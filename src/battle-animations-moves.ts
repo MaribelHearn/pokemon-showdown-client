@@ -33184,106 +33184,37 @@ BattleMoveAnims['offwaves'] = {
 };
 BattleMoveAnims['objection'] = {
 	anim(scene, [attacker, defender]) {
+		for (let i = 0; i < 5; i++) {
+			scene.showEffect('objection', {
+				x: attacker.x,
+				y: attacker.y + 30,
+				z: attacker.behind(-20),
+				scale: 0.75,
+				time: 0 + (i * 100),
+			}, {
+				scale: 0.65,
+				time: 50 + (i * 100),
+			}, 'linear', 'fade');
+			scene.showEffect('objection', {
+				x: attacker.x,
+				y: attacker.y + 30,
+				z: attacker.behind(-20),
+				scale: 0.65,
+				time: 50 + (i * 100),
+			}, {
+				scale: 0.75,
+				time: 100 + (i * 100),
+			}, 'linear', 'fade');
+		}
 		scene.showEffect('objection', {
 			x: attacker.x,
 			y: attacker.y + 30,
 			z: attacker.behind(-20),
 			scale: 0.75,
+			time: 500,
 		}, {
-			x: attacker.x + 5,
-			y: attacker.y + 32,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 50,
+			time: 1000,
 		}, 'linear', 'fade');
-		scene.showEffect('objection', {
-			x: attacker.x + 5,
-			y: attacker.y + 32,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 50,
-		}, {
-			x: attacker.x - 5,
-			y: attacker.y + 28,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 100,
-		}, 'linear', 'fade');
-		scene.showEffect('objection', {
-			x: attacker.x - 5,
-			y: attacker.y + 28,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 100,
-		}, {
-			x: attacker.x + 5,
-			y: attacker.y + 32,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 150,
-		}, 'linear', 'fade');
-		scene.showEffect('objection', {
-			x: attacker.x + 5,
-			y: attacker.y + 32,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 150,
-		}, {
-			x: attacker.x - 5,
-			y: attacker.y + 28,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 200,
-		}, 'linear', 'fade');
-		scene.showEffect('objection', {
-			x: attacker.x - 5,
-			y: attacker.y + 28,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 200,
-		}, {
-			x: attacker.x + 5,
-			y: attacker.y + 32,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 250,
-		}, 'linear', 'fade');
-		scene.showEffect('objection', {
-			x: attacker.x + 5,
-			y: attacker.y + 32,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 250,
-		}, {
-			x: attacker.x - 5,
-			y: attacker.y + 28,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 300,
-		}, 'linear', 'fade');
-		scene.showEffect('objection', {
-			x: attacker.x - 5,
-			y: attacker.y + 28,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 300,
-		}, {
-			x: attacker.x,
-			y: attacker.y + 30,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 350,
-		}, 'linear', 'fade');
-		scene.showEffect('objection', {
-			x: attacker.x,
-			y: attacker.y + 30,
-			z: attacker.behind(-20),
-			scale: 0.75,
-			time: 350,
-		}, {
-			scale: 0.75,
-			time: 600,
-		}, 'decel', 'fade');
 	},
 };
 BattleMoveAnims['iwakasascurse'] = {
