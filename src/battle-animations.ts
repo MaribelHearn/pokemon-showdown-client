@@ -3140,6 +3140,14 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'objection.png',
 		w: 108, h: 80,
 	},
+	holdit: {
+		url: 'holdit.png',
+		w: 114, h: 80,
+	},
+	takethat: {
+		url: 'takethat.png',
+		w: 114, h: 80,
+	},
 	shield: {
 		url: 'shield.png',
 		w: 82, h: 100,

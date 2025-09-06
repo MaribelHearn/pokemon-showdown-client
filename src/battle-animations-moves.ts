@@ -33217,6 +33217,76 @@ BattleMoveAnims['objection'] = {
 		}, 'linear', 'fade');
 	},
 };
+BattleMoveAnims['holdit'] = {
+	anim(scene, [attacker, defender]) {
+		for (let i = 0; i < 5; i++) {
+			scene.showEffect('holdit', {
+				x: attacker.x,
+				y: attacker.y + 30,
+				z: attacker.behind(-20),
+				scale: 0.75,
+				time: 0 + (i * 100),
+			}, {
+				scale: 0.65,
+				time: 50 + (i * 100),
+			}, 'linear', 'fade');
+			scene.showEffect('holdit', {
+				x: attacker.x,
+				y: attacker.y + 30,
+				z: attacker.behind(-20),
+				scale: 0.65,
+				time: 50 + (i * 100),
+			}, {
+				scale: 0.75,
+				time: 100 + (i * 100),
+			}, 'linear', 'fade');
+		}
+		scene.showEffect('holdit', {
+			x: attacker.x,
+			y: attacker.y + 30,
+			z: attacker.behind(-20),
+			scale: 0.75,
+			time: 500,
+		}, {
+			time: 1000,
+		}, 'linear', 'fade');
+	},
+};
+BattleMoveAnims['takethat'] = {
+	anim(scene, [attacker, defender]) {
+		for (let i = 0; i < 5; i++) {
+			scene.showEffect('takethat', {
+				x: attacker.x,
+				y: attacker.y + 30,
+				z: attacker.behind(-20),
+				scale: 0.75,
+				time: 0 + (i * 100),
+			}, {
+				scale: 0.65,
+				time: 50 + (i * 100),
+			}, 'linear', 'fade');
+			scene.showEffect('takethat', {
+				x: attacker.x,
+				y: attacker.y + 30,
+				z: attacker.behind(-20),
+				scale: 0.65,
+				time: 50 + (i * 100),
+			}, {
+				scale: 0.75,
+				time: 100 + (i * 100),
+			}, 'linear', 'fade');
+		}
+		scene.showEffect('takethat', {
+			x: attacker.x,
+			y: attacker.y + 30,
+			z: attacker.behind(-20),
+			scale: 0.75,
+			time: 500,
+		}, {
+			time: 1000,
+		}, 'linear', 'fade');
+	},
+};
 BattleMoveAnims['iwakasascurse'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('linear-gradient(#440044 30%, #000000', 1800, 0.3);
