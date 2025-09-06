@@ -37279,8 +37279,8 @@ BattleMoveAnims['missilepunch']={anim:BattleMoveAnims['bulletpunch'].anim};
 //electricalshield see above
 //denialofservice see above
 BattleMoveAnims['paralyzer']={anim:BattleMoveAnims['thundershock'].anim};
-BattleMoveAnims['holdit']={anim:BattleMoveAnims['fakeout'].anim};
-//takethat uses default animation
+//holdit see above
+//takethat see above
 BattleMoveAnims['firebrand']={anim:BattleMoveAnims['firepunch'].anim};
 //softreset see above
 //hardreset see above
