@@ -37085,6 +37085,71 @@ BattleMoveAnims['corrupt'] = {
 		}, 'linear');
 	},
 };
+BattleMoveAnims['grapplebeam'] = {
+	anim(scene, [attacker, defender]) {
+		for (let i = 0; i < 3; i++) {
+			scene.showEffect('iceball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 0.2,
+				time: 0 + (i * 50),
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				opacity: 0.6,
+				time: 200 + (i * 50),
+			}, 'linear', 'explode');
+		}
+		defender.delay(350);
+		defender.anim({
+			x: defender.x,
+			y: defender.y,
+			z: defender.behind(10),
+			time: 700,
+		}, 'linear');
+		for (let i = 0; i < 3; i++) {
+			scene.showEffect('iceball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 0.2,
+				time: 350 + (i * 50),
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.behind(10),
+				opacity: 0.6,
+				time: 550 + (i * 50),
+			}, 'linear', 'explode');
+		}
+		defender.anim({
+			x: defender.x,
+			y: defender.y,
+			z: defender.behind(20),
+			time: 1050,
+		}, 'linear');
+		for (let i = 0; i < 3; i++) {
+			scene.showEffect('iceball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 0.2,
+				time: 700 + (i * 50),
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.behind(20),
+				opacity: 0.6,
+				time: 900 + (i * 50),
+			}, 'linear', 'explode');
+		}
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
@@ -37203,7 +37268,7 @@ BattleMoveAnims['missilepunch']={anim:BattleMoveAnims['bulletpunch'].anim};
 //galickgun see above
 //lightarrow see above
 //remotemissile see above
-//BattleMoveAnims['grapplebeam']={anim:BattleMoveAnims['eggbomb'].anim};
+//grapplebeam see above
 //electricalshield see above
 //denialofservice see above
 BattleMoveAnims['paralyzer']={anim:BattleMoveAnims['thundershock'].anim};
