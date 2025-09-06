@@ -1479,10 +1479,10 @@ export class Battle {
 	}
 	animateMove(pokemon: Pokemon, move: Move, target: Pokemon | null, kwArgs: KWArgs) {
 		if (!this.seeking) {
-			if (toID(pokemon.getSpeciesForme()) === 'milesedgeworth' && move.id === 'objection') {
+			if (toID(pokemon.getSpeciesForme()) === 'milesedgeworth' && ['objection', 'holdit', 'takethat'].includes(move.id)) {
 				BattleSound.playEffect(`audio/moves/${move.id}2.mp3`);
 			}
-			else if (toID(pokemon.getSpeciesForme()) === 'phoenixwright' && move.id === 'objection') {
+			else if (toID(pokemon.getSpeciesForme()) === 'phoenixwright' && ['objection', 'holdit', 'takethat'].includes(move.id)) {
 				BattleSound.playEffect(`audio/moves/${move.id}.mp3`);
 			}
 			else if (toID(pokemon.getSpeciesForme()) === 'engineer' && move.id === 'nope') {
@@ -1491,7 +1491,7 @@ export class Battle {
 			else if (toID(pokemon.getSpeciesForme()) === 'chucktesta' && move.id === 'nope') {
 				BattleSound.playEffect(`audio/cries/chucktesta.mp3`);
 			}
-			else if (move.id !== 'objection' && move.id !== 'nope') {
+			else if (!['objection', 'holdit', 'takethat', 'nope'].includes(move.id)) {
 				BattleSound.playEffect(`audio/moves/${move.id}.mp3`);
 			}
 		}
