@@ -35245,21 +35245,7 @@ BattleMoveAnims['parasoltwirl'] = {
 };
 BattleMoveAnims['barriercrash'] = {
 	anim(scene, [attacker, defender]) {
-		scene.showEffect('mistball', {
-			x: attacker.x,
-			y: attacker.y - 30,
-			z: attacker.z,
-			scale: 0.5,
-			xscale: 0.25,
-			yscale: 0.75,
-			opacity: 0.5,
-		}, {
-			scale: 2,
-			xscale: 3.5,
-			opacity: 0.1,
-			time: 400,
-		}, 'decel', 'fade');
-		scene.showEffect('mistball', {
+		scene.showEffect('fairywisp', {
 			x: attacker.x,
 			y: attacker.y - 15,
 			z: attacker.z,
@@ -35267,44 +35253,28 @@ BattleMoveAnims['barriercrash'] = {
 			scale: 1.5,
 		}, {
 			scale: 1.8,
-			opacity: 0.1,
-			time: 350,
+			opacity: 0.5,
+			time: 400,
 		}, 'decel', 'fade');
 		scene.showEffect('fairywisp', {
 			x: attacker.x,
 			y: attacker.y - 15,
 			z: attacker.z,
-			opacity: 1,
-			scale: 3,
-		}, {
 			scale: 1.8,
 			opacity: 0.5,
-			time: 350,
-		}, 'decel', 'fade');
+			time: 400,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			time: 975,
+		}, 'ballistic', 'fade');
 		attacker.anim({
 			x: defender.x,
-			y: defender.y + 80,
-			z: defender.behind(-30),
+			y: defender.y,
+			z: defender.z,
 			time: 400,
 		}, 'ballistic');
-		attacker.anim({
-			x: defender.x,
-			y: defender.y + 5,
-			z: defender.z,
-			time: 100,
-		});
-		scene.showEffect('mistball', {
-			x: defender.x,
-			y: defender.y + 80,
-			z: defender.behind(-30),
-			opacity: 0.5,
-			scale: 1.5,
-			time: 350,
-		}, {
-			scale: 1.8,
-			opacity: 0.1,
-			time: 100,
-		}, 'decel', 'fade');
 		scene.showEffect('fairywisp', {
 			x: defender.x,
 			y: defender.y + 80,
@@ -35328,31 +35298,6 @@ BattleMoveAnims['barriercrash'] = {
 		defender.anim({
 			time: 300,
 		}, 'swing');
-		scene.showEffect('mistball', {
-			x: defender.x,
-			y: defender.y,
-			z: defender.behind(0),
-			opacity: 0.5,
-			scale: 1.5,
-			time: 450,
-		}, {
-			scale: 1.8,
-			opacity: 0.1,
-			time: 100,
-		}, 'decel', 'fade');
-		scene.showEffect('fairywisp', {
-			x: defender.x,
-			y: defender.y,
-			z: defender.behind(0),
-			opacity: 1,
-			scale: 3,
-			time: 450,
-		}, {
-			scale: 1.8,
-			opacity: 0.5,
-			time: 100,
-		}, 'decel', 'fade');
-		scene.wait(500);
 	},
 };
 BattleMoveAnims['shieldbash'] = {
