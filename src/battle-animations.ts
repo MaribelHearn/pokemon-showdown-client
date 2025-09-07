@@ -2426,7 +2426,7 @@ export class PokemonSprite extends Sprite {
 			if (pokemon.hasVolatile('substitute' as ID)) this.animSub(true);
 			return;
 		}
-		if (this.cryurl && pokemon.speciesForme === 'Chuck Testa') {
+		if (this.cryurl && pokemon.speciesForme !== 'Chuck Testa') {
 			BattleSound.playEffect(this.cryurl);
 		}
 		this.$el.css(this.scene.pos({
