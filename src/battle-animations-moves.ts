@@ -35245,7 +35245,7 @@ BattleMoveAnims['parasoltwirl'] = {
 };
 BattleMoveAnims['barriercrash'] = {
 	anim(scene, [attacker, defender]) {
-		scene.showEffect('fairywisp', {
+		scene.showEffect('mistball', {
 			x: attacker.x,
 			y: attacker.y - 15,
 			z: attacker.z,
@@ -35256,7 +35256,7 @@ BattleMoveAnims['barriercrash'] = {
 			opacity: 0.5,
 			time: 400,
 		}, 'decel', 'fade');
-		scene.showEffect('fairywisp', {
+		scene.showEffect('mistball', {
 			x: attacker.x,
 			y: attacker.y - 15,
 			z: attacker.z,
@@ -35269,24 +35269,13 @@ BattleMoveAnims['barriercrash'] = {
 			z: defender.z,
 			time: 975,
 		}, 'ballistic', 'fade');
+		attacker.delay(400);
 		attacker.anim({
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
 			time: 400,
 		}, 'ballistic');
-		scene.showEffect('fairywisp', {
-			x: defender.x,
-			y: defender.y + 80,
-			z: defender.behind(-30),
-			opacity: 1,
-			scale: 3,
-			time: 350,
-		}, {
-			scale: 1.8,
-			opacity: 0.5,
-			time: 100,
-		}, 'decel', 'fade');
 		attacker.anim({
 			time: 500,
 		}, 'ballistic2Back');
