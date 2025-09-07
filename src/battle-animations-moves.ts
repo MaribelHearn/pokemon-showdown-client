@@ -35267,7 +35267,7 @@ BattleMoveAnims['barriercrash'] = {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
-			time: 975,
+			time: 900,
 		}, 'ballistic', 'fade');
 		attacker.delay(400);
 		attacker.anim({
@@ -35279,7 +35279,7 @@ BattleMoveAnims['barriercrash'] = {
 		attacker.anim({
 			time: 500,
 		}, 'ballistic2Back');
-		defender.delay(450);
+		defender.delay(900);
 		defender.anim({
 			z: defender.behind(20),
 			time: 100,
