@@ -682,7 +682,7 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	weepinmeleon: 1380 + 161,
 	venudrio: 1380 + 162,
 	bloodyjitterbug: 1380 + 163,
-	bluescreenofdeath: 1380 + 164,
+	bluescreen: 1380 + 164,
 	internetexplorer: 1380 + 165,
 	inoriaizawa: 1380 + 166,
 	microsoftedge: 1380 + 167,
