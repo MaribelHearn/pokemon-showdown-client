@@ -39,7 +39,7 @@ function toID(text: any) {
 		text = text.userid;
 	}
 	if (typeof text !== 'string' && typeof text !== 'number') return '' as ID;
-	return ('' + text).toLowerCase().replace(/[^a-z0-9]+/g, '') as ID;
+	return ('' + text).toLowerCase().replace(/[^a-z0-9\?]+/g, '') as ID;
 }
 
 function toUserid(text: any) {
