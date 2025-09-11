@@ -48,7 +48,7 @@ const bgmName: Record<string, any> = {
 	"miracle-matter": "Kirby 64 - Miracle Matter",
 	"showdown-with-ganon": "Zelda: The Wand of Gamelon - Showdown with Ganon",
 	"meta-ridley": "Metroid Prime - VS Meta Ridley",
-	"border-of-life": "Touhou 10.5 - Bloom nobly, cherry blossoms of Sumizome ~ Border of Life",
+	"border-of-life": "Touhou 10.5 - Bloom nobly, Ink-Black Cherry Blossom ~ Border of Life",
 };
 
 /*
