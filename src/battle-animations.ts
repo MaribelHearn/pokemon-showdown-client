@@ -40,14 +40,15 @@ const bgmName: Record<string, any> = {
 	"trolololo": "Eduard Khil - I Am Very Glad, As I Am Finally Returning Back Home",
 	"windows-error-remix": "Windows Error Remix",
 	"tabuu-theme": "Super Smash Bros. Brawl - Final Battle",
-	"decisive-magic-battle": "Touhou - Decisive Magic Battle! ~ Fight it Out!",
-	"marisa": "Touhou - Love-coloured Master Spark",
-	"sanae": "Touhou - Faith is for the Transient People",
-	"utsuho": "Touhou - Solar Sect of Mystic Wisdom ~ Nuclear Fusion",
+	"decisive-magic-battle": "Touhou 3 - Decisive Magic Battle! ~ Fight it Out!",
+	"marisa": "Touhou 8 - Love-coloured Master Spark",
+	"sanae": "Touhou 10 - Faith is for the Transient People",
+	"utsuho": "Touhou 11 - Solar Sect of Mystic Wisdom ~ Nuclear Fusion",
 	"popple": "Mario & Luigi: Superstar Saga - Popple Battle",
 	"miracle-matter": "Kirby 64 - Miracle Matter",
 	"showdown-with-ganon": "Zelda: The Wand of Gamelon - Showdown with Ganon",
 	"meta-ridley": "Metroid Prime - VS Meta Ridley",
+	"border-of-life": "Touhou 10.5 - Bloom nobly, cherry blossoms of Sumizome ~ Border of Life",
 };
 
 /*
@@ -1768,6 +1769,9 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case 26:
 			this.bgm = BattleSound.loadBgm('audio/bgm/meta-ridley.mp3', 19700, 187000, this.bgm);
+			break;
+		case 27:
+			this.bgm = BattleSound.loadBgm('audio/bgm/border-of-life.mp3', 7000, 166000, this.bgm);
 			break;
 		default:
 			this.bgm = BattleSound.loadBgm('audio/bgm/ghetsis.mp3', 4000, 133000, this.bgm);
