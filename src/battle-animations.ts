@@ -46,6 +46,8 @@ const bgmName: Record<string, any> = {
 	"utsuho": "Touhou - Solar Sect of Mystic Wisdom ~ Nuclear Fusion",
 	"popple": "Mario & Luigi: Superstar Saga - Popple Battle",
 	"miracle-matter": "Kirby 64 - Miracle Matter",
+	"showdown-with-ganon": "Zelda: The Wand of Gamelon - Showdown with Ganon",
+	"meta-ridley": "Metroid Prime - VS Meta Ridley",
 };
 
 /*
@@ -1760,6 +1762,12 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case 24:
 			this.bgm = BattleSound.loadBgm('audio/bgm/miracle-matter.mp3', 91500, 166500, this.bgm);
+			break;
+		case 25:
+			this.bgm = BattleSound.loadBgm('audio/bgm/showdown-with-ganon.mp3', 0, 77000, this.bgm);
+			break;
+		case 26:
+			this.bgm = BattleSound.loadBgm('audio/bgm/meta-ridley.mp3', 19700, 187000, this.bgm);
 			break;
 		default:
 			this.bgm = BattleSound.loadBgm('audio/bgm/ghetsis.mp3', 4000, 133000, this.bgm);
