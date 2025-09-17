@@ -37084,7 +37084,7 @@ BattleMoveAnims['pingas']={anim(scene, [attacker, defender]) {/* do nothing */}}
 BattleMoveAnims['warlockpunch']={anim:BattleMoveAnims['shadowpunch'].anim};
 BattleMoveAnims['catnarok']={anim:BattleMoveAnims['explosion'].anim};
 //goldenbracket see above
-BattleMoveAnims['barrelroll']={anim:BattleMoveAnims['steelroller'].anim};
+BattleMoveAnims['barrelroll']={anim:BattleOtherAnims.bound.anim};
 BattleMoveAnims['umadbro']={anim:BattleMoveAnims['swagger'].anim};
 //zerolaser see above
 //objection see above
@@ -37108,7 +37108,7 @@ BattleMoveAnims['recollection']={anim:BattleMoveAnims['assist'].anim};
 BattleMoveAnims['releaseoftheid']={anim:BattleMoveAnims['acupressure'].anim};
 //megawattlineargun see above
 //monstercucumber see above
-BattleMoveAnims['superhumanbyakurenhijiri']={anim:BattleMoveAnims['extremespeed'].anim};
+BattleMoveAnims['superhuman']={anim:BattleMoveAnims['extremespeed'].anim};
 //redufosofrage see above
 //blueufosofgrief see above
 //greenufosofloyalty see above
