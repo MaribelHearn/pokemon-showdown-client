@@ -500,7 +500,7 @@ function pokeConvertInner($text)
 		{
 			$out[] = '  r-super-effective';
 		}
-		else if ($line === "<A critical hit!>")
+		else if ($line === "<A critical hit!>" || $line === "<Critical!!>" || $line == "<SMAAAASH!!>")
 		{
 			$out[] = '  r-crit';
 		}

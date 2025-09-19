@@ -1931,7 +1931,11 @@ export class Battle {
 		case '-crit': {
 			let poke = this.getPokemon(args[1]);
 			if (poke) this.scene.resultAnim(poke, 'Critical hit', 'bad');
-			if (this.activeMoveIsSpread) kwArgs.spread = '.';
+			const species = !poke ? '' : poke.speciesForme;
+			// Fundex: custom crit messages
+			if (species === 'Giygas') kwArgs.mother = '.';
+			else if (['Yarrow', 'Doomsday', 'Kanzou', 'Hagumanoki', 'Ruscus', 'Ryuuguu'].includes(species)) kwArgs.telefang = '.';
+			else if (this.activeMoveIsSpread) kwArgs.spread = '.';
 			this.log(args, kwArgs);
 			break;
 		}
