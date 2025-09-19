@@ -1020,6 +1020,9 @@ class BattleTextParser {
 			let templateId = cmd.slice(1);
 			if (templateId === 'supereffective') templateId = 'superEffective';
 			if (kwArgs.spread) templateId += 'Spread';
+			// Fundex: custom crit messages
+			if (kwArgs.mother) templateId += 'Mother';
+			if (kwArgs.telefang) templateId += 'Telefang';
 			const template = this.template(templateId);
 			return template.replace('[POKEMON]', this.pokemon(pokemon, tmtrainer));
 		}
