@@ -33101,7 +33101,7 @@ BattleMoveAnims['offwaves'] = {
 		let yf = [1, -1, -1, 1];
 		let xf2 = [1, 0, -1, 0];
 		let yf2 = [0, 1, 0, -1];
-		const times = [0, 200, 400, 500, 600];
+		const times = [0, 200, 400, 500, 700];
 
 		scene.backgroundEffect('#000000', 3500, 0.3);
 		for (let i = 1; i <= 3; i++) {
