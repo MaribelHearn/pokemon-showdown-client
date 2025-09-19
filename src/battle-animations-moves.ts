@@ -33101,9 +33101,9 @@ BattleMoveAnims['offwaves'] = {
 		let yf = [1, -1, -1, 1];
 		let xf2 = [1, 0, -1, 0];
 		let yf2 = [0, 1, 0, -1];
-		const times = [0, 300, 500, 600, 800];
+		const times = [0, 200, 400, 500, 600];
 
-		scene.backgroundEffect('#000000', 2700, 0.3);
+		scene.backgroundEffect('#000000', 3500, 0.3);
 		for (let i = 1; i <= 3; i++) {
 			scene.showEffect('flareball', {
 				x: attacker.x,
@@ -33112,12 +33112,12 @@ BattleMoveAnims['offwaves'] = {
 				scale: 1,
 				xscale: 5,
 				opacity: 0.8,
-				time: times[4] * (i - 1),
+				time: times[4] * (i - 1) + 1800,
 			}, {
 				scale: 2,
 				xscale: 8,
 				opacity: 0.1,
-				time: times[4] * i,
+				time: times[4] * i + 1800,
 			}, 'linear', 'fade');
 			scene.showEffect('flareball', {
 				x: defender.x,
@@ -33125,14 +33125,14 @@ BattleMoveAnims['offwaves'] = {
 				z: defender.z,
 				opacity: 0.3,
 				scale: 0,
-				time: times[1] * i,
+				time: times[1] * i + 1800,
 			}, {
 				x: defender.x,
 				y: defender.y,
 				z: defender.z,
 				scale: 2,
 				opacity: 0,
-				time: times[3] * i,
+				time: times[3] * i + 1800,
 			}, 'linear');
 			scene.showEffect('flareball', {
 				x: defender.x,
@@ -33140,14 +33140,14 @@ BattleMoveAnims['offwaves'] = {
 				z: defender.z,
 				opacity: 0.3,
 				scale: 0,
-				time: times[2] * i,
+				time: times[2] * i + 1800,
 			}, {
 				x: defender.x,
 				y: defender.y,
 				z: defender.z,
 				scale: 2,
 				opacity: 0,
-				time: times[4] * i,
+				time: times[4] * i + 1800,
 			}, 'linear');
 			for (let i = 0; i < 4; i++) {
 				scene.showEffect('wisp', {
@@ -33156,13 +33156,14 @@ BattleMoveAnims['offwaves'] = {
 					z: attacker.z,
 					scale: 0.3,
 					opacity: 0.4,
+					time: 1800
 				}, {
 					x: attacker.x + 240 * xf[i],
 					y: attacker.y,
 					z: attacker.z + 137 * yf[i],
 					scale: 0.7,
 					opacity: 0.4,
-					time: times[3] * i,
+					time: times[3] * i + 1800,
 				}, 'accel', 'fade');
 				scene.showEffect('wisp', {
 					x: attacker.x,
@@ -33170,13 +33171,14 @@ BattleMoveAnims['offwaves'] = {
 					z: attacker.z,
 					scale: 0.2,
 					opacity: 0.4,
+					time: 1800
 				}, {
 					x: attacker.x + 339 * xf2[i],
 					y: attacker.y,
 					z: attacker.z + 194 * yf2[i],
 					scale: 0.5,
 					opacity: 0.4,
-					time: times[3] * i,
+					time: times[3] * i + 1800,
 				}, 'accel', 'fade');
 			}
 		}
