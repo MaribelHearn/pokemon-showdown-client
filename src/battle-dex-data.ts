@@ -520,7 +520,7 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	dorsoil: 1344 + 33,
 
 	tentaquil: 1380 + 0,
-	tentaquix: 1380 + 1,
+	//tentaquix: 1380 + 1,
 	chucknorris: 1380 + 2,
 	captainfalcon: 1380 + 3,
 	flandre: 1380 + 4,
@@ -560,7 +560,7 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	yuyuko: 1380 + 38,
 	younglink: 1380 + 39,
 	link: 1380 + 40,
-	toonlink: 1380 + 41,
+	//toonlink: 1380 + 41,
 	youngzelda: 1380 + 42,
 	zelda: 1380 + 43,
 	sheik: 1380 + 44,
