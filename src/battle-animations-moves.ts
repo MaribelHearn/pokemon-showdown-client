@@ -37058,7 +37058,7 @@ BattleMoveAnims['immafirinmahlazer'] = {
 		let ystep = (defender.y - attacker.y) / 5;
 		let zstep = (defender.behind(50) - attacker.z) / 5;
 
-		scene.backgroundEffect('#000000', 1200, 0.6);
+		scene.backgroundEffect('#000000', 1500, 0.6);
 
 		for (let i = 0; i < 5; i++) {
 			scene.showEffect('wisp', {
@@ -37067,11 +37067,11 @@ BattleMoveAnims['immafirinmahlazer'] = {
 				z: attacker.z + zstep * (i + 1),
 				scale: 1,
 				opacity: 1,
-				time: 20 * i + 500,
+				time: 20 * i + 800,
 			}, {
 				scale: 3,
 				opacity: 0,
-				time: 40 * i + 600 + 500,
+				time: 40 * i + 600 + 800,
 			}, 'linear');
 		}
 		scene.showEffect('iceball', {
@@ -37080,14 +37080,14 @@ BattleMoveAnims['immafirinmahlazer'] = {
 			z: attacker.z,
 			scale: 0.4,
 			opacity: 0.6,
-			time: 500
+			time: 800
 		}, {
 			x: defender.x + 30,
 			y: defender.y + 30,
 			z: defender.z,
 			scale: 0.6,
 			opacity: 0.2,
-			time: 200 + 500,
+			time: 200 + 800,
 		}, 'linear', 'explode');
 		scene.showEffect('iceball', {
 			x: attacker.x,
@@ -37095,14 +37095,14 @@ BattleMoveAnims['immafirinmahlazer'] = {
 			z: attacker.z,
 			scale: 0.4,
 			opacity: 0.6,
-			time: 75 + 500,
+			time: 75 + 800,
 		}, {
 			x: defender.x + 20,
 			y: defender.y - 30,
 			z: defender.z,
 			scale: 0.6,
 			opacity: 0.2,
-			time: 275 + 500,
+			time: 275 + 800,
 		}, 'linear', 'explode');
 		scene.showEffect('iceball', {
 			x: attacker.x,
@@ -37110,14 +37110,14 @@ BattleMoveAnims['immafirinmahlazer'] = {
 			z: attacker.z,
 			scale: 0.4,
 			opacity: 0.6,
-			time: 150 + 500,
+			time: 150 + 800,
 		}, {
 			x: defender.x - 30,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.6,
 			opacity: 0.2,
-			time: 350 + 500,
+			time: 350 + 800,
 		}, 'linear', 'explode');
 		scene.showEffect('iceball', {
 			x: attacker.x,
@@ -37125,14 +37125,14 @@ BattleMoveAnims['immafirinmahlazer'] = {
 			z: attacker.z,
 			scale: 0.4,
 			opacity: 0.6,
-			time: 225 + 500,
+			time: 225 + 800,
 		}, {
 			x: defender.x - 10,
 			y: defender.y + 10,
 			z: defender.z,
 			scale: 0.6,
 			opacity: 0.2,
-			time: 425 + 500,
+			time: 425 + 800,
 		}, 'linear', 'explode');
 		scene.showEffect('iceball', {
 			x: attacker.x,
@@ -37140,14 +37140,14 @@ BattleMoveAnims['immafirinmahlazer'] = {
 			z: attacker.z,
 			scale: 0.4,
 			opacity: 0.6,
-			time: 300 + 500,
+			time: 300 + 800,
 		}, {
 			x: defender.x + 10,
 			y: defender.y - 10,
 			z: defender.z,
 			scale: 0.6,
 			opacity: 0.2,
-			time: 500 + 500,
+			time: 500 + 800,
 		}, 'linear', 'explode');
 		scene.showEffect('iceball', {
 			x: attacker.x,
@@ -37155,14 +37155,14 @@ BattleMoveAnims['immafirinmahlazer'] = {
 			z: attacker.z,
 			scale: 0.4,
 			opacity: 0.6,
-			time: 375 + 500,
+			time: 375 + 800,
 		}, {
 			x: defender.x - 20,
 			y: defender.y,
 			z: defender.z,
 			scale: 0.6,
 			opacity: 0.2,
-			time: 575 + 500,
+			time: 575 + 800,
 		}, 'linear', 'explode');
 
 		scene.showEffect('iceball', {
@@ -37171,11 +37171,11 @@ BattleMoveAnims['immafirinmahlazer'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.5,
-			time: 550 + 500,
+			time: 550 + 800,
 		}, {
 			scale: 4,
 			opacity: 0,
-			time: 750 + 500,
+			time: 750 + 800,
 		}, 'linear');
 		scene.showEffect('iceball', {
 			x: defender.x,
@@ -37183,14 +37183,14 @@ BattleMoveAnims['immafirinmahlazer'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.5,
-			time: 600 + 500,
+			time: 600 + 800,
 		}, {
 			scale: 4,
 			opacity: 0,
-			time: 800 + 500,
+			time: 800 + 800,
 		}, 'linear');
 
-		defender.delay(125 + 500);
+		defender.delay(125 + 800);
 		defender.anim({
 			z: defender.behind(5),
 			time: 75,
