@@ -37052,6 +37052,175 @@ BattleMoveAnims['grapplebeam'] = {
 		}, 'linear');
 	},
 };
+BattleMoveAnims['immafirinmahlazer'] = {
+	anim(scene, [attacker, defender]) {
+		let xstep = (defender.x - attacker.x) / 5;
+		let ystep = (defender.y - attacker.y) / 5;
+		let zstep = (defender.behind(50) - attacker.z) / 5;
+
+		scene.backgroundEffect('#000000', 3200, 0.6);
+
+		for (let i = 0; i < 5; i++) {
+			scene.showEffect('wisp', {
+				x: attacker.x + xstep * (i + 1),
+				y: attacker.y + ystep * (i + 1),
+				z: attacker.z + zstep * (i + 1),
+				scale: 1,
+				opacity: 1,
+				time: 20 * i + 2500,
+			}, {
+				scale: 3,
+				opacity: 0,
+				time: 40 * i + 3100,
+			}, 'linear');
+		}
+		scene.showEffect('iceball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 2500
+		}, {
+			x: defender.x + 30,
+			y: defender.y + 30,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.2,
+			time: 200 + 2500,
+		}, 'linear', 'explode');
+		scene.showEffect('iceball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 75 + 2500,
+		}, {
+			x: defender.x + 20,
+			y: defender.y - 30,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.2,
+			time: 275 + 2500,
+		}, 'linear', 'explode');
+		scene.showEffect('iceball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 150 + 2500,
+		}, {
+			x: defender.x - 30,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.2,
+			time: 350 + 2500,
+		}, 'linear', 'explode');
+		scene.showEffect('iceball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 225 + 2500,
+		}, {
+			x: defender.x - 10,
+			y: defender.y + 10,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.2,
+			time: 425 + 2500,
+		}, 'linear', 'explode');
+		scene.showEffect('iceball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 300 + 2500,
+		}, {
+			x: defender.x + 10,
+			y: defender.y - 10,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.2,
+			time: 500 + 2500,
+		}, 'linear', 'explode');
+		scene.showEffect('iceball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.4,
+			opacity: 0.6,
+			time: 375 + 2500,
+		}, {
+			x: defender.x - 20,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.6,
+			opacity: 0.2,
+			time: 575 + 2500,
+		}, 'linear', 'explode');
+
+		scene.showEffect('iceball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.5,
+			time: 550 + 2500,
+		}, {
+			scale: 4,
+			opacity: 0,
+			time: 750 + 2500,
+		}, 'linear');
+		scene.showEffect('iceball', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.5,
+			time: 600 + 2500,
+		}, {
+			scale: 4,
+			opacity: 0,
+			time: 800 + 2500,
+		}, 'linear');
+
+		defender.delay(125 + 2500);
+		defender.anim({
+			z: defender.behind(5),
+			time: 75,
+		}, 'swing');
+		defender.anim({
+			time: 75,
+		}, 'swing');
+		defender.anim({
+			z: defender.behind(5),
+			time: 75,
+		}, 'swing');
+		defender.anim({
+			time: 75,
+		}, 'swing');
+		defender.anim({
+			z: defender.behind(5),
+			time: 75,
+		}, 'swing');
+		defender.anim({
+			time: 75,
+		}, 'swing');
+		defender.anim({
+			z: defender.behind(5),
+			time: 75,
+		}, 'swing');
+		defender.anim({
+			time: 150,
+		}, 'swing');
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
@@ -37192,7 +37361,7 @@ BattleMoveAnims['cataclysm']={anim:BattleMoveAnims['dracometeor'].anim};
 //sledge see above
 //unrealunraveling see above
 //maxmystery see above
-BattleMoveAnims['immafirinmahlazer'] = {anim: BattleMoveAnims['aeroblast'].anim};
+//immafirinmahlazer see above
 BattleMoveAnims['perfectfreeze'] = {anim: BattleMoveAnims['sheercold'].anim};
 //perfectburn see above
 BattleMoveAnims['spartakick'] = {anim: BattleMoveAnims['highjumpkick'].anim};

@@ -1479,7 +1479,7 @@ export class Battle {
 	}
 	animateMove(pokemon: Pokemon, move: Move, target: Pokemon | null, kwArgs: KWArgs) {
 		if (!this.seeking) {
-			if (toID(pokemon.getSpeciesForme()) === 'milesedgeworth' && ['objection', 'holdit', 'takethat'].includes(move.id)) {
+			if (toID(pokemon.getSpeciesForme()) === 'milesedgeworth' && ['objection', 'holdit', 'takethat'].includes(move.id) || toID(pokemon.getSpeciesForme()) === 'droctogonapus' && move.id === 'immafirinmahlazer') {
 				BattleSound.playEffect(`audio/moves/${move.id}2.mp3`);
 			}
 			else if (toID(pokemon.getSpeciesForme()) === 'phoenixwright' && ['objection', 'holdit', 'takethat'].includes(move.id)) {
