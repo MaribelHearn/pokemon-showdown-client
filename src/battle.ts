@@ -2069,6 +2069,12 @@ export class Battle {
 				this.scene.runOtherAnim('radioactive' as ID, [poke]);
 			}
 			else {
+				if (poke.speciesForme === 'Cell') {
+					BattleSound.playEffect('audio/immafirinmahlazer.mp3');
+				}
+				else if (poke.speciesForme == 'Dr. Octogonapus') {
+					BattleSound.playEffect('audio/immafirinmahlazer2.mp3');
+				}
 				this.scene.runOtherAnim('zpower' as ID, [poke]);
 			}
 			this.log(args, kwArgs);
