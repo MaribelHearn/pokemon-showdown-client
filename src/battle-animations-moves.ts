@@ -37294,6 +37294,7 @@ BattleMoveAnims['borderdistortion'] = {
 			scale: 1,
 			time: 350,
 		});
+		scene.wait(2100);
 	},
 };
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
