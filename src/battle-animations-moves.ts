@@ -37245,10 +37245,7 @@ BattleMoveAnims['masterspark'] = {
 };
 BattleMoveAnims['borderdistortion'] = {
 	anim(scene, [attacker, defender]) {
-		scene.backgroundEffect('#AA44BB', 250, 0.6);
-		scene.backgroundEffect('#AA44BB', 250, 0.6, 400);
-		scene.backgroundEffect('#AA44FF', 250, 0.6, 800);
-		scene.backgroundEffect('#AA44FF', 250, 0.6, 1200);
+		scene.backgroundEffect('#AA44FF', 1200, 0.6);
 		defender.anim({
 			scale: 1.2,
 			time: 100,
@@ -37265,7 +37262,6 @@ BattleMoveAnims['borderdistortion'] = {
 			scale: 1,
 			time: 150,
 		});
-		scene.wait(700);
 		defender.anim({
 			scale: 1.2,
 			time: 200,
@@ -37282,7 +37278,6 @@ BattleMoveAnims['borderdistortion'] = {
 			scale: 1,
 			time: 250,
 		});
-		scene.wait(700);
 		defender.anim({
 			scale: 1.2,
 			time: 300,
@@ -37299,7 +37294,6 @@ BattleMoveAnims['borderdistortion'] = {
 			scale: 1,
 			time: 350,
 		});
-		scene.wait(700);
 	},
 };
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
