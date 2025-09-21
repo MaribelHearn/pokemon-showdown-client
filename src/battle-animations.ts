@@ -49,6 +49,7 @@ const bgmName: Record<string, any> = {
 	"showdown-with-ganon": "Zelda: The Wand of Gamelon - Showdown with Ganon",
 	"meta-ridley": "Metroid Prime - VS Meta Ridley",
 	"border-of-life": "Touhou 10.5 - Bloom nobly, Ink-Black Cherry Blossom ~ Border of Life",
+	"gen5-elite-four": "Pokemon Black & White - Battle! Elite Four",
 };
 
 /*
@@ -1772,6 +1773,9 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case 27:
 			this.bgm = BattleSound.loadBgm('audio/bgm/border-of-life.mp3', 7000, 166000, this.bgm);
+			break;
+		case 28:
+			this.bgm = BattleSound.loadBgm('audio/bgm/gen5-elite-four.mp3', 15000, 161700, this.bgm);
 			break;
 		default:
 			this.bgm = BattleSound.loadBgm('audio/bgm/ghetsis.mp3', 4000, 133000, this.bgm);
