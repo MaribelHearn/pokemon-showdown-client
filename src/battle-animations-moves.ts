@@ -37353,7 +37353,6 @@ BattleMoveAnims['mysterioussong']={anim:BattleMoveAnims['sing'].anim};
 BattleMoveAnims['illstarreddive']={anim:BattleMoveAnims['quickattack'].anim};
 BattleMoveAnims['peerlesswindgod']={anim:BattleMoveAnims['extremespeed'].anim};
 //nope uses default animation
-BattleMoveAnims['aculyhigherstat']={anim:BattleMoveAnims['acupressure'].anim};
 BattleMoveAnims['zantetsuken']={anim:BattleMoveAnims['sacredsword'].anim};
 BattleMoveAnims['magicaltempest']={anim:BattleMoveAnims['thunder'].anim};
 BattleMoveAnims['handofdestruction']={anim:BattleMoveAnims['punishment'].anim};
