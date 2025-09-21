@@ -37245,55 +37245,25 @@ BattleMoveAnims['masterspark'] = {
 };
 BattleMoveAnims['borderdistortion'] = {
 	anim(scene, [attacker, defender]) {
-		scene.backgroundEffect('#AA44FF', 1200, 0.6);
-		defender.anim({
-			scale: 1.2,
-			time: 100,
-		});
-		defender.anim({
-			scale: 1,
-			time: 100,
-		});
-		defender.anim({
-			scale: 1.4,
-			time: 150,
-		});
-		defender.anim({
-			scale: 1,
-			time: 150,
-		});
-		defender.anim({
-			scale: 1.2,
-			time: 200,
-		});
-		defender.anim({
-			scale: 1,
-			time: 200,
-		});
-		defender.anim({
-			scale: 1.4,
-			time: 250,
-		});
-		defender.anim({
-			scale: 1,
-			time: 250,
-		});
-		defender.anim({
-			scale: 1.2,
-			time: 300,
-		});
-		defender.anim({
-			scale: 1,
-			time: 300,
-		});
-		defender.anim({
-			scale: 1.4,
-			time: 350,
-		});
-		defender.anim({
-			scale: 1,
-			time: 350,
-		});
+		scene.backgroundEffect('#AA44FF', 2100, 0.6);
+		for (let i = 0; i < 3; i++) {
+			defender.anim({
+				scale: 1.2,
+				time: 100,
+			});
+			defender.anim({
+				scale: 1,
+				time: 100,
+			});
+			defender.anim({
+				scale: 1.4,
+				time: 150,
+			});
+			defender.anim({
+				scale: 1,
+				time: 150,
+			});
+		}
 		scene.wait(2100);
 	},
 };
