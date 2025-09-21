@@ -37246,6 +37246,8 @@ BattleMoveAnims['masterspark'] = {
 BattleMoveAnims['borderdistortion'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('#AA44BB', 250, 0.6);
+		scene.backgroundEffect('#AA44BB', 250, 0.6, 400);
+		scene.backgroundEffect('#AA44FF', 250, 0.6, 800);
 		scene.backgroundEffect('#AA44FF', 250, 0.6, 1200);
 		defender.anim({
 			scale: 1.2,
