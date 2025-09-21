@@ -37243,6 +37243,61 @@ BattleMoveAnims['masterspark'] = {
 		}
 	},
 };
+BattleMoveAnims['borderdistortion'] = {
+	anim(scene, [attacker, defender]) {
+		scene.backgroundEffect('#AA44BB', 250, 0.6);
+		scene.backgroundEffect('#AA44FF', 250, 0.6, 400);
+		defender.anim({
+			scale: 1.2,
+			time: 100,
+		});
+		defender.anim({
+			scale: 1,
+			time: 100,
+		});
+		defender.anim({
+			scale: 1.4,
+			time: 150,
+		});
+		defender.anim({
+			scale: 1,
+			time: 150,
+		});
+		defender.anim({
+			scale: 1.2,
+			time: 200,
+		});
+		defender.anim({
+			scale: 1,
+			time: 200,
+		});
+		defender.anim({
+			scale: 1.4,
+			time: 250,
+		});
+		defender.anim({
+			scale: 1,
+			time: 250,
+		});
+		defender.anim({
+			scale: 1.2,
+			time: 300,
+		});
+		defender.anim({
+			scale: 1,
+			time: 300,
+		});
+		defender.anim({
+			scale: 1.4,
+			time: 3250,
+		});
+		defender.anim({
+			scale: 1,
+			time: 350,
+		});
+		scene.wait(700);
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
 //masterspark see above
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
@@ -37285,7 +37340,7 @@ BattleMoveAnims['thunderdrumshot']={anim:BattleMoveAnims['electroball'].anim};
 //needleparade see above
 //finaldanmaku see above
 BattleMoveAnims['zzzap']={anim:BattleMoveAnims['thunderbolt'].anim};
-BattleMoveAnims['borderdistortion']={anim:BattleMoveAnims['extrasensory'].anim};
+//borderdistortion see above
 BattleMoveAnims['dreaminduction']={anim:BattleMoveAnims['hypnosis'].anim};
 BattleMoveAnims['berserk']={anim:BattleMoveAnims['darkpulse'].anim};
 BattleMoveAnims['surprise']={anim:BattleMoveAnims['fakeout'].anim};
