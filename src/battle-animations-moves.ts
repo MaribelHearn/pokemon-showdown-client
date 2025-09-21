@@ -37221,8 +37221,30 @@ BattleMoveAnims['immafirinmahlazer'] = {
 		}, 'swing');
 	},
 };
+BattleMoveAnims['masterspark'] = {
+	anim(scene, [attacker, defender]) {
+		const effects = ['iceball', 'electroball', 'energyball', 'mistball', 'shadowball'];
+		for (let i = 0; i < 50; i++) {
+			scene.showEffect(effects[i % 5], {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.8,
+				opacity: 0.2,
+				time: 0 + (i * 20),
+			}, {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 0.8,
+				opacity: 0.6,
+				time: 100 + (i * 20),
+			}, 'linear', 'explode');
+		}
+	},
+};
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
-BattleMoveAnims['masterspark']={anim:BattleMoveAnims['hyperbeam'].anim};
+//masterspark see above
 BattleMoveAnims['pukeblood']={anim:BattleMoveAnims['sludgebomb'].anim};
 BattleMoveAnims['roundhousekick']={anim:BattleMoveAnims['highjumpkick'].anim};
 //falconpunch see above
