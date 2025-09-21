@@ -37224,20 +37224,20 @@ BattleMoveAnims['immafirinmahlazer'] = {
 BattleMoveAnims['masterspark'] = {
 	anim(scene, [attacker, defender]) {
 		const effects = ['iceball', 'electroball', 'iceball', 'iceball', 'energyball', 'iceball'];
-		for (let i = 0; i < 235; i++) {
+		for (let i = 0; i < 225; i++) {
 			scene.showEffect(effects[i % 6], {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
 				scale: 0.8,
-				opacity: 0.2,
+				opacity: 0.4,
 				time: 0 + (i * 20),
 			}, {
 				x: defender.x,
 				y: defender.y,
 				z: defender.z,
 				scale: 0.8,
-				opacity: 0.6,
+				opacity: 0.8,
 				time: 75 + (i * 20),
 			}, 'linear', 'explode');
 		}
