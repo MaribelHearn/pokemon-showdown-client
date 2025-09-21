@@ -37265,6 +37265,7 @@ BattleMoveAnims['borderdistortion'] = {
 			scale: 1,
 			time: 150,
 		});
+		scene.wait(700);
 		defender.anim({
 			scale: 1.2,
 			time: 200,
@@ -37281,6 +37282,7 @@ BattleMoveAnims['borderdistortion'] = {
 			scale: 1,
 			time: 250,
 		});
+		scene.wait(700);
 		defender.anim({
 			scale: 1.2,
 			time: 300,
@@ -37297,7 +37299,7 @@ BattleMoveAnims['borderdistortion'] = {
 			scale: 1,
 			time: 350,
 		});
-		scene.wait(2100);
+		scene.wait(700);
 	},
 };
 BattleMoveAnims['apocalypse']={anim:BattleMoveAnims['gigaimpact'].anim};
