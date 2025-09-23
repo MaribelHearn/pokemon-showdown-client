@@ -37564,7 +37564,7 @@ BattleMoveAnims['countdown']={anim:BattleMoveAnims['skullbash'].anim,prepareAnim
 BattleMoveAnims['systemcrash']={anim:BattleMoveAnims['explosion'].anim};
 //malfunction see above
 BattleMoveAnims['strengthenjutsu']={anim:BattleMoveAnims['nastyplot'].anim};
-BattleMoveAnims['washingmachine']={anim:BattleMoveAnims['whirlpool'].anim};
+//washingmachine see above
 BattleMoveAnims['programfreeze']={anim:BattleMoveAnims['sheercold'].anim};
 BattleMoveAnims['datastream']={anim:BattleMoveAnims['hyperbeam'].anim};
 //delete see above
