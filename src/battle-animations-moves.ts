@@ -33704,6 +33704,226 @@ BattleMoveAnims['washingmachine'] = {
 				scale: 0.3,
 			}, 'linear', 'fade');
 		}
+		// first loop
+		for (let i = 0; i < 10; i++) {
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: 50 * i,
+				scale: 0.3,
+			}, {
+				x: attacker.x + 300,
+				y: attacker.y + (30 * i),
+				z: attacker.z,
+				time: (50 * i) + 300,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: 50 * i,
+				scale: 0.3,
+			}, {
+				x: attacker.x - (30 * i),
+				y: attacker.y + 300,
+				z: attacker.z,
+				time: (50 * i) + 300,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: 50 * i,
+				scale: 0.3,
+			}, {
+				x: attacker.x - 300,
+				y: attacker.y - (30 * i),
+				z: attacker.z,
+				time: (50 * i) + 300,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: 50 * i,
+				scale: 0.3,
+			}, {
+				x: attacker.x + (30 * i),
+				y: attacker.y - 300,
+				z: attacker.z,
+				time: (50 * i) + 300,
+				scale: 0.3,
+			}, 'linear', 'fade');
+		}
+		// second loop
+		for (let i = 0; i < 10; i++) {
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 500,
+				scale: 0.3,
+			}, {
+				x: (attacker.x - 300) - (30 * i),
+				y: attacker.y + 300,
+				z: attacker.z,
+				time: (50 * i) + 800,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 500,
+				scale: 0.3,
+			}, {
+				x: attacker.x - 300,
+				y: (attacker.y - 300) - (30 * i),
+				z: attacker.z,
+				time: (50 * i) + 800,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 500,
+				scale: 0.3,
+			}, {
+				x: (attacker.x + 300) + (30 * i),
+				y: attacker.y - 300,
+				z: attacker.z,
+				time: (50 * i) + 800,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 500,
+				scale: 0.3,
+			}, {
+				x: attacker.x + 300,
+				y: (attacker.y + 300) + (30 * i),
+				z: attacker.z,
+				time: (50 * i) + 800,
+				scale: 0.3,
+			}, 'linear', 'fade');
+		}
+		// third loop
+		for (let i = 0; i < 10; i++) {
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1000,
+				scale: 0.3,
+			}, {
+				x: attacker.x - (30 * i),
+				y: attacker.y + 300,
+				z: attacker.z,
+				time: (50 * i) + 1300,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1000,
+				scale: 0.3,
+			}, {
+				x: attacker.x - 300,
+				y: attacker.y - (30 * i),
+				z: attacker.z,
+				time: (50 * i) + 1300,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1000,
+				scale: 0.3,
+			}, {
+				x: attacker.x + (30 * i),
+				y: attacker.y - 300,
+				z: attacker.z,
+				time: (50 * i) + 1300,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1000,
+				scale: 0.3,
+			}, {
+				x: attacker.x + 300,
+				y: attacker.y + (30 * i),
+				z: attacker.z,
+				time: (50 * i) + 1300,
+				scale: 0.3,
+			}, 'linear', 'fade');
+		}
+		// fourth loop
+		for (let i = 0; i < 10; i++) {
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1500,
+				scale: 0.3,
+			}, {
+				x: attacker.x - 300,
+				y: (attacker.y - 300) - (30 * i),
+				z: attacker.z,
+				time: (50 * i) + 1800,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1500,
+				scale: 0.3,
+			}, {
+				x: (attacker.x + 300) + (30 * i),
+				y: attacker.y - 300,
+				z: attacker.z,
+				time: (50 * i) + 1800,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1500,
+				scale: 0.3,
+			}, {
+				x: attacker.x + 300,
+				y: (attacker.y + 300) + (30 * i),
+				z: attacker.z,
+				time: (50 * i) + 1800,
+				scale: 0.3,
+			}, 'linear', 'fade');
+			scene.showEffect('waterwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				time: (50 * i) + 1500,
+				scale: 0.3,
+			}, {
+				x: (attacker.x - 300) - (30 * i),
+				y: attacker.y + 300,
+				z: attacker.z,
+				time: (50 * i) + 1800,
+				scale: 0.3,
+			}, 'linear', 'fade');
+		}
 	},
 };
 BattleMoveAnims['needleparade'] = {
