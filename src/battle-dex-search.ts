@@ -778,9 +778,6 @@ abstract class BattleTypedSearch<T extends SearchType> {
 					(learnset[moveid].includes(`${gen + 1}`) && move.gen === gen))) {
 				return true;
 			}
-			if (!this.formatType || this.formatType === 'fundex') {
-				break;
-			}
 			learnsetid = this.nextLearnsetid(learnsetid, speciesid);
 		}
 		return false;
@@ -1453,6 +1450,8 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 		if (this.formatType?.startsWith('bdsp')) lsetTable = lsetTable['gen8bdsp'];
 		if (this.formatType === 'letsgo') lsetTable = lsetTable['gen7letsgo'];
 		if (this.formatType?.startsWith('dlc1')) lsetTable = lsetTable['gen8dlc1'];
+		// Fundex: make dex page not show regular pokemon
+		if (!format) lsetTable = lsetTable['fundex'];
 		while (learnsetid) {
 			let learnset = lsetTable.learnsets[learnsetid];
 			if (learnset) {
@@ -1489,9 +1488,6 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 						);
 					}
 				}
-			}
-			if (!this.formatType || this.formatType === 'fundex') {
-				break;
 			}
 			learnsetid = this.nextLearnsetid(learnsetid, species.id);
 		}
