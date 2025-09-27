@@ -510,8 +510,8 @@ class BattleTextParser {
 				// Fundex
 				case 'snakebusted': id = 'cardboardbox'; break;
 				case 'chucktestabusted': id = 'taxidermy'; break;
-				case 'samusarmored': id = 'armordamage'; break;
-				case 'samus': id = 'armordamage'; templateName = 'transformEnd'; break;
+				case 'samus': id = 'armordamage'; break;
+				case 'zerosuitsamus': id = 'armordamage'; templateName = 'transformEnd'; break;
 				case 'boolossus': id = 'gettogether'; break;
 				case 'boo': id = 'gettogether'; templateName = 'transformEnd'; break;
 				}
