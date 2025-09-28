@@ -613,8 +613,10 @@ abstract class BattleTypedSearch<T extends SearchType> {
 			this.dex = Dex.mod('gen7letsgo' as ID);
 		}
 		if (format.includes('national') || format.startsWith('nd') || format.includes('natdex')) {
-			format = (format.startsWith('nd') ? format.slice(2) :
-				format.includes('natdex') ? format.slice(6) : format.slice(11)) as ID;
+			if (!format.includes('fundex')) {
+				format = (format.startsWith('nd') ? format.slice(2) :
+					format.includes('natdex') ? format.slice(6) : format.slice(11)) as ID;
+			}
 			this.formatType = 'natdex';
 			if (!format) format = 'ou' as ID;
 		}
@@ -950,7 +952,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 		else if (format === 'pu') tierSet = tierSet.slice(slices.PU || slices.NU);
 		else if (format === 'zu') tierSet = tierSet.slice(slices.ZU || slices.PU || slices.NU);
 		else if (format === 'lc' || format === 'lcuu' || format.startsWith('lc') || (format !== 'caplc' && format !== 'fundexlc' && format.endsWith('lc'))) tierSet = tierSet.slice(slices.LC);
-		else if (format === 'nationalfundex') tierSet = tierSet.slice(slices['Fundex OU'], slices.CAP).concat(tierSet.slice(slices.AG));
+		else if (format === 'nationalfundex') tierSet = tierSet.slice(slices['Fundex OU'], slices.CAP).concat(tierSet.slice(slices.OU));
 		else if (format === 'fundexpurehackmons') tierSet = tierSet.slice(0, slices.CAP).concat(tierSet.slice(slices.AG));
 		else if (format === 'fundexuber' || format == 'fundexmetronome' || format === 'fundexlosersgame') tierSet = tierSet.slice(0, slices.CAP);
 		else if (format === 'fundexlc') tierSet = tierSet.slice(slices['Fundex LC'], slices.CAP);
