@@ -1445,17 +1445,21 @@ class BattleTooltips {
 			moveType = 'Dark';
 		}
 		// Fundex: Catnarok uses the user's type and highest attacking stat
+		// Diamond Blizzard becomes Fire for Achi Cirno
 		// Rainbow UFOs of Terror matches Nue's primary type
-		// Sledge uses the user's highest attacking stat
+		// Light Arrow and Sledge use the user's highest attacking stat
 		if (move.id === 'catnarok') {
 			if (pokemon.getSpecies().name === 'tacgnoL') moveType = 'Dark';
 			if (pokemon.getSpecies().name === 'oLngact') moveType = 'Fire';
 			if (serverPokemon.stats.spa > serverPokemon.stats.atk) category = 'Special';
 		}
+		if (move.id === 'diamondblizzard') {
+			if (pokemon.getSpecies().name === 'Achi Cirno') moveType = 'Fire';
+		}
 		if (move.id === 'rainbowufosofterror') {
 			moveType = pokemon.volatiles.typechange ? pokemon.volatiles.typechange[1] : pokemon.getSpecies().types[0];
 		}
-		if (move.id === 'sledge' && serverPokemon.stats.spa > serverPokemon.stats.atk) {
+		if ((move.id === 'lightarrow' || move.id === 'sledge') && serverPokemon.stats.spa > serverPokemon.stats.atk) {
 			category = 'Special';
 		}
 
