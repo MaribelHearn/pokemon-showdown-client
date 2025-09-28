@@ -950,7 +950,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 		else if (format === 'pu') tierSet = tierSet.slice(slices.PU || slices.NU);
 		else if (format === 'zu') tierSet = tierSet.slice(slices.ZU || slices.PU || slices.NU);
 		else if (format === 'lc' || format === 'lcuu' || format.startsWith('lc') || (format !== 'caplc' && format !== 'fundexlc' && format.endsWith('lc'))) tierSet = tierSet.slice(slices.LC);
-		else if (format === 'nationalfundex') tierSet = tierSet.slice(0, slices.CAP || slices.Uber).concat(tierSet.slice(slices.OU));
+		else if (format === 'nationalfundex') tierSet = tierSet.slice(slices['Fundex OU'], slices.CAP).concat(tierSet.slice(slices.AG));
 		else if (format === 'fundexpurehackmons') tierSet = tierSet.slice(0, slices.CAP).concat(tierSet.slice(slices.AG));
 		else if (format === 'fundexuber' || format == 'fundexmetronome' || format === 'fundexlosersgame') tierSet = tierSet.slice(0, slices.CAP);
 		else if (format === 'fundexlc') tierSet = tierSet.slice(slices['Fundex LC'], slices.CAP);
