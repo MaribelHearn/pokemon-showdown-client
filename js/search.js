@@ -298,7 +298,7 @@
 		// number
 		var tier = this.engine ? this.engine.getTier(pokemon) : pokemon.num;
 		// buf += '<span class="col numcol">' + (pokemon.num >= 0 ? pokemon.num : 'CAP') + '</span> ';
-		buf += '<span class="col numcol">' + tier + '</span> ';
+		buf += '<span class="col numcol">' + tier.replace("Fundex ", "") + '</span> ';
 
 		// icon
 		buf += '<span class="col iconcol">';
