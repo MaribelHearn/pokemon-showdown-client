@@ -50,6 +50,7 @@ const bgmName: Record<string, any> = {
 	"meta-ridley": "Metroid Prime - VS Meta Ridley",
 	"border-of-life": "Touhou 10.5 - Bloom nobly, Ink-Black Cherry Blossom ~ Border of Life",
 	"gen5-elite-four": "Pokemon Black & White - Battle! Elite Four",
+	//"gerudo-valley": "The Legend of Zelda: Ocarina of Time - Gerudo Valley",
 };
 
 /*
@@ -1777,6 +1778,9 @@ export class BattleScene implements BattleSceneStub {
 		case 28:
 			this.bgm = BattleSound.loadBgm('audio/bgm/gen5-elite-four.mp3', 15000, 161700, this.bgm);
 			break;
+		/*case 29:
+			this.bgm = BattleSound.loadBgm('audio/bgm/gerudo-valley.mp3', 15000, 161700, this.bgm);
+			break;*/
 		default:
 			this.bgm = BattleSound.loadBgm('audio/bgm/ghetsis.mp3', 4000, 133000, this.bgm);
 			break;
@@ -2675,7 +2679,7 @@ export class PokemonSprite extends Sprite {
 			const touhouFaintCry = ['Flandre', 'Marisa', 'Lily White', 'Cirno', 'Achi Cirno', 'Reimu', 'Utsuho', 'Yuyuko', 'Remilia', 'Sakuya',
 				'Wriggle', 'Eirin', 'Kaguya', 'Tenshi', 'Suika', 'Letty', 'Keine', 'Keine-Hakutaku', 'Yumemi', 'Mokou', 'Yuugi', 'Komachi', 'Eiki',
 				'Yukari', 'Yamame', 'Iku', 'Medicine', 'Yuuka', 'Minoriko', 'Shizuha', 'Alice', 'Genjii', 'VIVIT', 'Angel VIVIT', 'Maribel', 'Kogasa',
-				'Meiling', 'Patchouli', 'Suwako', 'Shingyoku', 'Shingyoku-Priestess', 'Shingyoku-Orb', 'Sariel', 'Satori', 'Koishi', 'Nitori',
+				'Meiling', 'Patchouli', 'Suwako', 'Shingyoku', 'Shingyoku-Priestess', 'Shingyoku-Priest', 'Sariel', 'Satori', 'Koishi', 'Nitori',
 				'Byakuren', 'Nue', 'Ichirin', 'Sunny Milk', 'Luna Child', 'Star Sapphire', 'Sanae', 'Kanako', 'Ran', 'Hina', 'Chen', 'Reisen',
 				'Parsee', 'Rin', 'Daiyousei', 'Konngara', 'Yumeko', 'Rumia', 'Koakuma', 'Youmu', 'Mystia', 'Tewi', 'Aya', 'Kisume'];
 
