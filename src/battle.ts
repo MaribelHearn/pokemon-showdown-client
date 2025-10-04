@@ -2075,6 +2075,9 @@ export class Battle {
 				else if (poke.speciesForme == 'Dr. Octogonapus' && !this.seeking) {
 					BattleSound.playEffect('audio/immafirinmahlazer2.mp3');
 				}
+				else if (poke.speciesForme === 'Leonidas' && !this.seeking) {
+					BattleSound.playEffect('audio/sparta.mp3');
+				}
 				this.scene.runOtherAnim('zpower' as ID, [poke]);
 			}
 			this.log(args, kwArgs);
