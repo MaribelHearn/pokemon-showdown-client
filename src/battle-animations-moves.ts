@@ -37668,7 +37668,7 @@ BattleMoveAnims['immafirinmahlazer'] = {
 BattleMoveAnims['masterspark'] = {
 	anim(scene, [attacker, defender]) {
 		const effects = ['iceball', 'electroball', 'iceball', 'iceball', 'energyball', 'iceball'];
-		for (let i = 0; i < 225; i++) {
+		for (let i = 0; i < 112; i++) {
 			scene.showEffect(effects[i % 6], {
 				x: attacker.x,
 				y: attacker.y,
