@@ -34877,21 +34877,21 @@ BattleMoveAnims['telemetry'] = {
 };
 BattleMoveAnims['laserbeam'] = {
     anim(scene, [attacker, defender]) {
-		for (let i = 0; i < 20; i++) {
+		for (let i = 0; i < 80; i++) {
 			scene.showEffect('redwisp', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
 				scale: 0.3,
 				opacity: 0.2,
-				time: 0 + (i * 20),
+				time: 0 + (i * 5),
 			}, {
 				x: defender.x,
 				y: defender.y,
 				z: defender.z,
 				scale: 0.3,
 				opacity: 0.6,
-				time: 200 + (i * 20),
+				time: 200 + (i * 5),
 			}, 'linear', 'explode');
 		}
 	},
