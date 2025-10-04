@@ -3163,6 +3163,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'fairywisp.png',
 		w: 100, h: 100,
 	},
+	redwisp: {
+		url: 'redwisp.png',
+		w: 100, h: 100,
+	},
 	objection: {
 		url: 'objection.png',
 		w: 108, h: 80,

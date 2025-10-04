@@ -34878,7 +34878,7 @@ BattleMoveAnims['telemetry'] = {
 BattleMoveAnims['laserbeam'] = {
     anim(scene, [attacker, defender]) {
 		for (let i = 0; i < 20; i++) {
-			scene.showEffect('wisp', {
+			scene.showEffect('redwisp', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
