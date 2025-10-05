@@ -783,6 +783,9 @@ abstract class BattleTypedSearch<T extends SearchType> {
 					(learnset[moveid].includes(`${gen + 1}`) && move.gen === gen))) {
 				return true;
 			}
+			if (!this.formatType || this.formatType === 'fundex') {
+				break;
+			}
 			learnsetid = this.nextLearnsetid(learnsetid, speciesid);
 		}
 		return false;
@@ -1495,6 +1498,9 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 						);
 					}
 				}
+			}
+			if (!this.formatType || this.formatType === 'fundex') {
+				break;
 			}
 			learnsetid = this.nextLearnsetid(learnsetid, species.id);
 		}
