@@ -551,7 +551,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 	set: PokemonSet | null = null;
 
 	protected formatType: 'doubles' | 'bdsp' | 'bdspdoubles' | 'letsgo' | 'metronome' | 'natdex' | 'nfe' |
-	'dlc1' | 'dlc1doubles' | 'stadium' | 'fundex' | null = null;
+	'dlc1' | 'dlc1doubles' | 'stadium' | 'fundex' | 'fundexdoubles' | null = null;
 
 	/**
 	 * Cached copy of what the results list would be with only base filters
@@ -595,7 +595,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 			format = format.slice(7) as ID;
 			if (!format) format = 'ou' as ID;
 		}
-		if (format.startsWith('vgc')) this.formatType = 'doubles';
+		if (format.includes('vgc')) this.formatType = 'doubles';
 		if (format === 'vgc2020') this.formatType = 'dlc1doubles';
 		if (format.includes('bdsp')) {
 			if (format.includes('doubles')) {
@@ -629,7 +629,10 @@ abstract class BattleTypedSearch<T extends SearchType> {
 			this.formatType = 'nfe';
 			if (!format) format = 'ou' as ID;
 		}
-		if (format.includes('fundex')) {
+		if (format.includes('fundex') && format.includes('vgc')) {
+			this.formatType = 'fundexdoubles';
+		}
+		else if (format.includes('fundex')) {
 			this.formatType = 'fundex';
 		}
 		this.format = format;
@@ -750,7 +753,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 	}
 	protected canLearn(speciesid: ID, moveid: ID) {
 		const move = this.dex.moves.get(moveid);
-		if ((this.formatType === 'natdex' || this.formatType === 'fundex') && move.isNonstandard && move.isNonstandard !== 'Past') {
+		if ((this.formatType === 'natdex' || this.formatType?.includes('fundex')) && move.isNonstandard && move.isNonstandard !== 'Past') {
 			return false;
 		}
 		const gen = this.dex.gen;
@@ -1338,7 +1341,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 			return (dex.gen < 4 && !moves.includes('sleeppowder')) || (dex.gen > 6 && abilityid === 'baddreams');
 		case 'icywind':
 			// Keldeo needs Hidden Power for Electric/Ghost
-			return species.baseSpecies === 'Keldeo' || this.formatType === 'doubles';
+			return species.baseSpecies === 'Keldeo' || this.formatType?.includes('doubles');
 		case 'infestation':
 			return moves.includes('stickyweb');
 		case 'irondefense':
@@ -1358,7 +1361,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 		case 'petaldance':
 			return abilityid === 'owntempo';
 		case 'phantomforce':
-			return (!moves.includes('poltergeist') && !moves.includes('shadowclaw')) || this.formatType === 'doubles';
+			return (!moves.includes('poltergeist') && !moves.includes('shadowclaw')) || this.formatType?.includes('doubles');
 		case 'poisonfang':
 			return species.types.includes('Poison') && !moves.includes('gunkshot') && !moves.includes('poisonjab');
 		case 'relicsong':
@@ -1382,7 +1385,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 		case 'steelwing':
 			return !moves.includes('ironhead');
 		case 'stompingtantrum':
-			return (!moves.includes('earthquake') && !moves.includes('drillrun')) || this.formatType === 'doubles';
+			return (!moves.includes('earthquake') && !moves.includes('drillrun')) || this.formatType?.includes('doubles');
 		case 'stunspore':
 			return !moves.includes('thunderwave');
 		case 'technoblast':
@@ -1395,7 +1398,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 			return species.baseStats.spe <= 100;
 		}
 
-		if (this.formatType === 'doubles' && BattleMoveSearch.GOOD_DOUBLES_MOVES.includes(id)) {
+		if (this.formatType?.includes('doubles') && BattleMoveSearch.GOOD_DOUBLES_MOVES.includes(id)) {
 			return true;
 		}
 
