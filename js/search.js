@@ -228,15 +228,15 @@
 		case 'tier':
 			// very hardcode
 			var tierTable = {
-				uber: "Uber",
-				ou: "OU",
+				uber: "Fundex Uber",
+				ou: "Fundex OU",
 				uu: "UU",
 				ru: "RU",
 				nu: "NU",
 				pu: "PU",
 				zu: "(PU)",
 				nfe: "NFE",
-				lc: "LC",
+				lc: "Fundex LC",
 				cap: "CAP",
 				caplc: "CAP LC",
 				capnfe: "CAP NFE",
