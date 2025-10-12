@@ -620,6 +620,7 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	zero: 1380 + 98,
 	zerotwo: 1380 + 99,
 	veteran: 1380 + 100,
+	babymario: 1380 + 101, // baby mario
 	yukari: 1380 + 102,
 	yamame: 1380 + 103,
 	iku: 1380 + 104,
@@ -709,10 +710,10 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	grandmatriarch: 1380 + 188,
 	snakebusted: 1380 + 189,
 	chucktestabusted: 1380 + 190,
-
-	smithy: 1380 + 191,
-	smithytankhead: 1380 + 192,
-	smithymagichead: 1380 + 193,
+	babyluigi: 1380 + 191, // baby luigi
+	smithy: 1380 + 192,
+	smithytankhead: 1380 + 193,
+	smithymagichead: 1380 + 194,
 };
 
 const BattlePokemonIconIndexesLeft: {[id: string]: number} = {
