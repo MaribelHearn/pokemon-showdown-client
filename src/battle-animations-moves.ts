@@ -35645,6 +35645,42 @@ BattleMoveAnims['pixiedust'] = {
 		}, 'ballistic');
 	},
 };
+BattleMoveAnims['houraielixir'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('wisp', {
+			x: attacker.leftof(-25),
+			y: attacker.y + 40,
+			z: attacker.behind(-20),
+			scale: 0.5,
+			opacity: 1,
+		}, {
+			x: attacker.leftof(-15),
+			y: attacker.y + 35,
+			z: attacker.z,
+			scale: 0,
+			opacity: 0.2,
+			time: 500,
+		}, 'swing', 'fade');
+
+		defender.delay(400);
+		defender.anim({
+			y: defender.y + 5,
+			yscale: 1.1,
+			time: 200,
+		}, 'swing');
+		defender.anim({
+			time: 200,
+		}, 'swing');
+		defender.anim({
+			y: defender.y + 5,
+			yscale: 1.1,
+			time: 200,
+		}, 'swing');
+		defender.anim({
+			time: 200,
+		}, 'swing');
+	},
+};
 BattleMoveAnims['explod'] = {
 	anim(scene, [attacker, defender]) {
 		for (let i = 1; i <= 26; i++) {
@@ -37734,7 +37770,7 @@ BattleMoveAnims['throwingatlas'] = {anim:BattleMoveAnims['stoneedge'].anim};
 //trainwreck see above
 BattleMoveAnims['suzuranpoison'] = {anim:BattleMoveAnims['poisongas'].anim};
 BattleMoveAnims['lemmingsparade'] = {anim:BattleMoveAnims['spikecannon'].anim};
-BattleMoveAnims['houraielixir'] = {anim:BattleMoveAnims['milkdrink'].anim};
+//houraielixir see above
 //explod see above
 BattleMoveAnims['study'] = {anim:BattleMoveAnims['calmmind'].anim};
 //corrupt see above
