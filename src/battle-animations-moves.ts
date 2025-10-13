@@ -37723,6 +37723,54 @@ BattleMoveAnims['masterspark'] = {
 		}
 	},
 };
+BattleMoveAnims['pukeblood'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('redwisp', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.1,
+			opacity: 0,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.7,
+			opacity: 1,
+			time: 400,
+		}, 'ballistic', 'explode');
+		scene.showEffect('redwisp', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.1,
+			opacity: 0,
+			time: 100,
+		}, {
+			x: defender.x + 40,
+			y: defender.y - 20,
+			z: defender.z,
+			scale: 0.7,
+			opacity: 1,
+			time: 500,
+		}, 'ballistic', 'explode');
+		scene.showEffect('redwisp', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.1,
+			opacity: 0,
+			time: 200,
+		}, {
+			x: defender.x - 30,
+			y: defender.y - 10,
+			z: defender.z,
+			scale: 0.7,
+			opacity: 1,
+			time: 600,
+		}, 'ballistic', 'explode');
+	},
+};
 BattleMoveAnims['borderdistortion'] = {
 	anim(scene, [attacker, defender]) {
 		scene.backgroundEffect('#AA44FF', 1500, 0.6);
@@ -37749,7 +37797,7 @@ BattleMoveAnims['borderdistortion'] = {
 };
 BattleMoveAnims['apocalypse'] = {anim:BattleMoveAnims['gigaimpact'].anim};
 //masterspark see above
-BattleMoveAnims['pukeblood'] = {anim:BattleMoveAnims['sludgebomb'].anim};
+//pukeblood see above
 BattleMoveAnims['roundhousekick'] = {anim:BattleMoveAnims['highjumpkick'].anim};
 //falconpunch see above
 BattleMoveAnims['laevateinn'] = {anim:BattleMoveAnims['sacredsword'].anim};
