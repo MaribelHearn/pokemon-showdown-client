@@ -729,7 +729,7 @@ const Dex = new class implements ModdedDex {
 		if (pokemon.species && !spriteid) {
 			spriteid = species.spriteid || toID(pokemon.species);
 		}
-		spriteid = spriteid.replace('?', '%3F');
+		spriteid = spriteid.replace(/\?/g, '%3f');
 		if (species.exists === false) return { spriteDir: 'sprites/gen5', spriteid: '0', x: 10, y: 5 };
 		const spriteData: TeambuilderSpriteData = {
 			spriteid,
