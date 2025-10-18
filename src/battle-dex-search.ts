@@ -612,11 +612,9 @@ abstract class BattleTypedSearch<T extends SearchType> {
 			this.formatType = 'letsgo';
 			this.dex = Dex.mod('gen7letsgo' as ID);
 		}
-		if (format.includes('national') || format.startsWith('nd') || format.includes('natdex') || format.includes('international')) {
-			if (!format.includes('fundex')) {
-				format = (format.startsWith('nd') ? format.slice(2) :
-					format.includes('natdex') ? format.slice(6) : format.slice(11)) as ID;
-			}
+		if (format.includes('national') || format.startsWith('nd') || format.includes('natdex')) {
+			format = (format.startsWith('nd') ? format.slice(2) :
+				format.includes('natdex') ? format.slice(6) : format.slice(11)) as ID;
 			this.formatType = 'natdex';
 			if (!format) format = 'ou' as ID;
 		}
