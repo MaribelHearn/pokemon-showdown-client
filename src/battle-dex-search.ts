@@ -551,7 +551,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 	set: PokemonSet | null = null;
 
 	protected formatType: 'doubles' | 'bdsp' | 'bdspdoubles' | 'letsgo' | 'metronome' | 'natdex' | 'nfe' |
-	'dlc1' | 'dlc1doubles' | 'stadium' | 'fundex' | 'fundexdoubles' | null = null;
+	'dlc1' | 'dlc1doubles' | 'stadium' | 'fundex' | 'fundexdoubles' | 'international' | null = null;
 
 	/**
 	 * Cached copy of what the results list would be with only base filters
@@ -612,7 +612,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 			this.formatType = 'letsgo';
 			this.dex = Dex.mod('gen7letsgo' as ID);
 		}
-		if (format.includes('national') || format.startsWith('nd') || format.includes('natdex')) {
+		if (format.includes('national') || format.startsWith('nd') || format.includes('natdex') && !format.includes('international')) {
 			format = (format.startsWith('nd') ? format.slice(2) :
 				format.includes('natdex') ? format.slice(6) : format.slice(11)) as ID;
 			this.formatType = 'natdex';
@@ -632,6 +632,9 @@ abstract class BattleTypedSearch<T extends SearchType> {
 		}
 		else if (format.includes('fundex')) {
 			this.formatType = 'fundex';
+		}
+		if (format.includes('international')) {
+			this.formatType = 'international';
 		}
 		this.format = format;
 
@@ -751,7 +754,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 	}
 	protected canLearn(speciesid: ID, moveid: ID) {
 		const move = this.dex.moves.get(moveid);
-		if ((this.formatType === 'natdex' || this.formatType?.includes('fundex')) && move.isNonstandard && move.isNonstandard !== 'Past') {
+		if ((this.formatType === 'natdex' || this.formatType?.includes('fundex') || this.formatType === 'international') && move.isNonstandard && move.isNonstandard !== 'Past') {
 			return false;
 		}
 		const gen = this.dex.gen;
@@ -789,7 +792,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 		return false;
 	}
 	getTier(pokemon: Species) {
-		if (this.formatType?.includes('metronome') || this.formatType === 'natdex') {
+		if (this.formatType?.includes('metronome') || this.formatType === 'natdex' || this.formatType === 'international') {
 			return pokemon.num >= 0 ? String(pokemon.num) : pokemon.tier;
 		}
 		let table = window.BattleTeambuilderTable;
