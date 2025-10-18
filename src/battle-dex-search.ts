@@ -960,11 +960,9 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 		else if (format === 'zu') tierSet = tierSet.slice(slices.ZU || slices.PU || slices.NU);
 		else if (format === 'lc' || format === 'lcuu' || format.startsWith('lc') || (format !== 'caplc' && format !== 'fundexlc' && format.endsWith('lc'))) tierSet = tierSet.slice(slices.LC);
 		else if (format === 'fundexpurehackmons') tierSet = tierSet.slice(0, slices.CAP).concat(tierSet.slice(slices.AG));
-		else if (format === 'fundexuber' || format == 'fundexmetronome' || format === 'fundexlosersgame') tierSet = tierSet.slice(0, slices.CAP);
+		else if (format === 'fundexuber' || format.startsWith('fundexmetronome') || format === 'fundexlosersgame') tierSet = tierSet.slice(0, slices.CAP);
 		else if (format === 'fundexlc') tierSet = tierSet.slice(slices['Fundex LC'], slices.CAP);
 		else if (format.startsWith('fundex')) tierSet = tierSet.slice(slices['Fundex OU'], slices.CAP);
-		//else if (format === 'internationaluber') tierSet = tierSet.slice(slices['Fundex Uber'], slices.CAP).concat(tierSet.slice(slices.AG));
-		//else if (format === 'internationalou') tierSet = tierSet.slice(slices['Fundex OU'], slices.CAP).concat(tierSet.slice(slices.OU));
 		else if (format === 'cap') tierSet = tierSet.slice(slices.CAP, slices.AG || slices.Uber).concat(tierSet.slice(slices.OU));
 		else if (format === 'caplc') {
 			tierSet = tierSet.slice(slices['CAP LC'], slices.AG || slices.Uber).concat(tierSet.slice(slices.LC));
