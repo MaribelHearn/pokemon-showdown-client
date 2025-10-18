@@ -321,11 +321,12 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 	const VGC = GENS.filter(x => x > 3).map(num => -num - 0.5);
 	const NFE = GENS.map(num => num + 0.3);
 	const STADIUM = [2.04, 1.04];
-	const OTHER = [8.6, 8.4, 8.2, 8.1, -8.4, -8.6, 7.1];
+	const OTHER = [8.8, 8.6, 8.4, 8.2, 8.1, -8.4, -8.6, 7.1];
 
 	// process.stdout.write("\n  ");
 	for (const genIdent of [...GENS, ...DOUBLES, ...VGC, ...NFE, ...STADIUM, ...OTHER]) {
 		const isLetsGo = (genIdent === 7.1);
+		const isInternational = (genIdent === 8.8);
 		const isBDSP = (genIdent === 8.6 || genIdent === -8.6);
 		const isMetBattle = (genIdent === 8.2);
 		const isNFE = ('' + genIdent).endsWith('.3');
@@ -356,6 +357,29 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 			const baseSpecies = Dex.mod(gen).species.get(species.baseSpecies);
 			if (species.gen > genNum) continue;
 			const tier = (() => {
+				if (isInternational) {
+					const unobtainables = [
+						'Eevee-Starter', 'Floette-Eternal', 'Pichu-Spiky-eared', 'Pikachu-Belle', 'Pikachu-Cosplay', 'Pikachu-Libre', 'Pikachu-PhD', 'Pikachu-Pop-Star', 'Pikachu-Rock-Star', 'Pikachu-Starter', 'Eternatus-Eternamax',
+					].map(toID);
+					if (species.isNonstandard && !['Past', 'Gigantamax'].includes(species.isNonstandard)) return 'Illegal';
+					if (unobtainables.includes(species.id)) return 'Illegal';
+					const uu = Dex.formats.get('gen8nationaldexag');
+					const ou = Dex.formats.get('gen8fundexou');
+					if (Dex.formats.getRuleTable(ou).isBannedSpecies(species)) return 'Uber';
+					if (Dex.formats.getRuleTable(ou).has('dynamaxclause') && species.name.endsWith('Gmax')) return '(Uber)';
+					if (Dex.formats.getRuleTable(uu).isRestrictedSpecies(species)) {
+						return 'UU';
+					} else {
+						if (species.nfe) {
+							if (species.prevo) {
+								return 'NFE';
+							} else {
+								return 'LC';
+							}
+						}
+						return '(UU)';
+					}
+				}
 				if (isNatDex) {
 					const unobtainables = [
 						'Eevee-Starter', 'Floette-Eternal', 'Pichu-Spiky-eared', 'Pikachu-Belle', 'Pikachu-Cosplay', 'Pikachu-Libre', 'Pikachu-PhD', 'Pikachu-Pop-Star', 'Pikachu-Rock-Star', 'Pikachu-Starter', 'Eternatus-Eternamax',
