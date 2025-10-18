@@ -612,7 +612,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 			this.formatType = 'letsgo';
 			this.dex = Dex.mod('gen7letsgo' as ID);
 		}
-		if (format.includes('national') || format.startsWith('nd') || format.includes('natdex')) {
+		if (format.includes('national') || format.startsWith('nd') || format.includes('natdex') || format.includes('international')) {
 			if (!format.includes('fundex') && !format.includes('international')) {
 				format = (format.startsWith('nd') ? format.slice(2) :
 					format.includes('natdex') ? format.slice(6) : format.slice(11)) as ID;
@@ -632,7 +632,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 		if (format.includes('fundex') && format.includes('vgc')) {
 			this.formatType = 'fundexdoubles';
 		}
-		else if (format.includes('fundex') || format.includes('international')) {
+		else if (format.includes('fundex')) {
 			this.formatType = 'fundex';
 		}
 		this.format = format;
@@ -962,8 +962,8 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 		else if (format === 'fundexuber' || format == 'fundexmetronome' || format === 'fundexlosersgame') tierSet = tierSet.slice(0, slices.CAP);
 		else if (format === 'fundexlc') tierSet = tierSet.slice(slices['Fundex LC'], slices.CAP);
 		else if (format.startsWith('fundex')) tierSet = tierSet.slice(slices['Fundex OU'], slices.CAP);
-		else if (format === 'internationaldexuber') tierSet = tierSet.slice(slices['Fundex Uber'], slices.CAP).concat(tierSet.slice(slices['National Dex AG']));
-		else if (format === 'internationaldexou') tierSet = tierSet.slice(slices['Fundex OU'], slices.CAP).concat(tierSet.slice(slices['National Dex']));
+		//else if (format === 'internationaluber') tierSet = tierSet.slice(slices['Fundex Uber'], slices.CAP).concat(tierSet.slice(slices.AG));
+		//else if (format === 'internationalou') tierSet = tierSet.slice(slices['Fundex OU'], slices.CAP).concat(tierSet.slice(slices.OU));
 		else if (format === 'cap') tierSet = tierSet.slice(slices.CAP, slices.AG || slices.Uber).concat(tierSet.slice(slices.OU));
 		else if (format === 'caplc') {
 			tierSet = tierSet.slice(slices['CAP LC'], slices.AG || slices.Uber).concat(tierSet.slice(slices.LC));
