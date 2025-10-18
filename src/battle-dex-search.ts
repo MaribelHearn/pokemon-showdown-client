@@ -613,7 +613,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 			this.dex = Dex.mod('gen7letsgo' as ID);
 		}
 		if (format.includes('national') || format.startsWith('nd') || format.includes('natdex') || format.includes('international')) {
-			if (!format.includes('fundex') && !format.includes('international')) {
+			if (!format.includes('fundex')) {
 				format = (format.startsWith('nd') ? format.slice(2) :
 					format.includes('natdex') ? format.slice(6) : format.slice(11)) as ID;
 			}
