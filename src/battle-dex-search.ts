@@ -1015,6 +1015,15 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 			});
 		}
 
+		// Filter Fundex Pokemon out of National Dex tiers
+		if (!format.includes('fundex') && !format.includes('international')) {
+			tierSet = tierSet.filter(([type, id]) => {
+				if (type === 'pokemon') {
+					return Dex.species.get(id).num < 2000;
+				}
+			});
+		}
+
 		return tierSet;
 	}
 	filter(row: SearchRow, filters: string[][]) {
