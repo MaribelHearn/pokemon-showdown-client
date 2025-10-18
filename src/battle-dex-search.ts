@@ -917,7 +917,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 			table = table['gen8' + this.formatType];
 		} else if (this.formatType === 'letsgo') {
 			table = table['gen7letsgo'];
-		} else if (this.formatType === 'natdex') {
+		} else if (this.formatType === 'natdex' || this.formatType === 'international') {
 			table = table['natdex'];
 		} else if (this.formatType?.includes('metronome')) {
 			table = table['metronome'];
