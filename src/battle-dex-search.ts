@@ -784,7 +784,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 					(learnset[moveid].includes(`${gen + 1}`) && move.gen === gen))) {
 				return true;
 			}
-			if (!this.formatType || this.formatType === 'fundex') {
+			if (!this.formatType || this.formatType.includes('fundex')) {
 				break;
 			}
 			learnsetid = this.nextLearnsetid(learnsetid, speciesid);
@@ -1480,7 +1480,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 					) {
 						continue;
 					}
-					if (this.formatType !== 'natdex' && this.formatType !== 'fundex' && this.formatType !== 'international' && move.isNonstandard === "Past") {
+					if (this.formatType !== 'natdex' && !this.formatType?.includes('fundex') && this.formatType !== 'international' && move.isNonstandard === "Past") {
 						continue;
 					}
 					if (
@@ -1499,7 +1499,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 					}
 				}
 			}
-			if (!this.formatType || this.formatType === 'fundex') {
+			if (!this.formatType || this.formatType.includes('fundex')) {
 				break;
 			}
 			learnsetid = this.nextLearnsetid(learnsetid, species.id);
@@ -1513,12 +1513,12 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 				if (sketch) {
 					if (move.noSketch || move.isMax || move.isZ) continue;
 					if (move.isNonstandard && move.isNonstandard !== 'Past') continue;
-					if (move.isNonstandard === 'Past' && this.formatType !== 'natdex' && this.formatType !== 'fundex') continue;
+					if (move.isNonstandard === 'Past' && this.formatType !== 'natdex' && !this.formatType?.includes('fundex')) continue;
 					sketchMoves.push(move.id);
 				} else {
 					if (!(dex.gen < 8 || this.formatType === 'natdex') && move.isZ) continue;
 					if (typeof move.isMax === 'string') continue;
-					if (move.isNonstandard === 'Past' && this.formatType !== 'natdex' && this.formatType !== 'fundex') continue;
+					if (move.isNonstandard === 'Past' && this.formatType !== 'natdex' && !this.formatType?.includes('fundex')) continue;
 					if (move.isNonstandard === 'LGPE' && this.formatType !== 'letsgo') continue;
 					moves.push(move.id);
 				}
