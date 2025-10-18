@@ -1480,7 +1480,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 					) {
 						continue;
 					}
-					if (this.formatType !== 'natdex' && this.formatType !== 'fundex' && move.isNonstandard === "Past") {
+					if (this.formatType !== 'natdex' && this.formatType !== 'fundex' && this.formatType !== 'international' && move.isNonstandard === "Past") {
 						continue;
 					}
 					if (
