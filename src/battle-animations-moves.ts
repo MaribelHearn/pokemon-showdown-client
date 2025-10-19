@@ -34541,7 +34541,7 @@ BattleMoveAnims['magicaltempest'] = {
 			z: attacker.z,
 			scale: 0.1,
 			opacity: 0.6,
-			time: 500,
+			time: 1000,
 		}, 'linear', 'explode');
 		for (var i = 0; i < 5; i++) {
 			scene.showEffect('energyball', {
@@ -34550,12 +34550,29 @@ BattleMoveAnims['magicaltempest'] = {
 				z: attacker.z,
 				scale: 0.2,
 				opacity: 0.6,
+				time: 1000,
+			}, {
+				x: attacker.x + Math.floor(Math.random() * 100),
+				y: attacker.y + Math.floor(Math.random() * 100),
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 0.6,
+				time: 1500,
+			}, 'linear', 'explode');
+		}
+		for (var i = 0; i < 5; i++) {
+			scene.showEffect('energyball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.2,
+				opacity: 0.6,
 				time: 500,
 			}, {
-				x: attacker.x + Math.floor(Math.random() * 50),
-				y: attacker.y + Math.floor(Math.random() * 50),
+				x: attacker.x - Math.floor(Math.random() * 100),
+				y: attacker.y - Math.floor(Math.random() * 100),
 				z: attacker.z,
-				scale: 0.7,
+				scale: 0.5,
 				opacity: 0.6,
 				time: 1000,
 			}, 'linear', 'explode');
@@ -34569,10 +34586,10 @@ BattleMoveAnims['magicaltempest'] = {
 				opacity: 0.6,
 				time: 500,
 			}, {
-				x: attacker.x - Math.floor(Math.random() * 50),
-				y: attacker.y - Math.floor(Math.random() * 50),
+				x: attacker.x + Math.floor(Math.random() * 100),
+				y: attacker.y - Math.floor(Math.random() * 100),
 				z: attacker.z,
-				scale: 0.7,
+				scale: 0.5,
 				opacity: 0.6,
 				time: 1000,
 			}, 'linear', 'explode');
@@ -34586,27 +34603,10 @@ BattleMoveAnims['magicaltempest'] = {
 				opacity: 0.6,
 				time: 500,
 			}, {
-				x: attacker.x + Math.floor(Math.random() * 50),
-				y: attacker.y - Math.floor(Math.random() * 50),
+				x: attacker.x - Math.floor(Math.random() * 100),
+				y: attacker.y + Math.floor(Math.random() * 100),
 				z: attacker.z,
-				scale: 0.7,
-				opacity: 0.6,
-				time: 1000,
-			}, 'linear', 'explode');
-		}
-		for (var i = 0; i < 5; i++) {
-			scene.showEffect('energyball', {
-				x: attacker.x,
-				y: attacker.y,
-				z: attacker.z,
-				scale: 0.2,
-				opacity: 0.6,
-				time: 500,
-			}, {
-				x: attacker.x - Math.floor(Math.random() * 50),
-				y: attacker.y + Math.floor(Math.random() * 50),
-				z: attacker.z,
-				scale: 0.7,
+				scale: 0.5,
 				opacity: 0.6,
 				time: 1000,
 			}, 'linear', 'explode');
