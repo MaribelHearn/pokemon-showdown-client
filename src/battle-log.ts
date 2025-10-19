@@ -170,7 +170,8 @@ export class BattleLog {
 			break;
 
 		case 'chatmsg-raw': case 'raw': case 'html':
-			divHTML = BattleLog.sanitizeHTML(args[1]);
+			// Fundex: fix WINNER name display
+			divHTML = BattleLog.sanitizeHTML(args[1]).replace('*** WINNER ***', '\*\*\* WINNER \*\*\*');
 			break;
 
 		case 'uhtml': case 'uhtmlchange':
