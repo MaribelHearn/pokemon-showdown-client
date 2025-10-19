@@ -237,6 +237,7 @@ class BattleTextParser {
 
 	pokemonName = (pokemon: string) => {
 		if (!pokemon) return '';
+		if (!pokemon.includes('***')) pokemon = pokemon.replace(/\*\*\*/g, '\\*\\*\\*');
 		if (!pokemon.startsWith('p')) return `???pokemon:${pokemon}???`;
 		if (pokemon.charAt(3) === ':') return pokemon.slice(4).trim();
 		else if (pokemon.charAt(2) === ':') return pokemon.slice(3).trim();
