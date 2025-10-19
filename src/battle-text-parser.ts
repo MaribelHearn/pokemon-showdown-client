@@ -237,7 +237,6 @@ class BattleTextParser {
 
 	pokemonName = (pokemon: string) => {
 		if (!pokemon) return '';
-		if (pokemon.includes('***')) pokemon = pokemon.replace(/\*\*\*/g, '\\*\\*\\*');
 		if (!pokemon.startsWith('p')) return `???pokemon:${pokemon}???`;
 		if (pokemon.charAt(3) === ':') return pokemon.slice(4).trim();
 		else if (pokemon.charAt(2) === ':') return pokemon.slice(3).trim();
@@ -246,6 +245,7 @@ class BattleTextParser {
 
 	pokemon(pokemon: string, tmtrainer?: boolean) {
 		if (!pokemon) return '';
+		if (pokemon.includes('***')) pokemon = pokemon.replace(/\*\*\*/g, '\*\*\*');
 		let side = pokemon.slice(0, 2);
 		if (!['p1', 'p2', 'p3', 'p4'].includes(side)) return `???pokemon:${pokemon}???`;
 		const name = this.pokemonName(pokemon);
