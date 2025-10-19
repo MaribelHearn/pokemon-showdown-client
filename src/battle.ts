@@ -2974,7 +2974,7 @@ export class Battle {
 					this.scene.resultAnim(poke, 'Protection broken', 'bad');
 				}
 			}
-			if (poke.status === 'tmt') {
+			if (poke?.status === 'tmt') {
 				args.push('TMTRAINER');
 			}
 			this.log(args, kwArgs);
