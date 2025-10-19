@@ -166,7 +166,8 @@ export class BattleLog {
 		}
 
 		case 'chatmsg': case '':
-			divHTML = BattleLog.escapeHTML(args[1]);
+			// Fundex: fix WINNER name display
+			divHTML = BattleLog.escapeHTML(args[1]).replace('*** WINNER ***', '\*\*\* WINNER \*\*\*');
 			break;
 
 		case 'chatmsg-raw': case 'raw': case 'html':
