@@ -34567,14 +34567,14 @@ BattleMoveAnims['magicaltempest'] = {
 				z: attacker.z,
 				scale: 0.2,
 				opacity: 0.6,
-				time: 500,
+				time: 1000,
 			}, {
 				x: attacker.x - Math.floor(Math.random() * 100),
 				y: attacker.y - Math.floor(Math.random() * 100),
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.6,
-				time: 1000,
+				time: 1500,
 			}, 'linear', 'explode');
 		}
 		for (var i = 0; i < 5; i++) {
@@ -34584,14 +34584,14 @@ BattleMoveAnims['magicaltempest'] = {
 				z: attacker.z,
 				scale: 0.2,
 				opacity: 0.6,
-				time: 500,
+				time: 1000,
 			}, {
 				x: attacker.x + Math.floor(Math.random() * 100),
 				y: attacker.y - Math.floor(Math.random() * 100),
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.6,
-				time: 1000,
+				time: 1500,
 			}, 'linear', 'explode');
 		}
 		for (var i = 0; i < 5; i++) {
@@ -34601,14 +34601,14 @@ BattleMoveAnims['magicaltempest'] = {
 				z: attacker.z,
 				scale: 0.2,
 				opacity: 0.6,
-				time: 500,
+				time: 1000,
 			}, {
 				x: attacker.x - Math.floor(Math.random() * 100),
 				y: attacker.y + Math.floor(Math.random() * 100),
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.6,
-				time: 1000,
+				time: 1500,
 			}, 'linear', 'explode');
 		}
 	},
