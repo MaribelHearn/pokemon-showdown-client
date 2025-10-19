@@ -903,7 +903,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 			table = table['gen' + dex.gen + 'vgc'];
 		} else if (
 			table['gen' + dex.gen + 'doubles'] && dex.gen > 4 &&
-			this.formatType !== 'letsgo' && this.formatType !== 'bdspdoubles' && this.formatType !== 'dlc1doubles' &&
+			this.formatType !== 'letsgo' && this.formatType !== 'bdspdoubles' && this.formatType !== 'dlc1doubles' && !this.formatType?.startsWith('fundex') &&
 			(
 				format.includes('doubles') || format.includes('triples') ||
 				format === 'freeforall' || format.startsWith('ffa')
