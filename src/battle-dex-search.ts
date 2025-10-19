@@ -551,7 +551,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 	set: PokemonSet | null = null;
 
 	protected formatType: 'doubles' | 'bdsp' | 'bdspdoubles' | 'letsgo' | 'metronome' | 'natdex' | 'nfe' |
-	'dlc1' | 'dlc1doubles' | 'stadium' | 'fundex' | 'fundexdoubles' | 'international' | null = null;
+	'dlc1' | 'dlc1doubles' | 'stadium' | 'fundex' | 'fundexdoubles' | 'fundexmetronome' | 'international' | null = null;
 
 	/**
 	 * Cached copy of what the results list would be with only base filters
@@ -629,6 +629,9 @@ abstract class BattleTypedSearch<T extends SearchType> {
 		}
 		if (format.includes('fundex') && format.includes('vgc')) {
 			this.formatType = 'fundexdoubles';
+		}
+		else if (format.includes('fundex') && format.includes('metronome')) {
+			this.formatType = 'fundexmetronome';
 		}
 		else if (format.includes('fundex')) {
 			this.formatType = 'fundex';
