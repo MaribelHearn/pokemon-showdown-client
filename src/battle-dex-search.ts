@@ -627,7 +627,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 			this.formatType = 'nfe';
 			if (!format) format = 'ou' as ID;
 		}
-		if (format.includes('fundex') && format.includes('vgc')) {
+		if (format.includes('fundex') && (format.includes('vgc') || format.includes('doubles'))) {
 			this.formatType = 'fundexdoubles';
 		}
 		else if (format.includes('fundex')) {
