@@ -1033,6 +1033,7 @@ class BattleTextParser {
 			let id = BattleTextParser.effectId(effect);
 			let templateId = 'block';
 			if (id === 'mist' && this.gen <= 2) templateId = 'blockGen' + this.gen;
+			if (kwArgs.coyote) templateId += 'Coyote';
 			const template = this.template(templateId, effect);
 			return line1 + template.replace('[POKEMON]', this.pokemon(pokemon, tmtrainer)).replace('[SOURCE]', this.pokemon(attacker || kwArgs.of)).replace('[MOVE]', move);
 		}

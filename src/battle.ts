@@ -2054,6 +2054,8 @@ export class Battle {
 			if (!this.seeking && poke.speciesForme === "Snake") {
 				BattleSound.playEffect('audio/alert.mp3');
 			}
+			// Fundex: custom message for shiny Chuck Testa
+			if (poke.speciesForme === 'Chuck Testa' && poke.shiny) kwArgs.coyote = '.';
 			this.log(args, kwArgs);
 			break;
 		}
