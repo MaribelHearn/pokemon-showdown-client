@@ -34528,6 +34528,91 @@ BattleMoveAnims['rainbowufosofterror'] = {
 		}, 'ballistic', 'fade');
 	},
 };
+BattleMoveAnims['magicaltempest'] = {
+	anim(scene, [attacker, defender]) {
+		scene.showEffect('energyball', {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			opacity: 0.6,
+		}, {
+			x: attacker.x,
+			y: attacker.y,
+			z: attacker.z,
+			scale: 0.1,
+			opacity: 0.6,
+			time: 500,
+		}, 'linear', 'explode');
+		for (var i = 0; i < 5; i++) {
+			scene.showEffect('energyball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.2,
+				opacity: 0.6,
+				time: 500,
+			}, {
+				x: attacker.x + Math.floor(Math.random() * 50),
+				y: attacker.y + Math.floor(Math.random() * 50),
+				z: attacker.z,
+				scale: 0.7,
+				opacity: 0.6,
+				time: 1000,
+			}, 'linear', 'explode');
+		}
+		for (var i = 0; i < 5; i++) {
+			scene.showEffect('energyball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.2,
+				opacity: 0.6,
+				time: 500,
+			}, {
+				x: attacker.x - Math.floor(Math.random() * 50),
+				y: attacker.y - Math.floor(Math.random() * 50),
+				z: attacker.z,
+				scale: 0.7,
+				opacity: 0.6,
+				time: 1000,
+			}, 'linear', 'explode');
+		}
+		for (var i = 0; i < 5; i++) {
+			scene.showEffect('energyball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.2,
+				opacity: 0.6,
+				time: 500,
+			}, {
+				x: attacker.x + Math.floor(Math.random() * 50),
+				y: attacker.y - Math.floor(Math.random() * 50),
+				z: attacker.z,
+				scale: 0.7,
+				opacity: 0.6,
+				time: 1000,
+			}, 'linear', 'explode');
+		}
+		for (var i = 0; i < 5; i++) {
+			scene.showEffect('energyball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.2,
+				opacity: 0.6,
+				time: 500,
+			}, {
+				x: attacker.x - Math.floor(Math.random() * 50),
+				y: attacker.y + Math.floor(Math.random() * 50),
+				z: attacker.z,
+				scale: 0.7,
+				opacity: 0.6,
+				time: 1000,
+			}, 'linear', 'explode');
+		}
+	},
+};
 BattleMoveAnims['matterstorm'] = {
 	anim(scene, [attacker, defender]) {
 		scene.showEffect('darkmatter', {
@@ -37882,7 +37967,7 @@ BattleMoveAnims['illstarreddive'] = {anim:BattleMoveAnims['quickattack'].anim};
 BattleMoveAnims['peerlesswindgod'] = {anim:BattleMoveAnims['extremespeed'].anim};
 //nope uses default animation
 BattleMoveAnims['zantetsuken'] = {anim:BattleMoveAnims['sacredsword'].anim};
-BattleMoveAnims['magicaltempest'] = {anim:BattleMoveAnims['thunder'].anim};
+//magicaltempest see above
 BattleMoveAnims['handofdestruction'] = {anim:BattleMoveAnims['punishment'].anim};
 //matterstorm see above
 //thousandcuts see above
