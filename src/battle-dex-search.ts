@@ -1026,7 +1026,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 		}
 
 		// Filter non-Metronome out of Metronome tiers
-		if (!format.includes('metronome')) {
+		if (format.includes('metronome')) {
 			tierSet = tierSet.filter(([type, id]) => {
 				if (type === 'pokemon') {
 					return this.canLearn(id, Dex.moves.get('metronome').id);
