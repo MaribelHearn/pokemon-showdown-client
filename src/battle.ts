@@ -1491,7 +1491,10 @@ export class Battle {
 			else if (toID(pokemon.getSpeciesForme()) === 'chucktesta' && move.id === 'nope') {
 				BattleSound.playEffect(`audio/cries/chucktesta.mp3`);
 			}
-			else if (!['objection', 'holdit', 'takethat', 'nope'].includes(move.id)) {
+			else if (toID(pokemon.getSpeciesForme()) === 'kingharkinian' && move.id === 'dinnerblaster') {
+				BattleSound.playEffect(`audio/moves/dinnerblaster.mp3`);
+			}
+			else if (!['objection', 'holdit', 'takethat', 'nope', 'dinnerblaster'].includes(move.id)) {
 				BattleSound.playEffect(`audio/moves/${move.id}.mp3`);
 			}
 		}
