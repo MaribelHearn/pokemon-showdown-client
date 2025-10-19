@@ -245,7 +245,7 @@ class BattleTextParser {
 
 	pokemon(pokemon: string, tmtrainer?: boolean) {
 		if (!pokemon) return '';
-		if (pokemon.includes('***')) pokemon = pokemon.replace(/\*\*\*/g, '\*\*\*');
+		if (pokemon.includes('*** WINNER ***')) pokemon = pokemon.replace(/\*\*\*/g, '🞲🞲🞲');
 		let side = pokemon.slice(0, 2);
 		if (!['p1', 'p2', 'p3', 'p4'].includes(side)) return `???pokemon:${pokemon}???`;
 		const name = this.pokemonName(pokemon);
