@@ -792,7 +792,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 		return false;
 	}
 	getTier(pokemon: Species) {
-		if (this.formatType?.includes('metronome') || this.formatType === 'natdex' || this.formatType === 'international') {
+		if (this.format.includes('metronome') || this.formatType === 'natdex' || this.formatType === 'international') {
 			return pokemon.num >= 0 ? String(pokemon.num) : pokemon.tier;
 		}
 		let table = window.BattleTeambuilderTable;
