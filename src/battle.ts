@@ -3636,11 +3636,11 @@ export class Battle {
 			this.scene.beforeMove(poke);
 			this.useMove(poke, move, poke2, kwArgs);
 			this.animateMove(poke, move, poke2, kwArgs);
-			if (poke.status === 'tmt') {
-				args.push('TMTRAINER');
-			}
-			else if (poke.ability === 'Incomprehensible') {
+			if (poke.ability === 'Incomprehensible') {
 				args.push('Incomprehensible');
+			}
+			else if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
 			}
 			this.log(args, kwArgs);
 			this.scene.afterMove(poke);
