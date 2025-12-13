@@ -1117,6 +1117,9 @@ class BattleTooltips {
 		if (ability === 'hustle' || (ability === 'gorillatactics' && !clientPokemon?.volatiles['dynamax'])) {
 			stats.atk = Math.floor(stats.atk * 1.5);
 		}
+		if (ability === 'insanity') {
+			stats.spa = Math.floor(stats.atk * 1.5);
+		}
 		if (weather) {
 			if (this.battle.gen >= 4 && this.pokemonHasType(pokemon, 'Rock') && weather === 'sandstorm') {
 				stats.spd = Math.floor(stats.spd * 1.5);
@@ -1558,6 +1561,9 @@ class BattleTooltips {
 		if (value.tryAbility('Hustle') && move.category === 'Physical') {
 			accuracyModifiers.push(3277);
 			value.abilityModify(0.8, "Hustle");
+		} else if (value.tryAbility('Insanity') && move.category === 'Special') {
+			accuracyModifiers.push(3277);
+			value.abilityModify(0.8, "Insanity");
 		} else if (value.tryAbility('Compound Eyes')) {
 			accuracyModifiers.push(5325);
 			value.abilityModify(1.3, "Compound Eyes");
