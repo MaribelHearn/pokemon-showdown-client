@@ -759,7 +759,7 @@ class BattleTooltips {
 			if (move.flags.arrow && ability === 'sharpshooter') {
 				text += `<p class="movetag">&#x2713; Arrow <small>(boosted by Sharpshooter)</small></p>`;
 			}
-			if ((move.type === 'Fire' || move.type === 'Water' || move.type === 'Electric' || move.type === 'Ground') && move.category !== 'Status' && ability === 'elementalist') {
+			if ((move.type === 'Steel' || move.type === 'Grass' || move.type === 'Fire' || move.type === 'Ground' || move.type === 'Water') && move.category !== 'Status' && ability === 'elementalist') {
 				text += `<p class="movetag">&#x2713; Elemental <small>(boosted by Elementalist)</small></p>`;
 			}
 			if ((move.recoil || move.hasCrashDamage) && ability === 'reckless') {
