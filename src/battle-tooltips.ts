@@ -1118,7 +1118,7 @@ class BattleTooltips {
 			stats.atk = Math.floor(stats.atk * 1.5);
 		}
 		if (ability === 'insanity') {
-			stats.spa = Math.floor(stats.atk * 1.5);
+			stats.spa = Math.floor(stats.spa * 1.5);
 		}
 		if (weather) {
 			if (this.battle.gen >= 4 && this.pokemonHasType(pokemon, 'Rock') && weather === 'sandstorm') {
