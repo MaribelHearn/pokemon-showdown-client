@@ -1190,11 +1190,20 @@ class BattleItemSearch extends BattleTypedSearch<'item'> {
 			table = table['gen' + this.dex.gen];
 		}
 		if (!table.itemSet) {
-			table.itemSet = table.items.map((r: any) => {
+			table.items = table.items.filter((r: any) => {
 				if (typeof r === 'string') {
-					return ['item', r];
+						const itemGen = this.dex.items.get(r).gen;
+						if (this.formatType?.startsWith('fundex') && itemGen === 2) {
+								return false;
+						}
 				}
-				return [r[0], r[1]];
+				return true;
+			});
+			table.itemSet = table.items.map((r: any) => {
+					if (typeof r === 'string') {
+							return ['item', r];
+					}
+					return [r[0], r[1]];
 			});
 			table.items = null;
 		}
