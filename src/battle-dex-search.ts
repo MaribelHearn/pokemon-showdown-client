@@ -1191,9 +1191,9 @@ class BattleItemSearch extends BattleTypedSearch<'item'> {
 		}
 		if (!table.itemSet) {
 			table.items = table.items.filter((r: any) => {
-				if (typeof r === 'string') {
+				if (this.formatType?.startsWith('fundex') && typeof r === 'string') {
 						const itemGen = this.dex.items.get(r).gen;
-						if (this.formatType?.startsWith('fundex') && itemGen === 2) {
+						if (itemGen === 2) {
 								return false;
 						}
 				}
