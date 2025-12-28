@@ -962,7 +962,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 		else if (format === 'fundexpurehackmons') tierSet = tierSet.slice(0, slices.CAP).concat(tierSet.slice(slices.AG));
 		else if (format === 'fundexuber' || format.startsWith('fundexmetronome') || format === 'fundexlosersgame') tierSet = tierSet.slice(0, slices.CAP);
 		else if (format === 'fundexlc') tierSet = tierSet.slice(slices['Fundex LC'], slices.CAP);
-		else if (format.startsWith('fundex')) tierSet = tierSet.slice(slices['Fundex OU'], slices.CAP);
+		else if (format.startsWith('fundex') || format === 'customgame') tierSet = tierSet.slice(slices['Fundex OU'], slices.CAP);
 		else if (format === 'internationaluber') tierSet = tierSet.slice(slices['Fundex Uber']);
 		else if (format === 'cap') tierSet = tierSet.slice(slices.CAP, slices.AG || slices.Uber).concat(tierSet.slice(slices.OU));
 		else if (format === 'caplc') {
@@ -1017,7 +1017,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 		}
 
 		// Filter Fundex Pokemon out of National Dex tiers
-		if (!format.includes('fundex') && !format.includes('international')) {
+		if (!format.includes('fundex') && !format.includes('international') && format !== 'customgame') {
 			tierSet = tierSet.filter(([type, id]) => {
 				if (type === 'pokemon') {
 					return Dex.species.get(id).num < 2000;
