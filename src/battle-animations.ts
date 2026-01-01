@@ -1710,7 +1710,7 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/super-star-boss.mp3', 6000, 98000, this.bgm);
 			break;
 		case 6:
-			this.bgm = BattleSound.loadBgm('audio/bgm/gen1-trainer.mp3', 14000, 97000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/gen1-trainer.mp3', 15000, 97000, this.bgm);
 			break;
 		case 7:
 			this.bgm = BattleSound.loadBgm('audio/bgm/battle-against-machine.mp3', 0, 95000, this.bgm);
@@ -1785,56 +1785,6 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/ghetsis.mp3', 4000, 133000, this.bgm);
 			break;
 		}
-		/*case 1:
-			this.bgm = BattleSound.loadBgm('audio/dpp-trainer.mp3', 13440, 96959, this.bgm);
-			break;
-		case 2:
-			this.bgm = BattleSound.loadBgm('audio/dpp-rival.mp3', 13888, 66352, this.bgm);
-			break;
-		case 3:
-			this.bgm = BattleSound.loadBgm('audio/hgss-johto-trainer.mp3', 23731, 125086, this.bgm);
-			break;
-		case 4:
-			this.bgm = BattleSound.loadBgm('audio/hgss-kanto-trainer.mp3', 13003, 94656, this.bgm);
-			break;
-		case 5:
-			this.bgm = BattleSound.loadBgm('audio/bw-trainer.mp3', 14629, 110109, this.bgm);
-			break;
-		case 6:
-			this.bgm = BattleSound.loadBgm('audio/bw-rival.mp3', 19180, 57373, this.bgm);
-			break;
-		case 7:
-			this.bgm = BattleSound.loadBgm('audio/bw-subway-trainer.mp3', 15503, 110984, this.bgm);
-			break;
-		case 8:
-			this.bgm = BattleSound.loadBgm('audio/bw2-kanto-gym-leader.mp3', 14626, 58986, this.bgm);
-			break;
-		case 9:
-			this.bgm = BattleSound.loadBgm('audio/bw2-rival.mp3', 7152, 68708, this.bgm);
-			break;
-		case 10:
-			this.bgm = BattleSound.loadBgm('audio/xy-trainer.mp3', 7802, 82469, this.bgm);
-			break;
-		case 11:
-			this.bgm = BattleSound.loadBgm('audio/xy-rival.mp3', 7802, 58634, this.bgm);
-			break;
-		case 12:
-			this.bgm = BattleSound.loadBgm('audio/oras-trainer.mp3', 13579, 91548, this.bgm);
-			break;
-		case 13:
-			this.bgm = BattleSound.loadBgm('audio/oras-rival.mp3', 14303, 69149, this.bgm);
-			break;
-		case 14:
-			this.bgm = BattleSound.loadBgm('audio/sm-trainer.mp3', 8323, 89230, this.bgm);
-			break;
-		case -101:
-			this.bgm = BattleSound.loadBgm('audio/spl-elite4.mp3', 3962, 152509, this.bgm);
-			break;
-		case 15:
-		default:
-			this.bgm = BattleSound.loadBgm('audio/sm-rival.mp3', 11389, 62158, this.bgm);
-			break;
-		}*/
 
 		this.updateBgm();
 	}
@@ -2433,6 +2383,22 @@ export class PokemonSprite extends Sprite {
 			}
 		}
 	}
+	playEntryCry(pokemon: Pokemon, cryurl: string) {
+		// check for custom shiny cry or forme cry
+		const shinyCry = ['Mario', 'Luigi', 'Bowser'];
+
+		const formeCry = ['Mega Dennis', 'Missingno.-Yellow'];
+
+		if (shinyCry.includes(pokemon.speciesForme)) {
+			BattleSound.playEffect(cryurl.replace('.mp3', '-shiny.mp3'));
+		}
+		else if (formeCry.includes(pokemon.speciesForme)) {
+			BattleSound.playEffect(`audio/cries/${pokemon.getBaseSpecies().id}.mp3`);
+		}
+		else {
+			BattleSound.playEffect(cryurl);
+		}
+	}
 	animSummon(pokemon: Pokemon, slot: number, instant?: boolean) {
 		if (!this.scene.animating) return;
 		this.scene.$sprites[+this.isFrontSprite].append(this.$el);
@@ -2447,7 +2413,7 @@ export class PokemonSprite extends Sprite {
 			return;
 		}
 		if (this.cryurl && pokemon.speciesForme !== 'Chuck Testa') {
-			BattleSound.playEffect(this.cryurl);
+			this.playEntryCry(pokemon, this.cryurl);
 		}
 		this.$el.css(this.scene.pos({
 			display: 'block',
@@ -2672,43 +2638,47 @@ export class PokemonSprite extends Sprite {
 			// Fundex: faint cries
 			const faintCries = ['Bowser', 'Captain Falcon', 'Darth Vader', 'Kirby', 'Leeroy Jenkins', 'Link', 'Snake-Busted', 'Tabuu', 'Young Link', 'Zero'];
 
-			if (faintCries.includes(pokemon.speciesForme)) {
-				BattleSound.playEffect(this.cryurl.replace(".mp3", "-faint.mp3"));
-			}
+			const formeCries = ['Missingno.-Yellow'];
 
 			const touhouFaintCry = ['Flandre', 'Marisa', 'Lily White', 'Cirno', 'Achi Cirno', 'Reimu', 'Utsuho', 'Yuyuko', 'Remilia', 'Sakuya',
 				'Wriggle', 'Eirin', 'Kaguya', 'Tenshi', 'Suika', 'Letty', 'Keine', 'Keine-Hakutaku', 'Yumemi', 'Mokou', 'Yuugi', 'Komachi', 'Eiki',
-				'Yukari', 'Yamame', 'Iku', 'Medicine', 'Yuuka', 'Minoriko', 'Shizuha', 'Alice', 'Genjii', 'VIVIT', 'Angel VIVIT', 'Maribel', 'Kogasa',
+				'Yukari', 'Yamame', 'Iku', 'Medicine', 'Yuuka', 'Minoriko', 'Shizuha', 'Alice', 'Genjii', 'Maribel', 'Kogasa',
 				'Meiling', 'Patchouli', 'Suwako', 'Shingyoku', 'Shingyoku-Priestess', 'Shingyoku-Priest', 'Sariel', 'Satori', 'Koishi', 'Nitori',
 				'Byakuren', 'Nue', 'Ichirin', 'Sunny Milk', 'Luna Child', 'Star Sapphire', 'Sanae', 'Kanako', 'Ran', 'Hina', 'Chen', 'Reisen',
 				'Parsee', 'Rin', 'Daiyousei', 'Konngara', 'Yumeko', 'Rumia', 'Koakuma', 'Youmu', 'Mystia', 'Tewi', 'Aya', 'Kisume'];
 
-			if (touhouFaintCry.includes(pokemon.speciesForme)) {
-				BattleSound.playEffect("audio/cries/touhou-faint.mp3");
-			}
+			const seihouFaintCry = ['VIVIT', 'Angel VIVIT'];
 
 			const telefangFaintCry = ['Yarrow', 'Doomsday', 'Kanzou', 'Hagumanoki', 'Ruscus', 'Ryuuguu'];
 
-			if (telefangFaintCry.includes(pokemon.speciesForme)) {
-				BattleSound.playEffect("audio/cries/telefang-faint.mp3");
-			}
-
 			const digitalFaintCry = ['Blue Screen of Death', 'Internet Explorer', 'Inori Aizawa', 'Microsoft Edge', 'Mozilla Firefox', 'Google Chrome', 'Recycle Bin'];
-
-			if (digitalFaintCry.includes(pokemon.speciesForme)) {
-				BattleSound.playEffect("audio/cries/digital-faint.mp3");
-			}
 
 			const labyrinthFaintCry = ['Hibachi', 'Hibachi 2', 'Evaccania DOOM', 'Berserk Maribel', 'Serpent of Chaos', '*** WINNER ***'];
 
-			if (labyrinthFaintCry.includes(pokemon.speciesForme)) {
-				BattleSound.playEffect("audio/cries/lot-faint.mp3");
-			}
-
-			// temporary
 			const marioFaintCry = ['Mario', 'Paper Mario', 'Malleo', 'Luigi', 'Mr. L', 'Weegee', 'Baby Bowser', 'Giga Bowser', 'Dry Bowser', 'Boo', 'Boolussus', 'King Boo', 'Wiggler', 'Angry Wiggler'];
 
-			if (marioFaintCry.includes(pokemon.speciesForme)) {
+			if (faintCries.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect(this.cryurl.replace(".mp3", "-faint.mp3"));
+			}
+			else if (formeCries.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect(`audio/cries/${pokemon.getBaseSpecies().id}-faint.mp3`);
+			}
+			else if (touhouFaintCry.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect("audio/cries/touhou-faint.mp3");
+			}
+			else if (seihouFaintCry.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect("audio/cries/seihou-faint.mp3");
+			}
+			else if (telefangFaintCry.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect("audio/cries/telefang-faint.mp3");
+			}
+			else if (digitalFaintCry.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect("audio/cries/digital-faint.mp3");
+			}
+			else if (labyrinthFaintCry.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect("audio/cries/lot-faint.mp3");
+			}
+			else if (marioFaintCry.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect("audio/cries/mario-faint.mp3");
 			}
 		}
@@ -2844,7 +2814,7 @@ export class PokemonSprite extends Sprite {
 				opacity: 0.3,
 			}, oldsp), 300, () => {
 				if (this.cryurl && doCry) {
-					BattleSound.playEffect(this.cryurl);
+					this.playEntryCry(pokemon, this.cryurl);
 				}
 				this.$el.replaceWith($newEl);
 				this.$el = $newEl;
