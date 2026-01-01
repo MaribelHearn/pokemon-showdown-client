@@ -2636,7 +2636,7 @@ export class PokemonSprite extends Sprite {
 		this.scene.updateSidebar(pokemon.side);
 		if (this.cryurl) {
 			// Fundex: faint cries
-			const faintCries = ['Bowser', 'Captain Falcon', 'Darth Vader', 'Kirby', 'Leeroy Jenkins', 'Link', 'Snake-Busted', 'Tabuu', 'Young Link', 'Zero'];
+			const faintCries = ['Bowser', 'Captain Falcon', 'Dark Matter', 'Darth Vader', 'Giygas', 'Kirby', 'Leeroy Jenkins', 'Link', 'Snake-Busted', 'Tabuu', 'Young Link', 'Zero'];
 
 			const formeCries = ['Missingno.-Yellow'];
 
