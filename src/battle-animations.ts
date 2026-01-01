@@ -1678,6 +1678,10 @@ export class BattleScene implements BattleSceneStub {
 		if (this.bgmNum === bgmNum) return;
 		this.bgmNum = bgmNum;
 
+		if (bgmNum === -4 && !this.currentBgm()?.includes('encounter')) {
+			return;
+		}
+
 		switch (bgmNum) {
 		case -1:
 			this.bgm = BattleSound.loadBgm('audio/bw2-homika-dogars.mp3', 1661, 68131, this.bgm);

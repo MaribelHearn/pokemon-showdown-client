@@ -2937,7 +2937,7 @@ export class Battle {
 				break;
 			// Fundex: Phoenix/Edgeworth sig move KO check
 			case 'objection': case 'holdit': case 'takethat':
-				if (!this.seeking && (poke.speciesForme === 'Phoenix Wright' || poke.speciesForme === 'Miles Edgeworth')) {
+				if (!this.seeking && !this.scene.currentBgm().includes('turnabout') && (poke.speciesForme === 'Phoenix Wright' || poke.speciesForme === 'Miles Edgeworth')) {
 					this.scene.setBgm(-5);
 				}
 			// ability activations
