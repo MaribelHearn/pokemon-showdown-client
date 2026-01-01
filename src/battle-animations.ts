@@ -3227,7 +3227,7 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	},
 	recyclebinback: {
 		url: 'recyclebin-back.png',
-		w: 96, h: 96,
+		w: 144, h: 144,
 	},
 	recyclebinxp: {
 		url: 'recyclebin-xp.png',
@@ -3235,7 +3235,7 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	},
 	recyclebinxpback: {
 		url: 'recyclebin-xp-back.png',
-		w: 96, h: 96,
+		w: 144, h: 144,
 	},
 	shinepink: {
 		url: 'shine-pink.png',
