@@ -675,7 +675,7 @@ License: GPLv2
 	background: rgba(60,60,60,0.80);
 	color: #CCCCCC;
 } */
-.dark .bgm {
+.dark .battle-log .chat em {
 	color: #CCCCCC;
 }
 .dark .battle-log {
