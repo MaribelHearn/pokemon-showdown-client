@@ -1678,7 +1678,7 @@ export class BattleScene implements BattleSceneStub {
 		if (this.bgmNum === bgmNum) return;
 		this.bgmNum = bgmNum;
 
-		if (bgmNum === -4 && !this.currentBgm()?.includes('encounter')) {
+		if (bgmNum === -4 && this.currentBgm()?.includes('encounter')) {
 			return;
 		}
 
