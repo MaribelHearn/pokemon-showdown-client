@@ -2393,7 +2393,7 @@ export class PokemonSprite extends Sprite {
 
 		const formeCry = ['Mega Dennis', 'Missingno.-Yellow'];
 
-		if (shinyCry.includes(pokemon.speciesForme)) {
+		if (shinyCry.includes(pokemon.speciesForme) && pokemon.shiny) {
 			BattleSound.playEffect(cryurl.replace('.mp3', '-shiny.mp3'));
 		}
 		else if (formeCry.includes(pokemon.speciesForme)) {
