@@ -548,7 +548,10 @@ class BattleTooltips {
 		let [moveType, category] = this.getMoveType(move, value, gmaxMove || isZOrMax === 'maxmove');
 
 		if (isZOrMax === 'zmove') {
-			if (item.zMoveFrom === move.name) {
+			// Fundex: custom Z-move explod
+			if (move.name === 'explod') {
+				move = this.battle.dex.moves.get('Z-explod');
+			} else if (item.zMoveFrom === move.name) {
 				move = this.battle.dex.moves.get(item.zMove as string);
 			} else if (item.id === 'unknowniumz') {
 				move = this.battle.dex.moves.get(item.zMove as string);
