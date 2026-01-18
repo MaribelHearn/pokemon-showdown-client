@@ -37910,6 +37910,7 @@ BattleMoveAnims['study'] = {anim:BattleMoveAnims['calmmind'].anim};
 BattleMoveAnims['sovietreversal'] = {anim:BattleMoveAnims['reversal'].anim};
 BattleMoveAnims['lolwut'] = {anim(scene, [attacker, defender]) {/* do nothing */}};
 BattleMoveAnims['pingas'] = {anim(scene, [attacker, defender]) {/* do nothing */}};
+BattleMoveAnims['zexplod'] = {anim(scene, [attacker, defender]) {/* do nothing */}};
 //dinnerblaster see above
 BattleMoveAnims['warlockpunch'] = {anim:BattleMoveAnims['shadowpunch'].anim};
 BattleMoveAnims['catnarok'] = {anim:BattleMoveAnims['explosion'].anim};
