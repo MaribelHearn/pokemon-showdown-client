@@ -1417,11 +1417,6 @@ export class Battle {
 		if (fromeffect.id && kwArgs.from.startsWith("move:")) {
 			callerMoveForPressure = fromeffect as Move;
 		}
-		// Fundex: special case custom Z-move for explod
-		if (move.id === 'unrealunraveling' && pokemon.speciesForme === 'Zeeky H. Bomb') {
-			move = this.dex.moves.get('Z-explod');
-			target = pokemon;
-		}
 		if (!fromeffect.id || callerMoveForPressure || fromeffect.id === 'pursuit') {
 			let moveName = move.name;
 			if (!callerMoveForPressure) {
