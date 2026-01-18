@@ -456,7 +456,9 @@ class BattleTooltips {
 		BattleTooltips.hideTooltip();
 	}
 
+	// Fundex: add "nothing" Z-effect
 	static zMoveEffects: {[zEffect: string]: string} = {
+		'nothing': "Does nothing",
 		'clearnegativeboost': "Restores negative stat stages to 0",
 		'crit2': "Crit ratio +2",
 		'heal': "Restores HP 100%",
