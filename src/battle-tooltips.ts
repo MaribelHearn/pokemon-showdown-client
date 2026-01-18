@@ -551,6 +551,7 @@ class BattleTooltips {
 			// Fundex: custom Z-move explod
 			if (move.name === 'explod') {
 				move = this.battle.dex.moves.get('Z-explod');
+				category = 'Status';
 			} else if (item.zMoveFrom === move.name) {
 				move = this.battle.dex.moves.get(item.zMove as string);
 			} else if (item.id === 'unknowniumz') {
