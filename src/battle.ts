@@ -1420,12 +1420,16 @@ export class Battle {
 		if (!fromeffect.id || callerMoveForPressure || fromeffect.id === 'pursuit') {
 			let moveName = move.name;
 			if (!callerMoveForPressure) {
-				if (move.isZ) {
+				if (move.isZ && moveName !== 'explod') {
 					pokemon.item = move.isZ;
 					let item = Dex.items.get(move.isZ);
 					if (item.zMoveFrom) moveName = item.zMoveFrom;
-				} else if (move.name.slice(0, 2) === 'Z-') {
-					moveName = moveName.slice(2);
+				} else if (move.name.slice(0, 2) === 'Z-' || moveName === 'explod') {
+					if (moveName === 'explod') {
+						moveName = 'Z-explod';
+					} else {
+						moveName = moveName.slice(2);
+					}
 					move = Dex.moves.get(moveName);
 					if (window.BattleItems) {
 						for (let item in BattleItems) {
