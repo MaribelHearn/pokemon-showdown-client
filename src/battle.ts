@@ -2069,6 +2069,7 @@ export class Battle {
 		}
 		case '-zpower': {
 			let poke = this.getPokemon(args[1])!;
+			// Fundex: custom Z-move animations and sounds
 			if (poke.speciesForme === 'Utsuho') {
 				if (!this.seeking) BattleSound.playEffect('audio/caution.mp3');
 				this.scene.runOtherAnim('radioactive' as ID, [poke]);
@@ -2082,6 +2083,9 @@ export class Battle {
 				}
 				else if (poke.speciesForme === 'Leonidas' && !this.seeking) {
 					BattleSound.playEffect('audio/sparta.mp3');
+				}
+				else if (poke.speciesForme === 'Zeeky H. Bomb' && !this.seeking) {
+					BattleSound.playEffect('audio/zeekyz.mp3');
 				}
 				this.scene.runOtherAnim('zpower' as ID, [poke]);
 			}
