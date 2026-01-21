@@ -12,7 +12,7 @@
  */
 
 type SearchType = (
-	'pokemon' | 'type' | 'tier' | 'move' | 'item' | 'ability' | 'egggroup' | 'category' | 'article'
+	'pokemon' | 'type' | 'tier' | 'move' | 'item' | 'ability' | 'egggroup' | 'category' | 'article' | 'movecategory'
 );
 
 type SearchRow = (
@@ -52,6 +52,7 @@ class DexSearch {
 		egggroup: 7,
 		category: 8,
 		article: 9,
+		movecategory: 10,
 	};
 	static typeName = {
 		pokemon: 'Pok&eacute;mon',
@@ -63,6 +64,7 @@ class DexSearch {
 		egggroup: 'Egg group',
 		category: 'Category',
 		article: 'Article',
+		movecategory: 'Move category',
 	};
 	firstPokemonColumn: 'Tier' | 'Number' = 'Number';
 
@@ -93,6 +95,7 @@ class DexSearch {
 		case 'ability': return new BattleAbilitySearch('ability', format, speciesOrSet);
 		case 'type': return new BattleTypeSearch('type', format, speciesOrSet);
 		case 'category': return new BattleCategorySearch('category', format, speciesOrSet);
+		case 'movecategory': return new BattleMoveCategorySearch('movecategory', format, speciesOrSet);
 		}
 		return null;
 	}
@@ -360,7 +363,7 @@ class DexSearch {
 			if (searchType === 'pokemon' && (typeIndex === 5 || typeIndex > 7)) continue;
 			if (searchType === 'pokemon' && typeIndex === 3 && this.dex.gen < 8) continue;
 			// For move queries, accept types/categories as filters
-			if (searchType === 'move' && ((typeIndex !== 8 && typeIndex > 4) || typeIndex === 3)) continue;
+			if (searchType === 'move' && ((typeIndex !== 8 && typeIndex !== 10 && typeIndex > 4) || typeIndex === 3)) continue;
 			// For move queries in the teambuilder, don't accept pokemon as filters
 			if (searchType === 'move' && illegal && typeIndex === 1) continue;
 			// For ability/item queries, don't accept anything else as a filter
@@ -494,6 +497,15 @@ class DexSearch {
 				buf.push(['header', `${category} moves`]);
 				for (let id in BattleMovedex) {
 					if (BattleMovedex[id].category === category) {
+						(illegal && id in illegal ? illegalBuf : buf).push(['move', id as ID]);
+					}
+				}
+				break;
+			case 'movecategory':
+				let moveCategory = fId.charAt(0).toUpperCase() + fId.slice(1);
+				buf.push(['header', `${moveCategory} moves`]);
+				for (let id in BattleMovedex) {
+					if (BattleMovedex[id].flags.hasOwnProperty(moveCategory)) {
 						(illegal && id in illegal ? illegalBuf : buf).push(['move', id as ID]);
 					}
 				}
@@ -1699,6 +1711,47 @@ class BattleCategorySearch extends BattleTypedSearch<'category'> {
 			['category', 'physical' as ID],
 			['category', 'special' as ID],
 			['category', 'status' as ID],
+		];
+	}
+	getBaseResults() {
+		return this.getDefaultResults();
+	}
+	filter(row: SearchRow, filters: string[][]): boolean {
+		throw new Error("invalid filter");
+	}
+	sort(results: SearchRow[], sortCol: string | null, reverseSort?: boolean): SearchRow[] {
+		throw new Error("invalid sortcol");
+	}
+}
+
+class BattleMoveCategorySearch extends BattleTypedSearch<'movecategory'> {
+	getTable() {
+		return {bypasssub: 1, bite: 1, bullet: 1, cantusetwice: 1, charge: 1, contact: 1, dance: 1, defrost: 1, distance: 1, gravity: 1, heal: 1,
+				mirror: 1, allyanim: 1, nonsky: 1, powder: 1, protect: 1, pulse: 1, punch: 1, recharge: 1, reflectable: 1, snatch: 1, sound: 1};
+	}
+	getDefaultResults(): SearchRow[] {
+		return [
+			['movecategory', 'bypasssub' as ID],
+			['movecategory', 'bite' as ID],
+			['movecategory', 'bullet' as ID],
+			['movecategory', 'cantusetwice' as ID],
+			['movecategory', 'charge' as ID],
+			['movecategory', 'contact' as ID],
+			['movecategory', 'dance' as ID],
+			['movecategory', 'defrost' as ID],
+			['movecategory', 'distance' as ID],
+			['movecategory', 'gravity' as ID],
+			['movecategory', 'heal' as ID],
+			['movecategory', 'mirror' as ID],
+			['movecategory', 'nonsky' as ID],
+			['movecategory', 'powder' as ID],
+			['movecategory', 'protect' as ID],
+			['movecategory', 'pulse' as ID],
+			['movecategory', 'punch' as ID],
+			['movecategory', 'recharge' as ID],
+			['movecategory', 'reflectable' as ID],
+			['movecategory', 'snatch' as ID],
+			['movecategory', 'sound' as ID],
 		];
 	}
 	getBaseResults() {
