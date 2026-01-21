@@ -300,7 +300,7 @@ class DexSearch {
 
 		// Notes:
 		// - if we have a searchType, that searchType's buffer will be on top
-		let bufs: SearchRow[][] = [[], [], [], [], [], [], [], [], [], []];
+		let bufs: SearchRow[][] = [[], [], [], [], [], [], [], [], [], [], []]; // Fundex: added additional bucket
 		let topbufIndex = -1;
 
 		let count = 0;
@@ -308,7 +308,7 @@ class DexSearch {
 
 		/** [type, id, typeIndex] */
 		let instafilter: [SearchType, ID, number] | null = null;
-		let instafilterSort = [0, 1, 2, 5, 4, 3, 6, 7, 8];
+		let instafilterSort = [0, 1, 2, 5, 4, 3, 6, 7, 8, 9]; // Fundex: added additional integer
 		let illegal = this.typedSearch?.illegalReasons;
 
 		// We aren't actually looping through the entirety of the searchIndex
@@ -1726,8 +1726,8 @@ class BattleCategorySearch extends BattleTypedSearch<'category'> {
 
 class BattleMoveCategorySearch extends BattleTypedSearch<'movecategory'> {
 	getTable() {
-		return {bypasssub: 1, bite: 1, bullet: 1, cantusetwice: 1, charge: 1, contact: 1, dance: 1, defrost: 1, distance: 1, gravity: 1, heal: 1,
-				mirror: 1, allyanim: 1, nonsky: 1, powder: 1, protect: 1, pulse: 1, punch: 1, recharge: 1, reflectable: 1, snatch: 1, sound: 1};
+		return {bypasssub: 1, bite: 1, bullet: 1, cantusetwice: 1, charge: 1, contact: 1, dance: 1, defrost: 1, distance: 1, gravity: 1, heal: 1, mirror: 1,
+				allyanim: 1, nonsky: 1, powder: 1, protect: 1, pulse: 1, punch: 1, recharge: 1, reflectable: 1, snatch: 1, sound: 1, beam: 1, arrow: 1};
 	}
 	getDefaultResults(): SearchRow[] {
 		return [
@@ -1752,6 +1752,8 @@ class BattleMoveCategorySearch extends BattleTypedSearch<'movecategory'> {
 			['movecategory', 'reflectable' as ID],
 			['movecategory', 'snatch' as ID],
 			['movecategory', 'sound' as ID],
+			['movecategory', 'beam' as ID],
+			['movecategory', 'arrow' as ID],
 		];
 	}
 	getBaseResults() {
