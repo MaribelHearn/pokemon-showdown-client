@@ -667,6 +667,8 @@ abstract class BattleTypedSearch<T extends SearchType> {
 			return [this.sortRow!, ...BattleCategorySearch.prototype.getDefaultResults.call(this)];
 		} else if (sortCol === 'ability') {
 			return [this.sortRow!, ...BattleAbilitySearch.prototype.getDefaultResults.call(this)];
+		} else if (sortCol === 'movecategory') {
+			return [this.sortRow!, ...BattleMoveCategorySearch.prototype.getDefaultResults.call(this)];
 		}
 
 		if (!this.baseResults) {
@@ -1650,6 +1652,9 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 				break;
 			case 'category':
 				if (move.category !== value) return false;
+				break;
+			case 'movecategory':
+				if (!move.flags.hasOwnProperty(value)) return false;
 				break;
 			case 'pokemon':
 				if (!this.canLearn(value as ID, move.id)) return false;
