@@ -144,7 +144,7 @@ class DexSearch {
 			return true;
 		} else if (this.typedSearch.searchType === 'move') {
 			if (type === this.sortCol) this.sortCol = null;
-			if (!['type', 'category', 'pokemon'].includes(type)) return false;
+			if (!['type', 'category', 'pokemon', 'movecategory'].includes(type)) return false;
 			if (type === 'pokemon') entry[1] = toID(entry[1]);
 			if (!this.filters) this.filters = [];
 			this.filters.push(entry);
@@ -362,7 +362,7 @@ class DexSearch {
 			// For pokemon queries, accept types/tier/abilities/moves/eggroups as filters
 			if (searchType === 'pokemon' && (typeIndex === 5 || typeIndex > 7)) continue;
 			if (searchType === 'pokemon' && typeIndex === 3 && this.dex.gen < 8) continue;
-			// For move queries, accept types/categories as filters
+			// For move queries, accept types/categories/movecategories as filters
 			if (searchType === 'move' && ((typeIndex !== 8 && typeIndex !== 10 && typeIndex > 4) || typeIndex === 3)) continue;
 			// For move queries in the teambuilder, don't accept pokemon as filters
 			if (searchType === 'move' && illegal && typeIndex === 1) continue;
