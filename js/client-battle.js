@@ -587,7 +587,7 @@
 					if (disabled) {
 						targetMenus[0] += '<button disabled="disabled"></button> ';
 					} else if (!pokemon || pokemon.fainted) {
-						targetMenus[0] += '<button name="chooseMoveTarget" value="' + (i + 1) + '"><span class="picon" style="' + Dex.getPokemonIcon('missingno') + '"></span></button> ';
+						targetMenus[0] += '<button name="chooseMoveTarget" value="' + (i + 1) + '"><span class="picon" style="' + Dex.getPokemonIcon('missingnooriginal') + '"></span></button> ';
 					} else {
 						targetMenus[0] += '<button name="chooseMoveTarget" value="' + (i + 1) + '" class="has-tooltip" data-tooltip="' + BattleLog.escapeHTML(tooltipArgs) + '"><span class="picon" style="' + Dex.getPokemonIcon(pokemon) + '"></span>' + (this.battle.ignoreOpponent || this.battle.ignoreNicks ? pokemon.speciesForme : BattleLog.escapeHTML(pokemon.name)) + '<span class="' + pokemon.getHPColorClass() + '"><span style="width:' + (Math.round(pokemon.hp * 92 / pokemon.maxhp) || 1) + 'px"></span></span>' + (pokemon.status ? '<span class="status ' + pokemon.status + '"></span>' : '') + '</button> ';
 					}
@@ -607,7 +607,7 @@
 					if (disabled) {
 						targetMenus[1] += '<button disabled="disabled" style="visibility:hidden"></button> ';
 					} else if (!pokemon || pokemon.fainted) {
-						targetMenus[1] += '<button name="chooseMoveTarget" value="' + (-(i + 1)) + '"><span class="picon" style="' + Dex.getPokemonIcon('missingno') + '"></span></button> ';
+						targetMenus[1] += '<button name="chooseMoveTarget" value="' + (-(i + 1)) + '"><span class="picon" style="' + Dex.getPokemonIcon('missingnooriginal') + '"></span></button> ';
 					} else {
 						targetMenus[1] += '<button name="chooseMoveTarget" value="' + (-(i + 1)) + '" class="has-tooltip" data-tooltip="' + BattleLog.escapeHTML(tooltipArgs) + '"><span class="picon" style="' + Dex.getPokemonIcon(pokemon) + '"></span>' + BattleLog.escapeHTML(pokemon.name) + '<span class="' + pokemon.getHPColorClass() + '"><span style="width:' + (Math.round(pokemon.hp * 92 / pokemon.maxhp) || 1) + 'px"></span></span>' + (pokemon.status ? '<span class="status ' + pokemon.status + '"></span>' : '') + '</button> ';
 					}
