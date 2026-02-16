@@ -330,7 +330,7 @@
 				name += '<small>' + pokemon.name.substr(tagStart) + '</small>';
 			}
 		}
-		buf += '<span class="col pokemonnamecol">' + name + '</span> ';
+		buf += '<span class="col pokemonnamecol' + (name.length >= 18 ? ' small' : '') + '">' + name + '</span> ';
 
 		// error
 		if (errorMessage) {
