@@ -298,6 +298,9 @@
 		if (Search.urlRoot) attrs += ' href="' + Search.urlRoot + 'pokemon/' + id + '" data-target="push"';
 		var buf = '<li class="result"><a' + attrs + ' data-entry="pokemon|' + BattleLog.escapeHTML(pokemon.name) + '">';
 
+		// Fundex: remove CAP from everywhere
+		if (pokemon.num < 0) return;
+
 		// number
 		var tier = this.engine ? this.engine.getTier(pokemon) : pokemon.num;
 		// buf += '<span class="col numcol">' + (pokemon.num >= 0 ? pokemon.num : 'CAP') + '</span> ';
