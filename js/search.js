@@ -420,7 +420,7 @@
 		var name = pokemon.name;
 		var tagStart = (pokemon.forme && pokemon.num < 2000 ? name.length - pokemon.forme.length - 1 : 0);
 		if (tagStart) name = name.substr(0, tagStart) + '<small>' + pokemon.name.substr(tagStart) + '</small>';
-		buf += '<span class="col shortpokemonnamecol">' + name + '</span> ';
+		buf += '<span class="col shortpokemonnamecol' + (name.length >= 18 ? ' small' : '') + '">' + name + '</span> ';
 
 		// error
 		if (errorMessage) {
