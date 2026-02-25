@@ -660,7 +660,8 @@
 
 	Search.prototype.renderTypeRow = function (type, matchStart, matchLength, errorMessage) {
 		var attrs = '';
-		if (Search.urlRoot) attrs = ' href="' + Search.urlRoot + 'types/' + toID(type.name) + '" data-target="push"';
+		var id = type.name === '???' ? 'unknown' : toID(type.name);
+		if (Search.urlRoot) attrs = ' href="' + Search.urlRoot + 'types/' + id + '" data-target="push"';
 		var buf = '<li class="result"><a' + attrs + ' data-entry="type|' + BattleLog.escapeHTML(type.name) + '">';
 
 		// name
