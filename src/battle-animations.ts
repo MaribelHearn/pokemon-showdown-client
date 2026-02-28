@@ -2037,6 +2037,7 @@ export class PokemonSprite extends Sprite {
 		goldenbracket: ['Golden Bracket', 'bad'],
 		sovietreversal: ['Soviet Reversal', 'bad'],
 		denialofservice: ['Denial of Service', 'bad'],
+		houraielixir: ['Hourai Elixir', 'good'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;

@@ -60,12 +60,7 @@ class PSSearchResults extends preact.Component<{search: DexSearch}> {
 					<span style={Dex.getPokemonIcon(pokemon.id)}></span>
 				</span>
 
-
-			{pokemon.name.length >= 18 ?
-				<span class="col pokemonnamecol small">{this.renderName(pokemon.name, matchStart, matchEnd, tagStart)}</span>
-			:
 				<span class="col pokemonnamecol">{this.renderName(pokemon.name, matchStart, matchEnd, tagStart)}</span>
-			}
 
 				{errorMessage}
 			</a></li>;
@@ -78,11 +73,7 @@ class PSSearchResults extends preact.Component<{search: DexSearch}> {
 				<span style={Dex.getPokemonIcon(pokemon.id)}></span>
 			</span>
 
-			{pokemon.name.length >= 18 ?
-				<span class="col pokemonnamecol small">{this.renderName(pokemon.name, matchStart, matchEnd, tagStart)}</span>
-			:
-				<span class="col pokemonnamecol">{this.renderName(pokemon.name, matchStart, matchEnd, tagStart)}</span>
-			}
+			<span class="col pokemonnamecol">{this.renderName(pokemon.name, matchStart, matchEnd, tagStart)}</span>
 
 			<span class="col typecol">
 				{pokemon.types.map(type =>
