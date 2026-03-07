@@ -2268,12 +2268,12 @@ class BattleStatGuesser {
 			if (move.category === 'Status') {
 				if (['batonpass', 'healingwish', 'lunardance'].includes(move.id)) {
 					moveCount['Support']++;
-				} else if (['metronome', 'assist', 'copycat', 'mefirst', 'photongeyser', 'shellsidearm', 'recollection', 'catnarok', 'lightarrow', 'sledge'].includes(move.id)) {
+				} else if (['metronome', 'assist', 'copycat', 'mefirst', 'photongeyser', 'shellsidearm', 'recollection', 'catnarok', 'darkcatnarok', 'fierycatnarok', 'lightarrow', 'sledge'].includes(move.id)) {
 					moveCount['Physical'] += 0.5;
 					moveCount['Special'] += 0.5;
 				} else if (move.id === 'naturepower') {
 					moveCount['Special']++;
-				} else if (['protect', 'detect', 'spikyshield', 'kingsshield', 'barrelroll', 'firewall', 'electricalshield'].includes(move.id)) {
+				} else if (['protect', 'detect', 'spikyshield', 'kingsshield', 'barrelroll', 'firewall', 'electricalshield', 'parasoltwirl'].includes(move.id)) {
 					moveCount['Stall']++;
 				} else if (move.id === 'wish') {
 					moveCount['Restoration']++;
