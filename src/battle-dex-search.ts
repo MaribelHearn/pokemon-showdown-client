@@ -1196,7 +1196,7 @@ class BattleItemSearch extends BattleTypedSearch<'item'> {
 		let table = BattleTeambuilderTable;
 		if (this.formatType?.startsWith('bdsp')) {
 			table = table['gen8bdsp'];
-		} else if (this.formatType === 'natdex') {
+		} else if (this.formatType === 'natdex' || this.formatType === 'international') {
 			table = table['natdex'];
 		} else if (this.formatType?.includes('metronome')) {
 			table = table['metronome'];
@@ -1204,15 +1204,6 @@ class BattleItemSearch extends BattleTypedSearch<'item'> {
 			table = table['gen' + this.dex.gen];
 		}
 		if (!table.itemSet) {
-			/*table.items = table.items.filter((r: any) => {
-				if (this.formatType?.startsWith('fundex') && typeof r === 'string') {
-						const itemGen = this.dex.items.get(r).gen;
-						if (itemGen === 2) {
-								return false;
-						}
-				}
-				return true;
-			});*/
 			table.itemSet = table.items.map((r: any) => {
 					if (typeof r === 'string') {
 							return ['item', r];
@@ -1220,6 +1211,47 @@ class BattleItemSearch extends BattleTypedSearch<'item'> {
 					return [r[0], r[1]];
 			});
 			table.items = null;
+		}
+		// Fundex: filter out non-Fundex items
+		if (this.formatType?.startsWith('fundex')) {
+			table.itemSet = table.itemSet.filter((r: string[]) => {
+				if (r[0] !== 'item') {
+					return true;
+				}
+				const item = this.dex.items.get(r[1]);
+				if (item.isPokeball) {
+					return false;
+				}
+				if (item.name.startsWith('TR') && item.name.length <= 5) {
+					return false;
+				}
+				if (item.megaStone && item.gen < 8) {
+					return false;
+				}
+				if (item.zMoveFrom && item.gen < 8) {
+					return false;
+				}
+				if (item.itemUser && item.gen < 8) {
+					return false;
+				}
+				if (item.name.includes('Bottle Cap')) {
+					return false;
+				}
+				if (item.name.endsWith('Memory')) {
+					return false;
+				}
+				if (item.name.startsWith('Power') && item.name !== 'Power Herb' && item.gen < 8) {
+					return false;
+				}
+				if (['Leek', 'Rusted Sword', 'Rusted Shield', 'Sweet Apple', 'Tart Apple', 'Sun Stone', 'Moon Stone', 'Fire Stone', 'Cracked Pot', 'Chipped Pot', 'Ice Stone',
+					'Thunder Stone', 'Water Stone', 'Leaf Stone', 'Root Fossil', 'Claw Fossil', 'Helix Fossil', 'Dome Fossil', 'Old Amber', 'Armor Fossil', 'Skull Fossil',
+					'Shiny Stone', 'Dusk Stone', 'Dawn Stone', 'Oval Stone', 'Prism Scale', 'Dragon Scale', 'Cover Fossil', 'Plume Fossil', 'Electirizer', 'Magmarizer',
+					'Reaper Cloth', 'Whipped Dream', 'Jaw Fossil', 'Sail Fossil', 'Fossilized Bird', 'Fossilized Fish', 'Fossilized Drake', 'Fossilized Dino', 'Strawberry Sweet',
+					'Love Sweet', 'Berry Sweet', 'Clover Sweet', 'Flower Sweet', 'Star Sweet', 'Ribbon Sweet', 'Mail', 'Energy Powder', 'Galarica Cuff', 'Sachet'].includes(item.name)) {
+					return false;
+				}
+				return true;
+			});
 		}
 		return table.itemSet;
 	}
