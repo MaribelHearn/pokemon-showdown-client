@@ -669,6 +669,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 				else greatItems.push(id);
 				break;
 			case 'sitrusberry':
+			case 'aspearberry':
 				if (genNum > 6) goodItems.push(id);
 				else if (genNum > 3 && genNum < 7) greatItems.push(id);
 				else poorItems.push(id);
@@ -761,7 +762,6 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 				badItems.push(id);
 				break;
 			// outclassed items
-			case 'aspearberry':
 			case 'bindingband':
 			case 'cheriberry':
 			case 'destinyknot':
