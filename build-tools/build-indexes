@@ -795,7 +795,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 				break;
 			default:
 				if (
-					item.name.endsWith(" Ball") || item.name.endsWith(" Fossil") || item.name.startsWith("Fossilized ") ||
+					item.name.endsWith(" Ball") && item.name !== "Smash Ball" || item.name.endsWith(" Fossil") || item.name.startsWith("Fossilized ") ||
 					item.name.endsWith(" Sweet") || item.name.endsWith(" Apple")
 				) {
 					badItems.push(id);

@@ -1247,7 +1247,7 @@ class BattleItemSearch extends BattleTypedSearch<'item'> {
 					'Thunder Stone', 'Water Stone', 'Leaf Stone', 'Root Fossil', 'Claw Fossil', 'Helix Fossil', 'Dome Fossil', 'Old Amber', 'Armor Fossil', 'Skull Fossil',
 					'Shiny Stone', 'Dusk Stone', 'Dawn Stone', 'Oval Stone', 'Prism Scale', 'Dragon Scale', 'Cover Fossil', 'Plume Fossil', 'Electirizer', 'Magmarizer',
 					'Reaper Cloth', 'Whipped Dream', 'Jaw Fossil', 'Sail Fossil', 'Fossilized Bird', 'Fossilized Fish', 'Fossilized Drake', 'Fossilized Dino', 'Strawberry Sweet',
-					'Love Sweet', 'Berry Sweet', 'Clover Sweet', 'Flower Sweet', 'Star Sweet', 'Ribbon Sweet', 'Mail', 'Energy Powder', 'Galarica Cuff', 'Sachet'].includes(item.name)) {
+					'Love Sweet', 'Berry Sweet', 'Clover Sweet', 'Flower Sweet', 'Star Sweet', 'Ribbon Sweet', 'Mail', 'Energy Powder', 'Galarica Cuff', 'Galarica Wreath', 'Sachet'].includes(item.name)) {
 					return false;
 				}
 				return true;
