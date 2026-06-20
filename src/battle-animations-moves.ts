@@ -37914,6 +37914,8 @@ BattleMoveAnims['zexplod'] = {anim(scene, [attacker, defender]) {/* do nothing *
 //dinnerblaster see above
 BattleMoveAnims['warlockpunch'] = {anim:BattleMoveAnims['shadowpunch'].anim};
 BattleMoveAnims['catnarok'] = {anim:BattleMoveAnims['explosion'].anim};
+BattleMoveAnims['darkcatnarok'] = {anim:BattleMoveAnims['explosion'].anim};
+BattleMoveAnims['fierycatnarok'] = {anim:BattleMoveAnims['explosion'].anim};
 //goldenbracket see above
 BattleMoveAnims['barrelroll'] = {anim:BattleOtherAnims.bound.anim};
 BattleMoveAnims['umadbro'] = {anim:BattleMoveAnims['swagger'].anim};
