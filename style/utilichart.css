@@ -104,11 +104,14 @@
 	width: 24px;
 	height: 27px;
 }
-.utilichart .itemiconcol span {
+.utilichart .itemiconcol span, .rouletteitem {
 	display: block;
 	width: 24px;
 	height: 24px;
 	background: transparent none no-repeat scroll 0px 0px;
+}
+.rouletteitem {
+	display: inline-block;
 }
 .utilichart .numcol {
 	width: 24px;
