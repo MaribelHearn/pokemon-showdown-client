@@ -2643,7 +2643,7 @@ export class PokemonSprite extends Sprite {
 			// Fundex: faint cries
 			const shinyCry = ['Ganondorf'];
 
-			const faintCries = ['Baby Mario', 'Bloody Jitterbug', 'Bowser', 'Captain Falcon', 'Dark Matter', 'Yoda', 'Darth Vader', 'Giygas', 'Kirby', 'Leeroy Jenkins', 'Link', 'Snake-Busted', 'Tabuu', 'Young Link', 'Zero'];
+			const faintCries = ['Baby Mario', 'Bloody Jitterbug', 'Bowser', 'Captain Falcon', 'Dark Matter', 'Yoda', 'Darth Vader', 'Giygas', 'Kirby', 'Leeroy Jenkins', 'Link', 'Snake-Busted', 'Tabuu', 'Young Link', 'Zero', 'Tesla'];
 
 			const formeCries = ['Missingno.-Yellow'];
 
