@@ -2390,7 +2390,7 @@ export class PokemonSprite extends Sprite {
 	}
 	playEntryCry(pokemon: Pokemon, cryurl: string) {
 		// check for custom shiny cry or forme cry
-		const shinyCry = ['Andross', 'Ganondorf', 'Mario', 'Luigi', 'Bowser', 'Nyan Cat'];
+		const shinyCry = ['Andross', 'Angry Bird', 'Ganondorf', 'Mario', 'Luigi', 'Bowser', 'Nyan Cat'];
 
 		const formeCry = ['Mega Dennis', 'Missingno.-Yellow'];
 
@@ -2643,7 +2643,8 @@ export class PokemonSprite extends Sprite {
 			// Fundex: faint cries
 			const shinyCry = ['Ganondorf'];
 
-			const faintCries = ['Baby Mario', 'Bloody Jitterbug', 'Bowser', 'Captain Falcon', 'Dark Matter', 'Yoda', 'Darth Vader', 'Giygas', 'Kirby', 'Leeroy Jenkins', 'Link', 'Snake-Busted', 'Tabuu', 'Young Link', 'Zero', 'Tesla'];
+			const faintCries = ['Baby Mario', 'Bloody Jitterbug', 'Bowser', 'Captain Falcon', 'Dark Matter', 'Darth Vader', 'Giygas', 'Kirby',
+				'Leeroy Jenkins', 'Link', 'Luigi', 'Mario', 'Snake-Busted', 'Tabuu', 'Tesla', 'Young Link', 'Yoda', 'Zero'];
 
 			const formeCries = ['Missingno.-Yellow'];
 
@@ -2662,8 +2663,7 @@ export class PokemonSprite extends Sprite {
 
 			const labyrinthFaintCry = ['Hibachi', 'Hibachi 2', 'Evaccania DOOM', 'Berserk Maribel', 'Serpent of Chaos', '*** WINNER ***'];
 
-			const marioFaintCry = ['Mario', 'Paper Mario', 'Malleo', 'Luigi', 'Mr. L', 'Weegee', 'Baby Bowser', 'Giga Bowser', 'Dry Bowser', 'Boo', 'Boolussus', 'King Boo', 'Wiggler', 'Angry Wiggler'];
-
+			//const marioFaintCry = ['Paper Mario', 'Malleo', 'Mr. L', 'Weegee', 'Baby Bowser', 'Boo', 'Boolussus', 'King Boo', 'Wiggler', 'Angry Wiggler'];
 			
 			if (shinyCry.includes(pokemon.speciesForme) && pokemon.shiny) {
 				BattleSound.playEffect(this.cryurl.replace('.mp3', '-faint-shiny.mp3'));
@@ -2688,9 +2688,6 @@ export class PokemonSprite extends Sprite {
 			}
 			else if (labyrinthFaintCry.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect("audio/cries/lot-faint.mp3");
-			}
-			else if (marioFaintCry.includes(pokemon.speciesForme)) {
-				BattleSound.playEffect("audio/cries/mario-faint.mp3");
 			}
 		}
 		this.anim({
