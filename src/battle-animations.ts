@@ -2663,6 +2663,8 @@ export class PokemonSprite extends Sprite {
 
 			const labyrinthFaintCry = ['Hibachi', 'Hibachi 2', 'Evaccania DOOM', 'Berserk Maribel', 'Serpent of Chaos', '*** WINNER ***'];
 
+			const angrybirdsFaintCry = ['Angry Bird', 'Big Brother'];
+
 			//const marioFaintCry = ['Paper Mario', 'Malleo', 'Mr. L', 'Weegee', 'Baby Bowser', 'Boo', 'Boolussus', 'King Boo', 'Wiggler', 'Angry Wiggler'];
 			
 			if (shinyCry.includes(pokemon.speciesForme) && pokemon.shiny) {
@@ -2688,6 +2690,9 @@ export class PokemonSprite extends Sprite {
 			}
 			else if (labyrinthFaintCry.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect("audio/cries/lot-faint.mp3");
+			}
+			else if (angrybirdsFaintCry.includes(pokemon.speciesForme)) {
+				BattleSound.playEffect("audio/cries/angrybird-faint.mp3");
 			}
 		}
 		this.anim({
