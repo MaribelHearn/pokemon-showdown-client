@@ -2644,7 +2644,7 @@ export class PokemonSprite extends Sprite {
 			const shinyCry = ['Ganondorf'];
 
 			const faintCries = ['Baby Mario', 'Bloody Jitterbug', 'Bowser', 'Captain Falcon', 'Dark Matter', 'Darth Vader', 'Giygas', 'Kirby',
-				'Leeroy Jenkins', 'Link', 'Luigi', 'Mario', 'Snake-Busted', 'Tabuu', 'Tesla', 'Young Link', 'Yoda', 'Zero'];
+				'Leeroy Jenkins', 'Link', 'Luigi', 'Mario', 'Snake-Busted', 'Suiseiseki', 'Tabuu', 'Tesla', 'Young Link', 'Yoda', 'Zero'];
 
 			const formeCries = ['Missingno.-Yellow'];
 
