@@ -2643,9 +2643,6 @@ export class PokemonSprite extends Sprite {
 			// Fundex: faint cries
 			const shinyCry = ['Ganondorf', 'Zeeky H. Bomb'];
 
-			const faintCries = ['Baby Mario', 'Bloody Jitterbug', 'Bowser', 'Captain Falcon', 'Dark Matter', 'Darth Vader', 'Giygas', 'Kirby',
-				'Leeroy Jenkins', 'Link', 'Luigi', 'Mario', 'Snake-Busted', 'Suiseiseki', 'Tabuu', 'Tesla', 'Young Link', 'Yoda', 'Zero'];
-
 			const formeCries = ['Missingno.-Yellow'];
 
 			const touhouFaintCry = ['Flandre', 'Marisa', 'Lily White', 'Cirno', 'Achi Cirno', 'Reimu', 'Utsuho', 'Yuyuko', 'Remilia', 'Sakuya',
@@ -2670,9 +2667,6 @@ export class PokemonSprite extends Sprite {
 			if (shinyCry.includes(pokemon.speciesForme) && pokemon.shiny) {
 				BattleSound.playEffect(this.cryurl.replace('.mp3', '-faint-shiny.mp3'));
 			}
-			else if (faintCries.includes(pokemon.speciesForme)) {
-				BattleSound.playEffect(this.cryurl.replace(".mp3", "-faint.mp3"));
-			}
 			else if (formeCries.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect(`audio/cries/${pokemon.getBaseSpecies().id}-faint.mp3`);
 			}
@@ -2693,6 +2687,9 @@ export class PokemonSprite extends Sprite {
 			}
 			else if (angrybirdsFaintCry.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect("audio/cries/angrybird-faint.mp3");
+			}
+			else {
+				BattleSound.playEffect(this.cryurl.replace(".mp3", "-faint.mp3"));
 			}
 		}
 		this.anim({
