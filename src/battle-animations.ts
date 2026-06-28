@@ -21,6 +21,7 @@ import {BattleBGM, BattleSound} from './battle-sound';
 const bgmName: Record<string, any> = {
 	"encounter": "Metal Gear Solid - Encounter",
 	"turnabout": "Phoenix Wright: Ace Attorney - Pressing Pursuit ~ Cornered",
+	"never-gonna-give-you-up": "Rick Astley - Never Gonna Give You Up",
 	"brobot-l-type": "Super Paper Mario - Brobot L-Type Battle",
 	"lot-boss": "Labyrinth of Touhou - Boss Battle",
 	"t-fanger": "Keitai Denjuu Telefang 2 - Battle! T-Fanger",
@@ -34,7 +35,6 @@ const bgmName: Record<string, any> = {
 	"firmament-army": "Seihou Shuusou Gyoku - Firmament Army",
 	"duel-of-the-fates": "LEGO Star Wars: The Video Game - Duel of the Fates",
 	"dream-chaser": "F-Zero X - Dream Chaser",
-	"never-gonna-give-you-up": "Rick Astley - Never Gonna Give You Up",
 	"star-wolf": "Star Fox 64 - Star Wolf",
 	"vertigo": "Dodonpachi Daifukkatsu Black Label - Vertigo",
 	"trolololo": "Eduard Khil - I Am Very Glad, As I Am Finally Returning Back Home",
@@ -1708,6 +1708,9 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case -6:
 			this.bgm = BattleSound.loadBgm('audio/bgm/never-gonna-give-you-up.mp3', 43000, 161000, this.bgm);
+			break;
+		case -7:
+			this.bgm = BattleSound.loadBgm('audio/bgm/duckroll.mp3', 1500, 60600, this.bgm);
 			break;
 		case 1:
 			this.bgm = BattleSound.loadBgm('audio/bgm/brobot-l-type.mp3', 8000, 120000, this.bgm);

@@ -2747,7 +2747,7 @@ export class Battle {
 					this.scene.resultAnim(poke, 'Illusion ended', 'bad');
 					// Fundex: Rickroll'd
 					if (toID(poke.getSpeciesForme()) === 'rickastley' && !this.seeking) {
-						this.scene.setBgm(-6);
+						this.scene.setBgm(poke.shiny ? -7 : -6);
 					}
 					poke.rememberAbility('Illusion');
 					break;
