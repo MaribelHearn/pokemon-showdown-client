@@ -2641,7 +2641,7 @@ export class PokemonSprite extends Sprite {
 		this.scene.updateSidebar(pokemon.side);
 		if (this.cryurl) {
 			// Fundex: faint cries
-			const shinyCry = ['Ganondorf'];
+			const shinyCry = ['Ganondorf', 'Zeeky H. Bomb'];
 
 			const faintCries = ['Baby Mario', 'Bloody Jitterbug', 'Bowser', 'Captain Falcon', 'Dark Matter', 'Darth Vader', 'Giygas', 'Kirby',
 				'Leeroy Jenkins', 'Link', 'Luigi', 'Mario', 'Snake-Busted', 'Suiseiseki', 'Tabuu', 'Tesla', 'Young Link', 'Yoda', 'Zero'];
