@@ -2408,7 +2408,7 @@ export class PokemonSprite extends Sprite {
 		else if (formeCry.includes(pokemon.speciesForme)) {
 			BattleSound.playEffect(`audio/cries/${pokemon.getBaseSpecies().id}.mp3`);
 		}
-		else {
+		else if (pokemon.speciesForme !== 'Rick Astley' || pokemon.ability !== 'Illusion') {
 			BattleSound.playEffect(cryurl);
 		}
 	}
@@ -2696,7 +2696,7 @@ export class PokemonSprite extends Sprite {
 			else if (angrybirdsFaintCry.includes(pokemon.speciesForme)) {
 				BattleSound.playEffect("audio/cries/angrybird-faint.mp3");
 			}
-			else {
+			else if (pokemon.speciesForme !== 'Rick Astley' || pokemon.ability !== 'Illusion') {
 				BattleSound.playEffect(this.cryurl.replace(".mp3", "-faint.mp3"));
 			}
 		}
