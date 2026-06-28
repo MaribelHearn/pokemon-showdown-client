@@ -2744,10 +2744,13 @@ export class Battle {
 					this.scene.runOtherAnim('bideunleash' as ID, [poke]);
 					break;
 				case 'illusion':
-					this.scene.resultAnim(poke, poke.shiny ? `Duckroll'd!` : `Rickroll'd!`, 'bad');
 					// Fundex: Rickroll'd
 					if (toID(poke.getSpeciesForme()) === 'rickastley' && !this.seeking) {
+						this.scene.resultAnim(poke, poke.shiny ? `Duckroll'd!` : `Rickroll'd!`, 'bad');
 						this.scene.setBgm(poke.shiny ? -7 : -6);
+					}
+					else {
+						this.scene.resultAnim(poke, 'Illusion ended', 'bad');
 					}
 					poke.rememberAbility('Illusion');
 					break;
@@ -3591,6 +3594,9 @@ export class Battle {
 			else if (!this.seeking && this.scene.currentBgm().includes('give-you-up') && oldPoke?.speciesForme === 'Rick Astley') {
 				this.scene.rollBgm();
 			}
+			else if (!this.seeking && this.scene.currentBgm().includes('duckroll') && oldPoke?.speciesForme === 'Rick Astley') {
+				this.scene.rollBgm();
+			}
 			let poke = this.getSwitchedPokemon(args[1], args[2])!;
 			let slot = poke.slot;
 			poke.healthParse(args[3]);
@@ -3620,6 +3626,9 @@ export class Battle {
 				this.scene.rollBgm();
 			}
 			else if (!this.seeking && this.scene.currentBgm().includes('give-you-up') && poke.speciesForme === 'Rick Astley') {
+				this.scene.rollBgm();
+			}
+			else if (!this.seeking && this.scene.currentBgm().includes('duckroll') && poke.speciesForme === 'Rick Astley') {
 				this.scene.rollBgm();
 			}
 			break;

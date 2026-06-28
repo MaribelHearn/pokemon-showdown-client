@@ -1710,7 +1710,7 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/never-gonna-give-you-up.mp3', 43000, 161000, this.bgm);
 			break;
 		case -7:
-			this.bgm = BattleSound.loadBgm('audio/bgm/duckroll.mp3', 18500, 60845, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/duckroll.mp3', 18550, 60840, this.bgm);
 			break;
 		case 1:
 			this.bgm = BattleSound.loadBgm('audio/bgm/brobot-l-type.mp3', 8000, 120000, this.bgm);
