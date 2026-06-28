@@ -2744,7 +2744,7 @@ export class Battle {
 					this.scene.runOtherAnim('bideunleash' as ID, [poke]);
 					break;
 				case 'illusion':
-					this.scene.resultAnim(poke, 'Illusion ended', 'bad');
+					this.scene.resultAnim(poke, poke.shiny ? `Duckroll'd!` : `Rickroll'd!`, 'bad');
 					// Fundex: Rickroll'd
 					if (toID(poke.getSpeciesForme()) === 'rickastley' && !this.seeking) {
 						this.scene.setBgm(poke.shiny ? -7 : -6);
