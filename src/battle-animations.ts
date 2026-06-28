@@ -2390,7 +2390,7 @@ export class PokemonSprite extends Sprite {
 	}
 	playEntryCry(pokemon: Pokemon, cryurl: string) {
 		// check for custom shiny cry or forme cry
-		const shinyCry = ['Andross', 'Angry Bird', 'Ganondorf', 'Mario', 'Luigi', 'Bowser', 'Nyan Cat'];
+		const shinyCry = ['Andross', 'Angry Bird', 'Big Brother', 'Ganondorf', 'Mario', 'Luigi', 'Bowser', 'Nyan Cat'];
 
 		const formeCry = ['Mega Dennis', 'Missingno.-Yellow'];
 
