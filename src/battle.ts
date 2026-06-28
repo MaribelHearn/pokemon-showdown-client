@@ -3584,6 +3584,9 @@ export class Battle {
 			if (!this.seeking && this.scene.currentBgm().includes('encounter') && oldPoke?.speciesForme === 'Snake-Busted') {
 				this.scene.rollBgm();
 			}
+			else if (!this.seeking && this.scene.currentBgm().includes('give-you-up') && oldPoke?.speciesForme === 'Rick Astley') {
+				this.scene.rollBgm();
+			}
 			let poke = this.getSwitchedPokemon(args[1], args[2])!;
 			let slot = poke.slot;
 			poke.healthParse(args[3]);
@@ -3609,7 +3612,10 @@ export class Battle {
 			if (!this.seeking && this.scene.currentBgm().includes('encounter') && poke.speciesForme === 'Snake-Busted') {
 				this.scene.rollBgm();
 			}
-			if (!this.seeking && this.scene.currentBgm().includes('turnabout') && poke.speciesForme === 'Phoenix Wright' || poke.speciesForme === 'Miles Edgeworth') {
+			else if (!this.seeking && this.scene.currentBgm().includes('turnabout') && poke.speciesForme === 'Phoenix Wright' || poke.speciesForme === 'Miles Edgeworth') {
+				this.scene.rollBgm();
+			}
+			else if (!this.seeking && this.scene.currentBgm().includes('give-you-up') && poke.speciesForme === 'Rick Astley') {
 				this.scene.rollBgm();
 			}
 			break;

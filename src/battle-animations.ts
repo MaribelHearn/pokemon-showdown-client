@@ -1586,9 +1586,12 @@ export class BattleScene implements BattleSceneStub {
 		return pokemon.sprite.updateStatbarIfExists(pokemon, updatePrevhp, updateHp);
 	}
 	animTransform(pokemon: Pokemon, isCustomAnim?: boolean, isPermanent?: boolean, isSeeking?: true) {
-		// Fundex: Snake hijacks music
+		// Fundex: Snake hijacks music; Rickroll'd
 		if (toID(pokemon.getSpeciesForme()) === 'snakebusted' && !isSeeking) {
 			this.setBgm(-4);
+		if (toID(pokemon.getSpeciesForme()) === 'rickastley' && !isSeeking) {
+			this.setBgm(-6);
+		}
 		}
 		return pokemon.sprite.animTransform(pokemon, isCustomAnim, isPermanent);
 	}
@@ -1682,6 +1685,14 @@ export class BattleScene implements BattleSceneStub {
 			return;
 		}
 
+		if (bgmNum === -5 && this.currentBgm()?.includes('turnabout')) {
+			return;
+		}
+
+		if (bgmNum === -6 && this.currentBgm()?.includes('give-you-up')) {
+			return;
+		}
+
 		switch (bgmNum) {
 		case -1:
 			this.bgm = BattleSound.loadBgm('audio/bw2-homika-dogars.mp3', 1661, 68131, this.bgm);
@@ -1697,6 +1708,9 @@ export class BattleScene implements BattleSceneStub {
 			break;
 		case -5:
 			this.bgm = BattleSound.loadBgm('audio/bgm/turnabout.mp3', 7000, 84000, this.bgm);
+			break;
+		case -6:
+			this.bgm = BattleSound.loadBgm('audio/bgm/never-gonna-give-you-up.mp3', 43000, 161000, this.bgm);
 			break;
 		case 1:
 			this.bgm = BattleSound.loadBgm('audio/bgm/brobot-l-type.mp3', 8000, 120000, this.bgm);
@@ -1735,54 +1749,51 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/dream-chaser.mp3', 2000, 200000, this.bgm);
 			break;
 		case 13:
-			this.bgm = BattleSound.loadBgm('audio/bgm/never-gonna-give-you-up.mp3', 43000, 161000, this.bgm);
-			break;
-		case 14:
 			this.bgm = BattleSound.loadBgm('audio/bgm/star-wolf.mp3', 8000, 119000, this.bgm);
 			break;
-		case 15:
+		case 14:
 			this.bgm = BattleSound.loadBgm('audio/bgm/vertigo.mp3', 125000, 250000, this.bgm);
 			break;
-		case 16:
+		case 15:
 			this.bgm = BattleSound.loadBgm('audio/bgm/trolololo.mp3', 2000, 163000, this.bgm);
 			break;
-		case 17:
+		case 16:
 			this.bgm = BattleSound.loadBgm('audio/bgm/windows-error-remix.mp3', 25000, 277000, this.bgm);
 			break;
-		case 18:
+		case 17:
 			this.bgm = BattleSound.loadBgm('audio/bgm/tabuu-theme.mp3', 1000, 188000, this.bgm);
 			break;
-		case 19:
+		case 18:
 			this.bgm = BattleSound.loadBgm('audio/bgm/decisive-magic-battle.mp3', 0, 544000, this.bgm);
 			break;
-		case 20:
+		case 19:
 			this.bgm = BattleSound.loadBgm('audio/bgm/marisa.mp3', 1000, 234000, this.bgm);
 			break;
-		case 21:
+		case 20:
 			this.bgm = BattleSound.loadBgm('audio/bgm/sanae.mp3', 13500, 341000, this.bgm);
 			break;
-		case 22:
+		case 21:
 			this.bgm = BattleSound.loadBgm('audio/bgm/utsuho.mp3', 0, 332000, this.bgm);
 			break;
-		case 23:
+		case 22:
 			this.bgm = BattleSound.loadBgm('audio/bgm/popple.mp3', 0, 93000, this.bgm);
 			break;
-		case 24:
+		case 23:
 			this.bgm = BattleSound.loadBgm('audio/bgm/miracle-matter.mp3', 91500, 166500, this.bgm);
 			break;
-		case 25:
+		case 24:
 			this.bgm = BattleSound.loadBgm('audio/bgm/showdown-with-ganon.mp3', 0, 77000, this.bgm);
 			break;
-		case 26:
+		case 25:
 			this.bgm = BattleSound.loadBgm('audio/bgm/meta-ridley.mp3', 19700, 187000, this.bgm);
 			break;
-		case 27:
+		case 26:
 			this.bgm = BattleSound.loadBgm('audio/bgm/border-of-life.mp3', 7000, 166000, this.bgm);
 			break;
-		case 28:
+		case 27:
 			this.bgm = BattleSound.loadBgm('audio/bgm/gen5-elite-four.mp3', 15000, 161700, this.bgm);
 			break;
-		/*case 29:
+		/*case 28:
 			this.bgm = BattleSound.loadBgm('audio/bgm/gerudo-valley.mp3', 15000, 161700, this.bgm);
 			break;*/
 		default:
