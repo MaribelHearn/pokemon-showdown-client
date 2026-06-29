@@ -2403,6 +2403,8 @@ export class PokemonSprite extends Sprite {
 		// check for custom shiny cry or forme cry
 		const shinyCry = ['Andross', 'Angry Bird', 'Big Brother', 'Ganondorf', 'Mario', 'Luigi', 'Bowser', 'Nyan Cat', 'Zeeky H. Bomb'];
 
+		const digitalCry = ['Internet Explorer', 'Inori Aizawa', 'Microsoft Edge', 'Mozilla Firefox', 'Google Chrome', 'Recycle Bin'];
+
 		const formeCry = ['Mega Dennis', 'Missingno.-Yellow'];
 
 		if (shinyCry.includes(pokemon.speciesForme) && pokemon.shiny) {
@@ -2410,6 +2412,9 @@ export class PokemonSprite extends Sprite {
 		}
 		else if (formeCry.includes(pokemon.speciesForme)) {
 			BattleSound.playEffect(`audio/cries/${pokemon.getBaseSpecies().id}.mp3`);
+		}
+		else if (digitalCry.includes(pokemon.speciesForme)) {
+			BattleSound.playEffect(`audio/cries/digital-entry.mp3`);
 		}
 		else if (pokemon.speciesForme !== 'Rick Astley' || pokemon.ability !== 'Illusion') {
 			BattleSound.playEffect(cryurl);
