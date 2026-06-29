@@ -2780,6 +2780,10 @@ export class PokemonSprite extends Sprite {
 		}
 
 		let $newEl = $('<img src="' + sp.url + '" style="display:block;opacity:0;position:absolute"' + (sp.pixelated ? ' class="pixelated"' : '') + ' />');
+		// Fundex: Wiggler transformation sound
+		if (speciesid === "wiggler") {
+			BattleSound.playEffect('audio/moves/wiggler-angry.mp3');
+		}
 		// Fundex: Smithy unique transformation
 		if (speciesid.startsWith("smithy")) {
 			BattleSound.playEffect('audio/moves/hammer.mp3');
