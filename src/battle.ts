@@ -3588,13 +3588,13 @@ export class Battle {
 		case 'switch': case 'drag': case 'replace': {
 			this.endLastTurn();
 			let oldPoke = this.getPokemon(args[1]);
-			if (!this.seeking && this.scene.currentBgm().includes('encounter') && oldPoke?.speciesForme === 'Snake-Busted') {
+			if (this.scene.currentBgm().includes('encounter') && oldPoke?.speciesForme === 'Snake-Busted') {
 				this.scene.rollBgm();
 			}
-			else if (!this.seeking && this.scene.currentBgm().includes('give-you-up') && oldPoke?.speciesForme === 'Rick Astley') {
+			else if (this.scene.currentBgm().includes('give-you-up') && oldPoke?.speciesForme === 'Rick Astley') {
 				this.scene.rollBgm();
 			}
-			else if (!this.seeking && this.scene.currentBgm().includes('duckroll') && oldPoke?.speciesForme === 'Rick Astley') {
+			else if (this.scene.currentBgm().includes('duckroll') && oldPoke?.speciesForme === 'Rick Astley') {
 				this.scene.rollBgm();
 			}
 			let poke = this.getSwitchedPokemon(args[1], args[2])!;
@@ -3619,16 +3619,16 @@ export class Battle {
 			let poke = this.getPokemon(args[1])!;
 			poke.side.faint(poke);
 			this.log(args, kwArgs);
-			if (!this.seeking && this.scene.currentBgm().includes('encounter') && poke.speciesForme === 'Snake-Busted') {
+			if (this.scene.currentBgm().includes('encounter') && poke.speciesForme === 'Snake-Busted') {
 				this.scene.rollBgm();
 			}
-			else if (!this.seeking && this.scene.currentBgm().includes('turnabout') && poke.speciesForme === 'Phoenix Wright' || poke.speciesForme === 'Miles Edgeworth') {
+			else if (this.scene.currentBgm().includes('turnabout') && poke.speciesForme === 'Phoenix Wright' || poke.speciesForme === 'Miles Edgeworth') {
 				this.scene.rollBgm();
 			}
-			else if (!this.seeking && this.scene.currentBgm().includes('give-you-up') && poke.speciesForme === 'Rick Astley') {
+			else if (this.scene.currentBgm().includes('give-you-up') && poke.speciesForme === 'Rick Astley') {
 				this.scene.rollBgm();
 			}
-			else if (!this.seeking && this.scene.currentBgm().includes('duckroll') && poke.speciesForme === 'Rick Astley') {
+			else if (this.scene.currentBgm().includes('duckroll') && poke.speciesForme === 'Rick Astley') {
 				this.scene.rollBgm();
 			}
 			break;
