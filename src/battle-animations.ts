@@ -1690,6 +1690,10 @@ export class BattleScene implements BattleSceneStub {
 			return;
 		}
 
+		if (bgmNum === -7 && this.currentBgm()?.includes('duckroll')) {
+			return;
+		}
+
 		switch (bgmNum) {
 		case -1:
 			this.bgm = BattleSound.loadBgm('audio/bw2-homika-dogars.mp3', 1661, 68131, this.bgm);
