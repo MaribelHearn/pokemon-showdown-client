@@ -516,6 +516,8 @@ class BattleTextParser {
 				case 'boolossus': id = 'gettogether'; break;
 				case 'boo': id = 'gettogether'; templateName = 'transformEnd'; break;
 				}
+			} else if (args[1].includes('Bad EGG')) {
+				id = 'eggwatch';
 			} else if (newSpecies) {
 				id = 'transform';
 			}
