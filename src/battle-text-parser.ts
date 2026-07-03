@@ -518,6 +518,9 @@ class BattleTextParser {
 				}
 			} else if (args[1].includes('Bad EGG')) {
 				id = 'eggwatch';
+				if (this.pokemon(pokemon, tmtrainer).toLowerCase().startsWith('the opposing')) {
+					templateName = 'transformEnd'; // used for opponent's perspective
+				}
 			} else if (newSpecies) {
 				id = 'transform';
 			}
