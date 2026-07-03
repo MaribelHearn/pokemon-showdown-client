@@ -473,6 +473,10 @@ export class Pokemon implements PokemonDetails, PokemonHealth {
 			this.removeVolatile('typeadd' as ID);
 		}
 	}
+	copyTypesFromSpecies(species: Species) {
+		const types = species.types;
+		this.addVolatile('typechange' as ID, types.join('/'));
+	}
 	getTypes(serverPokemon?: ServerPokemon): [ReadonlyArray<TypeName>, TypeName | ''] {
 		let types: ReadonlyArray<TypeName>;
 		if (this.volatiles.typechange) {
@@ -2485,8 +2489,9 @@ export class Battle {
 			}
 
 			poke.ability = effect.name;
-			const pokemon = species;
-			poke.addVolatile('transform' as ID, pokemon);
+			poke.copyTypesFromSpecies(species);
+			poke.addVolatile('transform' as ID, poke);
+			poke.addVolatile('formechange' as ID, species.name);
 			this.scene.animTransform(poke);
 			this.scene.resultAnim(poke, 'Transformed', 'good');
 			if (poke.status === 'tmt') {

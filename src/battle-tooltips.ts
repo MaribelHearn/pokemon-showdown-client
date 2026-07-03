@@ -1272,7 +1272,7 @@ class BattleTooltips {
 
 	renderStats(clientPokemon: Pokemon | null, serverPokemon?: ServerPokemon | null, short?: boolean) {
 		const isTransformed = clientPokemon?.volatiles.transform;
-		if (!serverPokemon || isTransformed) {
+		if (!serverPokemon || isTransformed && clientPokemon.side !== this.battle.mySide) {
 			if (!clientPokemon) throw new Error('Must pass either clientPokemon or serverPokemon');
 			let [min, max] = this.getSpeedRange(clientPokemon);
 			return '<p><small>Spe</small> ' + min + ' to ' + max + ' <small>(before items/abilities/modifiers)</small></p>';
