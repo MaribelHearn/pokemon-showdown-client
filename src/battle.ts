@@ -2475,6 +2475,26 @@ export class Battle {
 			this.log(['-transform', args[1], args[2], tpoke.speciesForme], kwArgs);
 			break;
 		}
+		case '-transformspecies': {
+			let poke = this.getPokemon(args[1])!;
+			let species = Dex.species.get(args[2])!;
+			let effect = Dex.getEffect(kwArgs.from);
+
+			if (!kwArgs.silent) {
+				this.activateAbility(poke, effect);
+			}
+
+			poke.ability = effect.name;
+			const pokemon = species;
+			poke.addVolatile('transform' as ID, pokemon);
+			this.scene.animTransform(poke);
+			this.scene.resultAnim(poke, 'Transformed', 'good');
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
+			this.log(['-transform', args[1], args[2], species.name], kwArgs);
+			break;
+		}
 		case '-formechange': {
 			let poke = this.getPokemon(args[1])!;
 			let species = Dex.species.get(args[2]);
