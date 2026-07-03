@@ -1457,6 +1457,7 @@ class BattleTooltips {
 		// Diamond Blizzard becomes Fire for Achi Cirno
 		// Rainbow UFOs of Terror matches Nue's primary type
 		// Light Arrow and Sledge use the user's highest attacking stat
+		// Glitzer Popping both uses the user's highest attacking stat and matches the user's primary type
 		if (move.id === 'catnarok') {
 			if (pokemon.getSpecies().name === 'tacgnoL') moveType = 'Dark';
 			if (pokemon.getSpecies().name === 'oLngact') moveType = 'Fire';
@@ -1470,6 +1471,13 @@ class BattleTooltips {
 		}
 		if ((move.id === 'lightarrow' || move.id === 'sledge') && serverPokemon.stats.spa > serverPokemon.stats.atk) {
 			category = 'Special';
+		}
+		if (move.id === 'glitzerpopping') {
+			moveType = pokemon.getSpecies().types[0];
+
+			if (serverPokemon.stats.spa > serverPokemon.stats.atk) {
+				category = 'Special';
+			}
 		}
 
 		// Other abilities that change the move type.
