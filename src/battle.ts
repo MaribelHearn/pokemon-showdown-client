@@ -2488,8 +2488,8 @@ export class Battle {
 				this.activateAbility(poke, effect);
 			}
 
-			poke.ability = effect.name;
 			poke.copyTypesFromSpecies(species);
+			poke.ability = effect.name;
 			poke.addVolatile('transform' as ID, poke);
 			poke.addVolatile('formechange' as ID, species.name);
 			this.scene.animTransform(poke);
@@ -2497,6 +2497,7 @@ export class Battle {
 			if (poke.status === 'tmt') {
 				args.push('TMTRAINER');
 			}
+
 			this.log(['-transform', args[1], args[2], species.name], kwArgs);
 			break;
 		}
