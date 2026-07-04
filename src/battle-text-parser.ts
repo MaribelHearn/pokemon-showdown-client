@@ -515,14 +515,13 @@ class BattleTextParser {
 				case 'zerosuitsamus': id = 'armordamage'; templateName = 'transformEnd'; break;
 				case 'boolossus': id = 'gettogether'; break;
 				case 'boo': id = 'gettogether'; templateName = 'transformEnd'; break;
-				}
-			} else if (args[1].includes('Bad EGG')) {
-				id = 'eggwatch';
-				if (this.pokemon(pokemon, tmtrainer).toLowerCase().startsWith('the opposing')) {
-					templateName = 'transformEnd'; // used for opponent's perspective
+				case 'badegg': id = 'eggwatch'; break;
 				}
 			} else if (newSpecies) {
 				id = 'transform';
+			}
+			if (id === 'eggwatch' && this.pokemon(pokemon, tmtrainer).toLowerCase().startsWith('the opposing')) {
+				templateName = 'transformEnd'; // used for opponent's perspective
 			}
 			const template = this.template(templateName, id, kwArgs.msg ? '' : 'NODEFAULT');
 			const line1 = this.maybeAbility(kwArgs.from, kwArgs.of || pokemon);
