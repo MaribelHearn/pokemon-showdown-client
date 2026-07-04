@@ -642,7 +642,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 		if (format.includes('fundex') && (format.includes('vgc') || format.includes('doubles'))) {
 			this.formatType = 'fundexdoubles';
 		}
-		else if (format.includes('fundex')) {
+		else if (format.includes('fundex') || format === 'badegghatching') {
 			this.formatType = 'fundex';
 		}
 		if (format.includes('international')) {
@@ -976,10 +976,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 		else if (format === 'fundexpurehackmons') tierSet = tierSet.slice(0, slices.CAP).concat(tierSet.slice(slices.AG));
 		else if (format === 'fundexuber' || format.startsWith('fundexmetronome') || format === 'fundexlosersgame' || format === 'fundexvgcregb' || format === 'customgame') tierSet = tierSet.slice(0, slices.CAP);
 		else if (format === 'fundexlc') tierSet = tierSet.slice(slices['Fundex LC'], slices.CAP);
-		else if (format === 'badegghatching') {
-			console.log([tierSet.slice(slices['Fundex LC'], slices.CAP)[0], tierSet.slice(slices['Fundex LC'], slices.CAP)[5]]);
-			tierSet = [tierSet.slice(slices['Fundex LC'], slices.CAP)[0], tierSet.slice(slices['Fundex LC'], slices.CAP)[5]];
-		}
+		else if (format === 'badegghatching') tierSet = [tierSet.slice(slices['Fundex LC'], slices.CAP)[0], tierSet.slice(slices['Fundex LC'], slices.CAP)[5]];
 		else if (format.startsWith('fundex')) tierSet = tierSet.slice(slices['Fundex OU'], slices.CAP);
 		else if (format === 'internationaluber') tierSet = tierSet.slice(slices['Fundex Uber']);
 		else if (format === 'cap') tierSet = tierSet.slice(slices.CAP, slices.AG || slices.Uber).concat(tierSet.slice(slices.OU));
