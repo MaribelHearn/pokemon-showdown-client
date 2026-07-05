@@ -2180,7 +2180,11 @@ export class Battle {
 			if (poke) {
 				poke.status = '';
 				switch (args[2]) {
-				case 'brn': case 'tmt':
+				case 'brn':
+					this.scene.resultAnim(poke, 'Burn cured', 'good');
+					break;
+				case 'tmt':
+					this.scene.updateStatbar(poke, false, false, false);
 					this.scene.resultAnim(poke, 'Burn cured', 'good');
 					break;
 				case 'tox':
@@ -2205,7 +2209,6 @@ export class Battle {
 			}
 			this.log(args, kwArgs);
 			break;
-
 		}
 		case '-cureteam': { // For old gens when the whole team was always cured
 			let poke = this.getPokemon(args[1])!;
