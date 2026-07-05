@@ -3025,8 +3025,7 @@ export class PokemonSprite extends Sprite {
 			if (this.$statbar) this.$statbar.hide();
 			return;
 		}
-		console.log(pokemon, updatePrevhp, updateHp, tmTrainer);
-		if (pokemon.status === 'tmt' && tmTrainer) {
+		if (pokemon.status === 'tmt' && tmTrainer !== undefined) {
 			this.resetStatbar(pokemon);
 			return;
 		}
