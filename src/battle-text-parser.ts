@@ -479,18 +479,18 @@ class BattleTextParser {
 			return template.replace('[TRAINER]', this.trainer(side)).replace('[FULLNAME]', fullname);
 		}
 
-		case 'detailschange': case '-transform': case '-formechange': {
+		case 'detailschange': case '-transform': case '-transformspecies': case '-formechange': {
 			const [, pokemon, arg2, arg3] = args;
 			let newSpecies = '';
 			switch (cmd) {
 			case 'detailschange': newSpecies = arg2.split(',')[0].trim(); break;
-			case '-transform': newSpecies = arg3; break;
+			case '-transform': case '-transformspecies': newSpecies = arg3; break;
 			case '-formechange': newSpecies = arg2; break;
 			}
 			let newSpeciesId = toID(newSpecies);
 			let id = '';
 			let templateName = 'transform';
-			if (cmd !== '-transform') {
+			if (!cmd.includes('-transform')) {
 				switch (newSpeciesId) {
 				case 'greninjaash': id = 'battlebond'; break;
 				case 'mimikyubusted': id = 'disguise'; break;
@@ -515,13 +515,14 @@ class BattleTextParser {
 				case 'zerosuitsamus': id = 'armordamage'; templateName = 'transformEnd'; break;
 				case 'boolossus': id = 'gettogether'; break;
 				case 'boo': id = 'gettogether'; templateName = 'transformEnd'; break;
-				case 'badegg': id = 'eggwatch'; break;
+				}
+			} else if (cmd === '-transformspecies') {
+				id = 'eggwatch';
+				if (this.pokemon(pokemon, tmtrainer).toLowerCase().startsWith('the opposing')) {
+					templateName = 'transformEnd'; // used for opponent's perspective
 				}
 			} else if (newSpecies) {
 				id = 'transform';
-			}
-			if (id === 'eggwatch' && this.pokemon(pokemon, tmtrainer).toLowerCase().startsWith('the opposing')) {
-				templateName = 'transformEnd'; // used for opponent's perspective
 			}
 			const template = this.template(templateName, id, kwArgs.msg ? '' : 'NODEFAULT');
 			const line1 = this.maybeAbility(kwArgs.from, kwArgs.of || pokemon);

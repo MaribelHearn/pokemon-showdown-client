@@ -2498,7 +2498,7 @@ export class Battle {
 				args.push('TMTRAINER');
 			}
 
-			this.log(['-transform', args[1], args[2], species.name], kwArgs);
+			this.log(['-transformspecies', args[1], args[2], species.name], kwArgs);
 			break;
 		}
 		case '-formechange': {
