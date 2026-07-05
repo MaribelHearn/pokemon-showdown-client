@@ -336,7 +336,8 @@ export class Pokemon implements PokemonDetails, PokemonHealth {
 		moveName = Dex.moves.get(moveName).name;
 		if (moveName.charAt(0) === '*') return;
 		if (moveName === 'Struggle') return;
-		if (this.volatiles.transform) {
+		// Fundex: Bad EGG hatching does not have Transform move behaviour
+		if (this.volatiles.transform && this.speciesForme !== 'Bad EGG') {
 			// make sure there is no infinite recursion if both Pokemon are transformed into each other
 			if (!recursionSource) recursionSource = this.ident;
 			this.volatiles.transform[1].rememberMove(moveName, 0, recursionSource);
