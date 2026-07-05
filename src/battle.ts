@@ -2474,10 +2474,11 @@ export class Battle {
 			}
 			this.scene.animTransform(poke);
 			this.scene.resultAnim(poke, 'Transformed', 'good');
+			let tmtrainer = '';
 			if (poke.status === 'tmt') {
-				args.push('TMTRAINER');
+				tmtrainer = 'TMTRAINER';
 			}
-			this.log(['-transform', args[1], args[2], tpoke.speciesForme], kwArgs);
+			this.log(['-transform', args[1], args[2], tpoke.speciesForme, tmtrainer], kwArgs);
 			break;
 		}
 		case '-transformspecies': {
@@ -2495,11 +2496,11 @@ export class Battle {
 			poke.addVolatile('formechange' as ID, species.name);
 			this.scene.animTransform(poke);
 			this.scene.resultAnim(poke, 'Transformed', 'good');
+			let tmtrainer = '';
 			if (poke.status === 'tmt') {
-				args.push('TMTRAINER');
+				tmtrainer = 'TMTRAINER';
 			}
-
-			this.log(['-transformspecies', args[1], args[2], species.name], kwArgs);
+			this.log(['-transformspecies', args[1], args[2], species.name, tmtrainer], kwArgs);
 			break;
 		}
 		case '-formechange': {
@@ -3639,6 +3640,9 @@ export class Battle {
 				poke.side.dragIn(poke);
 			}
 			this.scene.updateWeather();
+			if (poke.status === 'tmt') {
+				args.push('TMTRAINER');
+			}
 			this.log(args, kwArgs);
 			break;
 		}
