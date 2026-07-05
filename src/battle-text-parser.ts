@@ -653,14 +653,13 @@ class BattleTextParser {
 				arg4 = oldAbility;
 				oldAbility = '';
 			}
-			if (oldAbility) line1 += this.ability(oldAbility, pokemon);
+			if (oldAbility && oldAbility !== 'TMTRAINER') line1 += this.ability(oldAbility, pokemon);
 			line1 += this.ability(ability, pokemon);
 			if (kwArgs.fail) {
 				const template = this.template('block', kwArgs.from);
 				return line1 + template;
 			}
 			const id = BattleTextParser.effectId(ability);
-			const oldId = BattleTextParser.effectId(oldAbility);
 			if (kwArgs.from) {
 				// Fundex
 				if (kwArgs.from.includes('Research')) {
