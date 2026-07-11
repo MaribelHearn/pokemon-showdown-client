@@ -2065,6 +2065,8 @@ export class PokemonSprite extends Sprite {
 		sovietreversal: ['Soviet Reversal', 'bad'],
 		denialofservice: ['Denial of Service', 'bad'],
 		houraielixir: ['Hourai Elixir', 'good'],
+		lucky: ['Lucky', 'good'],
+		frenzy: ['Frenzy', 'good'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;
