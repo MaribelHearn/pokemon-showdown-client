@@ -38034,3 +38034,10 @@ BattleMoveAnims['imperishableshooting'] = {anim: BattleMoveAnims['sacredfire'].a
 BattleMoveAnims['overflowingunnaturalpower'] = {anim: BattleMoveAnims['focusenergy'].anim};
 BattleMoveAnims['medicineoflife'] = {anim:BattleMoveAnims['recover'].anim};
 BattleMoveAnims['200yojanain1slash'] = {anim:BattleMoveAnims['extremespeed'].anim};
+//superjump uses default animation
+BattleMoveAnims['goldencookie'] = {anim:BattleOtherAnims.shake.anim};
+BattleMoveAnims['blab'] = {anim:BattleMoveAnims['splash'].anim};
+BattleMoveAnims['ruin'] = {anim:BattleMoveAnims['ruination'].anim};
+BattleMoveAnims['clot'] = {anim:BattleMoveAnims['sludgebomb'].anim};
+BattleMoveAnims['frenzy'] = {anim:BattleMoveAnims['extremeevoboost'].anim};
+BattleMoveAnims['lucky'] = {anim:BattleMoveAnims['luckychant'].anim};
