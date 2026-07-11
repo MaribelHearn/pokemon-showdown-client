@@ -106,6 +106,9 @@ export class Pokemon implements PokemonDetails, PokemonHealth {
 
 	sprite: PokemonSprite;
 
+	// Fundex: track number of Super Jump hits
+	superJumps = 0;
+
 	constructor(data: PokemonDetails, side: Side) {
 		this.side = side;
 		this.speciesForme = data.speciesForme;
@@ -1487,7 +1490,7 @@ export class Battle {
 			if (toID(pokemon.getSpeciesForme()) === 'milesedgeworth' && ['objection', 'holdit', 'takethat'].includes(move.id) || toID(pokemon.getSpeciesForme()) === 'droctogonapus' && move.id === 'immafirinmahlazer') {
 				BattleSound.playEffect(`audio/moves/${move.id}2.mp3`);
 			}
-			else if (toID(pokemon.getSpeciesForme()) === 'phoenixwright' && ['objection', 'holdit', 'takethat'].includes(move.id)) {
+			else if (toID(pokemon.getSpeciesForme()) === 'phoenixwright' && ['objection', 'holdit', 'takethat'].includes(move.id) || toID(pokemon.getSpeciesForme()) === 'cell' && move.id === 'immafirinmahlazer') {
 				BattleSound.playEffect(`audio/moves/${move.id}.mp3`);
 			}
 			else if (toID(pokemon.getSpeciesForme()) === 'engineer' && move.id === 'nope') {
@@ -1695,7 +1698,7 @@ export class Battle {
 				}
 				args[3] = damageinfo;
 			}
-			this.scene.damageAnim(poke, Pokemon.getFormattedRange(range, 0, ' to '));
+			this.scene.damageAnim(poke, Pokemon.getFormattedRange(range, 0, ' to '), Dex.getEffect(kwArgs.of));
 			if (poke.status === 'tmt') {
 				args.push('TMTRAINER');
 			}
@@ -2069,6 +2072,10 @@ export class Battle {
 		}
 		case '-center': case '-notarget': case '-ohko':
 		case '-combine': case '-hitcount': case '-waiting': case '-zbroken': {
+			if (args[0] === '-hitcount') {
+				let poke = this.getPokemon(args[1])!;
+				poke.superJumps = 0;
+			}
 			this.log(args, kwArgs);
 			break;
 		}

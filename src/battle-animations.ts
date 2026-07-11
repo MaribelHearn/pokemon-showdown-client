@@ -565,16 +565,18 @@ export class BattleScene implements BattleSceneStub {
 			animEntry = BattleOtherAnims[targetsSelf ? 'fastanimself' : isSpecial ? 'fastanimspecial' : 'fastanimattack'];
 		} else if (incomprehensible && this.battle.mySide.sideid !== participants[0].side.sideid) {
 			animEntry = BattleMoveAnims['darkpulse'];
-		} else if (!animEntry) {
-			animEntry = BattleMoveAnims['tackle'];
-		} else if (moveid === 'remotemissile' && this.battle.mySide.sideid !== participants[0].side.sideid) {
-			animEntry = BattleMoveAnims['remotemissileback'];
-		} else if (moveid === 'delete' && this.battle.mySide.sideid !== participants[0].side.sideid && participants[0].shiny) {
-			animEntry = BattleMoveAnims['deleteshinyback'];
-		} else if (moveid === 'delete' && participants[0].shiny) {
-			animEntry = BattleMoveAnims['deleteshiny'];
-		} else if (moveid === 'delete' && this.battle.mySide.sideid !== participants[0].side.sideid) {
-			animEntry = BattleMoveAnims['deleteback'];
+		} else {
+			if (!animEntry) {
+				animEntry = BattleMoveAnims['tackle'];
+			} else if (moveid === 'remotemissile' && this.battle.mySide.sideid !== participants[0].side.sideid) {
+				animEntry = BattleMoveAnims['remotemissileback'];
+			} else if (moveid === 'delete' && this.battle.mySide.sideid !== participants[0].side.sideid && participants[0].shiny) {
+				animEntry = BattleMoveAnims['deleteshinyback'];
+			} else if (moveid === 'delete' && participants[0].shiny) {
+				animEntry = BattleMoveAnims['deleteshiny'];
+			} else if (moveid === 'delete' && this.battle.mySide.sideid !== participants[0].side.sideid) {
+				animEntry = BattleMoveAnims['deleteback'];
+			}
 		}
 		animEntry.anim(this, participants.map(p => p.sprite));
 	}
@@ -1510,7 +1512,7 @@ export class BattleScene implements BattleSceneStub {
 		pokemon.sprite.updateStatbar(pokemon);
 		if (this.acceleration < 3) this.waitFor($effect);
 	}
-	damageAnim(pokemon: Pokemon, damage: number | string) {
+	damageAnim(pokemon: Pokemon, damage: number | string, effect?: Effect) {
 		if (!this.animating) return;
 		if (!pokemon.sprite.$statbar) return;
 		pokemon.sprite.updateHPText(pokemon);
@@ -1528,6 +1530,16 @@ export class BattleScene implements BattleSceneStub {
 
 		if (damage === '100%' && pokemon.hp > 0) damage = '99%';
 		this.resultAnim(pokemon, this.battle.hardcoreMode ? 'Damage' : '&minus;' + damage, 'bad');
+
+		if (effect?.id === 'superjump') {
+			pokemon.superJumps++;
+
+			if (pokemon.superJumps > 10) {
+				pokemon.superJumps = 1;
+			}
+
+			BattleSound.playEffect(`audio/moves/superjump${pokemon.superJumps > 7 ? 7 : pokemon.superJumps}.mp3`);
+		}
 
 		$hp.animate({
 			width: w,
