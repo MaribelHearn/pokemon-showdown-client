@@ -1168,7 +1168,7 @@
 			var species = this.curTeam.dex.species.get(set.species);
 			var isLetsGo = this.curTeam.format.includes('letsgo');
 			var isBDSP = this.curTeam.format.includes('bdsp');
-			var isNatDex = this.curTeam.format.includes('nationaldex') || this.curTeam.format.includes('fundex') || this.curTeam.format.includes('international');
+			//var isNatDex = this.curTeam.format.includes('nationaldex') || this.curTeam.format.includes('fundex') || this.curTeam.format.includes('international');
 			var buf = '<li value="' + i + '">';
 			if (!set.species) {
 				if (this.deletedSet) {
@@ -2588,7 +2588,7 @@
 			var set = this.curSet;
 			var isLetsGo = this.curTeam.format.includes('letsgo');
 			var isBDSP = this.curTeam.format.includes('bdsp');
-			var isNatDex = this.curTeam.gen === 8 && (this.curTeam.format.includes('nationaldex') || this.curTeam.format.includes('fundex') || this.curTeam.format.includes('international'));
+			//var isNatDex = this.curTeam.gen === 8 && (this.curTeam.format.includes('nationaldex') || this.curTeam.format.includes('fundex') || this.curTeam.format.includes('international'));
 			var species = this.curTeam.dex.species.get(set.species);
 			if (!set) return;
 			buf += '<div class="resultheader"><h3>Details</h3></div>';
@@ -2646,7 +2646,7 @@
 				buf += '</select></div></div>';
 			}
 
-			if (!isLetsGo && (this.curTeam.gen === 7 || isNatDex || (isBDSP && species.baseSpecies === 'Unown'))) {
+			if (!isLetsGo && (this.curTeam.gen >= 7 || (isBDSP && species.baseSpecies === 'Unown'))) {
 				buf += '<div class="formrow"><label class="formlabel" title="Hidden Power Type">Hidden Power:</label><div><select name="hptype">';
 				buf += '<option value=""' + (!set.hpType ? ' selected="selected"' : '') + '>(automatic type)</option>'; // unset
 				var types = Dex.types.all();
@@ -2673,7 +2673,7 @@
 			var species = this.curTeam.dex.species.get(set.species);
 			var isLetsGo = this.curTeam.format.includes('letsgo');
 			var isBDSP = this.curTeam.format.includes('bdsp');
-			var isNatDex = this.curTeam.format.includes('nationaldex') || this.curTeam.format.includes('fundex') || this.curTeam.format.includes('international');
+			//var isNatDex = this.curTeam.format.includes('nationaldex') || this.curTeam.format.includes('fundex') || this.curTeam.format.includes('international');
 
 			// level
 			var level = parseInt(this.$chart.find('input[name=level]').val(), 10);

@@ -362,7 +362,8 @@
 					buf += '<span class="col abilitycol">' + abilities['0'] + '</span>';
 				}
 				var unreleasedHidden = pokemon.unreleasedHidden;
-				if (unreleasedHidden === 'Past' && (this.mod === 'natdex' || gen < 8)) unreleasedHidden = false;
+				// Fundex: remove Dexit
+				if (unreleasedHidden === 'Past') unreleasedHidden = false;
 				if (abilities['S']) {
 					if (abilities['H']) {
 						buf += '<span class="col twoabilitycol' + (unreleasedHidden ? ' unreleasedhacol' : '') + '">' + (abilities['H'] || '') + '<br />(' + abilities['S'] + ')</span>';
