@@ -2705,11 +2705,15 @@
 			}
 
 			// gender
-			var gender = this.$chart.find('input[name=gender]:checked').val();
-			if (gender === 'M' || gender === 'F') {
-				set.gender = gender;
+			if (species.gender === 'M' || species.gender === 'F') {
+				set.gender = species.gender;
 			} else {
-				delete set.gender;
+				var gender = this.$chart.find('input[name=gender]:checked').val();
+				if (gender === 'M' || gender === 'F') {
+					set.gender = gender;
+				} else {
+					delete set.gender;
+				}
 			}
 
 			// pokeball
