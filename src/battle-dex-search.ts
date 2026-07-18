@@ -1555,9 +1555,10 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 					) {
 						continue;
 					}
-					if (this.formatType !== 'natdex' && !this.formatType?.includes('fundex') && this.formatType !== 'international' && move.isNonstandard === "Past") {
+					// Fundex: remove Dexit
+					/*if (this.formatType !== 'natdex' && !this.formatType?.includes('fundex') && this.formatType !== 'international' && move.isNonstandard === "Past") {
 						continue;
-					}
+					}*/
 					if (
 						this.formatType?.startsWith('dlc1') &&
 						BattleTeambuilderTable['gen8dlc1']?.nonstandardMoves.includes(moveid)
@@ -1588,12 +1589,14 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 				if (sketch) {
 					if (move.noSketch || move.isMax || move.isZ) continue;
 					if (move.isNonstandard && move.isNonstandard !== 'Past') continue;
-					if (move.isNonstandard === 'Past' && this.formatType !== 'natdex' && !this.formatType?.includes('fundex')) continue;
+					// Fundex: remove Dexit
+					//if (move.isNonstandard === 'Past' && this.formatType !== 'natdex' && !this.formatType?.includes('fundex')) continue;
 					sketchMoves.push(move.id);
 				} else {
 					if (!(dex.gen < 8 || this.formatType === 'natdex') && move.isZ) continue;
 					if (typeof move.isMax === 'string') continue;
-					if (move.isNonstandard === 'Past' && this.formatType !== 'natdex' && !this.formatType?.includes('fundex')) continue;
+					// Fundex: remove Dexit
+					//if (move.isNonstandard === 'Past' && this.formatType !== 'natdex' && !this.formatType?.includes('fundex')) continue;
 					if (move.isNonstandard === 'LGPE' && this.formatType !== 'letsgo') continue;
 					moves.push(move.id);
 				}
