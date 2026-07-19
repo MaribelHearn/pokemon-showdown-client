@@ -803,9 +803,17 @@ class BattleTooltips {
 			genderBuf = ` <img src="${Dex.fxPrefix}gender-${gender.toLowerCase()}.png" alt="${gender}" width="7" height="10" class="pixelated" /> `;
 		}
 
-		let name = BattleLog.escapeHTML(pokemon.name);
-		if (pokemon.speciesForme !== pokemon.name) {
-			name += ' <small>(' + BattleLog.escapeHTML(pokemon.speciesForme) + ')</small>';
+		const species = Dex.species.get(pokemon.name);
+		let name;
+		
+		// Fundex: use forme name as the default instead of base species
+		if (species.exists && species.isNonstandard === 'Fundex') {
+			name = BattleLog.escapeHTML(pokemon.speciesForme);
+		} else {
+			name = BattleLog.escapeHTML(pokemon.name);
+			if (pokemon.speciesForme !== pokemon.name) {
+				name += ' <small>(' + BattleLog.escapeHTML(pokemon.speciesForme) + ')</small>';
+			}
 		}
 
 		let levelBuf = (pokemon.level !== 100 ? ` <small>L${pokemon.level}</small>` : ``);

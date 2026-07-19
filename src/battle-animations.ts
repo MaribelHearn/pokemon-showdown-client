@@ -2990,6 +2990,13 @@ export class PokemonSprite extends Sprite {
 		let buf = '<div class="statbar' + (this.isFrontSprite ? ' lstatbar' : ' rstatbar') + '" style="display: none">';
 		const ignoreNick = this.isFrontSprite && (this.scene.battle.ignoreOpponent || this.scene.battle.ignoreNicks);
 		let boldName = BattleLog.escapeHTML(ignoreNick ? pokemon.speciesForme : pokemon.name);
+
+		// Fundex: use forme name as the default instead of base species
+		const species = Dex.species.get(pokemon.name);
+		if (species.exists && species.isNonstandard === 'Fundex') {
+			boldName = BattleLog.escapeHTML(pokemon.speciesForme);
+		}
+
 		boldName = pokemon.status === 'tmt' ? 'TMTRAINER ' + boldName : boldName;
 		buf += `<strong>${boldName}`;
 		const gender = pokemon.gender;
