@@ -112,13 +112,16 @@ export class Pokemon implements PokemonDetails, PokemonHealth {
 	constructor(data: PokemonDetails, side: Side) {
 		this.side = side;
 		this.speciesForme = data.speciesForme;
-
 		this.details = data.details;
-		this.name = data.name;
+
+		// Fundex: use forme name as the default instead of base species
+		const species = Dex.species.get(data.name);
+		this.name = species.exists && species.isNonstandard === "Fundex" && data.name !== data.speciesForme ? data.speciesForme : data.name;
+	
 		this.level = data.level;
 		this.shiny = data.shiny;
 		this.gender = data.gender || 'N';
-		this.ident = data.ident;
+		this.ident = species.exists && species.isNonstandard === "Fundex" && data.name !== data.speciesForme ? data.ident.replace(data.name, data.speciesForme) : data.ident;
 		this.searchid = data.searchid;
 
 		this.sprite = side.battle.scene.addPokemonSprite(this);
@@ -3209,6 +3212,14 @@ export class Battle {
 		output.gender = '';
 		output.ident = (!isTeamPreview ? pokemonid : '');
 		output.searchid = (!isTeamPreview ? `${pokemonid}|${details}` : '');
+
+		// Fundex: use forme name as the default instead of base species
+		const species = Dex.species.get(name);
+		const forme = details.split(',')[0];
+		if (species.isNonstandard === "Fundex" && forme !== name) {
+			output.ident = output.ident.replace(name, forme);
+		}
+
 		let splitDetails = details.split(', ');
 		if (splitDetails[splitDetails.length - 1] === 'shiny') {
 			output.shiny = true;
@@ -3392,6 +3403,17 @@ export class Battle {
 		this.add(command);
 	}
 	runMajor(args: Args, kwArgs: KWArgs, preempt?: boolean) {
+		// Fundex: use forme name as the default instead of base species
+		if (args.length > 1 && Dex.species.get(args[1].substring(4)).exists) {
+			let poke = this.getPokemon(args[1]);
+			if (poke) {
+				const species = Dex.species.get(poke.speciesForme);
+				if (species.isNonstandard === 'Fundex' && species.forme !== '') {
+					args[1] = args[1].replace(species.baseSpecies, poke.speciesForme);
+				}
+			}
+		}
+
 		switch (args[0]) {
 		case 'start': {
 			this.nearSide.active[0] = null;

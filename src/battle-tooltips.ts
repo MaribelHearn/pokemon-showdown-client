@@ -803,17 +803,9 @@ class BattleTooltips {
 			genderBuf = ` <img src="${Dex.fxPrefix}gender-${gender.toLowerCase()}.png" alt="${gender}" width="7" height="10" class="pixelated" /> `;
 		}
 
-		const species = Dex.species.get(pokemon.name);
-		let name;
-		
-		// Fundex: use forme name as the default instead of base species
-		if (species.exists && species.isNonstandard === 'Fundex') {
-			name = BattleLog.escapeHTML(pokemon.speciesForme);
-		} else {
-			name = BattleLog.escapeHTML(pokemon.name);
-			if (pokemon.speciesForme !== pokemon.name) {
-				name += ' <small>(' + BattleLog.escapeHTML(pokemon.speciesForme) + ')</small>';
-			}
+		let name = BattleLog.escapeHTML(pokemon.name);
+		if (pokemon.speciesForme !== pokemon.name) {
+			name += ' <small>(' + BattleLog.escapeHTML(pokemon.speciesForme) + ')</small>';
 		}
 
 		let levelBuf = (pokemon.level !== 100 ? ` <small>L${pokemon.level}</small>` : ``);
@@ -1461,16 +1453,10 @@ class BattleTooltips {
 		if (move.id === 'aurawheel' && pokemon.getSpeciesForme() === 'Morpeko-Hangry') {
 			moveType = 'Dark';
 		}
-		// Fundex: Catnarok uses the user's type and highest attacking stat
-		// Diamond Blizzard becomes Fire for Achi Cirno
+		// Fundex: Diamond Blizzard becomes Fire for Achi Cirno
 		// Rainbow UFOs of Terror matches Nue's primary type
 		// Light Arrow and Sledge use the user's highest attacking stat
 		// Glitzer Popping both uses the user's highest attacking stat and matches the user's primary type
-		if (move.id === 'catnarok') {
-			if (pokemon.getSpecies().name === 'tacgnoL') moveType = 'Dark';
-			if (pokemon.getSpecies().name === 'oLngact') moveType = 'Fire';
-			if (serverPokemon.stats.spa > serverPokemon.stats.atk) category = 'Special';
-		}
 		if (move.id === 'diamondblizzard') {
 			if (pokemon.getSpecies().name === 'Achi Cirno') moveType = 'Fire';
 		}
@@ -1490,7 +1476,7 @@ class BattleTooltips {
 
 		// Other abilities that change the move type.
 		const noTypeOverride = [
-			'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball', 'catnarok',
+			'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball', 'glitzerpopping',
 		];
 		const allowTypeOverride = !noTypeOverride.includes(move.id);
 

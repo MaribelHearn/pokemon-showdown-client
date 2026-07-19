@@ -745,11 +745,6 @@
 			for (var i = 0; i < switchables.length; i++) {
 				var pokemon = switchables[i];
 				pokemon.name = pokemon.ident.substr(4);
-				// Fundex: use forme name as the default instead of base species
-				var species = Dex.species.get(pokemon.name);
-				if (species.exists && species.isNonstandard === 'Fundex') {
-					pokemon.name = pokemon.speciesForme;
-				}
 				var tooltipArgs = 'switchpokemon|' + i;
 				if (pokemon.fainted || i < this.battle.pokemonControlled || this.choice.switchFlags[i] || trapped) {
 					party += '<button class="disabled has-tooltip" name="chooseDisabled" value="' + BattleLog.escapeHTML(pokemon.name) + (pokemon.fainted ? ',fainted' : trapped ? ',trapped' : i < this.battle.nearSide.active.length ? ',active' : '') + '" data-tooltip="' + BattleLog.escapeHTML(tooltipArgs) + '"><span class="picon" style="' + Dex.getPokemonIcon(pokemon) + '"></span>' + BattleLog.escapeHTML(pokemon.name) + (pokemon.hp ? '<span class="' + pokemon.getHPColorClass() + '"><span style="width:' + (Math.round(pokemon.hp * 92 / pokemon.maxhp) || 1) + 'px"></span></span>' + (pokemon.status ? '<span class="status ' + pokemon.status + '"></span>' : '') : '') + '</button> ';
