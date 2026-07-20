@@ -3401,14 +3401,14 @@ export class Battle {
 			if (args[0] === 'switch') {
 				let poke = this.getSwitchedPokemon(args[1], args[2]);
 				let species = Dex.species.get(poke.speciesForme);
-				if (species.forme !== '') {
+				if (species.isNonstandard === 'Fundex' && species.forme !== '') {
 					args[1] = args[1].replace(species.baseSpecies, poke.speciesForme);
 				}
 			} else {
 				let poke = this.getPokemon(args[1]);
 				if (poke) {
 					let species = Dex.species.get(poke.speciesForme);
-					if (species.forme !== '') {
+					if (species.isNonstandard === 'Fundex' && species.forme !== '') {
 						args[1] = args[1].replace(species.baseSpecies, poke.speciesForme);
 					}
 				}
