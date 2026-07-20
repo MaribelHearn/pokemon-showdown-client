@@ -3213,13 +3213,6 @@ export class Battle {
 		output.ident = (!isTeamPreview ? pokemonid : '');
 		output.searchid = (!isTeamPreview ? `${pokemonid}|${details}` : '');
 
-		// Fundex: use forme name as the default instead of base species
-		const species = Dex.species.get(name);
-		const forme = details.split(',')[0];
-		if (species.isNonstandard === "Fundex" && forme !== name) {
-			output.ident = output.ident.replace(name, forme);
-		}
-
 		let splitDetails = details.split(', ');
 		if (splitDetails[splitDetails.length - 1] === 'shiny') {
 			output.shiny = true;
@@ -3405,11 +3398,19 @@ export class Battle {
 	runMajor(args: Args, kwArgs: KWArgs, preempt?: boolean) {
 		// Fundex: use forme name as the default instead of base species
 		if (args.length > 1 && Dex.species.get(args[1].substring(4)).exists) {
-			let poke = this.getPokemon(args[1]);
-			if (poke) {
-				const species = Dex.species.get(poke.speciesForme);
-				if (species.isNonstandard === 'Fundex' && species.forme !== '') {
+			if (args[0] === 'switch') {
+				let poke = this.getSwitchedPokemon(args[1], args[2]);
+				let species = Dex.species.get(poke.speciesForme);
+				if (species.forme !== '') {
 					args[1] = args[1].replace(species.baseSpecies, poke.speciesForme);
+				}
+			} else {
+				let poke = this.getPokemon(args[1]);
+				if (poke) {
+					let species = Dex.species.get(poke.speciesForme);
+					if (species.forme !== '') {
+						args[1] = args[1].replace(species.baseSpecies, poke.speciesForme);
+					}
 				}
 			}
 		}
