@@ -1500,7 +1500,7 @@ export class Battle {
 				BattleSound.playEffect(`audio/cries/engineer.mp3`);
 			}
 			else if (toID(pokemon.getSpeciesForme()) === 'chucktesta' && move.id === 'nope') {
-				BattleSound.playEffect(`audio/cries/chucktesta.mp3`);
+				BattleSound.playEffect(`audio/moves/nope.mp3`);
 			}
 			else if (toID(pokemon.getSpeciesForme()) === 'kingharkinian' && move.id === 'dinnerblaster') {
 				BattleSound.playEffect(`audio/moves/dinnerblaster.mp3`);
