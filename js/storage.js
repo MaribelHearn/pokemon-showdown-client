@@ -48,22 +48,25 @@ Storage.bg = {
 	 * they still need to be extracted using Color Thief.
 	 */
 	load: function (bgUrl, bgid, hues) {
-		this.id = bgid;
 		if (!bgid) {
 			if (location.host === 'smogtours.psim.us') {
 				bgid = 'shaymin';
-			} else if (location.host === Config.routes.client) {
-				bgid = ['horizon', 'ocean', 'waterfall', 'shaymin', 'charizards', 'psday'][Math.floor(Math.random() * 6)];
 			} else {
-				$(document.body).css({
-					background: '',
-					'background-size': ''
-				});
-				$('#mainmenubuttoncolors').remove();
-				return true;
+				bgid = ['charizards', 'horizon', 'ocean', 'solidblue'][Math.floor(Math.random() * 6)];
 			}
 			bgUrl = Dex.resourcePrefix + 'fx/client-bg-' + bgid + '.jpg';
 		}
+
+		if (bgid === 'charizards') {
+			$(document.body).css({
+				background: '',
+				'background-size': ''
+			});
+			$('#mainmenubuttoncolors').remove();
+			return true;
+		}
+
+		this.id = bgid;
 
 		// April Fool's 2016 - Digimon theme
 		// bgid = 'digimon';
