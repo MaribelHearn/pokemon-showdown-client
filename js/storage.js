@@ -63,6 +63,7 @@ Storage.bg = {
 				'background-size': ''
 			});
 			$('#mainmenubuttoncolors').remove();
+			this.id = bgid;
 			return true;
 		}
 
