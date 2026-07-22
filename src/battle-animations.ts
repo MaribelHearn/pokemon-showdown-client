@@ -1732,7 +1732,7 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/brobot-l-type.mp3', 8000, 120000, this.bgm);
 			break;
 		case 2:
-			this.bgm = BattleSound.loadBgm('audio/bgm/lot-boss.mp3', 1600, 231000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/lot-boss.mp3', 16200, 231200, this.bgm);
 			break;
 		case 3:
 			this.bgm = BattleSound.loadBgm('audio/bgm/t-fanger.mp3', 8000, 319000, this.bgm);
@@ -1741,7 +1741,7 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/doomsday.mp3', 0, 305800, this.bgm);
 			break;
 		case 5:
-			this.bgm = BattleSound.loadBgm('audio/bgm/super-star-boss.mp3', 6000, 98000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/super-star-boss.mp3', 6000, 98350, this.bgm);
 			break;
 		case 6:
 			this.bgm = BattleSound.loadBgm('audio/bgm/gen1-trainer.mp3', 14350, 97300, this.bgm);
@@ -1792,7 +1792,7 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/utsuho.mp3', 0, 332000, this.bgm);
 			break;
 		case 22:
-			this.bgm = BattleSound.loadBgm('audio/bgm/popple.mp3', 0, 93000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/popple.mp3', 0, 93100, this.bgm);
 			break;
 		case 23:
 			this.bgm = BattleSound.loadBgm('audio/bgm/miracle-matter.mp3', 91500, 166500, this.bgm);
@@ -1807,13 +1807,13 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/border-of-life.mp3', 7000, 166000, this.bgm);
 			break;
 		case 27:
-			this.bgm = BattleSound.loadBgm('audio/bgm/gen5-elite-four.mp3', 15000, 161700, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/gen5-elite-four.mp3', 14900, 88300, this.bgm);
 			break;
 		/*case 28:
 			this.bgm = BattleSound.loadBgm('audio/bgm/gerudo-valley.mp3', 15000, 161700, this.bgm);
 			break;*/
 		default:
-			this.bgm = BattleSound.loadBgm('audio/bgm/ghetsis.mp3', 4000, 133000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/ghetsis.mp3', 4000, 133700, this.bgm);
 			break;
 		}
 
