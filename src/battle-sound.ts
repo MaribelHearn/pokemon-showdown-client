@@ -115,7 +115,7 @@ export const BattleSound = new class {
 		if (this.soundCache[url]) return this.soundCache[url];
 		try {
 			const sound = document.createElement('audio');
-			sound.src = Dex.resourcePrefix + '/' + url;
+			sound.src = location.href + url;
 			sound.volume = this.effectVolume / 100;
 			this.soundCache[url] = sound;
 			return sound;
