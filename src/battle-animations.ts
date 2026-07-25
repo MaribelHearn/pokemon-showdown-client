@@ -1753,19 +1753,19 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/smithy.mp3', 3000, 135000, this.bgm);
 			break;
 		case 9:
-			this.bgm = BattleSound.loadBgm('audio/bgm/legrous.mp3', 12000, 184000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/legrous.mp3', 0, 86000, this.bgm);
 			break;
 		case 10:
-			this.bgm = BattleSound.loadBgm('audio/bgm/firmament-army.mp3', 6000, 147000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/firmament-army.mp3', 6400, 76900, this.bgm);
 			break;
 		case 11:
-			this.bgm = BattleSound.loadBgm('audio/bgm/duel-of-the-fates.mp3', 14000, 145000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/duel-of-the-fates.mp3', 15000, 82800, this.bgm);
 			break;
 		case 12:
-			this.bgm = BattleSound.loadBgm('audio/bgm/dream-chaser.mp3', 2000, 200000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/dream-chaser.mp3', 2200, 68500, this.bgm);
 			break;
 		case 13:
-			this.bgm = BattleSound.loadBgm('audio/bgm/star-wolf.mp3', 8000, 119000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/star-wolf.mp3', 8200, 64000, this.bgm);
 			break;
 		case 14:
 			this.bgm = BattleSound.loadBgm('audio/bgm/vertigo.mp3', 125000, 250000, this.bgm);
@@ -1789,7 +1789,7 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/sanae.mp3', 13500, 341000, this.bgm);
 			break;
 		case 21:
-			this.bgm = BattleSound.loadBgm('audio/bgm/utsuho.mp3', 0, 332000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/utsuho.mp3', 900, 167000, this.bgm);
 			break;
 		case 22:
 			this.bgm = BattleSound.loadBgm('audio/bgm/popple.mp3', 0, 93100, this.bgm);
@@ -1804,7 +1804,7 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/meta-ridley.mp3', 19700, 187000, this.bgm);
 			break;
 		case 26:
-			this.bgm = BattleSound.loadBgm('audio/bgm/border-of-life.mp3', 7000, 166000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/border-of-life.mp3', 7200, 86600, this.bgm);
 			break;
 		case 27:
 			this.bgm = BattleSound.loadBgm('audio/bgm/gen5-elite-four.mp3', 14900, 88300, this.bgm);
@@ -3342,10 +3342,6 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	question: {
 		url: 'question.png',
 		w: 44, h: 44,
-	},
-	beam: {
-		url: 'beam.png',
-		w: 400, h: 100,
 	},
 	// ------
 	wisp: {
