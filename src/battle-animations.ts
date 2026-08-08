@@ -1717,16 +1717,16 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/colosseum-miror-b.mp3', 896, 47462, this.bgm);
 			break;
 		case -4:
-			this.bgm = BattleSound.loadBgm('audio/bgm/encounter.mp3', 4000, 247000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/encounter.mp3', 48900, 109335, this.bgm);
 			break;
 		case -5:
 			this.bgm = BattleSound.loadBgm('audio/bgm/turnabout.mp3', 7000, 84000, this.bgm);
 			break;
 		case -6:
-			this.bgm = BattleSound.loadBgm('audio/bgm/never-gonna-give-you-up.mp3', 43000, 161000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/never-gonna-give-you-up.mp3', 43000, 160750, this.bgm);
 			break;
 		case -7:
-			this.bgm = BattleSound.loadBgm('audio/bgm/duckroll.mp3', 18550, 60840, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/duckroll.mp3', 18570, 60800, this.bgm);
 			break;
 		case 1:
 			this.bgm = BattleSound.loadBgm('audio/bgm/brobot-l-type.mp3', 8000, 120000, this.bgm);
@@ -1735,10 +1735,10 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/lot-boss.mp3', 16200, 231200, this.bgm);
 			break;
 		case 3:
-			this.bgm = BattleSound.loadBgm('audio/bgm/t-fanger.mp3', 8000, 319000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/t-fanger.mp3', 8200, 85900, this.bgm);
 			break;
 		case 4:
-			this.bgm = BattleSound.loadBgm('audio/bgm/doomsday.mp3', 0, 305800, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/doomsday.mp3', 160, 43830, this.bgm);
 			break;
 		case 5:
 			this.bgm = BattleSound.loadBgm('audio/bgm/super-star-boss.mp3', 6000, 98350, this.bgm);
@@ -1750,7 +1750,7 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/battle-against-machine.mp3', 0, 95000, this.bgm);
 			break;
 		case 8:
-			this.bgm = BattleSound.loadBgm('audio/bgm/smithy.mp3', 3000, 135000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/smithy.mp3', 6000, 72000, this.bgm);
 			break;
 		case 9:
 			this.bgm = BattleSound.loadBgm('audio/bgm/legrous.mp3', 0, 86000, this.bgm);
@@ -1768,25 +1768,25 @@ export class BattleScene implements BattleSceneStub {
 			this.bgm = BattleSound.loadBgm('audio/bgm/star-wolf.mp3', 8200, 64000, this.bgm);
 			break;
 		case 14:
-			this.bgm = BattleSound.loadBgm('audio/bgm/vertigo.mp3', 125000, 250000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/vertigo.mp3', 7000, 131850, this.bgm);
 			break;
 		case 15:
 			this.bgm = BattleSound.loadBgm('audio/bgm/trolololo.mp3', 2000, 163000, this.bgm);
 			break;
 		case 16:
-			this.bgm = BattleSound.loadBgm('audio/bgm/windows-error-remix.mp3', 25000, 277000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/windows-error-remix.mp3', 25500, 277500, this.bgm);
 			break;
 		case 17:
 			this.bgm = BattleSound.loadBgm('audio/bgm/tabuu-theme.mp3', 1000, 188000, this.bgm);
 			break;
 		case 18:
-			this.bgm = BattleSound.loadBgm('audio/bgm/decisive-magic-battle.mp3', 0, 544000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/decisive-magic-battle.mp3', 270, 126600, this.bgm);
 			break;
 		case 19:
-			this.bgm = BattleSound.loadBgm('audio/bgm/marisa.mp3', 1000, 234000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/marisa.mp3', 1500, 117900, this.bgm);
 			break;
 		case 20:
-			this.bgm = BattleSound.loadBgm('audio/bgm/sanae.mp3', 13500, 341000, this.bgm);
+			this.bgm = BattleSound.loadBgm('audio/bgm/sanae.mp3', 13600, 177080, this.bgm);
 			break;
 		case 21:
 			this.bgm = BattleSound.loadBgm('audio/bgm/utsuho.mp3', 900, 167000, this.bgm);
