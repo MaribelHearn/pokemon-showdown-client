@@ -1463,14 +1463,14 @@ class BattleTooltips {
 		if (move.id === 'rainbowufosofterror') {
 			moveType = pokemon.volatiles.typechange ? pokemon.volatiles.typechange[1] : pokemon.getSpecies().types[0];
 		}
-		if ((move.id === 'lightarrow' || move.id === 'sledge') && serverPokemon.stats.spa > serverPokemon.stats.atk) {
-			category = 'Special';
+		if ((move.id === 'photongeyser' || move.id === 'lightarrow' || move.id === 'sledge') && serverPokemon.stats.atk > serverPokemon.stats.spa) {
+			category = 'Physical';
 		}
 		if (move.id === 'glitzerpopping') {
 			moveType = pokemon.getSpecies().types[0];
 
-			if (serverPokemon.stats.spa > serverPokemon.stats.atk) {
-				category = 'Special';
+			if (serverPokemon.stats.atk > serverPokemon.stats.spa) {
+				category = 'Physical';
 			}
 		}
 
@@ -1824,7 +1824,7 @@ class BattleTooltips {
 		if (['psn', 'tox'].includes(pokemon.status) && move.category === 'Physical') {
 			value.abilityModify(1.5, "Toxic Boost");
 		}
-		if (this.battle.gen > 2 && ['brn', 'tmt'].includes(serverPokemon.status) && move.id !== 'facade' && move.category === 'Physical') {
+		if (this.battle.gen > 2 && ['brn', 'tmt'].includes(serverPokemon.status) && move.id !== 'facade' && (move.category === 'Physical' || (['photongeyser', 'lightarrow', 'glitzerpopping', 'sledge'].includes(move.id) && serverPokemon.stats.atk > serverPokemon.stats.spa))) {
 			if (!value.tryAbility("Guts")) value.modify(0.5, 'Burn');
 		}
 		if (['Rock', 'Ground', 'Steel'].includes(moveType) && this.battle.weather === 'sandstorm') {
@@ -2270,7 +2270,7 @@ class BattleStatGuesser {
 			if (move.category === 'Status') {
 				if (['batonpass', 'healingwish', 'lunardance'].includes(move.id)) {
 					moveCount['Support']++;
-				} else if (['metronome', 'assist', 'copycat', 'mefirst', 'photongeyser', 'shellsidearm', 'recollection', 'catnarok', 'darkcatnarok', 'fierycatnarok', 'lightarrow', 'sledge'].includes(move.id)) {
+				} else if (['metronome', 'assist', 'copycat', 'mefirst', 'photongeyser', 'shellsidearm', 'recollection', 'catnarok', 'darkcatnarok', 'fierycatnarok', 'lightarrow', 'glitzerpopping', 'sledge'].includes(move.id)) {
 					moveCount['Physical'] += 0.5;
 					moveCount['Special'] += 0.5;
 				} else if (move.id === 'naturepower') {

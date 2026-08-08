@@ -3171,7 +3171,7 @@
 				} else if (move.category === 'Physical' && !move.damage && !move.ohko &&
 					!['foulplay', 'endeavor', 'counter', 'bodypress', 'shieldbash', 'barriercrash', 'seismictoss', 'bide', 'metalburst', 'superfang'].includes(move.id) && !(this.curTeam.gen < 8 && move.id === 'rapidspin')) {
 					minAtk = false;
-				} else if (['metronome', 'assist', 'copycat', 'mefirst', 'photongeyser', 'shellsidearm', 'lightarrow', 'glitzerpopping'].includes(move.id)) {
+				} else if (['metronome', 'assist', 'copycat', 'mefirst', 'photongeyser', 'shellsidearm', 'lightarrow', 'glitzerpopping', 'sledge'].includes(move.id)) {
 					minAtk = false;
 				}
 				if (minSpe === false && moveName === 'Gyro Ball') {
