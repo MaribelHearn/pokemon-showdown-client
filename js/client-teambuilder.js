@@ -1200,8 +1200,8 @@
 			buf += '<div class="setcell setcell-details"><label>Details</label><button class="textbox setdetails" tabindex="-1" name="details">';
 
 			var GenderChart = {
-				'M': '♂️',
-				'F': '♀️',
+				'M': '♂',
+				'F': '♀',
 				'N': '&mdash;'
 			};
 			buf += '<span class="detailcell detailcell-first"><label>Level</label>' + (set.level || 100) + '</span>';
@@ -2739,8 +2739,8 @@
 			// update details cell
 			var buf = '';
 			var GenderChart = {
-				'M': '♂️',
-				'F': '♀️',
+				'M': '♂',
+				'F': '♀',
 				'N': '&mdash;'
 			};
 			buf += '<span class="detailcell detailcell-first"><label>Level</label>' + (set.level || 100) + '</span>';
