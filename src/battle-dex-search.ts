@@ -1273,8 +1273,9 @@ class BattleItemSearch extends BattleTypedSearch<'item'> {
 			});
 		}
 		// Fundex: filter out Mega Stones from TouhOU
-		if (this.formatType?.includes('touhou')) {
-			table.itemSet = table.itemSet.filter((r: string[]) => {if (r[0] !== 'item') {
+		if (this.format?.includes('touhou')) {
+			table.itemSet = table.itemSet.filter((r: string[]) => {
+				if (r[0] !== 'item') {
 					return true;
 				}
 				const item = this.dex.items.get(r[1]);
