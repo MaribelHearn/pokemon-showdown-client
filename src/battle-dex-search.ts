@@ -1052,16 +1052,17 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 		// Filter non-Touhou out of Fundex TouhOU
 		if (format.includes('touhou')) {
 			tierSet = tierSet.filter(([type, id]) => {
+				console.log(type, id);
 				if (type === 'pokemon') {
-					return !['tentaquil', 'captain falcon', 'cell', 'dennis', 'zalgo', 'roflcopter', 'andross', 'slenderman', 'baby luigi', 'luigi', 'weegee', 'matrix', 'lolwut pear', 'dr. eggman',
-						'leonidas', 'king harkinian', 'yarrow', 'doomsday', 'vegeta', 'dr. octogonapus', 'ace trainer', 'crasher wake', 'young link', 'link', 'young zelda', 'zelda', 'sheik',
-						'ganondorf', 'suiseiseki', 'admiral ackbar', 'yoda', 'darth vader', 'longcat', 'tacgnol', 'olngact', 'orly-owl', 'cats', 'raptor jesus', 'leeroy jenkins', 'angry bird',
-						'big brother', 'giant enemy crab', 'super nerd', 'leon powalski', 'trollface', 's. a. penguin', 'missingno.', 'missingno.-ghost', 'missingno.-aerodactyl',
-						'missingno.-kabutops', 'missingno.-yellow', 'kirby', 'meta knight', 'king dedede', 'snake', 'zero suit samus', 'samus', 'zeeky h. bomb', 'engineer', 'phoenix wright',
-						'rick astley', 'dark matter', 'zero', 'zero-two', 'veteran', 'hibachi', 'hibachi 2', 'evaccania doom', 'baby bowser', 'bowser', 'dry bowser', 'tesla', 'nyan cat',
-						'baby mario', 'mario', 'malleo', 'boo', 'boolossus', 'king boo', 'bouldergeist', 'glados', 'bad egg', 'wiggler', 'kanzou', 'hagumanoki', 'ruscus', 'ryuuguu',
-						'weepinmeleon', 'venudrio', 'bloody jitterbug', 'blue screen', 'internet explorer', 'inori aizawa', 'microsoft edge', 'mozilla firefox', 'google chrome', 'recycle bin',
-						'chuck testa', 'grandma'].includes(id);
+					return !['tentaquil', 'captainfalcon', 'cell', 'dennis', 'zalgo', 'roflcopter', 'andross', 'slenderman', 'babyluigi', 'luigi', 'mrl', 'weegee', 'matrix', 'lolwutpear', 'dreggman',
+						'leonidas', 'kingharkinian', 'yarrow', 'doomsday', 'vegeta', 'droctogonapus', 'acetrainer', 'crasherwake', 'younglink', 'link', 'youngzelda', 'zelda', 'sheik',
+						'ganondorf', 'suiseiseki', 'admiralackbar', 'yoda', 'darthvader', 'longcat', 'tacgnol', 'olngact', 'orlyowl', 'cats', 'raptorjesus', 'leeroyjenkins', 'angrybird',
+						'bigbrother', 'giantenemycrab', 'supernerd', 'leonpowalski', 'trollface', 'sapenguin', 'missingno', 'missingnoghost', 'missingnoaerodactyl',
+						'missingnokabutops', 'missingnoyellow', 'kirby', 'metaknight', 'kingdedede', 'snake', 'zerosuitsamus', 'samus', 'zeekyhbomb', 'engineer', 'phoenixwright',
+						'rickastley', 'darkmatter', 'zero', 'zerotwo', 'veteran', 'hibachi', 'hibachi2', 'evaccaniadoom', 'babybowser', 'bowser', 'drybowser', 'tesla', 'nyancat',
+						'babymario', 'mario', 'papermario', 'malleo', 'boo', 'boolossus', 'kingboo', 'bouldergeist', 'glados', 'badegg', 'wiggler', 'kanzou', 'hagumanoki', 'ruscus', 'ryuuguu',
+						'weepinmeleon', 'venudrio', 'bloodyjitterbug', 'bluescreen', 'internetexplorer', 'inoriaizawa', 'microsoftedge', 'mozillafirefox', 'googlechrome', 'recyclebin',
+						'chucktesta', 'grandma', 'gigabowser', 'grandmatriarch', 'ganon', 'supersaiyanvegeta', 'angelvivit', 'berserkmaribel', 'megadennis'].includes(id);
 				}
 			});
 		}
