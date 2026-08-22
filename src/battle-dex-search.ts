@@ -1049,6 +1049,23 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 			});
 		}
 
+		// Filter non-Touhou out of Fundex TouhOU
+		if (format.includes('touhou')) {
+			tierSet = tierSet.filter(([type, id]) => {
+				if (type === 'pokemon') {
+					return !['tentaquil', 'captain falcon', 'cell', 'dennis', 'zalgo', 'roflcopter', 'andross', 'slenderman', 'baby luigi', 'luigi', 'weegee', 'matrix', 'lolwut pear', 'dr. eggman',
+						'leonidas', 'king harkinian', 'yarrow', 'doomsday', 'vegeta', 'dr. octogonapus', 'ace trainer', 'crasher wake', 'young link', 'link', 'young zelda', 'zelda', 'sheik',
+						'ganondorf', 'suiseiseki', 'admiral ackbar', 'yoda', 'darth vader', 'longcat', 'tacgnol', 'olngact', 'orly-owl', 'cats', 'raptor jesus', 'leeroy jenkins', 'angry bird',
+						'big brother', 'giant enemy crab', 'super nerd', 'leon powalski', 'trollface', 's. a. penguin', 'missingno.', 'missingno.-ghost', 'missingno.-aerodactyl',
+						'missingno.-kabutops', 'missingno.-yellow', 'kirby', 'meta knight', 'king dedede', 'snake', 'zero suit samus', 'samus', 'zeeky h. bomb', 'engineer', 'phoenix wright',
+						'rick astley', 'dark matter', 'zero', 'zero-two', 'veteran', 'hibachi', 'hibachi 2', 'evaccania doom', 'baby bowser', 'bowser', 'dry bowser', 'tesla', 'nyan cat',
+						'baby mario', 'mario', 'malleo', 'boo', 'boolossus', 'king boo', 'bouldergeist', 'glados', 'bad egg', 'wiggler', 'kanzou', 'hagumanoki', 'ruscus', 'ryuuguu',
+						'weepinmeleon', 'venudrio', 'bloody jitterbug', 'blue screen', 'internet explorer', 'inori aizawa', 'microsoft edge', 'mozilla firefox', 'google chrome', 'recycle bin',
+						'chuck testa', 'grandma'].includes(id);
+				}
+			});
+		}
+
 		return tierSet;
 	}
 	filter(row: SearchRow, filters: string[][]) {
