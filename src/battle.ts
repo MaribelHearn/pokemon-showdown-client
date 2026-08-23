@@ -122,7 +122,7 @@ export class Pokemon implements PokemonDetails, PokemonHealth {
 		this.shiny = data.shiny;
 		this.gender = data.gender || 'N';
 		this.ident = species.exists && species.isNonstandard === "Fundex" && data.name !== data.speciesForme ? data.ident.replace(data.name, data.speciesForme) : data.ident;
-		this.searchid = data.searchid;
+		this.searchid = species.exists && species.isNonstandard === "Fundex" && data.name !== data.speciesForme && data.searchid !== '' ? data.searchid.replace(data.name, data.speciesForme) : data.searchid;
 
 		this.sprite = side.battle.scene.addPokemonSprite(this);
 	}
