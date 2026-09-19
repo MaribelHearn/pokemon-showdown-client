@@ -37905,7 +37905,7 @@ BattleMoveAnims['suzuranpoison'] = {anim:BattleMoveAnims['poisongas'].anim};
 BattleMoveAnims['lemmingsparade'] = {anim:BattleMoveAnims['spikecannon'].anim};
 //houraielixir see above
 //explod see above
-BattleMoveAnims['study'] = {anim:BattleMoveAnims['calmmind'].anim};
+BattleMoveAnims['study'] = {anim:BattleMoveAnims['sketch'].anim};
 //corrupt see above
 BattleMoveAnims['sovietreversal'] = {anim:BattleMoveAnims['reversal'].anim};
 BattleMoveAnims['lolwut'] = {anim(scene, [attacker, defender]) {/* do nothing */}};
