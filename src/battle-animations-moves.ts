@@ -34530,19 +34530,76 @@ BattleMoveAnims['rainbowufosofterror'] = {
 };
 BattleMoveAnims['magicaltempest'] = {
 	anim(scene, [attacker, defender]) {
-		scene.showEffect('energyball', {
-			x: attacker.x,
-			y: attacker.y,
-			z: attacker.z,
-			opacity: 0.6,
-		}, {
-			x: attacker.x,
-			y: attacker.y,
-			z: attacker.z,
-			scale: 0.1,
-			opacity: 0.6,
-			time: 1000,
-		}, 'linear', 'explode');
+		// inwards
+		for (var i = 0; i < 5; i++) {
+			scene.showEffect('energyball', {
+				x: attacker.x + Math.floor(Math.random() * 75),
+				y: attacker.y + Math.floor(Math.random() * 75),
+				z: attacker.z,
+				scale: 0.2,
+				opacity: 0.6,
+				time: 0,
+			}, {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 0.6,
+				time: 1000,
+			}, 'linear', 'explode');
+		}
+		for (var i = 0; i < 5; i++) {
+			scene.showEffect('energyball', {
+				x: attacker.x - Math.floor(Math.random() * 75),
+				y: attacker.y - Math.floor(Math.random() * 75),
+				z: attacker.z,
+				scale: 0.2,
+				opacity: 0.6,
+				time: 0,
+			}, {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 0.6,
+				time: 1000,
+			}, 'linear', 'explode');
+		}
+		for (var i = 0; i < 5; i++) {
+			scene.showEffect('energyball', {
+				x: attacker.x + Math.floor(Math.random() * 75),
+				y: attacker.y - Math.floor(Math.random() * 75),
+				z: attacker.z,
+				scale: 0.2,
+				opacity: 0.6,
+				time: 0,
+			}, {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 0.6,
+				time: 1000,
+			}, 'linear', 'explode');
+		}
+		for (var i = 0; i < 5; i++) {
+			scene.showEffect('energyball', {
+				x: attacker.x - Math.floor(Math.random() * 75),
+				y: attacker.y + Math.floor(Math.random() * 75),
+				z: attacker.z,
+				scale: 0.2,
+				opacity: 0.6,
+				time: 0,
+			}, {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.5,
+				opacity: 0.6,
+				time: 1000,
+			}, 'linear', 'explode');
+		}
+		// outwards
 		for (var i = 0; i < 5; i++) {
 			scene.showEffect('energyball', {
 				x: attacker.x,
@@ -34552,8 +34609,8 @@ BattleMoveAnims['magicaltempest'] = {
 				opacity: 0.6,
 				time: 1000,
 			}, {
-				x: attacker.x + Math.floor(Math.random() * 100),
-				y: attacker.y + Math.floor(Math.random() * 100),
+				x: attacker.x + Math.floor(Math.random() * 200),
+				y: attacker.y + Math.floor(Math.random() * 200),
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.6,
@@ -34569,8 +34626,8 @@ BattleMoveAnims['magicaltempest'] = {
 				opacity: 0.6,
 				time: 1000,
 			}, {
-				x: attacker.x - Math.floor(Math.random() * 100),
-				y: attacker.y - Math.floor(Math.random() * 100),
+				x: attacker.x - Math.floor(Math.random() * 200),
+				y: attacker.y - Math.floor(Math.random() * 200),
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.6,
@@ -34586,8 +34643,8 @@ BattleMoveAnims['magicaltempest'] = {
 				opacity: 0.6,
 				time: 1000,
 			}, {
-				x: attacker.x + Math.floor(Math.random() * 100),
-				y: attacker.y - Math.floor(Math.random() * 100),
+				x: attacker.x + Math.floor(Math.random() * 200),
+				y: attacker.y - Math.floor(Math.random() * 200),
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.6,
@@ -34603,8 +34660,8 @@ BattleMoveAnims['magicaltempest'] = {
 				opacity: 0.6,
 				time: 1000,
 			}, {
-				x: attacker.x - Math.floor(Math.random() * 100),
-				y: attacker.y + Math.floor(Math.random() * 100),
+				x: attacker.x - Math.floor(Math.random() * 200),
+				y: attacker.y + Math.floor(Math.random() * 200),
 				z: attacker.z,
 				scale: 0.5,
 				opacity: 0.6,
