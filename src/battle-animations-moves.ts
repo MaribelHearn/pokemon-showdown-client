@@ -37937,6 +37937,130 @@ BattleMoveAnims['borderdistortion'] = {
 		scene.wait(2100);
 	},
 };
+BattleMoveAnims['berserk'] = {
+	anim(scene, [attacker, defender]) {
+		var randomX = [], randomY = [], randomEff = [], eff;
+		scene.backgroundEffect('#000000', 2500, 0.6);
+		// first
+		for (var i = 0; i < 5; i++) {
+			randomX.push(defender.x + (Math.floor(Math.random() * 150) - 75));
+			randomY.push(defender.y + (Math.floor(Math.random() * 150) - 75));
+			eff = Math.floor(Math.random() * 4);
+			randomEff.push('pinkicicle' + (eff === 0 ? '' : eff));
+			console.log(randomEff[randomEff.length - 1]);
+			scene.showEffect(randomEff[randomEff.length - 1], {
+				x: randomX[randomX.length - 1],
+				y: randomY[randomY.length - 1],
+				z: defender.z,
+				time: 0,
+			}, {
+				x: randomX[randomX.length - 1],
+				y: randomY[randomY.length - 1],
+				z: defender.z,
+				time: 2000,
+			}, 'linear', 'explode');
+		}
+		// second
+		for (var i = 0; i < 3; i++) {
+			randomX.push(defender.x + (Math.floor(Math.random() * 150) - 75));
+			randomY.push(defender.y + (Math.floor(Math.random() * 150) - 75));
+			eff = Math.floor(Math.random() * 4);
+			randomEff.push('pinkicicle' + (eff === 0 ? '' : eff));
+			scene.showEffect(randomEff[randomEff.length - 1], {
+				x: randomX[randomX.length - 1],
+				y: randomY[randomY.length - 1],
+				z: defender.z,
+				time: 600,
+			}, {
+				x: randomX[randomX.length - 1],
+				y: randomY[randomY.length - 1],
+				z: defender.z,
+				time: 2000,
+			}, 'linear', 'explode');
+		}
+		for (var i = 0; i < 3; i++) {
+			randomX.push(defender.x + (Math.floor(Math.random() * 150) - 75));
+			randomY.push(defender.y + (Math.floor(Math.random() * 150) - 75));
+			eff = Math.floor(Math.random() * 4);
+			randomEff.push('pinkicicle' + (eff === 0 ? '' : eff));
+			scene.showEffect(randomEff[randomEff.length - 1], {
+				x: randomX[randomX.length - 1],
+				y: randomY[randomY.length - 1],
+				z: defender.z,
+				time: 800,
+			}, {
+				x: randomX[randomX.length - 1],
+				y: randomY[randomY.length - 1],
+				z: defender.z,
+				time: 2000,
+			}, 'linear', 'explode');
+		}
+		for (var i = 0; i < 3; i++) {
+			randomX.push(defender.x + (Math.floor(Math.random() * 150) - 75));
+			randomY.push(defender.y + (Math.floor(Math.random() * 150) - 75));
+			eff = Math.floor(Math.random() * 4);
+			randomEff.push('pinkicicle' + (eff === 0 ? '' : eff));
+			scene.showEffect(randomEff[randomEff.length - 1], {
+				x: randomX[randomX.length - 1],
+				y: randomY[randomY.length - 1],
+				z: defender.z,
+				time: 1000,
+			}, {
+				x: randomX[randomX.length - 1],
+				y: randomY[randomY.length - 1],
+				z: defender.z,
+				time: 2000,
+			}, 'linear', 'explode');
+		}
+		// cracks
+		scene.showEffect('rainbow', {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 0,
+			opacity: 0.8,
+			time: 1200,
+		}, {
+			x: defender.x,
+			y: defender.y,
+			z: defender.z,
+			scale: 5,
+			opacity: 0.8,
+			time: 1400,
+		}, 'linear', 'explode');
+		var randoms = randomX.length;
+		for (var i = 0; i < randoms; i++) {
+			scene.showEffect('wisp', {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				scale: 0,
+				time: 1200,
+			}, {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				scale: 1.5,
+				time: 1400,
+			}, 'linear', 'explode');
+		}
+		for (var i = 0; i < randoms; i++) {
+			scene.showEffect('wisp', {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				scale: 1.5,
+				time: 1400,
+			}, {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				scale: 1.5,
+				time: 2000,
+			}, 'linear', 'explode');
+		}
+	},
+};
 BattleMoveAnims['apocalypse'] = {anim:BattleMoveAnims['gigaimpact'].anim};
 //masterspark see above
 //pukeblood see above
@@ -37984,7 +38108,7 @@ BattleMoveAnims['thunderdrumshot'] = {anim:BattleMoveAnims['electroball'].anim};
 BattleMoveAnims['zzzap'] = {anim:BattleMoveAnims['thunderbolt'].anim};
 //borderdistortion see above
 BattleMoveAnims['dreaminduction'] = {anim:BattleMoveAnims['hypnosis'].anim};
-BattleMoveAnims['berserk'] = {anim:BattleMoveAnims['darkpulse'].anim};
+//berserk see above
 BattleMoveAnims['surprise'] = {anim:BattleMoveAnims['fakeout'].anim};
 BattleMoveAnims['royalflare'] = {anim:BattleMoveAnims['fireblast'].anim};
 BattleMoveAnims['princessundine'] = {anim:BattleMoveAnims['brine'].anim};

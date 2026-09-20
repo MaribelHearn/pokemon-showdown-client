@@ -3380,6 +3380,18 @@ const BattleEffects: {[k: string]: SpriteData} = {
 		url: 'icicle-pink.png', // http://opengameart.org/content/icicle-spell, recolored by Kalalokki
 		w: 80, h: 60,
 	},
+	pinkicicle1: {
+		url: 'icicle-pink-2.png',
+		w: 80, h: 60,
+	},
+	pinkicicle2: {
+		url: 'icicle-pink-3.png',
+		w: 60, h: 80,
+	},
+	pinkicicle3: {
+		url: 'icicle-pink-4.png',
+		w: 60, h: 80,
+	},
 	lightning: {
 		url: 'lightning.png', // by Pokemon Showdown user SailorCosmos
 		w: 41, h: 229,
