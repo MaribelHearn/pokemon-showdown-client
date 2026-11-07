@@ -37939,7 +37939,7 @@ BattleMoveAnims['borderdistortion'] = {
 };
 BattleMoveAnims['berserk'] = {
 	anim(scene, [attacker, defender]) {
-		var randomX = [], randomY = [], randomEff = [], eff;
+		var randomX = [], randomY = [], randomEff = [], eff, randoms;
 		scene.backgroundEffect('#000000', 2500, 0.6);
 		// first
 		for (var i = 0; i < 5; i++) {
@@ -37947,69 +37947,124 @@ BattleMoveAnims['berserk'] = {
 			randomY.push(defender.y + (Math.floor(Math.random() * 150) - 75));
 			eff = Math.floor(Math.random() * 4);
 			randomEff.push('pinkicicle' + (eff === 0 ? '' : eff));
-			console.log(randomEff[randomEff.length - 1]);
-			scene.showEffect(randomEff[randomEff.length - 1], {
-				x: randomX[randomX.length - 1],
-				y: randomY[randomY.length - 1],
+		}
+		for (var i = 0; i < 5; i++) {
+			scene.showEffect(randomEff[i], {
+				x: randomX[i],
+				y: randomY[i],
 				z: defender.z,
+				scale: 0,
+				opacity: 0.3,
 				time: 0,
 			}, {
-				x: randomX[randomX.length - 1],
-				y: randomY[randomY.length - 1],
+				x: randomX[i],
+				y: randomY[i],
 				z: defender.z,
-				time: 2000,
+				scale: 1,
+				opacity: 1,
+				time: 100,
+			}, 'linear', 'explode');
+			scene.showEffect(randomEff[i], {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				time: 100,
+			}, {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				time: 2200,
 			}, 'linear', 'explode');
 		}
 		// second
-		for (var i = 0; i < 3; i++) {
+		for (var i = 0; i < 9; i++) {
 			randomX.push(defender.x + (Math.floor(Math.random() * 150) - 75));
 			randomY.push(defender.y + (Math.floor(Math.random() * 150) - 75));
 			eff = Math.floor(Math.random() * 4);
 			randomEff.push('pinkicicle' + (eff === 0 ? '' : eff));
-			scene.showEffect(randomEff[randomEff.length - 1], {
-				x: randomX[randomX.length - 1],
-				y: randomY[randomY.length - 1],
+		}
+		for (var i = 5; i < 8; i++) {
+			scene.showEffect(randomEff[i], {
+				x: randomX[i],
+				y: randomY[i],
 				z: defender.z,
+				scale: 0,
+				opacity: 0.3,
 				time: 600,
 			}, {
-				x: randomX[randomX.length - 1],
-				y: randomY[randomY.length - 1],
+				x: randomX[i],
+				y: randomY[i],
+				scale: 1,
+				opacity: 1,
 				z: defender.z,
-				time: 2000,
+				time: 700,
+			}, 'linear', 'explode');
+			scene.showEffect(randomEff[i], {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				time: 700,
+			}, {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				time: 2200,
 			}, 'linear', 'explode');
 		}
-		for (var i = 0; i < 3; i++) {
-			randomX.push(defender.x + (Math.floor(Math.random() * 150) - 75));
-			randomY.push(defender.y + (Math.floor(Math.random() * 150) - 75));
-			eff = Math.floor(Math.random() * 4);
-			randomEff.push('pinkicicle' + (eff === 0 ? '' : eff));
-			scene.showEffect(randomEff[randomEff.length - 1], {
-				x: randomX[randomX.length - 1],
-				y: randomY[randomY.length - 1],
+		for (var i = 8; i < 11; i++) {
+			scene.showEffect(randomEff[i], {
+				x: randomX[i],
+				y: randomY[i],
 				z: defender.z,
+				scale: 0,
+				opacity: 0.3,
 				time: 800,
 			}, {
-				x: randomX[randomX.length - 1],
-				y: randomY[randomY.length - 1],
+				x: randomX[i],
+				y: randomY[i],
+				scale: 1,
+				opacity: 1,
 				z: defender.z,
-				time: 2000,
+				time: 900,
+			}, 'linear', 'explode');
+			scene.showEffect(randomEff[i], {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				time: 900,
+			}, {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				time: 2200,
 			}, 'linear', 'explode');
 		}
-		for (var i = 0; i < 3; i++) {
-			randomX.push(defender.x + (Math.floor(Math.random() * 150) - 75));
-			randomY.push(defender.y + (Math.floor(Math.random() * 150) - 75));
-			eff = Math.floor(Math.random() * 4);
-			randomEff.push('pinkicicle' + (eff === 0 ? '' : eff));
-			scene.showEffect(randomEff[randomEff.length - 1], {
-				x: randomX[randomX.length - 1],
-				y: randomY[randomY.length - 1],
+		for (var i = 11; i < 14; i++) {
+			scene.showEffect(randomEff[i], {
+				x: randomX[i],
+				y: randomY[i],
 				z: defender.z,
+				scale: 0,
+				opacity: 0.3,
 				time: 1000,
 			}, {
-				x: randomX[randomX.length - 1],
-				y: randomY[randomY.length - 1],
+				x: randomX[i],
+				y: randomY[i],
+				scale: 1,
+				opacity: 1,
 				z: defender.z,
-				time: 2000,
+				time: 1100,
+			}, 'linear', 'explode');
+			scene.showEffect(randomEff[i], {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				time: 1100,
+			}, {
+				x: randomX[i],
+				y: randomY[i],
+				z: defender.z,
+				time: 2200,
 			}, 'linear', 'explode');
 		}
 		// cracks
@@ -38019,29 +38074,29 @@ BattleMoveAnims['berserk'] = {
 			z: defender.z,
 			scale: 0,
 			opacity: 0.8,
-			time: 1200,
+			time: 1400,
 		}, {
 			x: defender.x,
 			y: defender.y,
 			z: defender.z,
 			scale: 5,
 			opacity: 0.8,
-			time: 1400,
+			time: 1600,
 		}, 'linear', 'explode');
-		var randoms = randomX.length;
+		randoms = randomX.length;
 		for (var i = 0; i < randoms; i++) {
 			scene.showEffect('wisp', {
 				x: randomX[i],
 				y: randomY[i],
 				z: defender.z,
 				scale: 0,
-				time: 1200,
+				time: 1400,
 			}, {
 				x: randomX[i],
 				y: randomY[i],
 				z: defender.z,
 				scale: 1.5,
-				time: 1400,
+				time: 1600,
 			}, 'linear', 'explode');
 		}
 		for (var i = 0; i < randoms; i++) {
@@ -38050,13 +38105,13 @@ BattleMoveAnims['berserk'] = {
 				y: randomY[i],
 				z: defender.z,
 				scale: 1.5,
-				time: 1400,
+				time: 1600,
 			}, {
 				x: randomX[i],
 				y: randomY[i],
 				z: defender.z,
 				scale: 1.5,
-				time: 2000,
+				time: 2200,
 			}, 'linear', 'explode');
 		}
 	},

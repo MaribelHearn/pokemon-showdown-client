@@ -560,7 +560,7 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	yuyuko: 1380 + 38,
 	younglink: 1380 + 39,
 	link: 1380 + 40,
-	//toonlink: 1380 + 41,
+	maskeddedede: 1380 + 41,
 	youngzelda: 1380 + 42,
 	zelda: 1380 + 43,
 	sheik: 1380 + 44,
